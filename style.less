@@ -3,7 +3,29 @@
 @contrast-color: #00ffd7;
 
 body {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	height: 100%;
+	width: 100%;
 	margin: 0;
 	background: @background-color;
 	color: @base-color;
+}
+
+section {
+	align-self: center;
+	
+	&.logo {
+		flex-grow: 1;
+	}
+	
+	&.text {
+		flex-grow: 1;
+	}
+	
+	&.media {
+		flex-grow: 0;
+		width: 100px;
+	}
 }
