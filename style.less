@@ -14,23 +14,22 @@ body {
 }
 
 section {
+	flex-grow: 1;
 	align-self: center;
 	
 	&.logo {
-		flex-grow: 1;
-		
-		svg {
-			display: block;
-			margin: auto;
-		}
 	}
 	
 	&.text {
-		flex-grow: 1;
 	}
 	
 	&.media {
 		flex-grow: 0;
 		width: 100px;
+	}
+	
+	svg {
+		display: block;
+		margin: auto;
 	}
 }
