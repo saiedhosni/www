@@ -38,11 +38,22 @@ section {
 	}
 	
 	&.media {
+		svg {
+			fill: @base-color;
+			.transition(fill 0.5s ease);
+		}
+		
 		a {
 			margin: 12px 0 0 0;
 			padding: 2px;
 			display: block;
 			width: 15px;
+			
+			&:hover {
+				svg {
+					fill: @contrast-color;
+				}
+			}
 		}
 	}
 	
