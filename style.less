@@ -38,7 +38,7 @@ section {
 		justify-content: space-between;
 		
 		section {
-			flex: 0 0 80px;
+			flex: 0 0 100px;
 		}
 	}
 	
@@ -49,18 +49,43 @@ section {
 	&.media {
 		svg {
 			fill: @base-color;
-			.transition(fill 0.5s ease);
+			.transition(all 1.5s @cubic-ease);
 		}
 		
 		a {
-			margin: 12px 0 0 0;
-			padding: 2px;
+			position: relative;
 			display: block;
-			width: 15px;
+			margin: 12px 0 0;
+			padding: 2px;
+			
+			&:after, &:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: 0px;
+				height: 1px;
+				background: @base-color;
+				.transition(all 1.5s @cubic-ease);
+			}
+			
+			&:after {
+				.transition(all 0.5s @cubic-ease);
+			}
 			
 			&:hover {
+				&:after, &:before {
+					width: 40px;
+				}
+				
+				&:after {
+					background: @contrast-color;
+					.transition(all 1s 0.2s @cubic-ease);
+				}
+				
 				svg {
 					fill: @contrast-color;
+					.transform(translateX(-10px));
 				}
 			}
 		}
