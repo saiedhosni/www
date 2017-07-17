@@ -2,6 +2,13 @@
 @base-color: #fff;
 @contrast-color: #00ffd7;
 
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+
 body {
 	display: flex;
 	justify-content: space-between;
