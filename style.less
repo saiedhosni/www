@@ -49,7 +49,7 @@ section {
 	&.media {
 		svg {
 			fill: @base-color;
-			.transition(all 1.5s @cubic-ease);
+			.transition(transform 1s @cubic-ease, fill 0.8s ease;);
 		}
 		
 		a {
@@ -66,11 +66,12 @@ section {
 				width: 0px;
 				height: 1px;
 				background: @base-color;
-				.transition(all 1.5s @cubic-ease);
+				.transition(width 1.2s @cubic-ease);
+				will-change: width;
 			}
 			
 			&:after {
-				.transition(all 0.5s @cubic-ease);
+				.transition(width 0.5s @cubic-ease);
 			}
 			
 			&:hover {
@@ -80,7 +81,7 @@ section {
 				
 				&:after {
 					background: @contrast-color;
-					.transition(all 1s 0.2s @cubic-ease);
+					.transition(width 1s 0.2s @cubic-ease);
 				}
 				
 				svg {
