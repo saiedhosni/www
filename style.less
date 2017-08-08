@@ -101,6 +101,21 @@ section {
 
 #mailto {
 	cursor: pointer;
+	
+	rect {
+		.transition(all 500ms @cubic-ease);
+		fill: @base-color;
+		will-change: width;
+	}
+	
+	&.highlight {
+		rect {
+			.transition(width 500ms ease, fill 1s ease;);
+			width: 380px;
+			fill: @contrast-color;
+			x: 26px;
+		}
+	}
 }
 
 @media (min-width: 640px) and (max-width: 1340px) {}
