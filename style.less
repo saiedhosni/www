@@ -103,17 +103,17 @@ section {
 	cursor: pointer;
 	
 	rect {
-		.transition(all 500ms @cubic-ease);
 		fill: @base-color;
 		will-change: width;
+		.transition(all 500ms @cubic-ease);
 	}
 	
 	&.highlight {
 		rect {
-			.transition(width 500ms ease, fill 500ms ease;);
 			width: 380px;
 			fill: @contrast-color;
 			x: 26px;
+			.transition(width 500ms ease, fill 500ms ease;);
 		}
 	}
 }
