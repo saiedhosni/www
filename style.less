@@ -135,6 +135,25 @@ section {
 	}
 	
 	section {
+		flex: auto;
+		flex-direction: column;
+		
+		&.logo {
+			display: flex;
+			justify-content: flex-end;
+		}
+		
+		&.content {
+			section {
+				flex: 0 0 70px;
+			}
+		}
+		&.media {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		
 		svg {
 			margin: 0 auto;
 		}
