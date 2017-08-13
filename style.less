@@ -157,6 +157,45 @@ section {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
+			
+			a {
+				margin: 12px 20px 0 0;
+				
+				&:last-child {
+					margin-right: 0;
+				}
+				
+				&:after, &:before {
+					left: 50%;
+					top: auto;
+					bottom: 0;
+					width: 1px;
+					height: 0px;
+					.transition(height 1.2s @cubic-ease);
+					will-change: height;
+				}
+				
+				&:after {
+					.transition(height 500ms @cubic-ease);
+				}
+				
+				&:hover {
+					&:after, &:before {
+						width: 1px;
+						height: 40px;
+					}
+					
+					&:after {
+						background: @contrast-color;
+						.transition(height 1s 200ms @cubic-ease);
+					}
+					
+					svg {
+						fill: @contrast-color;
+						.transform(translateY(-10px));
+					}
+				}
+			}
 		}
 		
 		svg {
