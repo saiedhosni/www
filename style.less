@@ -204,4 +204,28 @@ section {
 	}
 }
 
-@media (max-width: 639px) {}
+@media (max-width: 639px) {
+	section {
+		&.logo {
+			svg {
+				width: 92%;
+			}
+		}
+		
+		&.text {
+			margin-top: 0;
+			
+			svg {
+				width: 92%;
+			}
+			
+			#construction {
+				.transform(scale(1.2), translateY(-40px));
+			}
+			
+			#arrow, #mailto {
+				.transform(scale(1.2), translateY(-40px));
+			}
+		}
+	}
+}
