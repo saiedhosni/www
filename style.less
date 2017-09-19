@@ -231,4 +231,37 @@ section {
 }
 
 @media (max-width: 639px) and (orientation: landscape) {
+	section {
+		&.logo {
+			justify-content: center;
+			
+			svg {
+				height: 10vh;
+			}
+		}
+		
+		&.content {
+			section {
+				flex: 0 0 60px;
+			}
+		}
+		
+		&.text {
+			margin-top: 10px;
+			
+			svg {
+				height: 50vh;
+			}
+		}
+		
+		&.media {
+			a {
+				&:hover {
+					&:after, &:before {
+						height: 30px;
+					}
+				}
+			}
+		}
+	}
 }
