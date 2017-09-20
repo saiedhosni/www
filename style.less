@@ -3,6 +3,12 @@
 @contrast-color: #00ffd7;
 @cubic-ease: cubic-bezier(0.075, 0.82, 0.165, 1);
 
+.animation(...) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
+
 .transition(...) {
 	-webkit-transition: @arguments;
 	-moz-transition:@arguments;
