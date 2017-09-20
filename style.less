@@ -3,6 +3,18 @@
 @contrast-color: #00ffd7;
 @cubic-ease: cubic-bezier(0.075, 0.82, 0.165, 1);
 
+@-webkit-keyframes motion-opacity {
+	from {opacity: 0;} to {opacity: 1;}
+}
+
+@-moz-keyframes motion-opacity {
+	from {opacity: 0;} to {opacity: 1;}
+}
+
+@keyframes motion-opacity {
+	from {opacity: 0;} to {opacity: 1;}
+}
+
 .animation(...) {
 	-webkit-animation: @arguments;
 	-moz-animation: @arguments;
