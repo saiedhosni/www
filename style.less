@@ -42,6 +42,18 @@
 	100% {fill: @base-color;}
 }
 
+@-webkit-keyframes motion-zoom {
+	to {opacity: 1; .transform(scale(1));}
+}
+
+@-moz-keyframes motion-zoom {
+	to {opacity: 1; .transform(scale(1));}
+}
+
+@keyframes motion-zoom {
+	to {opacity: 1; .transform(scale(1));}
+}
+
 .animation(...) {
 	-webkit-animation: @arguments;
 	-moz-animation: @arguments;
