@@ -16,30 +16,15 @@
 }
 
 @-webkit-keyframes motion-fill {
-	0% {fill: @base-color;}
-	20% {fill: @contrast-color;}
-	40% {fill: #00e0ff;}
-	60% {fill: #ff8aca;}
-	80% {fill: #F6F94A;}
-	100% {fill: @base-color;}
+	to {fill: @contrast-color;}
 }
 
 @-moz-keyframes motion-fill {
-	0% {fill: @base-color;}
-	20% {fill: @contrast-color;}
-	40% {fill: #00e0ff;}
-	60% {fill: #ff8aca;}
-	80% {fill: #F6F94A;}
-	100% {fill: @base-color;}
+	to {fill: @contrast-color;}
 }
 
 @keyframes motion-fill {
-	0% {fill: @base-color;}
-	20% {fill: @contrast-color;}
-	40% {fill: #00e0ff;}
-	60% {fill: #ff8aca;}
-	80% {fill: #F6F94A;}
-	100% {fill: @base-color;}
+	to {fill: @contrast-color;}
 }
 
 @-webkit-keyframes motion-zoom {
@@ -186,7 +171,7 @@ section {
 }
 
 #interactive {
-	.animation(motion-fill 10s 3.2s ease forwards infinite);
+	.animation(motion-fill 2s 3.2s ease forwards);
 }
 
 #arrow {
