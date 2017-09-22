@@ -166,6 +166,25 @@ section {
 	.animation(motion-opacity 1s 2.2s ease forwards);
 }
 
+.media {
+	a {
+		opacity: 0;
+		.transform(scale(0.5));
+	}
+	
+	.facebook-link {
+		.animation(motion-zoom 1.2s 3.4s @cubic-ease forwards);
+	}
+	
+	.twitter-link {
+		.animation(motion-zoom 1.2s 3.6s @cubic-ease forwards);
+	}
+	
+	.instagram-link {
+		.animation(motion-zoom 1.2s 3.8s @cubic-ease forwards);
+	}
+}
+
 #interactive {
 	.animation(motion-fill 10s 3.2s ease forwards infinite);
 }
