@@ -1,3 +1,12 @@
+<?php
+	if (isset($_GET['404'])) {
+		header('HTTP/1.1 301 Moved Permanently');
+		header('Status: 301 Moved Permanently');
+		header('Location: https://www.studiomotio.com');
+		
+		return;
+	}
+?>
 <!doctype html>
 <html lang="fr">
 	<head>
