@@ -1,7 +1,7 @@
 ServerSignature Off
 
 RewriteEngine On
-RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTPS} !on
 RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
 ErrorDocument 404 /index.php?404
