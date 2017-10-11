@@ -1,6 +1,10 @@
+# disables server signature
 ServerSignature Off
 
+# actives the rewrite engine
 RewriteEngine On
+
+# rewrites content that are not in https, except for .dev environment
 RewriteCond %{HTTPS} !on
 RewriteCond %{HTTP_HOST} !.dev$
 RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
