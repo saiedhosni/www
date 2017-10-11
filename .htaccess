@@ -9,4 +9,5 @@ RewriteCond %{HTTPS} !on
 RewriteCond %{HTTP_HOST} !.dev$
 RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
-ErrorDocument 404 /index.php?404
+ErrorDocument 404 /index.php?404# rewrites index direct call
+RewriteRule ^index.html$ / [R,L]
