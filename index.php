@@ -35,9 +35,6 @@
 	// defines the requested file path
 	define('PATH', $path);
 	
-	echo $page;
-	return;
-	
 	// calls the template
 	require 'page/template.php';
 ?>
