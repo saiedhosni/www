@@ -11,6 +11,7 @@ RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
 # rewrites index direct call
 RewriteRule ^index.html$ / [R,L]
+RewriteRule ^fr$ / [R,L]
 RewriteRule ^en/index.html$ /en [R,L]
 RewriteRule ^en/index.php$ /en [R,L]
 
