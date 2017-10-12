@@ -29,10 +29,12 @@
 	// http header for 404 requests
 	if (!file_exists($path)) {
 		header('HTTP/1.1 404 Not Found');
-		$path = __DIR__ . '/page/' . LANGUAGE . '/404.php';
+		$page = LANGUAGE . '/404';
+		$path = __DIR__ . '/page/' . $page . '.php';
 	}
 	
-	// defines the requested file path
+	// defines the page and requested file path
+	define('PAGE', $page);
 	define('PATH', $path);
 	
 	// calls the template
