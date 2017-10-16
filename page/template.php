@@ -15,6 +15,12 @@
 		<link rel="preload" href="/style/foundation.min.css" as="style" onload="this.rel='stylesheet'" />
 		<link type="text/css" rel="stylesheet" media="all" href="/style/foundation.min.css" />
 		<link type="text/css" rel="stylesheet" media="all" href="/style/default.min.css" />
+		<link rel="preload" href="font/sailec-thin.woff" as="font" type="font/woff" />
+		<link rel="preload" href="font/sailec-thin.ttf" as="font" type="font/ttf" />
+		<link rel="preload" href="font/sailec-light.woff" as="font" type="font/woff" />
+		<link rel="preload" href="font/sailec-light.ttf" as="font" type="font/ttf" />
+		<link rel="preload" href="font/sailec-bold.woff" as="font" type="font/woff" />
+		<link rel="preload" href="font/sailec-bold.ttf" as="font" type="font/ttf" />
 		<?php
 			if (ENVIRONMENT == 'prod') {
 		?>
