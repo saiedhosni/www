@@ -13,7 +13,7 @@
 		<title><?php echo METADATA[PAGE][0] ?? ''; ?></title>
 		<link rel="icon" href="picture/favicon.ico" type="image/x-icon" />
 		<link type="text/css" rel="stylesheet" media="all" href="/style/foundation.min.css" />
-		<link type="text/css" rel="stylesheet" media="all" href="/style/style.min.css" />
+		<link type="text/css" rel="stylesheet" media="all" href="/style/default.min.css" />
 		<?php
 			if (ENVIRONMENT == 'prod') {
 		?>
