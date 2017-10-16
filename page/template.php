@@ -12,6 +12,7 @@
 		<meta name="theme-color" content="#000" />
 		<title><?php echo METADATA[PAGE][0] ?? ''; ?></title>
 		<link rel="icon" href="picture/favicon.ico" type="image/x-icon" />
+		<link rel="preload" href="/style/foundation.min.css" as="style" onload="this.rel='stylesheet'" />
 		<link type="text/css" rel="stylesheet" media="all" href="/style/foundation.min.css" />
 		<link type="text/css" rel="stylesheet" media="all" href="/style/default.min.css" />
 		<?php
