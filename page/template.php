@@ -36,4 +36,5 @@
 			require_once 'module/footer.php';
 		?>
 	</body>
+	<script type="text/javascript" src="/javascript/mo.min.js"></script>
 </html>
