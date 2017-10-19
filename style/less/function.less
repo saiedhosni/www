@@ -1,6 +1,20 @@
 // main: default.less
+
 .keyframes(@name, @frames) {
 	@-webkit-keyframes @name { @frames(); }
 	@-moz-keyframes @name { @frames(); }
 	@keyframes @name { @frames(); }
+}
+
+.animation(...) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
+
+.transition(...) {
+	-webkit-transition: @arguments;
+	-moz-transition:@arguments;
+	-o-transition: @arguments;
+	transition: @arguments;
 }
