@@ -1,1 +1,6 @@
 // main: default.less
+.keyframes(@name, @frames) {
+	@-webkit-keyframes @name { @frames(); }
+	@-moz-keyframes @name { @frames(); }
+	@keyframes @name { @frames(); }
+}
