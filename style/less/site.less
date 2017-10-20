@@ -1,1 +1,53 @@
 // main: default.less
+
+body {
+	background: @base-color;
+	color: @contrast-color;
+	font-family: @font;
+	font-weight: 300;
+}
+
+header {
+	padding: 50px;
+	font-size: 14px;
+
+	ul {
+		display: flex;
+		margin-top: 2px;
+
+		li {
+			margin-left: 20px;
+
+			&.inactive a {
+				color: @bright-color;
+			}
+		}
+	}
+}
+
+nav {
+	float: right;
+}
+
+ul {
+	margin: 0;
+	list-style-type: none;
+}
+
+img {
+	vertical-align: baseline;
+}
+
+a {
+	color: @contrast-color;
+	text-decoration: none;
+}
+
+.lang {
+	li:first-child::after {
+		content: '/';
+		position: absolute;
+		margin-left: 7px;
+		color: @contrast-color;
+	}
+}
