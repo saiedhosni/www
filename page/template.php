@@ -32,6 +32,7 @@
 	<body>
 		<?php
 			require_once 'module/header.php';
+			require_once 'module/media.php';
 			require_once PATH;
 			require_once 'module/footer.php';
 		?>
