@@ -51,3 +51,57 @@ a {
 		color: @contrast-color;
 	}
 }
+
+.media {
+	position: fixed;
+	left: 0;
+	top: 50%;
+	width: 100px;
+	text-align: center;
+	.transform(translate(0, -50%));
+
+	svg {
+		width: 15px;
+		height: 15px;
+		fill: @contrast-color;
+		.transition(transform 1s @ease, fill 800ms ease;);
+	}
+
+	a {
+		position: relative;
+		display: block;
+		padding: 4px 0px;
+
+		&:after, &:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 0px;
+			height: 1px;
+			background: @contrast-color;
+			.transition(width 1.2s @ease);
+			will-change: width;
+		}
+
+		&:after {
+			.transition(width 500ms @ease);
+		}
+
+		&:hover {
+			&:after, &:before {
+				width: 40px;
+			}
+
+			&:after {
+				background: @vibrant-color;
+				.transition(width 1s 200ms @ease);
+			}
+
+			svg {
+				fill: @vibrant-color;
+				.transform(translateX(10px));
+			}
+		}
+	}
+}
