@@ -1,5 +1,10 @@
 // main: default.less
 
+.selection(@color, @background) {
+	::-moz-selection {color: @color; background: @background;}
+	::selection {color: @color; background: @background;}
+}
+
 .keyframes(@name, @frames) {
 	@-webkit-keyframes @name { @frames(); }
 	@-moz-keyframes @name { @frames(); }
