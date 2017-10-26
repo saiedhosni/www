@@ -7,9 +7,9 @@
       <div class="column">
         <nav>
           <ul>
-            <li><a href="/le-studio" title="Le Studio">Studio</a></li>
-            <li><a href="/le-studio#nos-services" title="Nos services">Services</a></li>
-            <li><a href="/contact" title="Nous contacter">Contact</a></li>
+            <li><a href="/le-studio" title="Le Studio" class="underline">Studio</a></li>
+            <li><a href="/le-studio#nos-services" title="Nos services" class="underline">Services</a></li>
+            <li><a href="/contact" title="Nous contacter" class="underline">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -17,8 +17,8 @@
   </div>
 	<div class="column shrink">
     <ul class="lang">
-      <li><a href="/" title="Français">Fr</a></li>
-      <li class="inactive"><a href="/en" title="Anglais">En</a></li>
+      <li><a href="/" title="Français" class="underline">Fr</a></li>
+      <li class="inactive"><a href="/en" title="Anglais" class="underline">En</a></li>
     </ul>
   </div>
 </header>
