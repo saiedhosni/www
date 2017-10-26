@@ -9,7 +9,7 @@
           <ul>
             <li><a href="/le-studio" title="Le Studio">Studio</a></li>
             <li><a href="/le-studio#nos-services" title="Nos services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/contact" title="Contact">Contact</a></li>
           </ul>
         </nav>
       </div>
