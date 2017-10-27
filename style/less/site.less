@@ -61,6 +61,22 @@ a {
 	text-decoration: none;
 }
 
+section {
+	padding: @gutter;
+	min-height: 100vh;
+}
+
+.black {
+	background: @base-color;
+	color: @contrast-color;
+}
+
+.the-studio-intro {
+	h1, p {
+		margin-top: calc(~'35vh - ' @gutter);
+	}
+}
+
 .lang {
 	li:first-child::after {
 		content: '/';
