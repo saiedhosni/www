@@ -9,6 +9,7 @@
       <p>Nous concevons et réalisons des solutions digitales sur mesure, dans le but d'offir une expérience utilisateur intuitive, moderne et de qualité.</p>
     </div>
   </div>
+</section>
 <section class="row column expanded white">
   <div class="row">
     <div class="column large-4 large-offset-6">
@@ -19,4 +20,29 @@
     </div>
   </div>
 </section>
+<section class="row column expanded black" id="nos-services">
+  <div class="row">
+    <div class="column large-4 large-offset-6">
+      <h2>Nos services</h2>
+      <dl>
+        <dt>Design</dt>
+        <dd>Logotype</dd>
+        <dd>Branding</dd>
+        <dd>Identité visuelle</dd>
+        <dd>Webdesign (UI)</dd>
+      </dl>
+      <dl>
+        <dt>Motion</dt>
+        <dd>Micro-interactions</dd>
+        <dd>Expérience utilisateur (UX)</dd>
+        <dd>Design interactif pour le web</dd>
+      </dl>
+      <dl>
+        <dt>Développement</dt>
+        <dd>Site vitrine</dd>
+        <dd>Plateforme sur mesure</dd>
+        <dd>E-Shop</dd>
+      </dl>
+    </div>
+  </div>
 </section>
