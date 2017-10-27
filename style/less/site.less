@@ -6,6 +6,10 @@ body {
 	font-family: @font;
 	font-weight: 300;
 	.selection(@base-color, @vibrant-color);
+
+	&.has-footer {
+		margin-bottom: 400px;
+	}
 }
 
 header {
@@ -28,6 +32,14 @@ header {
 			}
 		}
 	}
+}
+
+footer {
+	position: fixed;
+	z-index: -1;
+	bottom: 0;
+	width: 100%;
+	padding: @gutter;
 }
 
 h1, h2, dt {

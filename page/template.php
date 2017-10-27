@@ -29,10 +29,10 @@
 			}
 		?>
 	</head>
-	<body>
 	<?php
 		$has_footer = PAGE == "fr/le-studio";
 	?>
+	<body class="<?php echo $has_footer ? 'has-footer' : '' ?>">
 		<?php
 			require_once 'module/header.php';
 			require_once 'module/media.php';
