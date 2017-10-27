@@ -30,11 +30,17 @@
 		?>
 	</head>
 	<body>
+	<?php
+		$has_footer = PAGE == "fr/le-studio";
+	?>
 		<?php
 			require_once 'module/header.php';
 			require_once 'module/media.php';
 			require_once PATH;
-			require_once 'module/footer.php';
+
+			if ($has_footer) {
+				require_once 'module/footer.php';
+			}
 		?>
 		<script type="text/javascript" src="/javascript/mo.min.js"></script>
 		<script type="text/javascript" src="/javascript/script.min.js"></script>
