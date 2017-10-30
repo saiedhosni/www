@@ -6,7 +6,7 @@
   </div>
   <div class="row">
     <div class="column large-4 large-offset-6">
-      <p>Nous concevons et réalisons des solutions digitales sur mesure, dans le but d'offir une expérience utilisateur intuitive, moderne et de qualité.</p>
+      <p>Nous concevons et réalisons des solutions digitales sur mesure, dans le but d'offrir une expérience utilisateur intuitive, moderne et de qualité.</p>
     </div>
   </div>
 </section>
