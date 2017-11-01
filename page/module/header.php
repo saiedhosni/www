@@ -7,21 +7,9 @@
 			<div class="column">
 				<nav>
 					<ul>
-						<?php
-							if (LANGUAGE == 'fr') {
-						?>
-						<li><a href="/le-studio" class="underline">Studio</a></li>
-						<li><a href="/le-studio#nos-services" class="underline">Services</a></li>
-						<li><a href="/contact" class="underline">Contact</a></li>
-						<?php
-							} else {
-						?>
-						<li><a href="/en/the-studio" class="underline">Studio</a></li>
-						<li><a href="/en/the-studio#our-services" class="underline">Services</a></li>
-						<li><a href="/en/contact" class="underline">Contact</a></li>
-						<?php
-							}
-						?>
+						<li><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" class="underline">Studio</a></li>
+						<li><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio#nos-services' : '/en/the-studio#our-services'; ?>" class="underline">Services</a></li>
+						<li><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" class="underline">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
