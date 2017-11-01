@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="<?php echo LANGUAGE; ?>">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="robots" content="all" />
