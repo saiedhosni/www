@@ -264,16 +264,35 @@ address {
 	}
 }
 
-.motio-o {
+.slider {
 	position: fixed;
 	top: 0;
 	right: 0;
+	height: 100%;
+
+	div {
+		position: absolute;
+		top: 50%;
+		height: 50%;
+		max-width: 60%;
+	}
+
+	h1 {
+		margin-top: 70px;
+	}
+
+	.button {
+		position: absolute;
+		bottom: 20%;
+	}
+}
+
+.motio-o {
 	height: 100%;
 	width: auto;
 
 	path {
 		stroke: @vibrant-color;
 		stroke-width: 24px;
-		fill: none;
 	}
 }
