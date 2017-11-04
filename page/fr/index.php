@@ -5,8 +5,7 @@
 	<div>
 		<h1>Studio de design interactif et de développement web</h1>
 		<a href="le-studio#nos-services" class="button underline">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path fill="none" stroke-miterlimit="10" d="M10 5.5L5.3.8M10 5.5l-4.7 4.8M1 5.5h8.3" stroke-linecap="round"/></svg>
-			Découvrir nos services
+			<svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Découvrir nos services
 		</a>
 	</div>
 </div>
