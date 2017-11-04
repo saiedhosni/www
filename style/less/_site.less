@@ -225,7 +225,7 @@ address {
 }
 
 .underline {
-	&::after, &::before {
+	&::before {
 		content: '';
 		position: absolute;
 		z-index: -1;
@@ -233,23 +233,14 @@ address {
 		bottom: 0;
 		width: 100%;
 		height: 0;
-		background: fade(@contrast-color, 30%);
+		background: fade(@vibrant-color, 50%);
 		will-change: height;
-		.transition(height 1s @ease);
-	}
-
-	&::after {
 		.transition(height 500ms @ease);
 	}
 
 	&:hover {
-		&::after, &::before {
+		&::before {
 			height: 30%;
-		}
-
-		&::after {
-			background: fade(@vibrant-color, 50%);
-			.transition(height 1s 200ms @ease);
 		}
 	}
 }
