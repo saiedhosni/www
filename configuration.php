@@ -1,13 +1,13 @@
 <?php
 	// engine configuration
 	define('DEFAULT_PAGE', 'index');
-	
+
 	// defines current environment
 	define('ENVIRONMENT', substr($_SERVER['HTTP_HOST'], -4) == '.dev' ? 'dev' : 'prod');
-	
+
 	// site metadata (suffix)
 	define('META_SUFFIX', ' &ndash; Studio MOTIO &reg;');
-	
+
 	// site metadata (title, description, keywords)
 	define('METADATA', array(
 		'fr/index' => array(
