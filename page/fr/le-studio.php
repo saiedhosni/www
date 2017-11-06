@@ -20,7 +20,7 @@
 		</div>
 	</div>
 </section>
-<section class="row column expanded black" id="nos-services">
+<section class="row column expanded black">
 	<div class="row">
 		<div class="column large-4 large-offset-6">
 			<h2>Nos services</h2>

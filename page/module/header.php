@@ -10,7 +10,7 @@
 				<nav>
 					<ul>
 						<li><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" class="underline">Studio</a></li>
-						<li><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio#nos-services' : '/en/the-studio#our-services'; ?>" class="underline">Services</a></li>
+						<!-- <li><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>" class="underline">Services</a></li> -->
 						<li><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" class="underline">Contact</a></li>
 					</ul>
 				</nav>
