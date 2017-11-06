@@ -30,7 +30,7 @@
 			'Oops! ' . META_SUFFIX,
 			'La page que vous recherchez est introuvable : elle a peut être été renommée, déplacée ou supprimée.'
 		),
-		'en/the-studio' => array(
+		'en/index' => array(
 			'Studio MOTIO &reg; &ndash; Interactive design and creative web studio from La Rochelle',
 			'France-based interactive design and creative web studio, from La Rochelle. We design and build tailor-made digital solutions, to offer intuitive, modern and quality user experience.'
 		),
