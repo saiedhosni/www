@@ -16,10 +16,8 @@
 	// creates a shape
 	const tilt = new mojs.Shape({
 		shape: 'circle',
-		radius: 3,
+		radius: 5,
 		fill: '#00ffdd',
-		stroke: '#00ffdd',
-		strokeWidth: 4,
 		isShowStart: true,
 		y:	{ '-100' : '100' },
 		duration: 5000,
