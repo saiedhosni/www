@@ -18,13 +18,13 @@
 		shape: 'circle',
 		radius: 5,
 		fill: '#00ffdd',
-		isShowStart: true,
 		y:	{ '-100' : '100' },
 		duration: 5000,
 		//easing: 'M0, 100 C0, 100 10, 25 10, 25 C10, 25 62.42857142857143, 60 62.42857142857143, 60 C62.42857142857143, 60 100, 0 100, 0 ',
 		//easing: 'M0, 0 C0, 0 30, 100 30, 100 C30, 100 60, 37 60, 37 C60, 37 100, 80 100, 80 ',
 		//easing: 'M0, 0 C0, 0 12.777811038085517, 99.59581172374884 50, 100 C88.8370381485382, 100.42172359932991 100, 0 100, 0 ',
 		easing: mojsCurve.getEasing()
+		isShowStart: false,
 	});
 
 	// adds shapes to the timeline
