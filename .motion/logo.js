@@ -32,7 +32,8 @@
 			curve: tiltRebound
 		},
 		origin: '50% 100%',
-		duration: 1200
+		duration: 1200,
+		repeat: 1
 	});
 
 	// adds shapes to the timeline
