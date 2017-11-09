@@ -3,7 +3,7 @@
 (function(){
 
 	// creates the curve editor
-	const mojsCurve = new MojsCurveEditor({
+	const curve = new MojsCurveEditor({
 		name: 'custom'
 	});
 
