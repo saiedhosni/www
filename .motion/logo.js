@@ -2,6 +2,14 @@
 
 (function(){
 
+	// defines some design constants
+	const colors = {
+		base: '#000',
+		vibrant: '#00ffd3',
+		contrast: '#fff',
+		bright: '#5f5f5f'
+	};
+
 	// creates the curve editor
 	const curve = new MojsCurveEditor({
 		name: 'custom'
@@ -21,7 +29,7 @@
 	const tilt = new mojs.Shape({
 		shape: 'circle',
 		radius: 5,
-		fill: '#00ffdd',
+		fill: colors.vibrant,
 		isShowStart: false,
 		y: {
 			'-200' : '-200',
