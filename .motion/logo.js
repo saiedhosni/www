@@ -44,9 +44,32 @@
 		repeat: 1
 	});
 
+	// creates a burst
+	const burst = new mojs.Burst({
+		y: 15,
+		degree: 180,
+		angle: 90,
+		radius: {5 : 25},
+		children: {
+			count: 'rand(2, 5)',
+			radius: 2,
+			fill: [colors.base, colors.vibrant, colors.bright],
+			scale: {
+				1 : 0,
+				easing: 'quad.in'
+			},
+			pathScale: [ .8, null ],
+			degreeShift: [ 'rand(5, 14)', null ],
+			easing: 'quint.out',
+			delay: 500,
+			repeat: 1
+		}
+	});
+
 	// adds shapes to the timeline
 	timeline.add(
-		tilt
+		tilt,
+		burst
 	);
 
 	// creates the player
