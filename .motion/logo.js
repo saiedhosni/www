@@ -28,8 +28,10 @@
 	// creates a shape
 	const tilt = new mojs.Shape({
 		shape: 'circle',
-		radius: 5,
-		fill: colors.vibrant,
+		radius: 4,
+		fill: 'transparent',
+		stroke: colors.vibrant,
+		strokeWidth: 2,
 		isShowStart: false,
 		y: {
 			'-200' : '-200',
