@@ -1,1 +1,15 @@
 // out: default.min.css, compress: true
+
+body {
+	margin: 0;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		margin-top: 10px;
+		width: 100%;
+		height: 1px;
+		background: #f4f4f4;
+	}
+}
