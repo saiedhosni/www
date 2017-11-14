@@ -4,7 +4,7 @@
 	</svg>
 	<div>
 		<h1>France based interactive design and creative web studio</h1>
-		<a href="le-studio" class="button underline">
+		<a href="/en/the-studio" class="button underline">
 			<svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Discover the studio
 		</a>
 	</div>
