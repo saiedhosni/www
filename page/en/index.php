@@ -3,7 +3,7 @@
 		<path fill="none" stroke-miterlimit="10" d="M12 50c0-21 17-38 38-38s38 17 38 38-17 38-38 38"/>
 	</svg>
 	<div>
-		<h1>France based interactive design and creative web studio</h1>
+		<h1>France based interactive design & creative web studio</h1>
 		<a href="/en/the-studio" class="button underline">
 			<svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Discover the studio
 		</a>
