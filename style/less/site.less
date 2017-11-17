@@ -117,8 +117,14 @@ svg {
 }
 
 section {
+	position: relative;
+	overflow: hidden;
 	padding: @gutter;
 	min-height: 100vh;
+
+	&.white {
+		z-index: 2;
+	}
 }
 
 address {
@@ -297,4 +303,8 @@ address {
 		stroke: @vibrant-color;
 		stroke-width: 24px;
 	}
+}
+
+.clone {
+	position: absolute;
 }
