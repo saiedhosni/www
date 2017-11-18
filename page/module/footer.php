@@ -1,4 +1,10 @@
-<footer class="row column expanded white">
+<?php
+	$color = in_array(PAGE, [
+		'fr/contact',
+		'en/contact'
+	]) ? 'black' : 'white';
+?>
+<footer class="row column expanded <?php echo $color; ?>">
 	<div class="row">
 		<div class="column large-4 large-offset-2">
 			<p class="no-margin"><strong><?php echo LANGUAGE == 'fr' ? 'Alors, on travaille ensemble ?' : 'So, do we work together?'; ?></strong></p>
