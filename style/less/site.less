@@ -160,6 +160,14 @@ address {
 			color: lighten(@bright-color, 50%);
 		}
 	}
+
+	.media {
+		a {
+			&::after, &::before {
+				background: lighten(@bright-color, 20%);
+			}
+		}
+	}
 }
 
 .logo {
