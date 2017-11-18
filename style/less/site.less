@@ -144,6 +144,22 @@ address {
 	a {
 		color: currentColor;
 	}
+
+	.lang {
+		li {
+			&:first-child::after {
+				color: @base-color;
+			}
+
+			&.active a {
+				color: @base-color;
+			}
+		}
+
+		a {
+			color: lighten(@bright-color, 50%);
+		}
+	}
 }
 
 .logo {
