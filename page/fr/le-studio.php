@@ -1,3 +1,4 @@
+<svg class="motio-vertical"><use xlink:href="/picture/sprite.svg#logo-motio-vertical" /></svg>
 <section class="row column expanded black the-studio-intro">
 	<div class="row">
 		<div class="column large-6 large-offset-2">
