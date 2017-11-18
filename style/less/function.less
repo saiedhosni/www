@@ -5,6 +5,12 @@
 	::selection {color: @color; background: @background;}
 }
 
+.border-radius(@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
 .keyframes(@name, @frames) {
 	@-webkit-keyframes @name { @frames(); }
 	@-moz-keyframes @name { @frames(); }
