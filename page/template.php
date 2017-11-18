@@ -32,7 +32,9 @@
 	<?php
 		$has_footer = in_array(PAGE, [
 			'fr/le-studio',
-			'en/the-studio'
+			'en/the-studio',
+			'fr/contact',
+			'en/contact'
 		]);
 	?>
 	<body class="<?php echo $has_footer ? 'has-footer' : '' ?>">
