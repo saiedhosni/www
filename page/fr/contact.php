@@ -16,7 +16,7 @@
 	<div class="row align-center">
 		<div class="column large-4">
 			<p><strong>Partenariat</strong></p>
-			<p class="no-margin">Nous sommes toujours intéressés pour faire de nouvelles collaborations. Vous avez du talent et vous souhaitez le partager avec nous, rejoignez le collectif !</p>
+			<p class="no-margin">Nous sommes toujours intéressés de faire de nouvelles collaborations. Vous avez du talent et vous souhaitez le partager avec nous, rejoignez le collectif !</p>
 			<p class="no-margin"><small><a href="mailto:collective@studiomotio.com" target="_blank" class="underline">collective@studiomotio.com</a></small></p>
 		</div>
 		<div class="column large-4">
