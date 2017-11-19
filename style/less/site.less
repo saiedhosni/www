@@ -134,6 +134,19 @@ address {
 
 form {
 	margin-bottom: 30px;
+	.transition(all 500ms ease);
+
+	&.invalid {
+		.send-message {
+			opacity: 0;
+			.transform(translateY(-10px));
+		}
+
+		.invalid-message {
+			opacity: 1;
+			.transform(translateY(-25px));
+		}
+	}
 }
 
 textarea {
@@ -303,7 +316,6 @@ textarea {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
-	height: 27px;
 	font-weight: 100;
 	font-size: 18px;
 	cursor: pointer;
@@ -365,4 +377,19 @@ textarea {
 
 .clone {
 	position: absolute;
+}
+
+.invalid-message {
+	position: absolute;
+	display: block;
+	opacity: 0;
+	color: lighten(red, 20%);
+}
+
+.send-message {
+	height: 27px;
+}
+
+.send-message, .invalid-message {
+	.transition(transform 400ms ease, opacity 400ms ease;);
 }
