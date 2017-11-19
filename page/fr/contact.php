@@ -8,7 +8,7 @@
 		<div class="column large-8">
 			<p><strong>Hello, quels sont vos besoins ?</strong></p>
 			<form method="post">
-				<textarea name="message"></textarea>
+				<textarea name="message" required="required" autocomplete="off">
 				<button name="submit" class="underline button"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Poster ce message</button>
 			</form>
 		</div>
