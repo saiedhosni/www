@@ -12,15 +12,15 @@
 		<meta name="theme-color" content="#000" />
 		<title><?php echo METADATA[PAGE][0] ?? ''; ?></title>
 		<link rel="icon" href="/picture/favicon.ico" type="image/x-icon" />
-		<link rel="prefetch" href="/style/foundation.min.css" as="style" onload="this.rel='stylesheet'" />
 		<link type="text/css" rel="stylesheet" media="all" href="/style/foundation.min.css" />
 		<link type="text/css" rel="stylesheet" media="all" href="/style/default.min.css" />
-		<link rel="prefetch" href="/font/sailec-thin.woff" as="font" type="font/woff" />
-		<link rel="prefetch" href="/font/sailec-thin.ttf" as="font" type="font/ttf" />
-		<link rel="prefetch" href="/font/sailec-light.woff" as="font" type="font/woff" />
-		<link rel="prefetch" href="/font/sailec-light.ttf" as="font" type="font/ttf" />
-		<link rel="prefetch" href="/font/sailec-bold.woff" as="font" type="font/woff" />
-		<link rel="prefetch" href="/font/sailec-bold.ttf" as="font" type="font/ttf" />
+		<link rel="prefetch" href="/style/foundation.min.css" />
+		<link rel="prefetch" href="/font/sailec-thin.woff" />
+		<link rel="prefetch" href="/font/sailec-thin.ttf" />
+		<link rel="prefetch" href="/font/sailec-light.woff" />
+		<link rel="prefetch" href="/font/sailec-light.ttf" />
+		<link rel="prefetch" href="/font/sailec-bold.woff" />
+		<link rel="prefetch" href="/font/sailec-bold.ttf" />
 		<?php
 			if (ENVIRONMENT == 'prod') {
 		?>
