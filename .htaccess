@@ -18,6 +18,9 @@ RewriteRule ^en/index.php$ /en [R,L]
 # rewrites urls ending with /
 RewriteRule (.*)/$ /$1 [R,L]
 
+# ignores rewriting for asynchronous calls
+RewriteRule ^(javascript/asynchronous)($|/) - [L]
+
 # rewrites php urls to html extension
 RewriteRule ^([/0-9a-zA-Z-]+)\.php$ index.php?page=$1 [L,QSA]
 
