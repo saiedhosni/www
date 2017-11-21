@@ -51,4 +51,11 @@
 			'The page you are looking for is unavailable: it may have been renamed, moved or deleted.'
 		)
 	));
+
+	// swiftmailer module
+	define('MAIL_SMTP', 'ssl0.ovh.net');
+	define('MAIL_SMTP_PORT', 465);
+	define('MAIL_USERNAME', 'roboto@studiomotio.com');
+	define('MAIL_PASSWORD', '*****');
+	define('MAIL_SENDER', 'Roboto');
 ?>
