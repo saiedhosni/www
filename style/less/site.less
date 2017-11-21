@@ -156,6 +156,12 @@ textarea {
 		color: @base-color;
 		border-bottom: 1px solid @base-color;
 	}
+
+	&:disabled {
+		overflow: hidden;
+		background: @contrast-color;
+		cursor: default;
+	}
 }
 
 .black {
