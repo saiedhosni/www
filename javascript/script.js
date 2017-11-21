@@ -43,7 +43,10 @@
 		// binds the submit event of the form to validate the content
 		form.addEventListener('submit', function(e) {
 
-			// mail regular expression
+			// prevents default event
+			e.preventDefault();
+
+			// defines the mail regular expression
 			var regex = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
 
 			// displays an invalid message if email address is not specified
