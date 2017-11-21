@@ -135,18 +135,6 @@ address {
 form {
 	margin-bottom: 30px;
 	.transition(all 500ms ease);
-
-	&.invalid {
-		.send-message {
-			opacity: 0;
-			.transform(translateY(-10px));
-		}
-
-		.invalid-message {
-			opacity: 1;
-			.transform(translateY(-25px));
-		}
-	}
 }
 
 textarea {
@@ -379,17 +367,41 @@ textarea {
 	position: absolute;
 }
 
-.invalid-message {
+.post {
+	height: 27px;
+	visibility: visible;
+	opacity: 1;
+}
+
+.message {
 	position: absolute;
 	display: block;
+	visibility: hidden;
 	opacity: 0;
-	color: lighten(red, 20%);
 }
 
-.send-message {
-	height: 27px;
+.warning {
+	color: @warning-color;
 }
 
-.send-message, .invalid-message {
-	.transition(transform 400ms ease, opacity 400ms ease;);
+.state {
+	.post {
+		visibility: hidden;
+		opacity: 0;
+		.transform(translateY(-10px));
+	}
+
+	.message {
+		.transform(translateY(-25px));
+	}
+
+	&.nomail .missing-mail, &.pending .pending-request, &.undelivered .bad-request, &.delivered .message-sent {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.post, .message {
+	.transition(transform 400ms ease, opacity 400ms ease, visibility 400ms ease;);
+}
 }

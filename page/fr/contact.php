@@ -8,9 +8,12 @@
 		<div class="column large-8">
 			<p><strong>Hello, quels sont vos besoins ?</strong></p>
 			<form method="post">
-				<textarea name="message" required="required" autocomplete="off"></textarea>
-				<button name="submit" class="underline button send-message"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Poster ce message</button>
-				<strong class="invalid-message">N'oubliez pas d'indiquer votre adresse email</strong>
+				<textarea required="required" autocomplete="off"></textarea>
+				<button name="submit" class="underline button post"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Poster ce message</button>
+				<strong class="message warning missing-mail">N'oubliez pas d'indiquer votre adresse email</strong>
+				<strong class="message warning bad-request">Oops, votre message n'a pas pu être envoyé, merci de réessayer dans quelques instants</strong>
+				<strong class="message pending-request">Envoi en cours..</strong>
+				<strong class="message message-sent">Message envoyé. Nous vous répondrons sur mesure <span class="emoji">✌</span></strong>
 			</form>
 		</div>
 	</div>
