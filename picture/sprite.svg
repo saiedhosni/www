@@ -7,6 +7,9 @@
 	<symbol id="logo-motio-vertical" viewBox="0 0 354 1252">
 		<g fill="none" stroke="#00ffd3" stroke-miterlimit="10"><path stroke-width="62.6" d="M233.5 209.4c49.2 0 89-40 89-89 0-49.2-40-89-89-89-49.2 0-89 39.8-89 89"/><path stroke-width="65.8" d="M111.3 330H234"/><circle cx="39.9" cy="329.6" r="39.15" fill="#00ffd3" stroke="none"/><path stroke-width="62.6" d="M39.3 497.7H248c40-.2 67.3-16 73-49.6 2.3-13.4 1-25.2 1-38.6"/><path stroke-width="57.6" d="M140 572.8V409.4"/><path stroke-width="62.6" d="M322.4 722.5c0-49.2-40-89-89-89-49.3 0-89 39.8-89 89s39.8 89 89 89"/><path stroke-width="62.6" d="M302 1071.3h-84.3c-33.3-.3-70.5-24.2-70.5-73 0-48 37-71.7 70-71.7H354"/><path stroke-width="62.6" d="M353.8 1217.8h-136c-33.4-.3-70.6-24.2-70.6-73 0-48 37-71.7 70-71.7H302"/><path stroke-width="62.6" d="M116.2 1220.8h237.6"/></g>
 	</symbol>
+	<symbol id="logo-motio-o" viewBox="0 0 100 100">
+		<path fill="none" stroke-width="24" stroke-miterlimit="10" d="M12 50c0-21 17-38 38-38s38 17 38 38-17 38-38 38"/>
+	</symbol>
 	<symbol id="logo-facebook" viewbox="0 0 15 15">
 		<path d="M8.68 15H5.86V7.5H3.98V4.92h1.88V3.38c0-2.12.57-3.4 3.05-3.4H11v2.58H9.7c-.95 0-1 .37-1 1.04v1.3H11l-.28 2.58H8.7L8.68 15z"/>
 	</symbol>
