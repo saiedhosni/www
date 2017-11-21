@@ -57,7 +57,7 @@
 
 				// restores the previous state after 2.2 seconds
 				setTimeout(function() {
-					form.classList.remove('invalid');
+					form.className = '';
 				}, 2200);
 
 				return;
