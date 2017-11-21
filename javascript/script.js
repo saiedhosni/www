@@ -49,11 +49,16 @@
 			// defines the mail regular expression
 			var regex = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
 
-			// displays an invalid message if email address is not specified
-			if (!regex.test(document.querySelector('textarea').value)) {
-				e.preventDefault();
-				form.classList.add('invalid');
-				document.querySelector('button').blur();
+			// gets the textarea field
+			var message = document.querySelector('textarea');
+
+			// gets the post button
+			var button = document.querySelector('button');
+
+			// displays an invalid message if no mail address is specified
+			if (!regex.test(message.value)) {
+				form.classList.add('state', 'nomail');
+				button.blur();
 
 				// restores the previous state after 2.2 seconds
 				setTimeout(function() {
@@ -62,6 +67,43 @@
 
 				return;
 			}
+
+			// displays a pending state before sending the message
+			message.setAttribute('disabled', 'disabled');
+			form.classList.add('state', 'pending');
+			button.blur();
+
+			// prepares the message for sending
+			var request = new XMLHttpRequest();
+			request.open('POST', 'javascript/asynchronous/message.php');
+			request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			request.onreadystatechange = function() {
+				if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+					if (request.responseText == 'posted') {
+						form.classList.remove('pending');
+						form.classList.add('state', 'delivered');
+
+						// restores the previous state after 2.2 seconds
+						setTimeout(function() {
+							form.className = '';
+							message.removeAttribute('disabled');
+							message.value = '';
+						}, 3200);
+					} else {
+						form.classList.remove('pending');
+						form.classList.add('undelivered');
+
+						// restores the previous state after 3.2 seconds
+						setTimeout(function() {
+							form.className = '';
+							message.removeAttribute('disabled');
+						}, 3200);
+					}
+				}
+			};
+
+			// sends the contact message to the studio
+			request.send('message=' + document.querySelector('textarea').value);
 		});
 	}
 })();
