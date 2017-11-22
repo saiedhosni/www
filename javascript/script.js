@@ -75,7 +75,7 @@
 
 			// prepares the message for sending
 			var request = new XMLHttpRequest();
-			request.open('POST', 'javascript/asynchronous/message.php');
+			request.open('POST', '/javascript/asynchronous/message.php');
 			request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 			request.onreadystatechange = function() {
 				if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
