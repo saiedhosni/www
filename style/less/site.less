@@ -26,14 +26,18 @@ header {
 	top: 0;
 	padding: @gutter / 2;
 	font-size: 14px;
+	pointer-events: none;
 
 	ul {
 		display: flex;
 		margin-top: 2px;
-
 		li {
 			margin-left: 20px;
 		}
+	}
+
+	.column {
+		pointer-events: auto;
 	}
 }
 
