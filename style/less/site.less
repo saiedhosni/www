@@ -149,6 +149,7 @@ textarea {
 	font-size: 35px;
 	font-weight: 100;
 	color: @bright-color;
+	background: none;
 	line-height: 1.4;
 	border: none;
 	border-bottom: 1px solid lighten(@bright-color, 50%);
@@ -163,7 +164,7 @@ textarea {
 
 	&:disabled {
 		overflow: hidden;
-		background: @contrast-color;
+		background: none;
 		cursor: default;
 	}
 }
@@ -359,6 +360,15 @@ textarea {
 	stroke: @vibrant-color;
 }
 
+.motio-o-contact {
+	position: fixed;
+	right: 0;
+	top: -40vh;
+	width: 80vh;
+	height: 80vh;
+	z-index: -1;
+	stroke: @vibrant-color;
+	.transform(rotate(90deg));
 }
 
 .motio-vertical {

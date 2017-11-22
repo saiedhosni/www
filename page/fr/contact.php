@@ -1,4 +1,5 @@
 <section class="row column expanded white">
+	<svg class="motio-o-contact"><use xlink:href="/picture/sprite.svg#logo-motio-o" /></svg>
 	<div class="row align-center">
 		<div class="column large-8">
 			<p>Envie de nous confier votre projet, lancer un nouveau site web ou construire une identité de marque mémorable, laissez-nous un petit mot. Nous serions ravis de travailler avec vous !</p>
