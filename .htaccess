@@ -4,6 +4,9 @@ ServerSignature Off
 # disables directory listing
 Options All -Indexes
 
+# disables trailing slash redirects
+DirectorySlash Off
+
 # actives the rewrite engine
 RewriteEngine On
 
@@ -18,7 +21,7 @@ RewriteRule ^fr$ / [R,L]
 RewriteRule ^en/index.html$ /en [R,L]
 RewriteRule ^en/index.php$ /en [R,L]
 
-# rewrites urls ending with /
+# removes trailing slashes
 RewriteRule (.*)/$ /$1 [R,L]
 
 # ignores rewriting for asynchronous calls
