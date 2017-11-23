@@ -1,6 +1,9 @@
 # disables server signature
 ServerSignature Off
 
+# disables directory listing
+Options All -Indexes
+
 # actives the rewrite engine
 RewriteEngine On
 
