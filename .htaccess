@@ -7,6 +7,9 @@ Options All -Indexes
 # disables trailing slash redirects
 DirectorySlash Off
 
+# compresses content with the Apache deflate filter
+SetOutputFilter DEFLATE
+
 # actives the rewrite engine
 RewriteEngine On
 
