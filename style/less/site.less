@@ -324,6 +324,13 @@ textarea {
 		height: 14px;
 		stroke: currentColor;
 		margin-right: 10px;
+		.transition(transform 500ms 150ms @cubic);
+	}
+
+	&:hover {
+		svg {
+			.transform(translateX(4px));
+		}
 	}
 
 	&.big {
