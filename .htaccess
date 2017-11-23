@@ -33,5 +33,6 @@ RewriteRule ^([/0-9a-zA-Z-]+)\.php$ index.php?page=$1 [L,QSA]
 # rewrites urls to the template engine
 RewriteRule ^([/0-9a-zA-Z-]+)$ index.php?page=$1 [L,QSA]
 
-# redirects 404 http request to a specific 404 page
+# redirects 403 and 404 http requests to a specific 404 page
+ErrorDocument 403 /index.php?page=404
 ErrorDocument 404 /index.php?page=404
