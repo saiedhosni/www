@@ -15,7 +15,7 @@
 	<div class="row">
 		<div class="column large-4 large-offset-6">
 			<h2>Le studio</h2>
-			<p>Spécialisé dans la création d’animations et micro-interactions web basées sur les principes du motion design, nous travaillons en collaboration avec des designers et des développeurs de proximité, perfectionnistes, pointilleux et soucieux du détail.</p>
+			<p>Spécialisé dans la création d'animations et micro-interactions web basées sur les principes du motion design, nous travaillons en collaboration avec des designers et des développeurs de proximité, perfectionnistes, pointilleux et soucieux du détail.</p>
 			<p>L'expérience utilisateur est au cœur de notre métier, c'est pourquoi nous utilisons des technologies graphiques de pointe, ayant déjà fait leur preuve et s'imposant aujourd'hui comme des références dans le domaine du web pour leur compatibilité, leurs performances et leur fluidité.</p>
 			<p>Nous aimons notre métier, et nous réalisons toujours tous nos projets avec passion.</p>
 		</div>
