@@ -77,7 +77,7 @@
 			var request = new XMLHttpRequest();
 			request.open('POST', '/javascript/asynchronous/message.php');
 			request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-			request.onreadystatechange = function() {
+			request.addEventListener('readystatechange', function() {
 				if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
 					if (request.responseText == 'posted') {
 						form.classList.remove('pending');
@@ -100,7 +100,7 @@
 						}, 3200);
 					}
 				}
-			};
+			});
 
 			// sends the contact message to the studio
 			request.send('message=' + document.querySelector('textarea').value);
