@@ -34,7 +34,9 @@
 			'fr/le-studio',
 			'en/the-studio',
 			'fr/contact',
-			'en/contact'
+			'en/contact',
+			'fr/mentions-legales',
+			'en/legal-notices'
 		]);
 	?>
 	<body class="<?php echo $has_footer ? 'has-footer' : '' ?>">
