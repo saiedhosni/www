@@ -1,4 +1,8 @@
 <?php
+
+	// security time limit of 10 seconds
+	set_time_limit(10);
+
 	// security checkpoint
 	if ($_SERVER['REQUEST_METHOD'] !== 'POST' && !isset($_POST['message'])) {
 		return;
