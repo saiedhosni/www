@@ -425,6 +425,24 @@ textarea {
 		visibility: visible;
 		opacity: 1;
 	}
+
+	&.pending {
+		.progress {
+			.animation(pending-progress 4s 500ms @cubic forwards);
+		}
+	}
+
+	&.undelivered {
+		.progress {
+			.animation(undelivered-progress 1s @cubic forwards);
+		}
+	}
+
+	&.delivered {
+		.progress {
+			.animation(delivered-progress 1s @cubic forwards);
+		}
+	}
 }
 
 .post, .message {
