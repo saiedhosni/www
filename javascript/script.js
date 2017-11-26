@@ -3,18 +3,18 @@
 (function() {
 
 	// gets the white section as a wrapper
-	var wrapper = document.querySelector('section.white');
+	const wrapper = document.querySelector('section.white');
 
 	// checks if the wrapper is initialized
 	if (wrapper != null && wrapper.length != 0) {
 
 		// clones the header
-		var header = document.querySelector('header').cloneNode(true);
+		const header = document.querySelector('header').cloneNode(true);
 		header.classList.add('clone');
 		wrapper.appendChild(header);
 
 		// clones the media
-		var media = document.querySelector('.media').cloneNode(true);
+		const media = document.querySelector('.media').cloneNode(true);
 		media.classList.add('clone');
 		wrapper.appendChild(media);
 
@@ -23,7 +23,7 @@
 			window.addEventListener(e, function() {
 
 				// gets the wrapper section boundary
-				var top = wrapper.getBoundingClientRect().top * -1;
+				let top = wrapper.getBoundingClientRect().top * -1;
 
 				// moves the header at the good top
 				header.style['top'] = top + 'px';
@@ -35,7 +35,7 @@
 	}
 
 	// gets the contact form
-	var form = document.querySelector('form');
+	const form = document.querySelector('form');
 
 	// checks if the form is present on the page
 	if (form != null) {
@@ -47,13 +47,13 @@
 			e.preventDefault();
 
 			// defines the mail regular expression
-			var regex = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+			const regex = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
 
 			// gets the textarea field
-			var message = document.querySelector('textarea');
+			const message = document.querySelector('textarea');
 
 			// gets the post button
-			var button = document.querySelector('button');
+			const button = document.querySelector('button');
 
 			// displays an invalid message if no mail address is specified
 			if (!regex.test(message.value)) {
@@ -74,7 +74,7 @@
 			button.blur();
 
 			// prepares the message for sending
-			var request = new XMLHttpRequest();
+			const request = new XMLHttpRequest();
 			request.open('POST', '/javascript/asynchronous/message.php');
 			request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 			request.addEventListener('readystatechange', function() {
