@@ -10,6 +10,7 @@
 			<p><strong>Hello, what are your needs?</strong></p>
 			<form method="post">
 				<textarea required="required" autocomplete="off"></textarea>
+				<span class="progress"></span>
 				<button name="submit" class="underline button post"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Post this message</button>
 				<strong class="message warning missing-mail">Don't forget to let your mail address</strong>
 				<strong class="message warning bad-request">Oops, your message could not be sent, please try again in a few moments</strong>
