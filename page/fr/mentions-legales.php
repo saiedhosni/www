@@ -2,39 +2,44 @@
 	<div class="row align-center">
 		<div class="column large-8">
 			<h1>Mentions légales</h1>
-			<p>Ce site internet est soumis aux lois du copyright et est fourni exclusivement sous la licence "MIT" ce qui signifie que vous êtes libre de partager, copier, distribuer et transmettre le contenu de ce site internet en respectant les directives de citation de l'auteur et les règles d'utilisation à but non commercial du contenu.</p>
+			<p>Ce site internet est la propriété exclusive de Studio MOTIO. Toute reproduction ou représentation totale ou partielle de ce site par quelque procédé que ce soit, sans l'autorisation expresse du studio est interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
 		</div>
 	</div>
 	<div class="row align-center">
 		<article class="column large-8">
-			<h2>Édition</h2>
-			<p>Studio MOTIO &reg;</p>
-			<p class="no-margin">17000 La Rochelle</p>
-			<p class="no-margin"><a href="mailto:hello@studiomotio.com" target="_blank" class="underline">hello@studiomotio.com</a></p>
-			<p class="no-margin">Responsable de la publication : Xavier Foucrier</p>
+			<p><strong>Édition</strong></p>
+			<p class="no-margin">
+				Studio MOTIO ®<br />
+				17000 La Rochelle<br />
+				<a href="mailto:hello@studiomotio.com" target="_blank" class="underline">hello@studiomotio.com</a><br />
+				Publication : <a href="mailto:xavier@studiomotio.com" target="_blank" class="underline">Xavier Foucrier</a> &ndash; 2017<br />
+			</p>
 		</article>
 	</div>
 	<div class="row align-center">
 		<article class="column large-8">
-			<h2>Hébergement</h2>
-			<p>Ce site internet est hébergé en France sur un hébergement professionnel et totalement sécurisé. OVH SAS au capital de 10 069 020€ RCS Lille Métropole - Tourcoing 424 761 419 00045 Code APE 2620Z - N° TVA : FR 22 424 761 419. Siège social au 2 rue Kellermann 59100 Roubaix - France. Plus d'informations sur OVH en consultant leur site internet : <a href="https://www.ovh.com" target="_blank" class="underline">https://www.ovh.com</a>.</p>
+			<p><strong>Hébergement</strong></p>
+			<p class="no-margin">Ce site internet est hébergé en France sur un hébergement professionnel et totalement sécurisé. OVH SAS au capital de 10 069 020€ RCS Lille Métropole - Tourcoing 424 761 419 00045 Code APE 2620Z - N° TVA : FR 22 424 761 419. Siège social au 2 rue Kellermann 59100 Roubaix - France. Plus d'informations sur OVH en consultant leur site internet : <a href="https://www.ovh.com" target="_blank" class="underline">https://www.ovh.com</a>.</p>
 		</article>
 	</div>
 	<div class="row align-center">
 		<article class="column large-8">
-			<h2>Protection des données</h2>
-		</article>
-	</div>
-	</div>
-	<div class="row align-center">
-		<article class="column large-8">
-			<h2>Cookies</h2>
+			<p><strong>Protection des données</strong></p>
+			<p class="no-margin">Le site respecte la vie privée de l'internaute et se conforme strictement aux lois en vigueur sur la protection de la vie privée et des libertés individuelles. Aucune information personnelle n'est collectée à votre insu. Aucune information personnelle n'est cédée à des tiers. Les courriels, les adresses électroniques ou autres informations nominatives dont ce site est destinataire ne font l'objet d'aucune exploitation et ne sont conservés que pour la durée nécessaire à leur traitement.  Conformément aux dispositions de la loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données qui vous concerne. Ce droit s'exerce par voie électronique, en justifiant de son identité, à l'adresse <a href="mailto:hello@studiomotio.com" target="_blank" class="underline">hello@studiomotio.com</a>.</p>
 		</article>
 	</div>
 	</div>
 	<div class="row align-center">
 		<article class="column large-8">
-			<h2>Marque déposée</h2>
+			<p><strong>Cookies</strong></p>
+			<p class="no-margin">Des données non personnelles sont collectées lors de votre navigation, par un système de cookies, à des fins statistiques.  Ces fichiers, stockés sur votre ordinateur, permettent d'enregistrer des informations relatives à votre navigation sur notre site, comme par exemple les pages consultées ou encore la durée de consultation.  En aucun cas ces données ne nous permettent de vous identifier. Vous pouvez vous opposer à l'enregistrement des « cookies » en configurant votre navigateur internet.</p>
+		</article>
+	</div>
+	</div>
+	<div class="row align-center">
+		<article class="column large-8">
+			<p><strong>Marque déposée</strong></p>
+			<p class="no-margin">Studio MOTIO ® est une marque Française déposée à l'INPI sous le numéro 17 4 343 034. Toute reproduction totale ou partielle de cette marque ou des logos effectuées à partir des éléments du site sans l'autorisation expresse du studio est prohibée, au sens des articles L.713-2 et suivants du Code de la propriété intellectuelle. Tous les noms de produits, logos et marques sont la propriété de leurs détenteurs respectifs. Toute personne ne respectant pas les dispositions légales applicables se rend coupable du délit de contrefaçon et est passible des sanctions pénales prévues par la loi.</p>
 		</article>
 	</div>
 </section>
