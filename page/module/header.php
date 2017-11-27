@@ -17,7 +17,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="column shrink">
+	<div class="column shrink hide-for-small-only">
 		<ul class="lang">
 			<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="underline">Fr</a></li>
 			<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="underline">En</a></li>

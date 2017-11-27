@@ -1,4 +1,4 @@
-<div class="media">
+<div class="media hide-for-small-only">
 	<a href="https://www.facebook.com/studiomotio" target="_blank">
 		<svg><use xlink:href="/picture/sprite.svg#logo-facebook" /></svg>
 	</a>
