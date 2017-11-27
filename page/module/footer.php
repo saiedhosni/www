@@ -17,7 +17,7 @@
 		<div class="column">
 			<svg class="logo"><use xlink:href="/picture/sprite.svg#logo-studiomotio" /></svg>
 			<address>
-				<p class="no-margin">17000 La Rochelle<?php echo LANGUAGE == 'en' ? ' &ndash; France' : ''; ?></p>
+				<p class="no-margin">17000 La Rochelle<?php echo LANGUAGE == 'en' ? ', France' : ''; ?></p>
 				<p class="no-margin"><a href="mailto:hello@studiomotio.com" target="_blank" class="underline">hello@studiomotio.com</a></p>
 			</address>
 		</div>
