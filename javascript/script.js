@@ -11,6 +11,7 @@
 		// clones the header
 		const header = document.querySelector('header').cloneNode(true);
 		header.classList.add('clone');
+		header.querySelector('#trigger').id = 'trigger-clone';
 		wrapper.appendChild(header);
 
 		// clones the media (for medium and large screens)
