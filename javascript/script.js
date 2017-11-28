@@ -13,10 +13,12 @@
 		header.classList.add('clone');
 		wrapper.appendChild(header);
 
-		// clones the media
-		const media = document.querySelector('.media').cloneNode(true);
-		media.classList.add('clone');
-		wrapper.appendChild(media);
+		// clones the media (for medium and large screens)
+		if (window.innerWidth >= 640) {
+			var media = document.querySelector('.media').cloneNode(true);
+			media.classList.add('clone');
+			wrapper.appendChild(media);
+		}
 
 		// binds the load/scroll/resize events to refresh the cloned objects position
 		['load', 'scroll', 'resize'].forEach(function(e) {
@@ -28,8 +30,10 @@
 				// moves the header at the good top
 				header.style['top'] = top + 'px';
 
-				// moves the media block at the good top
-				media.style['top'] = 'calc(' + top + 'px + 50vh)';
+				// moves the media block at the good top (for medium and large screens)
+				if (typeof(media) !== 'undefined') {
+					media.style['top'] = 'calc(' + top + 'px + 50vh)';
+				}
 			});
 		});
 	}
