@@ -11,14 +11,21 @@
 		// clones the header
 		const header = document.querySelector('header').cloneNode(true);
 		header.classList.add('clone');
-		header.querySelector('#trigger').id = 'trigger-clone';
+		header.querySelector('#trigger').setAttribute('id', 'trigger-clone');
+		header.querySelector('[for="trigger"]').setAttribute('for', 'trigger-clone');
 		wrapper.appendChild(header);
 
-		// clones the media (for medium and large screens)
+		// checks if we are on medium and large screens
 		if (window.innerWidth >= 640) {
+
+			// clones the media
 			var media = document.querySelector('.media').cloneNode(true);
 			media.classList.add('clone');
 			wrapper.appendChild(media);
+		} else {
+
+			// tells to the cloned menu button to activate the cloned trigger
+			document.querySelector('[for="trigger"]').setAttribute('for', 'trigger-clone');
 		}
 
 		// binds the load/scroll/resize events to refresh the cloned objects position
