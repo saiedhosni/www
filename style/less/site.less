@@ -115,7 +115,6 @@ dd {
 }
 
 a {
-	position: relative;
 	color: @contrast-color;
 	text-decoration: none;
 }
@@ -295,6 +294,9 @@ textarea {
 }
 
 .underline {
+	position: relative;
+	z-index: 0;
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -316,7 +318,6 @@ textarea {
 }
 
 .button {
-	position: relative;
 	display: inline-flex;
 	align-items: center;
 	font-weight: 100;
