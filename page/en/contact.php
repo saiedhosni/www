@@ -27,7 +27,7 @@
 		</div>
 		<div class="column large-4">
 			<p><strong>Jobs</strong></p>
-			<p class="no-margin">The studio does not host trainees at the moment. Still want to show us what you are capable of? Send us your CV!</p>
+			<p class="no-margin">The studio does not host trainees at the moment. Still want to show us what you talents and what you are capable of? Send us your resume!</p>
 			<p class="no-margin"><small><a href="mailto:jobs@studiomotio.com" target="_blank" class="underline">jobs@studiomotio.com</a></small></p>
 		</div>
 	</div>
