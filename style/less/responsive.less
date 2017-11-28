@@ -12,4 +12,45 @@
  */
 @media (max-width: 39.9375em) {
 
+	.menu-button {
+		position: absolute;
+		top: 44px;
+		right: 50px;
+		width: 34px;
+		height: 34px;
+		z-index: 50;
+		cursor: pointer;
+
+		&:hover {
+			span {
+				.transform(translateX(30%));
+			}
+		}
+
+		&::before, &::after, span {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 4px;
+			width: 100%;
+			background: @contrast-color;
+			cursor: pointer;
+		}
+
+		&::before {
+			top: 3px;
+			.transition(all 400ms ease);
+		}
+
+		&::after {
+			bottom: 3px;
+			.transition(all 400ms ease);
+		}
+
+		span {
+			top: 15px;
+			width: 75%;
+			.transition(transform 800ms @cubic);
+		}
+	}
 }

@@ -8,7 +8,9 @@
 			</div>
 			<div class="column">
 				<nav>
-					<ul>
+					<input type="checkbox" id="trigger" class="menu-trigger show-for-small-only">
+					<label for="trigger" class="menu-button show-for-small-only"><span></span></label>
+					<ul class="menu">
 						<li><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" class="underline">Studio</a></li>
 						<!-- <li><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>" class="underline">Services</a></li> -->
 						<li><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" class="underline">Contact</a></li>
