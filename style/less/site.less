@@ -188,7 +188,7 @@ textarea {
 
 	.lang {
 		li {
-			&:first-child::after {
+			&:last-child::before {
 				color: @base-color;
 			}
 
@@ -224,10 +224,12 @@ textarea {
 
 .lang {
 	li {
-		&:first-child::after {
+		position: relative;
+
+		&:last-child::before {
 			content: '/';
 			position: absolute;
-			margin-left: 7px;
+			left: -12px;
 			color: @contrast-color;
 		}
 
