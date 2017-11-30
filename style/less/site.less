@@ -27,6 +27,7 @@ header {
 	padding: @gutter / 2;
 	font-size: 14px;
 	pointer-events: none;
+	.no-select();
 
 	ul {
 		display: flex;
@@ -48,6 +49,7 @@ footer {
 	bottom: 0;
 	width: 100%;
 	padding: @gutter;
+	.no-select();
 }
 
 h1, h2, dt {
@@ -332,6 +334,7 @@ textarea {
 	font-weight: 100;
 	font-size: 18px;
 	cursor: pointer;
+	.no-select();
 
 	svg {
 		width: 14px;
