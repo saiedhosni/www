@@ -90,11 +90,12 @@
 		padding: 10vh 20vw;
 		background: @base-color;
 		will-change: transform;
-		.transition(transform 1500ms 100ms @cubic);
+		.transition(transform 1400ms 100ms @cubic);
 
 		&::before {
 			content: '';
 			position: fixed;
+			z-index: 1;
 			left: 0;
 			top: 0;
 			width: 100vw;
@@ -107,13 +108,14 @@
 		&::after {
 			content: '';
 			position: fixed;
+			z-index: 2;
 			left: 0;
 			top: 0;
 			width: 100vw;
 			height: 100vh;
 			background: @vibrant-color;
 			will-change: width;
-			.transition(width 1500ms 100ms @cubic;);
+			.transition(width 1400ms 100ms @cubic;);
 		}
 
 		& > li {
