@@ -11,6 +11,25 @@
  * small screens
  */
 @media (max-width: 39.9375em) {
+	.menu-trigger {
+		left: -100px;
+		opacity: 0;
+
+		&:checked {
+			~ .menu {
+				.transform(translate3d(-100vw, 0, 0));
+
+				&::before {
+					.transform(translate3d(-100vw, 0, 0));
+				}
+
+				&::after {
+					width: 10vw;
+				}
+			}
+		}
+	}
+
 	.menu-button, .clone .menu-button {
 		position: absolute;
 		top: 44px;
@@ -47,25 +66,6 @@
 			top: 15px;
 			width: 75%;
 			.transition(transform 400ms @cubic);
-		}
-	}
-
-	.menu-trigger {
-		left: -100px;
-		opacity: 0;
-
-		&:checked {
-			~ .menu {
-				.transform(translate3d(-100vw, 0, 0));
-
-				&::before {
-					.transform(translate3d(-100vw, 0, 0));
-				}
-
-				&::after {
-					width: 10vw;
-				}
-			}
 		}
 	}
 
