@@ -37,18 +37,16 @@
 
 		&::before {
 			top: 3px;
-			.transition(all 400ms ease);
 		}
 
 		&::after {
 			bottom: 3px;
-			.transition(all 400ms ease);
 		}
 
 		span {
 			top: 15px;
 			width: 75%;
-			.transition(transform 800ms @cubic);
+			.transition(transform 400ms @cubic);
 		}
 	}
 
@@ -66,12 +64,6 @@
 
 				&::after {
 					width: 10vw;
-				}
-			}
-
-			~ label {
-				&::before, &::after, span {
-					background: @contrast-color;
 				}
 			}
 		}
