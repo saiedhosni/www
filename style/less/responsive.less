@@ -81,7 +81,7 @@
 		padding: 10vh 20vw;
 		background: @base-color;
 		will-change: transform;
-		.transition(transform 1400ms 100ms @cubic);
+		.transition(transform 1400ms 250ms @cubic);
 
 		&::before {
 			content: '';
@@ -93,7 +93,7 @@
 			height: 100vh;
 			background: @contrast-color;
 			will-change: transform;
-			.transition(transform 2000ms @cubic);
+			.transition(transform 2000ms 150ms @cubic);
 		}
 
 		&::after {
@@ -106,7 +106,7 @@
 			height: 100vh;
 			background: @vibrant-color;
 			will-change: width;
-			.transition(width 1400ms 100ms @cubic;);
+			.transition(width 1400ms 250ms @cubic;);
 		}
 
 		& > li {
