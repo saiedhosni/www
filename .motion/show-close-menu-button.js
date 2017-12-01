@@ -56,6 +56,19 @@
 		}, options)
 	});
 
+	// cross shape to allow the user to close the menu
+	let cross = new mojs.Shape(
+		mojs.helpers.extend({
+			shape: 'cross',
+			angle: 45,
+			radius: { 0 : 20 },
+			strokeWidth: 4,
+			easing: 'circ.out',
+			duration: time * 2,
+			delay: time * 0.15
+		}, options)
+	);
+
 	const bubbles = new stage(
 		mojs.helpers.extend({
 			shape: 'circle',
@@ -75,6 +88,7 @@
 	timeline.add(
 		circle,
 		pulse,
+		cross,
 	);
 
 	// creates the player
