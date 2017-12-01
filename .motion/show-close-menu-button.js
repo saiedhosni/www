@@ -45,6 +45,17 @@
 		}, options)
 	);
 
+	// burst for pulse tween
+	let pulse = new mojs.Burst({
+		radius: { 0 : 60 },
+		children: mojs.helpers.extend({
+			shape: 'line',
+			radius: { 5 : 2, curve: linearCurve },
+			duration: time * 1.5,
+			delay: 70,
+		}, options)
+	});
+
 	const bubbles = new stage(
 		mojs.helpers.extend({
 			shape: 'circle',
@@ -63,6 +74,7 @@
 	// adds shapes to the timeline
 	timeline.add(
 		circle,
+		pulse,
 	);
 
 	// creates the player
