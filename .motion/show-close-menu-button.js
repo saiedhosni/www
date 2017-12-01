@@ -36,8 +36,34 @@
 		isForce3d: true
 	};
 
+	// circle shape for explode tween
+	let circle = new mojs.Shape(
+		mojs.helpers.extend({
+			shape: 'circle',
+			radius: { 0 : 30 },
+			opacity: { 1 : 0, curve: linearCurve }
+		}, options)
+	);
+
+	const bubbles = new stage(
+		mojs.helpers.extend({
+			shape: 'circle',
+			radius:  [{ 0: 10 },  { 0: 6 }, { 0: 4 }],
+			quantifier: 3,
+			x: '-100px',
+			y: '-100px',
+			delay: time
+			// animate scale from `0` to staggered value (`1` for 1st module, `1.25` for 2nd, `1.5` for 3rd etc.)
+			//scale: { 0: 'stagger(1, .25)' },
+			// random value in range from `0` to staggered value (`200` for 1st module, `400` for 2nd, `600` for 3rd etc.)
+			//x: 'stagger(-300, rand(100, 200))'
+		}, options)
+	);
+
 	// adds shapes to the timeline
-	timeline.add();
+	timeline.add(
+		circle,
+	);
 
 	// creates the player
 	new MojsPlayer({
