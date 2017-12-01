@@ -24,6 +24,15 @@
 	// tween duration time
 	let time = 700;
 
+	// defines the base options
+	const options = {
+		fill: 'transparent',
+		stroke: colors.contrast,
+		strokeWidth: { 4 : 0 },
+		duration: time,
+		isForce3d: true
+	};
+
 	// adds shapes to the timeline
 	timeline.add();
 
