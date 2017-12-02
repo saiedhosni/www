@@ -22,8 +22,33 @@
 		delay: 0
 	});
 
+	// tween base time
+	let time = 700;
+
+	// defines the base options
+	const options = {
+		fill: 'transparent',
+		stroke: colors.contrast,
+		strokeWidth: { 4 : 0 },
+		duration: time,
+		isForce3d: true
+	};
+
+	// cross shape to allow the user to close the menu
+	let cross = new mojs.Shape(
+		mojs.helpers.extend({
+			shape: 'cross',
+			angle: 45,
+			radius: 20,
+			strokeWidth: 4,
+			isShowStart: true
+		}, options)
+	);
+
 	// adds shapes to the timeline
-	timeline.add();
+	timeline.add(
+		cross
+	);
 
 	// creates the player
 	new MojsPlayer({
