@@ -16,17 +16,14 @@
 		header.querySelector('.menu-button-close').setAttribute('for', 'trigger-clone');
 		wrapper.appendChild(header);
 
-		// checks if we are on medium and large screens
-		if (window.innerWidth >= 640) {
+		// tells to the base menu button to activate the cloned trigger
+		document.querySelector('[for="trigger"]').setAttribute('for', 'trigger-clone');
 
-			// clones the media
+		// clones the media if we are on medium and large screens
+		if (window.innerWidth >= 640) {
 			var media = document.querySelector('.media').cloneNode(true);
 			media.classList.add('clone');
 			wrapper.appendChild(media);
-		} else {
-
-			// tells to the cloned menu button to activate the cloned trigger
-			document.querySelector('[for="trigger"]').setAttribute('for', 'trigger-clone');
 		}
 
 		// binds the load/scroll/resize events to refresh the cloned objects position
