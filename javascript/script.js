@@ -6,7 +6,7 @@
 	const wrapper = document.querySelector('section.white');
 
 	// checks if the wrapper is initialized
-	if (wrapper != null && wrapper.length != 0) {
+	if (wrapper != null) {
 
 		// clones the header
 		const header = document.querySelector('header').cloneNode(true);
