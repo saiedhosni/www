@@ -65,7 +65,7 @@
 			strokeWidth: 4,
 			easing: 'circ.out',
 			duration: time * 2,
-			delay: time * 0.15
+			delay: 200
 		}, options)
 	);
 
