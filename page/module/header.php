@@ -24,6 +24,7 @@
 								<li><a href="https://www.twitter.com/studiomotio" target="_blank" class="underline"><svg><use xlink:href="/picture/sprite.svg#logo-twitter" /></svg></a></li>
 								<li><a href="https://www.instagram.com/studiomotio" target="_blank" class="underline"><svg><use xlink:href="/picture/sprite.svg#logo-instagram" /></svg></a></li>
 							</ul>
+							<label for="trigger" class="menu-button-close"></label>
 						</li>
 					</ul>
 				</nav>
