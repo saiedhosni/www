@@ -13,6 +13,7 @@
 		header.classList.add('clone');
 		header.querySelector('#trigger').setAttribute('id', 'trigger-clone');
 		header.querySelector('[for="trigger"]').setAttribute('for', 'trigger-clone');
+		header.querySelector('.menu-button-close').setAttribute('for', 'trigger-clone');
 		wrapper.appendChild(header);
 
 		// checks if we are on medium and large screens
