@@ -116,4 +116,81 @@
 			request.send('message=' + document.querySelector('textarea').value);
 		});
 	}
+
+	// motion colors based on main theme
+	const colors = {
+		base: '#000',
+		vibrant: '#00ffd3',
+		contrast: '#fff',
+		bright: '#5f5f5f',
+		warning: '#f6cc00'
+	};
+
+	// linear easing path (1:1)
+	const linearCurve = mojs.easing.path('M0, -100 C0, -100 100, 0 100, 0');
+
+	// mojs options and objects for the "show close menu button" tween
+	const options_showCloseMenuButton = {
+		parent: document.querySelector(wrapper != null ? '.clone .menu-button-close' : '.menu-button-close'),
+		fill: 'transparent',
+		stroke: colors.contrast,
+		strokeWidth: { 4 : 0 },
+		duration: 700,
+		isForce3d: true
+	};
+
+	let circle_showCloseMenuButton = new mojs.Shape(
+		mojs.helpers.extend({
+			shape: 'circle',
+			radius: { 0 : 30 },
+			opacity: { 1 : 0, curve: linearCurve }
+		}, options_showCloseMenuButton)
+	);
+
+	let pulse_showCloseMenuButton = new mojs.Burst({
+		radius: { 0 : 60 },
+		children: mojs.helpers.extend({
+			shape: 'line',
+			radius: { 5 : 2, curve: linearCurve },
+			duration: 1050,
+			delay: 70,
+		}, options_showCloseMenuButton)
+	});
+
+	let cross_showCloseMenuButton = new mojs.Shape(
+		mojs.helpers.extend({
+			shape: 'cross',
+			angle: 45,
+			radius: { 0 : 20 },
+			strokeWidth: 4,
+			easing: 'circ.out',
+			duration: 1400,
+			delay: 200
+		}, options_showCloseMenuButton)
+	);
+
+	let stage_showCloseMenuButton = mojs.stagger(mojs.Shape);
+	let bubbles_showCloseMenuButton = new stage_showCloseMenuButton(
+		mojs.helpers.extend({
+			shape: 'circle',
+			radius: [{ 0: 10 }, { 0: 6 }, { 0: 4 }],
+			quantifier: 3,
+			x: ['rand(-30px, -20px)', 'rand(5px, 10px)', 'rand(15px, 30px)'],
+			y: ['rand(-20px, -40px)', 'rand(30px, 40px)', 'rand(-10px, -20px)'],
+			opacity: { 1 : 0, curve: linearCurve },
+			stroke: colors.vibrant,
+			delay: 'stagger(500, 150)'
+		}, options_showCloseMenuButton)
+	);
+
+	let timeline_showCloseMenuButton = new mojs.Timeline({delay: 1200});
+	timeline_showCloseMenuButton.add(circle_showCloseMenuButton, pulse_showCloseMenuButton, cross_showCloseMenuButton, bubbles_showCloseMenuButton);
+
+	// blinds all close menu buttons to displays the tween when the menu is opened
+	Array.from(document.querySelectorAll('.menu-button')).forEach(function(button) {
+		button.addEventListener('click', function(e) {
+			bubbles_showCloseMenuButton.generate();
+			timeline_showCloseMenuButton.replay();
+		});
+	});
 })();
