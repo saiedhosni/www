@@ -38,6 +38,7 @@
 	let cross = new mojs.Shape(
 		mojs.helpers.extend({
 			shape: 'cross',
+			className: 'menu-button-close',
 			angle: 45,
 			radius: 20,
 			strokeWidth: 4,
