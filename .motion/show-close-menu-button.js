@@ -69,18 +69,18 @@
 		}, options)
 	);
 
+	// staggered shape for bubbles around the cross
+	const stage = mojs.stagger(mojs.Shape);
 	const bubbles = new stage(
 		mojs.helpers.extend({
 			shape: 'circle',
-			radius:  [{ 0: 10 },  { 0: 6 }, { 0: 4 }],
+			radius: [{ 0: 10 }, { 0: 6 }, { 0: 4 }],
 			quantifier: 3,
-			x: '-100px',
-			y: '-100px',
-			delay: time
-			// animate scale from `0` to staggered value (`1` for 1st module, `1.25` for 2nd, `1.5` for 3rd etc.)
-			//scale: { 0: 'stagger(1, .25)' },
-			// random value in range from `0` to staggered value (`200` for 1st module, `400` for 2nd, `600` for 3rd etc.)
-			//x: 'stagger(-300, rand(100, 200))'
+			x: ['rand(-30px, -20px)', 'rand(5px, 10px)', 'rand(15px, 30px)'],
+			y: ['rand(-20px, -40px)', 'rand(30px, 40px)', 'rand(-10px, -20px)'],
+			opacity: { 1 : 0, curve: linearCurve },
+			stroke: colors.vibrant,
+			delay: 'stagger(' + (time - 200) + ', 150)'
 		}, options)
 	);
 
@@ -89,6 +89,7 @@
 		circle,
 		pulse,
 		cross,
+		bubbles
 	);
 
 	// creates the player
