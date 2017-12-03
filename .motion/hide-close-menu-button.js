@@ -26,13 +26,11 @@
 	const linearCurve = mojs.easing.path('M0, -100 C0, -100 100, 0 100, 0');
 
 	// tween base time
-	let time = 700;
+	let time = 1000;
 
 	// defines the base options
 	const options = {
-		fill: 'transparent',
 		stroke: colors.contrast,
-		strokeWidth: { 4 : 0 },
 		duration: time,
 		isForce3d: true
 	};
