@@ -49,9 +49,22 @@
 		}, options)
 	);
 
+	// circle shape for explode tween
+	let circle = new mojs.Shape(
+		mojs.helpers.extend({
+			shape: 'circle',
+			radius: { 0 : 30 },
+			fill: 'transparent',
+			strokeWidth: { 8 : 0 },
+			opacity: { 1 : 0, curve: linearCurve },
+			duration: time / 2
+		}, options)
+	);
+
 	// adds shapes to the timeline
 	timeline.add(
-		cross
+		cross,
+		circle,
 	);
 
 	// creates the player
