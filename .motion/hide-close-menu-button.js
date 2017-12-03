@@ -41,10 +41,9 @@
 			shape: 'cross',
 			className: 'menu-button-close',
 			angle: 45,
-			radius: 20,
+			radius: { 20 : 0 },
 			strokeWidth: 4,
 			isShowStart: true,
-			scale: { 1 : 0 },
 			duration: time / 2
 		}, options)
 	);
