@@ -2,6 +2,13 @@
 
 (function() {
 
+	// screen size detection (based on Foundation build)
+	const screen = {
+		small: window.innerWidth < 640,
+		medium: window.innerWidth >= 640 && window.innerWidth < 1024,
+		large: window.innerWidth >= 1024
+	}
+
 	// gets the white section as a wrapper
 	const wrapper = document.querySelector('section.white');
 
@@ -19,8 +26,8 @@
 		// tells to the base menu button to activate the cloned trigger
 		document.querySelector('[for="trigger"]').setAttribute('for', 'trigger-clone');
 
-		// clones the media if we are on medium and large screens
-		if (window.innerWidth >= 640) {
+		// clones the media if we are on medium or large screens
+		if (screen.medium || screen.large) {
 			var media = document.querySelector('.media').cloneNode(true);
 			media.classList.add('clone');
 			wrapper.appendChild(media);
