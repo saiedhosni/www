@@ -149,7 +149,7 @@
 
 	let menuPulse = new mojs.Burst({
 		radius: { 0 : 60 },
-		parent: document.querySelector(wrapper != null ? '.clone .menu-button-close' : '.menu-button-close'),
+		parent: menuOptions.parent,
 		children: mojs.helpers.extend({
 			shape: 'line',
 			radius: { 5 : 2, curve: linearCurve },
@@ -187,7 +187,7 @@
 	let menuSteam = new mojs.Burst({
 		degree: 20,
 		radius: { 0 : 90 },
-		parent: document.querySelector(wrapper != null ? '.clone .menu-button-close' : '.menu-button-close'),
+		parent: menuOptions.parent,
 		children: mojs.helpers.extend({
 			shape: 'circle',
 			swirlSize: 10,
@@ -207,25 +207,21 @@
 	let menuTimeline = new mojs.Timeline({delay: 1200});
 	menuTimeline.add(menuCircle, menuPulse, menuCross, menuBubbles);
 
-	// blinds all menu buttons to displays the tween when the menu is opened
-	Array.from(document.querySelectorAll('.menu-button')).forEach(function(button) {
-		button.addEventListener('click', function(e) {
-			menuBubbles.generate();
-			menuTimeline.play();
-		});
+	// blinds the menu button to displays the tween when the menu is opened
+	document.querySelector(wrapper != null ? '.clone .menu-button' : '.menu-button').addEventListener('click', function(e) {
+		menuBubbles.generate();
+		menuTimeline.play();
 	});
 
-	// blinds all close menu buttons to displays the tween when the menu is closed
-	Array.from(document.querySelectorAll('.menu-button-close')).forEach(function(button) {
-		button.addEventListener('click', function(e) {
-			menuCross.then({
-				radius: 0,
-				duration: 500,
-				delay: 0
-			}).play();
+	// blinds the close menu button to displays the tween when the menu is closed
+	menuOptions.parent.addEventListener('click', function(e) {
+		menuCross.then({
+			radius: 0,
+			duration: 500,
+			delay: 0
+		}).play();
 
-			menuCircle.play();
-			menuSteam.generate().play();
-		});
+		menuCircle.play();
+		menuSteam.generate().play();
 	});
 })();
