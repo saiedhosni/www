@@ -213,4 +213,18 @@
 			easing: 'cubic.in'
 		}, options_showCloseMenuButton)
 	});
+
+	// blinds all close menu buttons to displays the tween when the menu is closed
+	Array.from(document.querySelectorAll('.menu-button-close')).forEach(function(button) {
+		button.addEventListener('click', function(e) {
+			cross_showCloseMenuButton.then({
+				radius: 0,
+				duration: 500,
+				delay: 0
+			}).play();
+
+			circle_showCloseMenuButton.play();
+			swirl_hideCloseMenuButton.generate().play();
+		});
+	});
 })();
