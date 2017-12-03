@@ -149,6 +149,7 @@
 
 	let menuPulse = new mojs.Burst({
 		radius: { 0 : 60 },
+		parent: document.querySelector(wrapper != null ? '.clone .menu-button-close' : '.menu-button-close'),
 		children: mojs.helpers.extend({
 			shape: 'line',
 			radius: { 5 : 2, curve: linearCurve },
