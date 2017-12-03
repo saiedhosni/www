@@ -190,7 +190,7 @@
 	Array.from(document.querySelectorAll('.menu-button')).forEach(function(button) {
 		button.addEventListener('click', function(e) {
 			bubbles_showCloseMenuButton.generate();
-			timeline_showCloseMenuButton.replay();
+			timeline_showCloseMenuButton.play();
 		});
 	});
 })();
