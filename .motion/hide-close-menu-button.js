@@ -61,10 +61,31 @@
 		}, options)
 	);
 
+	// bursted swirl for evaporation effect
+	let swirl = new mojs.Burst({
+		degree: 20,
+		radius: { 0 : 100 },
+		children: mojs.helpers.extend({
+			shape: 'circle',
+			swirlSize: 10,
+			swirlFrequency: 'rand(5, 7)',
+			pathScale: 'rand(0.3, 1)',
+			degreeShift: 10,
+			isSwirl: true,
+			radius: { 'rand(8, 10)' : 0 },
+			fill: colors.contrast,
+			stroke: 'transparent',
+			delay: 100,
+			duration: time - 300,
+			easing: 'cubic.in'
+		}, options)
+	});
+
 	// adds shapes to the timeline
 	timeline.add(
 		cross,
 		circle,
+		swirl
 	);
 
 	// creates the player
