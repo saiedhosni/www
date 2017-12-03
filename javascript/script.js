@@ -193,4 +193,24 @@
 			timeline_showCloseMenuButton.play();
 		});
 	});
+
+	let swirl_hideCloseMenuButton = new mojs.Burst({
+		degree: 20,
+		radius: { 0 : 90 },
+		parent: document.querySelector(wrapper != null ? '.clone .menu-button-close' : '.menu-button-close'),
+		children: mojs.helpers.extend({
+			shape: 'circle',
+			swirlSize: 10,
+			swirlFrequency: 'rand(5, 7)',
+			pathScale: 'rand(0.3, 1)',
+			degreeShift: 10,
+			isSwirl: true,
+			radius: { 'rand(6, 8)' : 0 },
+			fill: [colors.contrast, colors.vibrant],
+			stroke: 'transparent',
+			delay: 100,
+			duration: 600,
+			easing: 'cubic.in'
+		}, options_showCloseMenuButton)
+	});
 })();
