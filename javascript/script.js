@@ -129,8 +129,8 @@
 	// linear easing path (1:1)
 	const linearCurve = mojs.easing.path('M0, -100 C0, -100 100, 0 100, 0');
 
-	// mojs options and objects for the "show close menu button" tween
-	const options_showCloseMenuButton = {
+	// mojs options and objects for the "show/hide the close menu button" tween
+	const menuOptions = {
 		parent: document.querySelector(wrapper != null ? '.clone .menu-button-close' : '.menu-button-close'),
 		fill: 'transparent',
 		stroke: colors.contrast,
@@ -139,25 +139,25 @@
 		isForce3d: true
 	};
 
-	let circle_showCloseMenuButton = new mojs.Shape(
+	let menuCircle = new mojs.Shape(
 		mojs.helpers.extend({
 			shape: 'circle',
 			radius: { 0 : 30 },
 			opacity: { 1 : 0, curve: linearCurve }
-		}, options_showCloseMenuButton)
+		}, menuOptions)
 	);
 
-	let pulse_showCloseMenuButton = new mojs.Burst({
+	let menuPulse = new mojs.Burst({
 		radius: { 0 : 60 },
 		children: mojs.helpers.extend({
 			shape: 'line',
 			radius: { 5 : 2, curve: linearCurve },
 			duration: 1050,
 			delay: 70,
-		}, options_showCloseMenuButton)
+		}, menuOptions)
 	});
 
-	let cross_showCloseMenuButton = new mojs.Shape(
+	let menuCross = new mojs.Shape(
 		mojs.helpers.extend({
 			shape: 'cross',
 			angle: 45,
@@ -166,11 +166,11 @@
 			easing: 'circ.out',
 			duration: 1400,
 			delay: 200
-		}, options_showCloseMenuButton)
+		}, menuOptions)
 	);
 
-	let stage_showCloseMenuButton = mojs.stagger(mojs.Shape);
-	let bubbles_showCloseMenuButton = new stage_showCloseMenuButton(
+	let stageMenu = mojs.stagger(mojs.Shape);
+	let menuBubbles = new stageMenu(
 		mojs.helpers.extend({
 			shape: 'circle',
 			radius: [{ 0: 10 }, { 0: 6 }, { 0: 4 }],
@@ -180,21 +180,10 @@
 			opacity: { 1 : 0, curve: linearCurve },
 			stroke: colors.vibrant,
 			delay: 'stagger(500, 150)'
-		}, options_showCloseMenuButton)
+		}, menuOptions)
 	);
 
-	let timeline_showCloseMenuButton = new mojs.Timeline({delay: 1200});
-	timeline_showCloseMenuButton.add(circle_showCloseMenuButton, pulse_showCloseMenuButton, cross_showCloseMenuButton, bubbles_showCloseMenuButton);
-
-	// blinds all menu buttons to displays the tween when the menu is opened
-	Array.from(document.querySelectorAll('.menu-button')).forEach(function(button) {
-		button.addEventListener('click', function(e) {
-			bubbles_showCloseMenuButton.generate();
-			timeline_showCloseMenuButton.play();
-		});
-	});
-
-	let swirl_hideCloseMenuButton = new mojs.Burst({
+	let menuSteam = new mojs.Burst({
 		degree: 20,
 		radius: { 0 : 90 },
 		parent: document.querySelector(wrapper != null ? '.clone .menu-button-close' : '.menu-button-close'),
@@ -211,20 +200,31 @@
 			delay: 100,
 			duration: 600,
 			easing: 'cubic.in'
-		}, options_showCloseMenuButton)
+		}, menuOptions)
+	});
+
+	let menuTimeline = new mojs.Timeline({delay: 1200});
+	menuTimeline.add(menuCircle, menuPulse, menuCross, menuBubbles);
+
+	// blinds all menu buttons to displays the tween when the menu is opened
+	Array.from(document.querySelectorAll('.menu-button')).forEach(function(button) {
+		button.addEventListener('click', function(e) {
+			menuBubbles.generate();
+			menuTimeline.play();
+		});
 	});
 
 	// blinds all close menu buttons to displays the tween when the menu is closed
 	Array.from(document.querySelectorAll('.menu-button-close')).forEach(function(button) {
 		button.addEventListener('click', function(e) {
-			cross_showCloseMenuButton.then({
+			menuCross.then({
 				radius: 0,
 				duration: 500,
 				delay: 0
 			}).play();
 
-			circle_showCloseMenuButton.play();
-			swirl_hideCloseMenuButton.generate().play();
+			menuCircle.play();
+			menuSteam.generate().play();
 		});
 	});
 })();
