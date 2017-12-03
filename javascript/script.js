@@ -207,13 +207,13 @@
 	let menuTimeline = new mojs.Timeline({delay: 1200});
 	menuTimeline.add(menuCircle, menuPulse, menuCross, menuBubbles);
 
-	// blinds the menu button to displays the tween when the menu is opened
+	// binds the menu button to displays the tween when the menu is opened
 	document.querySelector(wrapper != null ? '.clone .menu-button' : '.menu-button').addEventListener('click', function(e) {
 		menuBubbles.generate();
 		menuTimeline.play();
 	});
 
-	// blinds the close menu button to displays the tween when the menu is closed
+	// binds the close menu button to displays the tween when the menu is closed
 	menuOptions.parent.addEventListener('click', function(e) {
 		menuCross.then({
 			radius: 0,
