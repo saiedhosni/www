@@ -22,6 +22,9 @@
 		delay: 0
 	});
 
+	// linear easing path (1:1)
+	const linearCurve = mojs.easing.path('M0, -100 C0, -100 100, 0 100, 0');
+
 	// tween base time
 	let time = 700;
 
