@@ -186,7 +186,7 @@
 	let timeline_showCloseMenuButton = new mojs.Timeline({delay: 1200});
 	timeline_showCloseMenuButton.add(circle_showCloseMenuButton, pulse_showCloseMenuButton, cross_showCloseMenuButton, bubbles_showCloseMenuButton);
 
-	// blinds all close menu buttons to displays the tween when the menu is opened
+	// blinds all menu buttons to displays the tween when the menu is opened
 	Array.from(document.querySelectorAll('.menu-button')).forEach(function(button) {
 		button.addEventListener('click', function(e) {
 			bubbles_showCloseMenuButton.generate();
