@@ -207,10 +207,12 @@
 	let menuTimeline = new mojs.Timeline({delay: 1200});
 	menuTimeline.add(menuCircle, menuPulse, menuCross, menuBubbles);
 
-	// binds the menu button to displays the tween when the menu is opened
-	document.querySelector(wrapper != null ? '.clone .menu-button' : '.menu-button').addEventListener('click', function(e) {
-		menuBubbles.generate();
-		menuTimeline.play();
+	// binds all open menu buttons to displays the tween when the menu is opened (from white or black section)
+	Array.from(document.querySelectorAll('.menu-button')).forEach(function(button) {
+		button.addEventListener('click', function(e) {
+			menuBubbles.generate();
+			menuTimeline.play();
+		});
 	});
 
 	// binds the close menu button to displays the tween when the menu is closed
