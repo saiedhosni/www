@@ -72,7 +72,7 @@
 			degreeShift: 10,
 			isSwirl: true,
 			radius: { 'rand(8, 10)' : 0 },
-			fill: colors.contrast,
+			fill: [colors.contrast, colors.vibrant],
 			stroke: 'transparent',
 			delay: 100,
 			duration: time - 300,
