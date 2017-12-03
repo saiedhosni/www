@@ -43,7 +43,9 @@
 			angle: 45,
 			radius: 20,
 			strokeWidth: 4,
-			isShowStart: true
+			isShowStart: true,
+			scale: { 1 : 0 },
+			duration: time / 2
 		}, options)
 	);
 
