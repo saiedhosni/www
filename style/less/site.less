@@ -225,7 +225,17 @@ textarea {
 
 .the-studio-intro {
 	h1, p {
-		margin-top: calc(~'35vh - ' @gutter * 1.5);
+		position: absolute;
+	}
+
+	h1 {
+		top: 30vh;
+		max-width: 41vw;
+	}
+
+	p {
+		max-width: 27vw;
+		bottom: 18vh;
 	}
 }
 
@@ -395,13 +405,18 @@ textarea {
 	.transform(rotate(90deg));
 }
 
+.wrapper-motio-vertical {
+	position: relative;
+	height:	0;
+}
+
 .motio-vertical {
 	position: absolute;
-	z-index: 3;
+	left: 14vw;
+	top: -122px;
 	width: 353px;
 	height: 1252px;
-	left: 16%;
-	top: calc(~'100vh - 122px');
+	z-index: 3;
 	pointer-events: none;
 }
 
