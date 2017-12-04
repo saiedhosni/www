@@ -4,15 +4,35 @@
  * medium screens
  */
 @media (min-width: 40em) and (max-width: 63.9375em) {
-
+	footer {
+		.button.big {
+			font-size: 30px;
+		}
+	}
 }
 
 /*
  * small screens
  */
 @media (max-width: 39.9375em) {
+	body {
+		&.has-footer {
+			section:last-of-type {
+				margin-bottom: 476px;
+			}
+		}
+	}
+
 	header {
 		padding: @gutter / 2 @gutter * 1 / 3;
+	}
+
+	footer {
+		text-align: center;
+
+		.logo, .copyright {
+			margin-top: 30px;
+		}
 	}
 
 	.menu-trigger {
