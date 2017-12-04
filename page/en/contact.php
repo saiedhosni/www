@@ -1,12 +1,12 @@
 <section class="row column expanded white">
 	<svg class="motio-o-contact"><use xlink:href="/picture/sprite.svg#logo-motio-o" /></svg>
 	<div class="row align-center">
-		<div class="column large-8">
+		<div class="column medium-9 large-8">
 			<p>Want to entrust us with your project, launch a new website or build a memorable brand identity, leave us a note. We would love to work with you!</p>
 		</div>
 	</div>
 	<div class="row align-center">
-		<div class="column large-8">
+		<div class="column medium-9 large-8">
 			<p><strong>Hello, what are your needs?</strong></p>
 			<form method="post">
 				<textarea required="required" autocomplete="off"></textarea>
@@ -20,12 +20,12 @@
 		</div>
 	</div>
 	<div class="row align-center">
-		<div class="column large-4">
+		<div class="column small-12 medium-9 large-4">
 			<p><strong>Partnership</strong></p>
 			<p class="no-margin">We are always interested in making new collaborations. You have talent and you want to share it with us, join the collective!</p>
 			<p class="no-margin"><small><a href="mailto:collective@studiomotio.com" target="_blank" class="underline">collective@studiomotio.com</a></small></p>
 		</div>
-		<div class="column large-4">
+		<div class="column small-12 medium-9 large-4">
 			<p><strong>Jobs</strong></p>
 			<p class="no-margin">The studio does not host trainees at the moment. Still want to show us what you talents and what you are capable of? Send us your resume!</p>
 			<p class="no-margin"><small><a href="mailto:jobs@studiomotio.com" target="_blank" class="underline">jobs@studiomotio.com</a></small></p>
