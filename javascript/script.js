@@ -38,7 +38,7 @@
 			window.addEventListener(e, function() {
 
 				// gets the wrapper section boundary
-				let top = wrapper.getBoundingClientRect().top * -1;
+				let top = window.scrollY - wrapper.offsetTop;
 
 				// moves the header at the good top
 				header.style['top'] = top + 'px';
