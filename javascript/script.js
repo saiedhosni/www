@@ -2,6 +2,9 @@
 
 (function() {
 
+	// web developer console signature
+	console.log('%c Made with ❤︎️ by Studio MOTIO — https://www.studiomotio.com', 'background:#000;color:#fff;padding:0.5em 1em;line-height:2;');
+
 	// screen size detection (based on Foundation build)
 	const screen = {
 		small: window.innerWidth < 640,
