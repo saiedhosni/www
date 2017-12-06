@@ -12,7 +12,7 @@
 				<textarea required="required" autocomplete="off"></textarea>
 				<span class="progress"></span>
 				<button name="submit" class="underline button post"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Post this message</button>
-				<strong class="message warning missing-mail">Don't forget to let your mail address</strong>
+				<strong class="message warning missing-mail">Don't forget to let your mail address with your message</strong>
 				<strong class="message warning bad-request">Oops, your message could not be sent, please try again in a few moments</strong>
 				<strong class="message pending-request">Sending in progress..</strong>
 				<strong class="message message-sent">Message sent. We will answer you soon<span class="emoji">✌</span></strong>
