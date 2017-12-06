@@ -157,17 +157,6 @@
 		}, menuOptions)
 	);
 
-	let menuPulse = new mojs.Burst({
-		radius: { 0 : 60 },
-		parent: menuOptions.parent,
-		children: mojs.helpers.extend({
-			shape: 'line',
-			radius: { 5 : 2, curve: linearCurve },
-			duration: 1050,
-			delay: 70,
-		}, menuOptions)
-	});
-
 	let menuCross = new mojs.Shape(
 		mojs.helpers.extend({
 			shape: 'cross',
@@ -215,7 +204,7 @@
 	});
 
 	let menuTimeline = new mojs.Timeline({delay: 1200});
-	menuTimeline.add(menuCircle, menuPulse, menuCross, menuBubbles);
+	menuTimeline.add(menuCircle, menuCross, menuBubbles);
 
 	// binds all open menu buttons to displays the tween when the menu is opened (from white or black section)
 	Array.from(document.querySelectorAll('.menu-button')).forEach(function(button) {
