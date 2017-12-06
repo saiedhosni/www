@@ -3,7 +3,9 @@
 		'fr/contact',
 		'en/contact',
 		'fr/mentions-legales',
-		'en/legal-notices'
+		'en/legal-notices',
+		'fr/404',
+		'en/404'
 	]) ? 'black' : 'white';
 ?>
 <footer class="row column expanded <?php echo $color; ?>">

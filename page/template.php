@@ -36,7 +36,9 @@
 			'fr/contact',
 			'en/contact',
 			'fr/mentions-legales',
-			'en/legal-notices'
+			'en/legal-notices',
+			'fr/404',
+			'en/404'
 		]);
 	?>
 	<body class="<?php echo $has_footer ? 'has-footer' : '' ?>">
