@@ -30,15 +30,9 @@
 		?>
 	</head>
 	<?php
-		$has_footer = in_array(PAGE, [
-			'fr/le-studio',
-			'en/the-studio',
-			'fr/contact',
-			'en/contact',
-			'fr/mentions-legales',
-			'en/legal-notices',
-			'fr/404',
-			'en/404'
+		$has_footer = !in_array(PAGE, [
+			'fr/index',
+			'en/index'
 		]);
 	?>
 	<body class="<?php echo $has_footer ? 'has-footer' : '' ?>">

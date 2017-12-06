@@ -1,11 +1,7 @@
 <?php
-	$color = in_array(PAGE, [
-		'fr/contact',
-		'en/contact',
-		'fr/mentions-legales',
-		'en/legal-notices',
-		'fr/404',
-		'en/404'
+	$color = !in_array(PAGE, [
+		'fr/le-studio',
+		'en/the-studio'
 	]) ? 'black' : 'white';
 ?>
 <footer class="row column expanded <?php echo $color; ?>">
