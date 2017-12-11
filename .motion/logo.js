@@ -22,6 +22,9 @@
 		delay: 0
 	});
 
+	// tween base time
+	let time = 500;
+
 	// adds shapes to the timeline
 	timeline.add();
 
