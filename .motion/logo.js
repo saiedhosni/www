@@ -7,7 +7,8 @@
 		base: '#000',
 		vibrant: '#00ffd3',
 		contrast: '#fff',
-		bright: '#5f5f5f'
+		bright: '#5f5f5f',
+		warning: '#f6cc00'
 	};
 
 	// creates the curve editor
