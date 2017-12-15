@@ -328,14 +328,14 @@ textarea {
 		bottom: 0;
 		width: 100%;
 		height: 0;
-		background: fade(@vibrant-color, 50%);
-		will-change: height;
-		.transition(height 400ms ease);
+		background: fade(@vibrant-color, 60%);
+		.transition(height 250ms @cubic);
 	}
 
 	&:hover, &:focus {
 		&::before {
 			height: 30%;
+			.transition(height 500ms @cubic);
 		}
 	}
 }
@@ -353,7 +353,7 @@ textarea {
 		height: 14px;
 		stroke: currentColor;
 		margin-right: 10px;
-		.transition(transform 500ms 150ms @cubic);
+		.transition(transform 500ms @cubic);
 	}
 
 	&:hover {
