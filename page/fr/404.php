@@ -12,7 +12,9 @@
 					<p>La page que vous recherchez est introuvable : elle a peut être été renommée, déplacée ou supprimée. Nous allons menez notre petite enquête pour essayer de retrouver cette page, en attendant, allez déguster un petit café sur les terrases en face du port <span class="emoji">☕</span>.</p>
 					<p><a href="/" class="underline button"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Rejoindre l'accueil</a></p>
 				</div>
-				<div class="column small-12 large-5"></div>
+				<div class="column small-12 large-5">
+					<svg viewBox="0 0 500 260"><use xlink:href="/picture/sprite.svg#la-rochelle" /></svg>
+				</div>
 			</div>
 		</div>
 	</div>
