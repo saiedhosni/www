@@ -10,7 +10,7 @@
 		</div>
 	</div>
 </section>
-<div class="wrapper-motio-vertical">
+<div class="wrapper-motio-vertical hide-for-small-only">
 	<svg class="motio-vertical"><use xlink:href="/picture/sprite.svg#logo-motio-vertical" /></svg>
 </div>
 <section class="row column expanded white">
