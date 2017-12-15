@@ -144,6 +144,7 @@
 		width: 34px;
 		height: 34px;
 		cursor: pointer;
+		.no-highlight();
 
 		&:hover {
 			span {
@@ -182,7 +183,7 @@
 		z-index: 50;
 		left: 100vw;
 		top: 0;
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
 		margin: 0;
 		padding: 10vh 20vw;
@@ -296,10 +297,11 @@
 	.menu-button-close {
 		position: fixed;
 		top: 44px;
-		right: 47px;
+		right: 30px;
 		width: 34px;
 		height: 34px;
 		cursor: pointer;
+		.no-highlight();
 	}
 
 	.message {
