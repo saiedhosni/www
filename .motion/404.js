@@ -36,7 +36,7 @@
 			strokeDashoffset: { '-100%' : '100%' },
 			x: { 'rand(-250, 250)' : 'rand(-250, 250)' },
 			y: 'rand(-40, 60)',
-			opacity: { 1 : 0 },
+			opacity: { 0.8 : 0 },
 			radius: 'rand(20, 60)',
 			duration: 500,
 			repeat: 100,
