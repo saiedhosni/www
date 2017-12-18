@@ -24,7 +24,7 @@
 		isForce3d: true
 	};
 
-	// fog
+	// fog tween
 	const fogShape = mojs.stagger(mojs.Shape);
 	const fog = new fogShape(
 		mojs.helpers.extend({
