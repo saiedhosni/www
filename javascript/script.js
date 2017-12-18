@@ -233,6 +233,7 @@
 	// checks if the illustration is present on the page
 	if (illustration != null) {
 
+		// base options for the 404 illustration
 		const illustrationOptions = {
 			parent: document.querySelector('.illustration-404'),
 			isForce3d: true
