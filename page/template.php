@@ -46,6 +46,7 @@
 			}
 		?>
 		<script type="text/javascript" src="/javascript/mo.min.js"></script>
+		<script type="text/javascript" src="/javascript/barba.min.js"></script>
 		<script type="text/javascript" src="/javascript/script.min.js"></script>
 	</body>
 </html>
