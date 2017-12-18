@@ -13,7 +13,9 @@
 					<p><a href="/" class="underline button"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Rejoindre l'accueil</a></p>
 				</div>
 				<div class="column small-12 large-5">
-					<svg viewBox="0 0 500 260"><use xlink:href="/picture/sprite.svg#la-rochelle" /></svg>
+					<div class="illustration-404">
+						<svg viewBox="0 0 500 260"><use xlink:href="/picture/sprite.svg#la-rochelle" /></svg>
+					</div>
 				</div>
 			</div>
 		</div>
