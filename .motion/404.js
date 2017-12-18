@@ -8,7 +8,8 @@
 		vibrant: '#00ffd3',
 		contrast: '#fff',
 		bright: '#5f5f5f',
-		warning: '#f6cc00'
+		warning: '#f6cc00',
+		fog: '#dadce0'
 	};
 
 	// creates the timeline
