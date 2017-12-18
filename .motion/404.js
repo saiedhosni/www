@@ -54,7 +54,7 @@
 			left: '80%',
 			top: '20%',
 			radius: { 18 : 20 },
-			opacity: { 0.1 : 0.2 },
+			opacity: { 0.2 : 0.3 },
 			duration: 4000,
 			repeat: 3000,
 			isYoyo: true
