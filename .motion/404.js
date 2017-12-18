@@ -39,10 +39,12 @@
 			opacity: { 1 : 0 },
 			radius: 'rand(20, 60)',
 			duration: 500,
+			repeat: 100,
 			delay: 'rand(0, 2000)',
 			isShowEnd: false,
-			repeat: 100,
-			speed: 0.02
+			speed: 0.03
+		}, options)
+	);
 		}, options)
 	);
 
