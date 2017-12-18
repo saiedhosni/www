@@ -45,12 +45,26 @@
 			speed: 0.03
 		}, options)
 	);
+
+	// sun tween
+	let sun = new mojs.Shape(
+		mojs.helpers.extend({
+			shape: 'circle',
+			fill: colors.warning,
+			left: '80%',
+			top: '20%',
+			radius: { 18 : 20 },
+			opacity: { 0.1 : 0.2 },
+			duration: 4000,
+			repeat: 3000,
+			isYoyo: true
 		}, options)
 	);
 
 	// adds shapes to the timeline
 	timeline.add(
-		fog
+		fog,
+		sun
 	);
 
 	// creates the player
