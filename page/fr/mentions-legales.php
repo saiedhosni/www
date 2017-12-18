@@ -28,13 +28,11 @@
 			<p class="no-margin">Le site respecte la vie privée de l'internaute et se conforme strictement aux lois en vigueur sur la protection de la vie privée et des libertés individuelles. Aucune information personnelle n'est collectée à votre insu. Aucune information personnelle n'est cédée à des tiers. Les courriels, les adresses électroniques ou autres informations nominatives dont ce site est destinataire ne font l'objet d'aucune exploitation et ne sont conservés que pour la durée nécessaire à leur traitement.  Conformément aux dispositions de l'article L.78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données qui vous concerne. Ce droit s'exerce par voie électronique, en justifiant de votre identité, à l'adresse <a href="mailto:hello@studiomotio.com" target="_blank" class="underline">hello@studiomotio.com</a>.</p>
 		</article>
 	</div>
-	</div>
 	<div class="row align-center">
 		<article class="column medium-9 large-8">
 			<p><strong>Cookies</strong></p>
 			<p class="no-margin">Des données non personnelles sont collectées lors de votre navigation, par un système de cookies, à des fins statistiques.  Ces fichiers, stockés sur votre ordinateur, permettent d'enregistrer des informations relatives à votre navigation sur notre site, comme par exemple les pages consultées ou encore la durée de consultation.  En aucun cas ces données ne nous permettent de vous identifier. Vous pouvez vous opposer à l'enregistrement des « cookies » en configurant votre navigateur internet.</p>
 		</article>
-	</div>
 	</div>
 	<div class="row align-center">
 		<article class="column medium-9 large-8">
