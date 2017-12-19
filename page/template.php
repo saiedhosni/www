@@ -35,16 +35,20 @@
 			'en/index'
 		]);
 	?>
-	<body class="<?php echo $has_footer ? 'has-footer' : '' ?>">
+	<body class="<?php echo $has_footer ? 'has-footer' : '' ?>" id="barba-wrapper">
 		<?php
 			require_once 'module/header.php';
 			require_once 'module/media.php';
-			require_once PATH;
-
-			if ($has_footer) {
-				require_once 'module/footer.php';
-			}
 		?>
+		<div class="barba-container">
+			<?php
+				require_once PATH;
+
+				if ($has_footer) {
+					require_once 'module/footer.php';
+				}
+			?>
+		</div>
 		<script type="text/javascript" src="/javascript/mo.min.js"></script>
 		<script type="text/javascript" src="/javascript/barba.min.js"></script>
 		<script type="text/javascript" src="/javascript/script.min.js"></script>
