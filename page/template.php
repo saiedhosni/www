@@ -40,7 +40,7 @@
 			require_once 'module/header.php';
 			require_once 'module/media.php';
 		?>
-		<div class="barba-container">
+		<main class="barba-container">
 			<?php
 				require_once PATH;
 
@@ -48,7 +48,7 @@
 					require_once 'module/footer.php';
 				}
 			?>
-		</div>
+		</main>
 		<script type="text/javascript" src="/javascript/mo.min.js"></script>
 		<script type="text/javascript" src="/javascript/barba.min.js"></script>
 		<script type="text/javascript" src="/javascript/script.min.js"></script>
