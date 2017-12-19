@@ -12,6 +12,9 @@
 		large: window.innerWidth >= 1024
 	}
 
+	// initializes barba js
+	Barba.Pjax.start();
+
 	// gets the white section as a wrapper
 	const wrapper = document.querySelector('section.white');
 
