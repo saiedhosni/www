@@ -124,6 +124,107 @@
 		}, options)
 	);
 
+	// studio "s" tween
+	let studio_s = new mojs.Html(
+		mojs.helpers.extend({
+			el: '#studio-s',
+			strokeDasharray: 56.3,
+			strokeDashoffset: { '-56.3' : 0 },
+			delay: delay * 8 + 200
+		}, options)
+	);
+
+	// studio "t" tween
+	let studio_t_horizontal = new mojs.Html(
+		mojs.helpers.extend({
+			el: '#studio-t-horizontal',
+			strokeDasharray: 12,
+			strokeDashoffset: { '12' : 0 },
+			delay: delay * 9 + 200
+		}, options)
+	);
+
+	let studio_t_vertical = new mojs.Html(
+		mojs.helpers.extend({
+			el: '#studio-t-vertical',
+			strokeDasharray: 34,
+			strokeDashoffset: { '34' : 0 },
+			delay: delay * 10 + 200
+		}, options)
+	);
+
+	// studio "u" tween
+	let studio_u = new mojs.Html(
+		mojs.helpers.extend({
+			el: '#studio-u',
+			strokeDasharray: 50.2,
+			strokeDashoffset: { '-50.2' : 0 },
+			delay: delay * 11 + 200
+		}, options)
+	);
+
+	let studio_u_vertical = new mojs.Html(
+		mojs.helpers.extend({
+			el: '#studio-u-vertical',
+			strokeDasharray: 21.2,
+			strokeDashoffset: { '-21.2' : 0 },
+			delay: delay * 12 + 200
+		}, options)
+	);
+
+	// studio "d" tween
+	let studio_d = new mojs.Html(
+		mojs.helpers.extend({
+			el: '#studio-d',
+			strokeDasharray: 62,
+			strokeDashoffset: { '62' : 0 },
+			angleZ: { '-90' : 0 },
+			transformOrigin: '50% 50%',
+			delay: delay * 13 + 200
+		}, options)
+	);
+
+	let studio_d_vertical = new mojs.Html(
+		mojs.helpers.extend({
+			el: '#studio-d-vertical',
+			strokeDasharray: 33,
+			strokeDashoffset: { '33' : 0 },
+			delay: delay * 14 + 200
+		}, options)
+	);
+
+	// studio "i" tween
+	let studio_i_vertical = new mojs.Html(
+		mojs.helpers.extend({
+			el: '#studio-i-vertical',
+			strokeDasharray: 21.2,
+			strokeDashoffset: { '-21.2' : 0 },
+			delay: delay * 15 + 200
+		}, options)
+	);
+
+	let studio_i_dot = new mojs.Html(
+		mojs.helpers.extend({
+			el: '#studio-i-dot',
+			r: { 0 : 1.31 },
+			stroke: 0,
+			fill: colors.base,
+			delay: delay * 16 + 200
+		}, options)
+	);
+
+	// studio "o" tween
+	let studio_o = new mojs.Html(
+		mojs.helpers.extend({
+			el: '#studio-o',
+			strokeDasharray: 63.3,
+			strokeDashoffset: { '-63.3' : 0 },
+			angleZ: { '280' : 0 },
+			transformOrigin: '50% 50%',
+			delay: delay * 17 + 200
+		}, options)
+	);
+
 	// adds shapes to the timeline
 	timeline.add(
 		motion_m_vertical,
@@ -134,7 +235,17 @@
 		motio_t_vertical,
 		motio_i_vertical,
 		motio_i_dot,
-		motio_o_last
+		motio_o_last,
+		studio_s,
+		studio_t_horizontal,
+		studio_t_vertical,
+		studio_u,
+		studio_u_vertical,
+		studio_d,
+		studio_d_vertical,
+		studio_i_vertical,
+		studio_i_dot,
+		studio_o
 	);
 
 	// creates the player
