@@ -93,7 +93,7 @@
 		}, options)
 	);
 
-	// motion "i" tween
+	// motio "i" tween
 	let motio_i_vertical = new mojs.Html(
 		mojs.helpers.extend({
 			el: '#motio-i-vertical',
@@ -112,7 +112,7 @@
 		}, options)
 	);
 
-	// motion "o" tween
+	// motio "o" tween
 	let motio_o_last = new mojs.Html(
 		mojs.helpers.extend({
 			el: '#motio-o-last',
