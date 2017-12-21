@@ -123,6 +123,25 @@
 		}, motio_options)
 	);
 
+	// burst effect on start
+	let burst_start = new mojs.Burst({
+		x: -95,
+		y: 0,
+		count: 10,
+		radius: { 5 : 50 },
+		children: {
+			shape: 'line',
+			duration: 1000,
+			radius: ['rand(2, 3)', 'rand(2, 3)', 'rand(2, 5)'],
+			stroke: [colors.warning, colors.bright, colors.vibrant],
+			scale: {
+				1 : 0,
+				easing: 'quad.in'
+			},
+			easing: 'quint.out'
+		}
+	});
+
 	// adds shapes to the timeline
 	motio_timeline.add(
 		motio_m_vertical,
@@ -134,6 +153,7 @@
 		motio_i_vertical,
 		motio_i_dot,
 		motio_o_last,
+		burst_start
 	);
 
 	// creates the "studio" timeline
