@@ -37,7 +37,7 @@
 	};
 
 	// motio "m" tween
-	let motion_m_vertical = new mojs.Html(
+	let motio_m_vertical = new mojs.Html(
 		mojs.helpers.extend({
 			el: '#motio-m-vertical',
 			strokeDasharray: 80,
@@ -45,7 +45,7 @@
 		}, options)
 	);
 
-	let motion_m_arc_1 = new mojs.Html(
+	let motio_m_arc_1 = new mojs.Html(
 		mojs.helpers.extend({
 			el: '#motio-m-arc-1',
 			strokeDasharray: 98,
@@ -54,7 +54,7 @@
 		}, options)
 	);
 
-	let motion_m_arc_2 = new mojs.Html(
+	let motio_m_arc_2 = new mojs.Html(
 		mojs.helpers.extend({
 			el: '#motio-m-arc-2',
 			strokeDasharray: 119,
@@ -64,7 +64,7 @@
 	);
 
 	// motio "o" tween
-	let motion_o_first = new mojs.Html(
+	let motio_o_first = new mojs.Html(
 		mojs.helpers.extend({
 			el: '#motio-o-first',
 			strokeDasharray: 138,
