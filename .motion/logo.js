@@ -148,9 +148,9 @@
 	// defines the base options
 	const studio_options = {
 		fill: 'transparent',
-		stroke: colors.base,
 		duration: 500,
 		easing: mojs.easing.cubic.in,
+		stroke: { 'transparent' : colors.base },
 		isForce3d: true
 	};
 
@@ -160,7 +160,6 @@
 			el: '#studio-s',
 			strokeDasharray: 56.3,
 			strokeDashoffset: { '-56.3' : 0 },
-			opacity: { 0 : 1 },
 		}, studio_options)
 	);
 
@@ -170,7 +169,6 @@
 			el: '#studio-t-horizontal',
 			strokeDasharray: 12,
 			strokeDashoffset: { '12' : 0 },
-			opacity: { 0 : 1 },
 			delay: studio_interval
 		}, studio_options)
 	);
@@ -180,7 +178,6 @@
 			el: '#studio-t-vertical',
 			strokeDasharray: 34,
 			strokeDashoffset: { '34' : 0 },
-			opacity: { 0 : 1 },
 			delay: studio_interval * 2
 		}, studio_options)
 	);
@@ -191,7 +188,6 @@
 			el: '#studio-u',
 			strokeDasharray: 50.2,
 			strokeDashoffset: { '-50.2' : 0 },
-			opacity: { 0 : 1 },
 			delay: studio_interval * 3
 		}, studio_options)
 	);
@@ -201,7 +197,6 @@
 			el: '#studio-u-vertical',
 			strokeDasharray: 21.2,
 			strokeDashoffset: { '-21.2' : 0 },
-			opacity: { 0 : 1 },
 			delay: studio_interval * 4
 		}, studio_options)
 	);
@@ -212,7 +207,6 @@
 			el: '#studio-d',
 			strokeDasharray: 62,
 			strokeDashoffset: { '62' : 0 },
-			opacity: { 0 : 1 },
 			angleZ: { '-90' : 0 },
 			transformOrigin: '50% 50%',
 			delay: studio_interval * 5
@@ -224,7 +218,6 @@
 			el: '#studio-d-vertical',
 			strokeDasharray: 33,
 			strokeDashoffset: { '33' : 0 },
-			opacity: { 0 : 1 },
 			delay: studio_interval * 6
 		}, studio_options)
 	);
@@ -235,7 +228,6 @@
 			el: '#studio-i-vertical',
 			strokeDasharray: 21.2,
 			strokeDashoffset: { '-21.2' : 0 },
-			opacity: { 0 : 1 },
 			delay: studio_interval * 7
 		}, studio_options)
 	);
@@ -244,9 +236,8 @@
 		mojs.helpers.extend({
 			el: '#studio-i-dot',
 			r: { 0 : 1.31 },
-			stroke: 0,
-			fill: colors.base,
-			opacity: { 0 : 1 },
+			stroke: 'transparent',
+			fill: { 'transparent' : colors.base },
 			delay: studio_interval * 8
 		}, studio_options)
 	);
@@ -257,7 +248,6 @@
 			el: '#studio-o',
 			strokeDasharray: 63.3,
 			strokeDashoffset: { '-63.3' : 0 },
-			opacity: { 0 : 1 },
 			angleZ: { '280' : 0 },
 			transformOrigin: '50% 50%',
 			delay: studio_interval * 9
