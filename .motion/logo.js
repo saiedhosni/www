@@ -68,6 +68,8 @@
 			el: '#motio-o-first',
 			strokeDasharray: 138,
 			strokeDashoffset: { 138 : 0 },
+			angleZ: { 90 : 0 },
+			transformOrigin: '50% 50%',
 			delay: delay * 3
 		}, options)
 	);
@@ -116,6 +118,8 @@
 			el: '#motio-o-last',
 			strokeDasharray: 138,
 			strokeDashoffset: { '-138' : 0 },
+			angleZ: { '-90' : 0 },
+			transformOrigin: '50% 50%',
 			delay: delay * 8
 		}, options)
 	);
