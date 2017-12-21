@@ -139,7 +139,7 @@
 	// creates the "studio" timeline
 	const studio_timeline = new mojs.Timeline({
 		speed: 1.0,
-		delay: 500
+		delay: motio_o_last._o.delay + 300
 	});
 
 	// tween interval
