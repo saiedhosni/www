@@ -25,6 +25,7 @@
 	// tween base time and delay
 	let time = 500;
 	let delay = 100;
+	let delay2 = 30;
 
 	// defines the base options
 	const options = {
@@ -130,7 +131,7 @@
 			el: '#studio-s',
 			strokeDasharray: 56.3,
 			strokeDashoffset: { '-56.3' : 0 },
-			delay: delay * 8 + 200
+			delay: delay * 7
 		}, options)
 	);
 
@@ -140,7 +141,7 @@
 			el: '#studio-t-horizontal',
 			strokeDasharray: 12,
 			strokeDashoffset: { '12' : 0 },
-			delay: delay * 9 + 200
+			delay: delay * 8 + delay2
 		}, options)
 	);
 
@@ -149,7 +150,7 @@
 			el: '#studio-t-vertical',
 			strokeDasharray: 34,
 			strokeDashoffset: { '34' : 0 },
-			delay: delay * 10 + 200
+			delay: delay * 8 + delay2 * 2
 		}, options)
 	);
 
@@ -159,7 +160,7 @@
 			el: '#studio-u',
 			strokeDasharray: 50.2,
 			strokeDashoffset: { '-50.2' : 0 },
-			delay: delay * 11 + 200
+			delay: delay * 8 + delay2 * 3
 		}, options)
 	);
 
@@ -168,7 +169,7 @@
 			el: '#studio-u-vertical',
 			strokeDasharray: 21.2,
 			strokeDashoffset: { '-21.2' : 0 },
-			delay: delay * 12 + 200
+			delay: delay * 8 + delay2 * 4
 		}, options)
 	);
 
@@ -180,7 +181,7 @@
 			strokeDashoffset: { '62' : 0 },
 			angleZ: { '-90' : 0 },
 			transformOrigin: '50% 50%',
-			delay: delay * 13 + 200
+			delay: delay * 8 + delay2 * 5
 		}, options)
 	);
 
@@ -189,7 +190,7 @@
 			el: '#studio-d-vertical',
 			strokeDasharray: 33,
 			strokeDashoffset: { '33' : 0 },
-			delay: delay * 14 + 200
+			delay: delay * 8 + delay2 * 6
 		}, options)
 	);
 
@@ -199,7 +200,7 @@
 			el: '#studio-i-vertical',
 			strokeDasharray: 21.2,
 			strokeDashoffset: { '-21.2' : 0 },
-			delay: delay * 15 + 200
+			delay: delay * 8 + delay2 * 7
 		}, options)
 	);
 
@@ -209,7 +210,7 @@
 			r: { 0 : 1.31 },
 			stroke: 0,
 			fill: colors.base,
-			delay: delay * 16 + 200
+			delay: delay * 8 + delay2 * 8
 		}, options)
 	);
 
@@ -221,7 +222,7 @@
 			strokeDashoffset: { '-63.3' : 0 },
 			angleZ: { '280' : 0 },
 			transformOrigin: '50% 50%',
-			delay: delay * 17 + 200
+			delay: delay * 8 + delay2 * 9
 		}, options)
 	);
 
