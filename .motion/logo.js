@@ -148,9 +148,9 @@
 	// defines the base options
 	const studio_options = {
 		fill: 'transparent',
-		duration: 500,
-		easing: mojs.easing.cubic.in,
 		stroke: { 'transparent' : colors.base },
+		duration: 1200,
+		easing: mojs.easing.ease.in,
 		isForce3d: true
 	};
 
