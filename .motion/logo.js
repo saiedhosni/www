@@ -17,21 +17,19 @@
 	});
 
 	// creates the timeline
-	const timeline = new mojs.Timeline({
+	const motio_timeline = new mojs.Timeline({
 		speed: 1.0,
 		delay: 0
 	});
 
-	// tween base time and delay
-	let time = 500;
-	let delay = 100;
-	let delay2 = 30;
+	// tween interval
+	let motio_interval = 100;
 
 	// defines the base options
-	const options = {
+	const motio_options = {
 		fill: 'transparent',
 		stroke: colors.base,
-		duration: time,
+		duration: 500,
 		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0'),
 		isForce3d: true
 	};
@@ -42,7 +40,7 @@
 			el: '#motio-m-vertical',
 			strokeDasharray: 80,
 			strokeDashoffset: { '-80' : 0 }
-		}, options)
+		}, motio_options)
 	);
 
 	let motio_m_arc_1 = new mojs.Html(
@@ -50,8 +48,8 @@
 			el: '#motio-m-arc-1',
 			strokeDasharray: 98,
 			strokeDashoffset: { 98 : 0 },
-			delay: delay
-		}, options)
+			delay: motio_interval
+		}, motio_options)
 	);
 
 	let motio_m_arc_2 = new mojs.Html(
@@ -59,8 +57,8 @@
 			el: '#motio-m-arc-2',
 			strokeDasharray: 119,
 			strokeDashoffset: { 119 : 0 },
-			delay: delay * 2
-		}, options)
+			delay: motio_interval * 2
+		}, motio_options)
 	);
 
 	// motio "o" tween
@@ -71,8 +69,8 @@
 			strokeDashoffset: { 138 : 0 },
 			angleZ: { 90 : 0 },
 			transformOrigin: '50% 50%',
-			delay: delay * 3
-		}, options)
+			delay: motio_interval * 3
+		}, motio_options)
 	);
 
 	// motio "t" tween
@@ -81,8 +79,8 @@
 			el: '#motio-t-horizontal',
 			strokeDasharray: 54,
 			strokeDashoffset: { 54 : 0 },
-			delay: delay * 4
-		}, options)
+			delay: motio_interval * 4
+		}, motio_options)
 	);
 
 	let motio_t_vertical = new mojs.Html(
@@ -90,8 +88,8 @@
 			el: '#motio-t-vertical',
 			strokeDasharray: 113,
 			strokeDashoffset: { '-113' : 0 },
-			delay: delay * 5
-		}, options)
+			delay: motio_interval * 5
+		}, motio_options)
 	);
 
 	// motio "i" tween
@@ -100,17 +98,17 @@
 			el: '#motio-i-vertical',
 			strokeDasharray: 40,
 			strokeDashoffset: { '-40' : 0 },
-			delay: delay * 6
-		}, options)
+			delay: motio_interval * 6
+		}, motio_options)
 	);
 
 	let motio_i_dot = new mojs.Html(
 		mojs.helpers.extend({
 			el: '#motio-i-dot',
 			r: { 0 : 12.633 },
-			delay: delay * 7,
+			delay: motio_interval * 7,
 			fill: '#000'
-		}, options)
+		}, motio_options)
 	);
 
 	// motio "o" tween
@@ -121,9 +119,40 @@
 			strokeDashoffset: { '-138' : 0 },
 			angleZ: { '-90' : 0 },
 			transformOrigin: '50% 50%',
-			delay: delay * 8
-		}, options)
+			delay: motio_interval * 8
+		}, motio_options)
 	);
+
+	// adds shapes to the timeline
+	motio_timeline.add(
+		motio_m_vertical,
+		motio_m_arc_1,
+		motio_m_arc_2,
+		motio_o_first,
+		motio_t_horizontal,
+		motio_t_vertical,
+		motio_i_vertical,
+		motio_i_dot,
+		motio_o_last,
+	);
+
+	// creates the "studio" timeline
+	const studio_timeline = new mojs.Timeline({
+		speed: 1.0,
+		delay: 500
+	});
+
+	// tween interval
+	let studio_interval = 30;
+
+	// defines the base options
+	const studio_options = {
+		fill: 'transparent',
+		stroke: colors.base,
+		duration: 500,
+		easing: mojs.easing.cubic.in,
+		isForce3d: true
+	};
 
 	// studio "s" tween
 	let studio_s = new mojs.Html(
@@ -131,8 +160,8 @@
 			el: '#studio-s',
 			strokeDasharray: 56.3,
 			strokeDashoffset: { '-56.3' : 0 },
-			delay: delay * 7
-		}, options)
+			opacity: { 0 : 1 },
+		}, studio_options)
 	);
 
 	// studio "t" tween
@@ -141,8 +170,9 @@
 			el: '#studio-t-horizontal',
 			strokeDasharray: 12,
 			strokeDashoffset: { '12' : 0 },
-			delay: delay * 8 + delay2
-		}, options)
+			opacity: { 0 : 1 },
+			delay: studio_interval
+		}, studio_options)
 	);
 
 	let studio_t_vertical = new mojs.Html(
@@ -150,8 +180,9 @@
 			el: '#studio-t-vertical',
 			strokeDasharray: 34,
 			strokeDashoffset: { '34' : 0 },
-			delay: delay * 8 + delay2 * 2
-		}, options)
+			opacity: { 0 : 1 },
+			delay: studio_interval * 2
+		}, studio_options)
 	);
 
 	// studio "u" tween
@@ -160,8 +191,9 @@
 			el: '#studio-u',
 			strokeDasharray: 50.2,
 			strokeDashoffset: { '-50.2' : 0 },
-			delay: delay * 8 + delay2 * 3
-		}, options)
+			opacity: { 0 : 1 },
+			delay: studio_interval * 3
+		}, studio_options)
 	);
 
 	let studio_u_vertical = new mojs.Html(
@@ -169,8 +201,9 @@
 			el: '#studio-u-vertical',
 			strokeDasharray: 21.2,
 			strokeDashoffset: { '-21.2' : 0 },
-			delay: delay * 8 + delay2 * 4
-		}, options)
+			opacity: { 0 : 1 },
+			delay: studio_interval * 4
+		}, studio_options)
 	);
 
 	// studio "d" tween
@@ -179,10 +212,11 @@
 			el: '#studio-d',
 			strokeDasharray: 62,
 			strokeDashoffset: { '62' : 0 },
+			opacity: { 0 : 1 },
 			angleZ: { '-90' : 0 },
 			transformOrigin: '50% 50%',
-			delay: delay * 8 + delay2 * 5
-		}, options)
+			delay: studio_interval * 5
+		}, studio_options)
 	);
 
 	let studio_d_vertical = new mojs.Html(
@@ -190,8 +224,9 @@
 			el: '#studio-d-vertical',
 			strokeDasharray: 33,
 			strokeDashoffset: { '33' : 0 },
-			delay: delay * 8 + delay2 * 6
-		}, options)
+			opacity: { 0 : 1 },
+			delay: studio_interval * 6
+		}, studio_options)
 	);
 
 	// studio "i" tween
@@ -200,8 +235,9 @@
 			el: '#studio-i-vertical',
 			strokeDasharray: 21.2,
 			strokeDashoffset: { '-21.2' : 0 },
-			delay: delay * 8 + delay2 * 7
-		}, options)
+			opacity: { 0 : 1 },
+			delay: studio_interval * 7
+		}, studio_options)
 	);
 
 	let studio_i_dot = new mojs.Html(
@@ -210,8 +246,9 @@
 			r: { 0 : 1.31 },
 			stroke: 0,
 			fill: colors.base,
-			delay: delay * 8 + delay2 * 8
-		}, options)
+			opacity: { 0 : 1 },
+			delay: studio_interval * 8
+		}, studio_options)
 	);
 
 	// studio "o" tween
@@ -220,23 +257,15 @@
 			el: '#studio-o',
 			strokeDasharray: 63.3,
 			strokeDashoffset: { '-63.3' : 0 },
+			opacity: { 0 : 1 },
 			angleZ: { '280' : 0 },
 			transformOrigin: '50% 50%',
-			delay: delay * 8 + delay2 * 9
-		}, options)
+			delay: studio_interval * 9
+		}, studio_options)
 	);
 
 	// adds shapes to the timeline
-	timeline.add(
-		motion_m_vertical,
-		motion_m_arc_1,
-		motion_m_arc_2,
-		motion_o_first,
-		motio_t_horizontal,
-		motio_t_vertical,
-		motio_i_vertical,
-		motio_i_dot,
-		motio_o_last,
+	studio_timeline.add(
 		studio_s,
 		studio_t_horizontal,
 		studio_t_vertical,
@@ -249,9 +278,14 @@
 		studio_o
 	);
 
+	// merges timelines
+	motio_timeline.add(
+		studio_timeline
+	);
+
 	// creates the player
 	new MojsPlayer({
-		add: timeline,
+		add: motio_timeline,
 		isSaveState: true,
 		isPlaying: false,
 		isRepeat: false,
