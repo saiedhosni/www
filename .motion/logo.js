@@ -22,6 +22,9 @@
 		delay: 0
 	});
 
+	// linear easing path (1:1)
+	const linearCurve = mojs.easing.path('M0, -100 C0, -100 100, 0 100, 0');
+
 	// tween interval
 	let motio_interval = 150;
 
@@ -300,6 +303,7 @@
 		strokeWidth: { 'rand(1, 5)' : 0 },
 		strokeDasharray: '100%',
 		strokeDashoffset: { '-100%': '100%' },
+		opacity: { 1 : 0, curve: linearCurve },
 		x: 'rand(-120, -20)',
 		y: 'rand(-70, -40)',
 		radius: 40,
