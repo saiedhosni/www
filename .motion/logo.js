@@ -291,6 +291,23 @@
 		}, studio_options)
 	);
 
+	// stagger effect on the "studio" word
+	var diagonalLinesStagger = mojs.stagger(mojs.Shape);
+	var stagger_diagonal = new diagonalLinesStagger({
+		quantifier: 10,
+		shape: 'line',
+		stroke: [colors.warning, colors.vibrant, colors.bright],
+		strokeWidth: { 'rand(1, 5)' : 0 },
+		strokeDasharray: '100%',
+		strokeDashoffset: { '-100%': '100%' },
+		x: 'rand(-120, -20)',
+		y: 'rand(-70, -40)',
+		radius: 40,
+		angle: '-45',
+		duration: 'rand(250, 700)',
+		delay: 'rand(0, 500)'
+	});
+
 	// adds shapes to the timeline
 	studio_timeline.add(
 		studio_s,
@@ -302,7 +319,8 @@
 		studio_d_vertical,
 		studio_i_vertical,
 		studio_i_dot,
-		studio_o
+		studio_o,
+		stagger_diagonal
 	);
 
 	// merges timelines
