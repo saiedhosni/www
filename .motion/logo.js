@@ -152,7 +152,7 @@
 		strokeDasharray: '100%',
 		strokeDashoffset: { '-100%': '100%' },
 		duration: 'rand(250, 500)',
-		delay: 'rand(' + (motio_t_horizontal._o.delay + 100) + ', ' + (motio_t_horizontal._o.delay + 300) + ')',
+		delay: 'rand(' + (motio_t_horizontal._o.delay + 150) + ', ' + (motio_t_horizontal._o.delay + 350) + ')',
 		x: 'rand(100px, 0)',
 		y: 'rand(-50px, -20px)',
 		radius: 30
