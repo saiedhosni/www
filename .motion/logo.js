@@ -142,6 +142,22 @@
 		}
 	});
 
+	// stagger effect on the horizontal "t" bar
+	var horizontalLinesStagger = mojs.stagger(mojs.Shape);
+	var stagger_horizontal = new horizontalLinesStagger({
+		quantifier: 10,
+		shape: 'line',
+		stroke: [colors.warning, colors.vibrant, colors.bright],
+		strokeWidth: { 'rand(1, 5)' : 0 },
+		strokeDasharray: '100%',
+		strokeDashoffset: { '-100%': '100%' },
+		duration: 'rand(250, 500)',
+		delay: 'rand(' + (motio_t_horizontal._o.delay + 100) + ', ' + (motio_t_horizontal._o.delay + 300) + ')',
+		x: 'rand(100px, 0)',
+		y: 'rand(-50px, -20px)',
+		radius: 30
+	});
+
 	// adds shapes to the timeline
 	motio_timeline.add(
 		motio_m_vertical,
@@ -153,7 +169,8 @@
 		motio_i_vertical,
 		motio_i_dot,
 		motio_o_last,
-		burst_start
+		burst_start,
+		stagger_horizontal
 	);
 
 	// creates the "studio" timeline
