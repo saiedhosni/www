@@ -23,7 +23,7 @@
 	});
 
 	// tween interval
-	let motio_interval = 100;
+	let motio_interval = 150;
 
 	// defines the base options
 	const motio_options = {
