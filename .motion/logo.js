@@ -186,7 +186,7 @@
 	const studio_options = {
 		fill: 'transparent',
 		stroke: { 'transparent' : colors.base },
-		duration: 1200,
+		duration: 500,
 		easing: mojs.easing.ease.in,
 		isForce3d: true
 	};
