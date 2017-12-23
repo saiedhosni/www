@@ -32,96 +32,134 @@
 	const motio_options = {
 		fill: 'transparent',
 		stroke: colors.base,
+		strokeWidth: 10,
+		strokeDasharray: '100%',
+		strokeDashoffset: { '100%' : 0 },
 		duration: 500,
 		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0'),
 		isForce3d: true
 	};
 
+	// defines the base shapes
+	class MotioMArc1 extends mojs.CustomShape {
+		getShape() { return '<path d="M38.56 50.39c0-5.36 5.17-9.7 11.54-9.7 6.3 0 11.43 4.25 11.53 9.54V64.6"/>'; }
+		getLength() { return 47.7; }
+	}
+
+	class MotioMArc2 extends mojs.CustomShape {
+		getShape() { return '<path d="M38.47 42.75c0-5.35 5.16-9.7 11.53-9.7 6.31 0 11.43 4.26 11.53 9.54v24.36"/>'; }
+		getLength() { return 57.7; }
+	}
+
+	class MotioO extends mojs.CustomShape {
+		getShape() { return '<path d="M50 64.21A14.21 14.21 0 1 0 35.8 50"/>'; }
+		getLength() { return 66.9; }
+	}
+
+	class MotioT extends mojs.CustomShape {
+		getShape() { return '<path d="M42.95 27.4v33.33c.03 6.39 2.56 10.73 7.9 11.64 2.18.37 4.07.17 6.2.17"/>';}
+		getLength() { return 55; }
+	}
+
+	// adds all custom shapes to the library
+	mojs.addShape('MotioMArc1', MotioMArc1);
+	mojs.addShape('MotioMArc2', MotioMArc2);
+	mojs.addShape('MotioO', MotioO);
+	mojs.addShape('MotioT', MotioT);
+
 	// motio "m" tween
-	let motio_m_vertical = new mojs.Html(
+	let motio_m_vertical = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#motio-m-vertical',
-			strokeDasharray: 80,
-			strokeDashoffset: { '-80' : 0 }
+			shape: 'line',
+			strokeWidth: 10.5,
+			radius: 19.4,
+			x: -95,
+			y: -19,
+			angle: -90,
 		}, motio_options)
 	);
 
-	let motio_m_arc_1 = new mojs.Html(
+	let motio_m_arc_1 = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#motio-m-arc-1',
-			strokeDasharray: 98,
-			strokeDashoffset: { 98 : 0 },
+			shape: 'MotioMArc1',
+			x: -83.3,
+			y: -24.2,
 			delay: motio_interval
 		}, motio_options)
 	);
 
-	let motio_m_arc_2 = new mojs.Html(
+	let motio_m_arc_2 = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#motio-m-arc-2',
-			strokeDasharray: 119,
-			strokeDashoffset: { 119 : 0 },
+			shape: 'MotioMArc2',
+			x: -60,
+			y: -17,
 			delay: motio_interval * 2
 		}, motio_options)
 	);
 
 	// motio "o" tween
-	let motio_o_first = new mojs.Html(
+	let motio_o_first = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#motio-o-first',
-			strokeDasharray: 138,
-			strokeDashoffset: { 138 : 0 },
-			angleZ: { 90 : 0 },
-			transformOrigin: '50% 50%',
+			shape: 'MotioO',
+			x: -15.5,
+			y: -19,
+			angle: { 90 : 0 },
 			delay: motio_interval * 3
 		}, motio_options)
 	);
 
 	// motio "t" tween
-	let motio_t_horizontal = new mojs.Html(
+	let motio_t_horizontal = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#motio-t-horizontal',
-			strokeDasharray: 54,
-			strokeDashoffset: { 54 : 0 },
+			shape: 'line',
+			strokeWidth: 9,
+			radius: 13,
+			x: 21.5,
+			y: -33.8,
 			delay: motio_interval * 4
 		}, motio_options)
 	);
 
-	let motio_t_vertical = new mojs.Html(
+	let motio_t_vertical = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#motio-t-vertical',
-			strokeDasharray: 113,
-			strokeDashoffset: { '-113' : 0 },
+			shape: 'MotioT',
+			x: 27.5,
+			y: -27.3,
 			delay: motio_interval * 5
 		}, motio_options)
 	);
 
 	// motio "i" tween
-	let motio_i_vertical = new mojs.Html(
+	let motio_i_vertical = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#motio-i-vertical',
-			strokeDasharray: 40,
-			strokeDashoffset: { '-40' : 0 },
+			shape: 'line',
+			radius: 9.7,
+			x: 47.5,
+			y: -28.5,
+			angle: -90,
 			delay: motio_interval * 6
 		}, motio_options)
 	);
 
-	let motio_i_dot = new mojs.Html(
+	let motio_i_dot = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#motio-i-dot',
-			r: { 0 : 12.633 },
-			delay: motio_interval * 7,
-			fill: '#000'
+			shape: 'circle',
+			stroke: 'transparent',
+			fill: colors.base,
+			radius: { 0 : 6.3 },
+			x: 47,
+			y: -49.5,
+			delay: motio_interval * 7
 		}, motio_options)
 	);
 
 	// motio "o" tween
-	let motio_o_last = new mojs.Html(
+	let motio_o_last = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#motio-o-last',
-			strokeDasharray: 138,
-			strokeDashoffset: { '-138' : 0 },
-			angleZ: { '-90' : 0 },
-			transformOrigin: '50% 50%',
+			shape: 'MotioO',
+			x: 80.5,
+			y: -19,
+			angle: { 180 : 90 },
 			delay: motio_interval * 8
 		}, motio_options)
 	);
