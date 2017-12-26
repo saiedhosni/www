@@ -91,8 +91,8 @@
 	let motio_m_arc_2 = new mojs.Shape(
 		mojs.helpers.extend({
 			shape: 'motio-m-arc2',
-			x: -60,
-			y: -17,
+			x: -60.1,
+			y: -16.5,
 			delay: motio_interval * 2
 		}, motio_options)
 	);
@@ -123,7 +123,7 @@
 		mojs.helpers.extend({
 			shape: 'motio-t',
 			x: 27.5,
-			y: -27.3,
+			y: -27.4,
 			delay: motio_interval * 5
 		}, motio_options)
 	);
