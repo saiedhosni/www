@@ -24,6 +24,8 @@
 
 	// linear easing path (1:1)
 	const linearCurve = mojs.easing.path('M0, -100 C0, -100 100, 0 100, 0');
+	const bounceCurve = mojs.easing.path('M0, 50 C0, 50 17.25503118510422, -149.86658034848554 35, -150 C52.744968814895785, -150.13341965151443 62.32679796811743, 12.80677716048544 70, 25 C77.67320203188257, 37.193222839514554 100, 0 100, 0');
+	const reboundCurve = mojs.easing.path('M0, 0 C0, 0 10, 95 10, 95 C10, 95 19.734172277623827, 0.13682671383441278 45, 0 C64.43392377726468, 0.14888757187990748 100, 0 100, 0');
 
 	// tween interval
 	let motio_interval = 150;
@@ -138,17 +140,22 @@
 			angle: -90,
 			delay: motio_interval * 6
 		}, motio_options)
-	);
+	).then({
+		delay: 85,
+		y: { '-20' : '-28.5' },
+		radius: { 9.7 : 9.7, curve: reboundCurve },
+		easing: reboundCurve
+	});
 
 	let motio_i_dot = new mojs.Shape(
 		mojs.helpers.extend({
 			shape: 'circle',
 			stroke: 'transparent',
 			fill: colors.base,
-			radius: { 0 : 6.3 },
+			radius: { 5.3 : 6.3 },
 			x: 47,
-			y: -49.5,
-			delay: motio_interval * 7
+			y: { '-45' : -49.5, curve: bounceCurve },
+			delay: motio_interval * 7 + 100
 		}, motio_options)
 	);
 
