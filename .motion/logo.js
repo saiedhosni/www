@@ -35,6 +35,7 @@
 		strokeWidth: 10,
 		strokeDasharray: '100%',
 		strokeDashoffset: { '100%' : 0 },
+		y: -19,
 		duration: 500,
 		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0'),
 		isForce3d: true
@@ -74,7 +75,6 @@
 			strokeWidth: 10.5,
 			radius: 19.4,
 			x: -95,
-			y: -19,
 			angle: -90,
 		}, motio_options)
 	);
@@ -102,7 +102,6 @@
 		mojs.helpers.extend({
 			shape: 'MotioO',
 			x: -15.5,
-			y: -19,
 			angle: { 90 : 0 },
 			delay: motio_interval * 3
 		}, motio_options)
@@ -158,7 +157,6 @@
 		mojs.helpers.extend({
 			shape: 'MotioO',
 			x: 80.5,
-			y: -19,
 			angle: { 180 : 90 },
 			delay: motio_interval * 8
 		}, motio_options)
@@ -221,114 +219,113 @@
 	});
 
 	// tween interval
-	let studio_interval = 30;
+	let studio_interval = 70;
 
 	// defines the base options
 	const studio_options = {
 		fill: 'transparent',
 		stroke: { 'transparent' : colors.base },
+		strokeWidth: 0.71,
+		strokeDasharray: '100%',
+		strokeDashoffset: { '-100%' : 0 },
+		y: -56,
 		duration: 500,
 		easing: mojs.easing.ease.in,
 		isForce3d: true
 	};
 
+	// defines the base shapes
+	class StudioS extends mojs.CustomShape {
+		getShape() { return '<path d="M54.034 48.451c-.076-.852-.473-1.473-1.043-1.89-.633-.459-1.188-.563-2.086-.57-.279-.004-1.143-.021-1.807.368-.492.288-.83.608-1.033 1.105-.207.494-.242.729-.203 1.213.041.482.135.76.338 1.018.205.256.434.438.955.635.514.189 1.398.377 1.988.506a11.68 11.68 0 0 1 1.666.492c.355.137.803.346 1.021.578.248.266.336.441.408.635.055.146.152.523.121 1.029-.021.363-.078.701-.258 1.025-.143.256-.35.57-.742.813-.373.23-.91.514-1.754.572-1.096.078-1.426-.037-1.965-.195a2.968 2.968 0 0 1-1.51-1.07c-.215-.305-.443-.654-.5-1.23"/>'; }
+		getLength() { return 27.4; }
+	}
+
+	class StudioT extends mojs.CustomShape {
+		getShape() { return '<path d="M53.1758 55.6758c-.3281 0-1.4688.1826-2.0215-.004-.8457-.2665-1.0527-.7187-1.2783-1.1591-.2608-.6387-.2217-1.2246-.2295-2.0547V42.0332"/><path d="M47.3389 46.0557h5.7959"/>'; }
+		getLength() { return 22.1; }
+	}
+
+	class StudioU extends mojs.CustomShape {
+		getShape() { return '<path d="M54.579 45.869v6.64c-.094.723-.173 1.064-.554 1.727-.653 1.139-1.829 1.758-3.032 1.777-1.166.02-1.969-.34-2.585-1.006-.609-.658-.993-1.541-1.001-2.5v-6.638m7.172 0v10.304"/>'; }
+		getLength() { return 34.71; }
+	}
+
+	class StudioD extends mojs.CustomShape {
+		getShape() { return '<ellipse cx="51.002" cy="50.99" rx="4.564" ry="5.022"/><path d="M55.566 40.214v15.911"/>'; }
+		getLength() { return 46.06; }
+	}
+
+	class StudioI extends mojs.CustomShape {
+		getShape() { return '<circle cx="51" cy="41.907" r="0.7" stroke="none"/><path d="M50.965 45.97v10.305"/>'; }
+		getLength() { return 10.53; }
+	}
+
+	class StudioO extends mojs.CustomShape {
+		getShape() { return '<ellipse cx="50.999" cy="50.98" rx="4.777" ry="5.025"/>'; }
+		getLength() { return 30.8; }
+	}
+
+	// adds all custom shapes to the library
+	mojs.addShape('StudioS', StudioS);
+	mojs.addShape('StudioT', StudioT);
+	mojs.addShape('StudioU', StudioU);
+	mojs.addShape('StudioD', StudioD);
+	mojs.addShape('StudioI', StudioI);
+	mojs.addShape('StudioO', StudioO);
+
 	// studio "s" tween
-	let studio_s = new mojs.Html(
+	let studio_s = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#studio-s',
-			strokeDasharray: 56.3,
-			strokeDashoffset: { '-56.3' : 0 },
+			shape: 'StudioS',
+			x: -97,
 		}, studio_options)
 	);
 
 	// studio "t" tween
-	let studio_t_horizontal = new mojs.Html(
+	let studio_t = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#studio-t-horizontal',
-			strokeDasharray: 12,
-			strokeDashoffset: { '12' : 0 },
+			shape: 'StudioT',
+			x: -88,
+			strokeDashoffset: { '100%' : 0 },
 			delay: studio_interval
 		}, studio_options)
 	);
 
-	let studio_t_vertical = new mojs.Html(
+	// studio "u" tween
+	let studio_u = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#studio-t-vertical',
-			strokeDasharray: 34,
-			strokeDashoffset: { '34' : 0 },
+			shape: 'StudioU',
+			x: -79,
 			delay: studio_interval * 2
 		}, studio_options)
 	);
 
-	// studio "u" tween
-	let studio_u = new mojs.Html(
+	// studio "d" tween
+	let studio_d = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#studio-u',
-			strokeDasharray: 50.2,
-			strokeDashoffset: { '-50.2' : 0 },
+			shape: 'StudioD',
+			x: -67,
 			delay: studio_interval * 3
 		}, studio_options)
 	);
 
-	let studio_u_vertical = new mojs.Html(
+	// studio "i" tween
+	let studio_i = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#studio-u-vertical',
-			strokeDasharray: 21.2,
-			strokeDashoffset: { '-21.2' : 0 },
+			shape: 'StudioI',
+			fill: { 'transparent' : colors.base },
+			x: -58,
 			delay: studio_interval * 4
 		}, studio_options)
 	);
 
-	// studio "d" tween
-	let studio_d = new mojs.Html(
-		mojs.helpers.extend({
-			el: '#studio-d',
-			strokeDasharray: 62,
-			strokeDashoffset: { '62' : 0 },
-			angleZ: { '-90' : 0 },
-			transformOrigin: '50% 50%',
-			delay: studio_interval * 5
-		}, studio_options)
-	);
-
-	let studio_d_vertical = new mojs.Html(
-		mojs.helpers.extend({
-			el: '#studio-d-vertical',
-			strokeDasharray: 33,
-			strokeDashoffset: { '33' : 0 },
-			delay: studio_interval * 6
-		}, studio_options)
-	);
-
-	// studio "i" tween
-	let studio_i_vertical = new mojs.Html(
-		mojs.helpers.extend({
-			el: '#studio-i-vertical',
-			strokeDasharray: 21.2,
-			strokeDashoffset: { '-21.2' : 0 },
-			delay: studio_interval * 7
-		}, studio_options)
-	);
-
-	let studio_i_dot = new mojs.Html(
-		mojs.helpers.extend({
-			el: '#studio-i-dot',
-			r: { 0 : 1.31 },
-			stroke: 'transparent',
-			fill: { 'transparent' : colors.base },
-			delay: studio_interval * 8
-		}, studio_options)
-	);
-
 	// studio "o" tween
-	let studio_o = new mojs.Html(
+	let studio_o = new mojs.Shape(
 		mojs.helpers.extend({
-			el: '#studio-o',
-			strokeDasharray: 63.3,
-			strokeDashoffset: { '-63.3' : 0 },
-			angleZ: { '280' : 0 },
-			transformOrigin: '50% 50%',
-			delay: studio_interval * 9
+			shape: 'StudioO',
+			x: -49,
+			strokeDashoffset: { '100%' : 0 },
+			delay: studio_interval * 5
 		}, studio_options)
 	);
 
@@ -353,14 +350,10 @@
 	// adds shapes to the timeline
 	studio_timeline.add(
 		studio_s,
-		studio_t_horizontal,
-		studio_t_vertical,
+		studio_t,
 		studio_u,
-		studio_u_vertical,
 		studio_d,
-		studio_d_vertical,
-		studio_i_vertical,
-		studio_i_dot,
+		studio_i,
 		studio_o,
 		stagger_diagonal
 	);
