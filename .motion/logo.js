@@ -63,10 +63,10 @@
 	}
 
 	// adds all custom shapes to the library
-	mojs.addShape('MotioMArc1', MotioMArc1);
-	mojs.addShape('MotioMArc2', MotioMArc2);
-	mojs.addShape('MotioO', MotioO);
-	mojs.addShape('MotioT', MotioT);
+	mojs.addShape('motio-m-arc1', MotioMArc1);
+	mojs.addShape('motio-m-arc2', MotioMArc2);
+	mojs.addShape('motio-o', MotioO);
+	mojs.addShape('motio-t', MotioT);
 
 	// motio "m" tween
 	let motio_m_vertical = new mojs.Shape(
@@ -81,7 +81,7 @@
 
 	let motio_m_arc_1 = new mojs.Shape(
 		mojs.helpers.extend({
-			shape: 'MotioMArc1',
+			shape: 'motio-m-arc1',
 			x: -83.3,
 			y: -24.2,
 			delay: motio_interval
@@ -90,7 +90,7 @@
 
 	let motio_m_arc_2 = new mojs.Shape(
 		mojs.helpers.extend({
-			shape: 'MotioMArc2',
+			shape: 'motio-m-arc2',
 			x: -60,
 			y: -17,
 			delay: motio_interval * 2
@@ -100,7 +100,7 @@
 	// motio "o" tween
 	let motio_o_first = new mojs.Shape(
 		mojs.helpers.extend({
-			shape: 'MotioO',
+			shape: 'motio-o',
 			x: -15.5,
 			angle: { 90 : 0 },
 			delay: motio_interval * 3
@@ -121,7 +121,7 @@
 
 	let motio_t_vertical = new mojs.Shape(
 		mojs.helpers.extend({
-			shape: 'MotioT',
+			shape: 'motio-t',
 			x: 27.5,
 			y: -27.3,
 			delay: motio_interval * 5
@@ -155,7 +155,7 @@
 	// motio "o" tween
 	let motio_o_last = new mojs.Shape(
 		mojs.helpers.extend({
-			shape: 'MotioO',
+			shape: 'motio-o',
 			x: 80.5,
 			angle: { 180 : 90 },
 			delay: motio_interval * 8
@@ -266,17 +266,17 @@
 	}
 
 	// adds all custom shapes to the library
-	mojs.addShape('StudioS', StudioS);
-	mojs.addShape('StudioT', StudioT);
-	mojs.addShape('StudioU', StudioU);
-	mojs.addShape('StudioD', StudioD);
-	mojs.addShape('StudioI', StudioI);
-	mojs.addShape('StudioO', StudioO);
+	mojs.addShape('studio-s', StudioS);
+	mojs.addShape('studio-t', StudioT);
+	mojs.addShape('studio-u', StudioU);
+	mojs.addShape('studio-d', StudioD);
+	mojs.addShape('studio-i', StudioI);
+	mojs.addShape('studio-o', StudioO);
 
 	// studio "s" tween
 	let studio_s = new mojs.Shape(
 		mojs.helpers.extend({
-			shape: 'StudioS',
+			shape: 'studio-s',
 			x: -97,
 		}, studio_options)
 	);
@@ -284,7 +284,7 @@
 	// studio "t" tween
 	let studio_t = new mojs.Shape(
 		mojs.helpers.extend({
-			shape: 'StudioT',
+			shape: 'studio-t',
 			x: -88,
 			strokeDashoffset: { '100%' : 0 },
 			delay: studio_interval
@@ -294,7 +294,7 @@
 	// studio "u" tween
 	let studio_u = new mojs.Shape(
 		mojs.helpers.extend({
-			shape: 'StudioU',
+			shape: 'studio-u',
 			x: -79,
 			delay: studio_interval * 2
 		}, studio_options)
@@ -303,7 +303,7 @@
 	// studio "d" tween
 	let studio_d = new mojs.Shape(
 		mojs.helpers.extend({
-			shape: 'StudioD',
+			shape: 'studio-d',
 			x: -67,
 			delay: studio_interval * 3
 		}, studio_options)
@@ -312,7 +312,7 @@
 	// studio "i" tween
 	let studio_i = new mojs.Shape(
 		mojs.helpers.extend({
-			shape: 'StudioI',
+			shape: 'studio-i',
 			fill: { 'transparent' : colors.base },
 			x: -58,
 			delay: studio_interval * 4
@@ -322,7 +322,7 @@
 	// studio "o" tween
 	let studio_o = new mojs.Shape(
 		mojs.helpers.extend({
-			shape: 'StudioO',
+			shape: 'studio-o',
 			x: -49,
 			strokeDashoffset: { '100%' : 0 },
 			delay: studio_interval * 5
