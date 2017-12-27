@@ -304,7 +304,7 @@
 	var stagger_diagonal = new diagonalLinesStagger({
 		quantifier: 10,
 		shape: 'line',
-		stroke: [colors.warning, colors.vibrant, colors.bright],
+		stroke: [colors.bright, colors.vibrant],
 		strokeWidth: { 'rand(1, 5)' : 0 },
 		strokeDasharray: '100%',
 		strokeDashoffset: { '-100%': '100%' },
