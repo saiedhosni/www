@@ -169,41 +169,6 @@
 		}, motio_options)
 	);
 
-	// burst effect on start
-	let burst_start = new mojs.Burst({
-		x: -95,
-		y: 0,
-		count: 10,
-		radius: { 5 : 50 },
-		children: {
-			shape: 'line',
-			duration: 1000,
-			radius: ['rand(2, 3)', 'rand(2, 3)', 'rand(2, 5)'],
-			stroke: [colors.warning, colors.bright, colors.vibrant],
-			scale: {
-				1 : 0,
-				easing: 'quad.in'
-			},
-			easing: 'quint.out'
-		}
-	});
-
-	// stagger effect on the horizontal "t" bar
-	var horizontalLinesStagger = mojs.stagger(mojs.Shape);
-	var stagger_horizontal = new horizontalLinesStagger({
-		quantifier: 10,
-		shape: 'line',
-		stroke: [colors.warning, colors.vibrant, colors.bright],
-		strokeWidth: { 'rand(1, 5)' : 0 },
-		strokeDasharray: '100%',
-		strokeDashoffset: { '-100%': '100%' },
-		duration: 'rand(250, 500)',
-		delay: 'rand(' + (motio_t_horizontal._o.delay + 150) + ', ' + (motio_t_horizontal._o.delay + 350) + ')',
-		x: 'rand(100, 0)',
-		y: 'rand(-50, -20)',
-		radius: 30
-	});
-
 	// adds shapes to the timeline
 	motio_timeline.add(
 		motio_m_vertical,
@@ -214,9 +179,7 @@
 		motio_t_vertical,
 		motio_i_vertical,
 		motio_i_dot,
-		motio_o_last,
-		burst_start,
-		stagger_horizontal
+		motio_o_last
 	);
 
 	// creates the "studio" timeline
