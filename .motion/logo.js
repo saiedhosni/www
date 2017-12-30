@@ -141,7 +141,7 @@
 			delay: motio_interval * 6
 		}, motio_options)
 	).then({
-		delay: 85,
+		delay: 75,
 		y: { '-20' : '-28.5' },
 		radius: { 9.7 : 9.7, curve: reboundCurve },
 		easing: reboundCurve
