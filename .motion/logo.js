@@ -39,8 +39,7 @@
 		strokeDashoffset: { '100%' : 0 },
 		y: -19,
 		duration: 500,
-		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0'),
-		isForce3d: true
+		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0')
 	};
 
 	// defines the base shapes
@@ -200,8 +199,7 @@
 		strokeDashoffset: { '-100%' : 0 },
 		y: -56,
 		duration: 500,
-		easing: mojs.easing.ease.in,
-		isForce3d: true
+		easing: mojs.easing.ease.in
 	};
 
 	// defines the base shapes
