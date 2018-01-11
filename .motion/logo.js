@@ -298,8 +298,8 @@
 	);
 
 	// stagger effect on the "studio" word
-	var diagonalLinesStagger = mojs.stagger(mojs.Shape);
-	var diagonal_lines = new diagonalLinesStagger({
+	let diagonalLinesStagger = mojs.stagger(mojs.Shape);
+	let diagonal_lines = new diagonalLinesStagger({
 		quantifier: 8,
 		shape: 'line',
 		stroke: [colors.bright, colors.vibrant],
