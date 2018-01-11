@@ -28,7 +28,7 @@
 	const reboundCurve = mojs.easing.path('M0, 0 C0, 0 1.5581395348837228, 64.71428571428571 6.578073089700997, 65 C11.598006644518271, 65.28571428571429 8.650122205969112, 65.14210007000197 13.417411218269201, 65 C24.120011928557993, 59.42932850142662 21.325081368532917, -0.14888757187985946 45, 0 C64.43392377726468, 0.14888757187990745 100, 0 100, 0');
 
 	// tween interval
-	let motio_interval = 150;
+	let motio_interval = 100;
 
 	// defines the base options
 	const motio_options = {
@@ -39,6 +39,14 @@
 		strokeDashoffset: { '100%' : 0 },
 		y: -19,
 		duration: 500,
+		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0')
+	};
+
+	// defines options for the out animation
+	const motio_out = {
+		delay: 3500,
+		duration: 250,
+		strokeDashoffset: '-100%',
 		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0')
 	};
 
@@ -76,8 +84,12 @@
 			strokeWidth: 10.5,
 			radius: 19.4,
 			x: -95,
-			angle: -90,
+			angle: -90
 		}, motio_options)
+	).then(
+		mojs.helpers.extend({
+			delay: motio_out.delay - motio_interval * 0.5
+		}, motio_out)
 	);
 
 	let motio_m_arc_1 = new mojs.Shape(
@@ -87,6 +99,10 @@
 			y: -24.2,
 			delay: motio_interval
 		}, motio_options)
+	).then(
+		mojs.helpers.extend({
+			delay: motio_out.delay - motio_interval * 1
+		}, motio_out)
 	);
 
 	let motio_m_arc_2 = new mojs.Shape(
@@ -96,6 +112,10 @@
 			y: -16.5,
 			delay: motio_interval * 2
 		}, motio_options)
+	).then(
+		mojs.helpers.extend({
+			delay: motio_out.delay - motio_interval * 1.5
+		}, motio_out)
 	);
 
 	// motio "o" tween
@@ -106,6 +126,11 @@
 			angle: { 90 : 0 },
 			delay: motio_interval * 3
 		}, motio_options)
+	).then(
+		mojs.helpers.extend({
+			angle: -90,
+			delay: motio_out.delay - motio_interval * 2
+		}, motio_out)
 	);
 
 	// motio "t" tween
@@ -118,6 +143,10 @@
 			y: -33.8,
 			delay: motio_interval * 4
 		}, motio_options)
+	).then(
+		mojs.helpers.extend({
+			delay: motio_out.delay - motio_interval * 2.5
+		}, motio_out)
 	);
 
 	let motio_t_vertical = new mojs.Shape(
@@ -127,7 +156,10 @@
 			y: -27.4,
 			delay: motio_interval * 5
 		}, motio_options)
-	);
+	).then(
+		mojs.helpers.extend({
+			delay: motio_out.delay - motio_interval * 3
+		}, motio_out));
 
 	// motio "i" tween
 	let motio_i_vertical = new mojs.Shape(
@@ -144,7 +176,11 @@
 		y: { '-19' : '-28.5' },
 		radius: { 9.7: 9.7, curve: reboundCurve},
 		easing: reboundCurve
-	});
+	}).then(
+		mojs.helpers.extend({
+			delay: motio_out.delay - motio_interval * 9.5
+		}, motio_out)
+	);
 
 	let motio_i_dot = new mojs.Shape(
 		mojs.helpers.extend({
@@ -156,6 +192,11 @@
 			y: { '-45' : -49.5, curve: bounceCurve },
 			delay: motio_interval * 7 + 100
 		}, motio_options)
+	).then(
+		mojs.helpers.extend({
+			radius: 0,
+			delay: motio_out.delay - motio_interval * 5.5
+		}, motio_out)
 	);
 
 	// motio "o" tween
@@ -166,6 +207,11 @@
 			angle: { 180 : 90 },
 			delay: motio_interval * 8
 		}, motio_options)
+	).then(
+		mojs.helpers.extend({
+			angle: 450,
+			delay: motio_out.delay - motio_interval * 5
+		}, motio_out)
 	);
 
 	// adds shapes to the timeline
@@ -200,6 +246,13 @@
 		y: -56,
 		duration: 500,
 		easing: mojs.easing.ease.in
+	};
+
+	// defines options for the out animation
+	const studio_out = {
+		opacity: 0,
+		duration: 500,
+		delay: 2200
 	};
 
 	// defines the base shapes
@@ -247,7 +300,7 @@
 			shape: 'studio-s',
 			x: -97,
 		}, studio_options)
-	);
+	).then(studio_out);
 
 	// studio "t" tween
 	let studio_t = new mojs.Shape(
@@ -257,7 +310,7 @@
 			strokeDashoffset: { '100%' : 0 },
 			delay: studio_interval
 		}, studio_options)
-	);
+	).then(studio_out);
 
 	// studio "u" tween
 	let studio_u = new mojs.Shape(
@@ -266,7 +319,7 @@
 			x: -79,
 			delay: studio_interval * 2
 		}, studio_options)
-	);
+	).then(studio_out);
 
 	// studio "d" tween
 	let studio_d = new mojs.Shape(
@@ -275,7 +328,7 @@
 			x: -67,
 			delay: studio_interval * 3
 		}, studio_options)
-	);
+	).then(studio_out);
 
 	// studio "i" tween
 	let studio_i = new mojs.Shape(
@@ -285,7 +338,7 @@
 			x: -58,
 			delay: studio_interval * 4
 		}, studio_options)
-	);
+	).then(studio_out);
 
 	// studio "o" tween
 	let studio_o = new mojs.Shape(
@@ -295,7 +348,7 @@
 			strokeDashoffset: { '100%' : 0 },
 			delay: studio_interval * 5
 		}, studio_options)
-	);
+	).then(studio_out);
 
 	// stagger effect on the "studio" word
 	let diagonalLinesStagger = mojs.stagger(mojs.Shape);
