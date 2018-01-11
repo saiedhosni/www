@@ -151,8 +151,8 @@
 			shape: 'circle',
 			stroke: 'transparent',
 			fill: colors.base,
-			radius: { 5.3 : 6.3 },
-			x: 47,
+			radius: { 5 : 6.3 },
+			x: 47.4,
 			y: { '-45' : -49.5, curve: bounceCurve },
 			delay: motio_interval * 7 + 100
 		}, motio_options)
