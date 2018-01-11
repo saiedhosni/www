@@ -299,7 +299,7 @@
 
 	// stagger effect on the "studio" word
 	var diagonalLinesStagger = mojs.stagger(mojs.Shape);
-	var stagger_diagonal = new diagonalLinesStagger({
+	var diagonal_lines = new diagonalLinesStagger({
 		quantifier: 8,
 		shape: 'line',
 		stroke: [colors.bright, colors.vibrant],
@@ -323,7 +323,7 @@
 		studio_d,
 		studio_i,
 		studio_o,
-		stagger_diagonal
+		diagonal_lines
 	);
 
 	// merges timelines
