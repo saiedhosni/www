@@ -300,19 +300,19 @@
 	// stagger effect on the "studio" word
 	var diagonalLinesStagger = mojs.stagger(mojs.Shape);
 	var stagger_diagonal = new diagonalLinesStagger({
-		quantifier: 10,
+		quantifier: 8,
 		shape: 'line',
 		stroke: [colors.bright, colors.vibrant],
 		strokeWidth: { 'rand(1, 5)' : 0 },
 		strokeDasharray: '100%',
 		strokeDashoffset: { '-100%': '100%' },
 		opacity: { 1 : 0, curve: linearCurve },
-		x: 'rand(-120, -20)',
-		y: 'rand(-70, -40)',
-		radius: 40,
+		x: 'rand(-110, -20)',
+		y: 'rand(-70, -50)',
+		radius: 'rand(25, 35)',
 		angle: '-45',
 		duration: 'rand(250, 700)',
-		delay: 'rand(0, 500)'
+		delay: 'rand(100, 400)'
 	});
 
 	// adds shapes to the timeline
