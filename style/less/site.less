@@ -27,6 +27,7 @@ header {
 	padding: @gutter / 2;
 	font-size: 14px;
 	pointer-events: none;
+	mix-blend-mode: difference;
 	.no-select();
 
 	ul {
@@ -129,13 +130,9 @@ svg {
 
 section {
 	position: relative;
-	overflow: hidden;
 	padding: @gutter * 1.5 @gutter;
 	min-height: 100vh;
-
-	&.white {
-		z-index: 2;
-	}
+	z-index: 0;
 }
 
 address {
@@ -223,6 +220,7 @@ textarea {
 
 .menu {
 	padding-left: 40px;
+	.no-select();
 }
 
 .the-studio-intro {
@@ -269,6 +267,7 @@ textarea {
 	top: 50vh;
 	width: @gutter;
 	text-align: center;
+	mix-blend-mode: difference;
 	.transform(translate(0, -50%));
 
 	svg {
@@ -420,10 +419,6 @@ textarea {
 	height: 1252px;
 	z-index: 3;
 	pointer-events: none;
-}
-
-.clone {
-	position: absolute;
 }
 
 .post {

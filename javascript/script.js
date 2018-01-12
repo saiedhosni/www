@@ -15,48 +15,6 @@
 	// initializes barba js
 	Barba.Pjax.start();
 
-	// gets the white section as a wrapper
-	const wrapper = document.querySelector('section.white');
-
-	// checks if the wrapper is initialized
-	if (wrapper != null) {
-
-		// clones the header
-		const header = document.querySelector('header').cloneNode(true);
-		header.classList.add('clone');
-		header.querySelector('#trigger').setAttribute('id', 'trigger-clone');
-		header.querySelector('[for="trigger"]').setAttribute('for', 'trigger-clone');
-		header.querySelector('.menu-button-close').setAttribute('for', 'trigger-clone');
-		wrapper.appendChild(header);
-
-		// tells to the base menu button to activate the cloned trigger
-		document.querySelector('[for="trigger"]').setAttribute('for', 'trigger-clone');
-
-		// clones the media if we are on medium or large screens
-		if (screen.medium || screen.large) {
-			var media = document.querySelector('.media').cloneNode(true);
-			media.classList.add('clone');
-			wrapper.appendChild(media);
-		}
-
-		// binds the load/scroll/resize events to refresh the cloned objects position
-		['load', 'scroll', 'resize'].forEach(function(e) {
-			window.addEventListener(e, function() {
-
-				// gets the wrapper section boundary
-				let top = window.scrollY - wrapper.offsetTop;
-
-				// moves the header at the good top
-				header.style['top'] = top + 'px';
-
-				// moves the media block at the good top (for medium and large screens)
-				if (typeof(media) !== 'undefined') {
-					media.style['top'] = 'calc(' + top + 'px + 50vh)';
-				}
-			});
-		});
-	}
-
 	// gets the contact form
 	const form = document.querySelector('form');
 
@@ -145,7 +103,7 @@
 
 	// mojs options and objects for the "show/hide the close menu button" tween
 	const menuOptions = {
-		parent: document.querySelector(wrapper != null ? '.clone .menu-button-close' : '.menu-button-close'),
+		parent: document.querySelector('.menu-button-close'),
 		fill: 'transparent',
 		stroke: colors.contrast,
 		strokeWidth: { 4 : 0 },
@@ -211,11 +169,9 @@
 	menuTimeline.add(menuCircle, menuCross, menuBubbles);
 
 	// binds all open menu buttons to displays the tween when the menu is opened (from white or black section)
-	Array.from(document.querySelectorAll('.menu-button')).forEach(function(button) {
-		button.addEventListener('click', function(e) {
-			menuBubbles.generate();
-			menuTimeline.play();
-		});
+	document.querySelector('.menu-button').addEventListener('click', function(e) {
+		menuBubbles.generate();
+		menuTimeline.play();
 	});
 
 	// binds the close menu button to displays the tween when the menu is closed
