@@ -40,7 +40,7 @@
 			require_once 'module/header.php';
 			require_once 'module/media.php';
 		?>
-		<main class="barba-container">
+		<main class="barba-container" data-namespace="<?php echo str_replace(LANGUAGE . '/', '', PAGE); ?>">
 			<?php
 				require_once PATH;
 
