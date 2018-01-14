@@ -192,47 +192,69 @@
 	// checks if the illustration is present on the page
 	if (illustration != null) {
 
-		// base options for the 404 illustration
-		const illustrationOptions = {
+		// bird tween
+		const birdOptions = {
 			parent: document.querySelector('.illustration-404'),
+			shape: 'zigzag',
+			count: 2,
+			radiusX: 7,
+			radiusY: 5,
+			angle: 180,
+			scale: 'rand(0.5, 1)',
+			opacity: { 0 : 1 },
+			fill: 'transparent',
+			stroke: colors.base,
+			strokeWidth: 'rand(1, 1.5)',
+			strokeLinecap: 'round',
+			x: 'rand(0, 140)',
+			y: 'rand(-60, -10)',
+			duration: 'rand(500, 1500)',
+			delay: 'rand(0, 400)',
 			isForce3d: true
 		};
 
-		// fog tween
-		const fogShape = mojs.stagger(mojs.Shape);
-		const fog = new fogShape(
-			mojs.helpers.extend({
-				quantifier: 40,
-				shape: 'line',
-				stroke: colors.fog,
-				strokeWidth: 'rand(1.5, 3)',
-				strokeDasharray: '100%',
-				strokeDashoffset: { '-100%' : '100%' },
-				x: { 'rand(-250, 250)' : 'rand(-250, 250)' },
-				y: 'rand(-40, 60)',
-				opacity: { 0.8 : 0 },
-				radius: 'rand(20, 60)',
-				duration: 500,
-				repeat: 100,
-				delay: 'rand(0, 2000)',
-				isShowEnd: false,
-				speed: 0.03
-			}, illustrationOptions)
-		).play();
+		// creates some birds and makes them fly
+		for(let i = 0; i < Math.floor((Math.random() * 5) + 2); i++) {
+			new mojs.Shape(birdOptions).then({
+				radiusY: { 5 : 2 },
+				origin: { '50% 50%' : '50% 20%' },
+				easing: mojs.easing.sin.inout,
+				speed: 'rand(0.3, 0.4)',
+				delay: 0,
+				isYoyo: true,
+				repeat: 999
+			}).play();
+		}
 
-		// sun tween
-		let sun = new mojs.Shape(
-			mojs.helpers.extend({
-				shape: 'circle',
-				fill: colors.warning,
-				left: '80%',
-				top: '20%',
-				radius: { 18 : 20 },
-				opacity: { 0.2 : 0.3 },
-				duration: 4000,
-				repeat: 3000,
-				isYoyo: true
-			}, illustrationOptions)
-		).play();
+		// defines the wind shape
+		class Wind extends mojs.CustomShape {
+			getShape() { return '<path d="M14.798 70.488c9.153.405 19.657-4.285 27.707-8.416 10.015-5.139 22.439-12.05 27.156-22.866 6.19-14.195-14.828-10.743-6.568-.406 6.633 8.301 19.062-.819 22.108-7.998"/>';}
+			getLength() { return 118.114; }
+		}
+
+		// adds the wind shape to the library
+		mojs.addShape('wind', Wind);
+
+		// creates the wind effect
+		let wind = new mojs.Shape({
+			parent: document.querySelector('.illustration-404'),
+			shape: 'wind',
+			left: 'rand(10%, 90%)',
+			top: 'rand(20%, 60%)',
+			fill: 'transparent',
+			stroke: colors.base,
+			strokeWidth: { 2 : 'rand(0.5, 1)' },
+			strokeDasharray: '40% 140%',
+			strokeDashoffset: { '50%' : '-140%' },
+			opacity: { 0.4 : 0 },
+			scale: 'rand(0.5, 1)',
+			easing: mojs.easing.quint.out,
+			duration: 'rand(3000, 4000)',
+			delay: 'rand(1000, 2000)',
+			isForce3d: true,
+			onComplete: function() {
+				this.generate().replay();
+			}
+		}).play();
 	}
 })();
