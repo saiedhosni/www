@@ -95,7 +95,7 @@
 		contrast: '#fff',
 		bright: '#5f5f5f',
 		warning: '#f6cc00',
-		fog: '#dadce0'
+		cloud: '#dadce0'
 	};
 
 	// linear easing path (1:1)
@@ -242,11 +242,11 @@
 			left: 'rand(10%, 90%)',
 			top: 'rand(20%, 60%)',
 			fill: 'transparent',
-			stroke: colors.base,
+			stroke: colors.cloud,
 			strokeWidth: { 2 : 'rand(0.5, 1)' },
 			strokeDasharray: '40% 140%',
 			strokeDashoffset: { '50%' : '-140%' },
-			opacity: { 0.4 : 0 },
+			opacity: { 1 : 0 },
 			scale: 'rand(0.5, 1)',
 			easing: mojs.easing.quint.out,
 			duration: 'rand(3000, 4000)',
