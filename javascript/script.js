@@ -194,7 +194,7 @@
 
 		// bird tween
 		const birdOptions = {
-			parent: document.querySelector('.illustration-404'),
+			parent: '.illustration-404',
 			shape: 'zigzag',
 			count: 2,
 			radiusX: 7,
@@ -237,7 +237,7 @@
 
 		// creates the wind effect
 		let wind = new mojs.Shape({
-			parent: document.querySelector('.illustration-404'),
+			parent: '.illustration-404',
 			shape: 'wind',
 			left: 'rand(10%, 90%)',
 			top: 'rand(20%, 60%)',
