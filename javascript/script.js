@@ -15,6 +15,13 @@
 	// initializes barba js
 	Barba.Pjax.start();
 
+	// adds a css class to pages that displays a footer (all pages except the homepage)
+	Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, HTMLElementContainer, newPageRawHTML) {
+		if (currentStatus.namespace != 'index') {
+			document.querySelector('body').classList.add('has-footer');
+		}
+	});
+
 	// gets the contact form
 	const form = document.querySelector('form');
 
