@@ -176,13 +176,13 @@
 	menuTimeline.add(menuCircle, menuCross, menuBubbles);
 
 	// binds all open menu buttons to displays the tween when the menu is opened (from white or black section)
-	document.querySelector('.menu-button').addEventListener('click', function(e) {
+	document.querySelector('.menu-button').addEventListener('click', function() {
 		menuBubbles.generate();
 		menuTimeline.play();
 	});
 
 	// binds the close menu button to displays the tween when the menu is closed
-	menuOptions.parent.addEventListener('click', function(e) {
+	menuOptions.parent.addEventListener('click', function() {
 		menuCross.then({
 			radius: 0,
 			duration: 500,
