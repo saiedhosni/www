@@ -190,7 +190,7 @@
 			radius: { 5 : 6.3 },
 			x: 47.4,
 			y: { '-45' : -49.5, curve: bounceCurve },
-			delay: motio_interval * 7 + 100
+			delay: motio_interval * 7 + 150
 		}, motio_options)
 	).then(
 		mojs.helpers.extend({
@@ -356,7 +356,7 @@
 		quantifier: 8,
 		shape: 'line',
 		stroke: [colors.bright, colors.vibrant],
-		strokeWidth: { 'rand(1, 5)' : 0 },
+		strokeWidth: { 'rand(1, 4)' : 0 },
 		strokeDasharray: '100%',
 		strokeDashoffset: { '-100%': '100%' },
 		opacity: { 1 : 0, curve: linearCurve },
@@ -365,7 +365,7 @@
 		radius: 'rand(25, 35)',
 		angle: '-45',
 		duration: 'rand(250, 700)',
-		delay: 'rand(100, 400)'
+		delay: 'stagger(100, rand(50, 100))'
 	});
 
 	// adds shapes to the timeline
