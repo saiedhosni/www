@@ -132,7 +132,7 @@
 			angle: 45,
 			radius: { 0 : 20 },
 			strokeWidth: 4,
-			easing: 'circ.out',
+			easing: mojs.easing.circ.out,
 			duration: 1400,
 			delay: 200
 		}, menuOptions)
@@ -168,7 +168,7 @@
 			stroke: 'transparent',
 			delay: 100,
 			duration: 600,
-			easing: 'cubic.in'
+			easing: mojs.easing.cubic.in
 		}, menuOptions)
 	});
 
