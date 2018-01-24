@@ -18,6 +18,10 @@
 			'Le studio' . META_SUFFIX,
 			'Studio motio est un studio français spécialisé dans le design interactif et le développement web, basé à La Rochelle.'
 		),
+		'fr/nos-services' => array(
+			'Nos services' . META_SUFFIX,
+			'L\'art de l\'animation et de l\'interaction sur mesure, au bon endroit et au bon moment !'
+		),
 		'fr/contact' => array(
 			'Contact' . META_SUFFIX,
 			'Envie de nous confier votre projet, lancer un nouveau site web ou construire une identité de marque mémorable, laissez-nous un petit mot. Nous serions ravis de travailler avec vous !'
@@ -37,6 +41,10 @@
 		'en/the-studio' => array(
 			'The studio' . META_SUFFIX,
 			'Studio motio is a france-based interactive design and creative web studio, from La Rochelle.'
+		),
+		'en/our-services' => array(
+			'Our services' . META_SUFFIX,
+			'The art of animation and tailor-made interaction, in the right place and at the right time!'
 		),
 		'en/contact' => array(
 			'Contact' . META_SUFFIX,

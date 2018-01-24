@@ -20,32 +20,18 @@
 			<p>Spécialisé dans la création d'animations et micro-interactions web basées sur les principes du motion design, nous travaillons en collaboration avec des designers et des développeurs de proximité, perfectionnistes, pointilleux et soucieux du détail.</p>
 			<p>L'expérience utilisateur est au cœur de notre métier, c'est pourquoi nous utilisons des technologies graphiques de pointe, ayant déjà fait leur preuve et s'imposant aujourd'hui comme des références dans le domaine du web pour leur compatibilité, leurs performances et leur fluidité.</p>
 			<p>Nous aimons notre métier, et nous réalisons toujours tous nos projets avec passion.</p>
+			<p><a href="/nos-services" class="underline button"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Découvrir nos services</a></p>
 		</div>
 	</div>
 </section>
 <section class="row column expanded black">
 	<div class="row">
 		<div class="column medium-6 medium-offset-5 large-4 large-offset-6">
-			<h2>Nos services</h2>
-			<dl>
-				<dt>Design</dt>
-				<dd>Logotype</dd>
-				<dd>Branding</dd>
-				<dd>Identité visuelle</dd>
-				<dd>Webdesign (UI)</dd>
-			</dl>
-			<dl>
-				<dt>Motion</dt>
-				<dd>Micro-interactions</dd>
-				<dd>Expérience utilisateur (UX)</dd>
-				<dd>Design interactif pour le web</dd>
-			</dl>
-			<dl>
-				<dt>Développement</dt>
-				<dd>Site vitrine</dd>
-				<dd>Plateforme sur mesure</dd>
-				<dd>E-Shop</dd>
-			</dl>
+			<h2>Le collectif</h2>
+			<p>Notre point fort, la collaboration. Nous avons fondé le collectif afin de rassembler des entreprises de proximité, dans une démarche "éco-responsable".</p>
+			<p>Cette méthode permet d'échanger les compétences, d'avoir de multiples points de vues et de partager le goût du détail pour mener à bien votre projet.</p>
+			<p>Que vous soyez art-director, graphiste, designer, ou même développeur, le collectif est ouvert à tout le monde et vous pouvez nous rejoindre à tout moment.</p>
+			<p><a href="/contact" class="underline button"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Nous rejoindre</a></p>
 		</div>
 	</div>
 </section>
