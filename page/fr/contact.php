@@ -2,13 +2,13 @@
 	<svg class="motio-o-contact"><use xlink:href="/picture/sprite.svg#logo-motio-o" /></svg>
 	<div class="row align-center">
 		<div class="column medium-9 large-8">
-			<p>Envie de nous confier votre projet, lancer un nouveau site web ou construire une identité de marque mémorable, laissez-nous un petit mot. Nous serions ravis de travailler avec vous !</p>
+			<p data-emergence>Envie de nous confier votre projet, lancer un nouveau site web ou construire une identité de marque mémorable, laissez-nous un petit mot. Nous serions ravis de travailler avec vous !</p>
 		</div>
 	</div>
 	<div class="row align-center">
 		<div class="column medium-9 large-8">
-			<p><strong>Hello, quels sont vos besoins ?</strong></p>
-			<form method="post">
+			<p data-emergence><strong>Hello, quels sont vos besoins ?</strong></p>
+			<form method="post" data-emergence>
 				<textarea required="required" autocomplete="off"></textarea>
 				<span class="progress"></span>
 				<button name="submit" class="underline button post"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Poster ce message</button>
@@ -21,14 +21,14 @@
 	</div>
 	<div class="row align-center">
 		<div class="column small-12 medium-9 large-4">
-			<p><strong>Collaboration</strong></p>
-			<p class="no-margin">Nous sommes toujours intéressés de construire de nouveaux partenariats. Vous avez du talent et vous souhaitez le partager avec nous, rejoignez le collectif !</p>
-			<p class="no-margin"><small><a href="mailto:collective@studiomotio.com" target="_blank" class="underline">collective@studiomotio.com</a></small></p>
+			<p data-emergence><strong>Collaboration</strong></p>
+			<p class="no-margin" data-emergence>Nous sommes toujours intéressés de construire de nouveaux partenariats. Vous avez du talent et vous souhaitez le partager avec nous, rejoignez le collectif !</p>
+			<p class="no-margin" data-emergence><small><a href="mailto:collective@studiomotio.com" target="_blank" class="underline">collective@studiomotio.com</a></small></p>
 		</div>
 		<div class="column small-12 medium-9 large-4">
-			<p><strong>Jobs</strong></p>
-			<p class="no-margin">Le studio n'accueille pas de stagiaire pour le moment. Vous souhaitez tout de même nous montrer de quoi vous êtes capable ? Envoyez-nous votre CV !</p>
-			<p class="no-margin"><small><a href="mailto:jobs@studiomotio.com" target="_blank" class="underline">jobs@studiomotio.com</a></small></p>
+			<p data-emergence><strong>Jobs</strong></p>
+			<p class="no-margin" data-emergence>Le studio n'accueille pas de stagiaire pour le moment. Vous souhaitez tout de même nous montrer de quoi vous êtes capable ? Envoyez-nous votre CV !</p>
+			<p class="no-margin" data-emergence><small><a href="mailto:jobs@studiomotio.com" target="_blank" class="underline">jobs@studiomotio.com</a></small></p>
 		</div>
 	</div>
 </section>

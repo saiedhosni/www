@@ -175,6 +175,18 @@ textarea {
 	}
 }
 
+[data-emergence] {
+	.transition(opacity 550ms ease);
+}
+
+[data-emergence="hidden"] {
+	opacity: 0;
+}
+
+[data-emergence="visible"] {
+	opacity: 1;
+}
+
 .black {
 	background: @base-color;
 	color: @contrast-color;
