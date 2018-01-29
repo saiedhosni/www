@@ -216,14 +216,6 @@ textarea {
 			color: fade(@bright-color, 50%);
 		}
 	}
-
-	.media {
-		a {
-			&::after, &::before {
-				background: lighten(@bright-color, 20%);
-			}
-		}
-	}
 }
 
 .logo {
@@ -297,7 +289,7 @@ textarea {
 	svg {
 		width: 15px;
 		height: 15px;
-		.transition(transform 1s @cubic, fill 800ms ease;);
+		.transition(transform 1s @cubic);
 	}
 
 	a {
@@ -305,7 +297,7 @@ textarea {
 		position: relative;
 		padding: 4px 0px;
 
-		&::after, &::before {
+		&::before {
 			content: '';
 			position: absolute;
 			top: 50%;
@@ -317,22 +309,12 @@ textarea {
 			.transition(width 1.1s @cubic);
 		}
 
-		&::after {
-			.transition(width 500ms @cubic);
-		}
-
 		&:hover, &:focus {
-			&::after, &::before {
+			&::before {
 				width: 40px;
 			}
 
-			&::after {
-				background: @vibrant-color;
-				.transition(width 1s 200ms @cubic);
-			}
-
 			svg {
-				fill: @vibrant-color;
 				.transform(translateX(10px));
 			}
 		}
