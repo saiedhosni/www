@@ -49,7 +49,7 @@ footer {
 	z-index: -1;
 	bottom: 0;
 	width: 100%;
-	padding: @gutter;
+	padding: @gutter @min-gutter;
 	.no-select();
 }
 
@@ -130,7 +130,8 @@ svg {
 
 section {
 	position: relative;
-	padding: @gutter * 1.5 @gutter;
+	padding: @gutter * 1.5 @min-gutter;
+	width: 100%;
 	min-height: 100vh;
 	z-index: 0;
 }

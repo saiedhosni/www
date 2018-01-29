@@ -1,4 +1,4 @@
-<section class="row column expanded black the-studio-intro">
+<section class="black the-studio-intro">
 	<div class="row">
 		<div class="column medium-8 medium-offset-2 large-6">
 			<h1 data-emergence>Studio MOTIO est un studio Français spécialisé dans le design interactif, le développement web et basé à La Rochelle.</h1>
@@ -13,7 +13,7 @@
 <div class="wrapper-motio-vertical hide-for-small-only">
 	<svg class="motio-vertical"><use xlink:href="/picture/sprite.svg#logo-motio-vertical" /></svg>
 </div>
-<section class="row column expanded white">
+<section class="white">
 	<div class="row">
 		<div class="column medium-6 medium-offset-5 large-4 large-offset-6">
 			<h2 data-emergence>Le studio</h2>
@@ -24,7 +24,7 @@
 		</div>
 	</div>
 </section>
-<section class="row column expanded black">
+<section class="black">
 	<div class="row">
 		<div class="column medium-6 medium-offset-5 large-4 large-offset-6">
 			<h2 data-emergence>Le collectif</h2>

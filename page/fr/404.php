@@ -1,4 +1,4 @@
-<section class="row align-middle expanded white">
+<section class="row align-middle expanded collapse white">
 	<div class="column">
 		<div class="row align-center">
 			<div class="column medium-9 large-8">

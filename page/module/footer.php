@@ -4,7 +4,7 @@
 		'en/the-studio'
 	]) ? 'black' : 'white';
 ?>
-<footer class="row column expanded <?php echo $color; ?>">
+<footer class="<?php echo $color; ?>">
 	<div class="row align-center">
 		<div class="column small-12 medium-5 medium-offset-0 large-4 large-offset-2">
 			<p class="no-margin"><strong><?php echo LANGUAGE == 'fr' ? 'Alors, on travaille ensemble ?' : 'So, do we work together?'; ?></strong></p>

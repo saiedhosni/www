@@ -1,4 +1,4 @@
-<section class="row column expanded white">
+<section class="white">
 	<div class="row align-center">
 		<div class="column medium-9 large-8">
 			<h1>Legal notices</h1>

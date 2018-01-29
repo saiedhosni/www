@@ -1,4 +1,4 @@
-<section class="row column expanded white">
+<section class="white">
 	<svg class="motio-o-contact"><use xlink:href="/picture/sprite.svg#logo-motio-o" /></svg>
 	<div class="row align-center">
 		<div class="column medium-9 large-8">
