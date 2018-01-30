@@ -1,7 +1,9 @@
 <?php
 	$color = !in_array(PAGE, [
 		'fr/le-studio',
-		'en/the-studio'
+		'en/the-studio',
+		'fr/nos-services',
+		'en/our-services'
 	]) ? 'black' : 'white';
 ?>
 <footer class="row align-middle expanded <?php echo $color; ?>">

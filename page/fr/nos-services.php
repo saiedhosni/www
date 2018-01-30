@@ -1,4 +1,4 @@
-<section class="black the-studio-intro">
+<section class="white intro">
 	<div class="row">
 		<div class="column medium-8 medium-offset-5 large-6">
 			<h1 data-emergence>L'art de l'animation et de l'interaction sur mesure, au bon endroit et au bon moment !</h1>
@@ -10,7 +10,7 @@
 		</div>
 	</div>
 </section>
-<section class="expanded white">
+<section class="black expanded">
 	<div class="row">
 		<div class="column medium-8 medium-offset-2">
 			<h2 data-emergence>Nos services</h2>
