@@ -1,7 +1,7 @@
 <section class="black the-studio-intro">
 	<div class="row">
-		<div class="column medium-8 medium-offset-2 large-6">
-			<h1>Studio MOTIO is a France-based interactive design and creative web development studio, from La Rochelle.</h1>
+		<div class="column align-self-top medium-8 medium-offset-2 large-6">
+			<h1>Studio MOTIO is a France-based interactive design and creative web development studio from La Rochelle</h1>
 		</div>
 	</div>
 	<div class="row">
