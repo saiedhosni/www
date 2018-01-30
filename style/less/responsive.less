@@ -42,14 +42,14 @@
 		height: 33vh;
 	}
 
-	.the-studio-intro {
+	.intro {
 		h1 {
-			top: 25vh;
+			margin-top: 25vh;
 			max-width: 62vw;
 		}
 
 		p {
-			bottom: 20vh;
+			margin-bottom: 20vh;
 			max-width: 45vw;
 		}
 	}
@@ -95,11 +95,7 @@
 	}
 
 	section {
-		padding: @gutter * 1.5 @min-gutter @gutter @min-gutter;
-
-		&:not(:first-child) {
-			padding: @gutter @min-gutter;
-		}
+		padding: @gutter @min-gutter;
 	}
 
 	h1 {
@@ -110,12 +106,21 @@
 		height: 44vh;
 	}
 
-	.the-studio-intro {
-		h1, p {
-			position: relative;
-			top: auto;
-			bottom: auto;
+	.intro {
+		padding: @gutter * 1.5 @min-gutter @gutter @min-gutter;
+
+		h1 {
+			margin-top: inherit;
 			max-width: none;
+		}
+
+		p {
+			margin-bottom: inherit;
+			max-width: none;
+		}
+
+		.row {
+			height: auto;
 		}
 	}
 
