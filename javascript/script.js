@@ -323,4 +323,27 @@
 			}
 		}).play();
 	}
+
+	// manages the footer scroll animation
+	let scrollY = 0;
+	let debounce;
+	let footer = document.querySelector('footer');
+
+	// binds the scroll event to hide/show the footer content
+	window.addEventListener('scroll', function() {
+		scrollY = window.scrollY;
+		window.cancelAnimationFrame(debounce);
+
+		// displays the footer content and animate the footer logo depending on the scroll position
+		debounce = window.requestAnimationFrame(function() {
+			if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (screen.small ? 85 : 95)) {
+				if (!footer.classList.contains('show')) {
+					footer.classList.add('show');
+					footer.querySelector('.logo').dispatchEvent(new Event('mouseenter'));
+				}
+			} else {
+				footer.classList.remove('show');
+			}
+		});
+	});
 })();
