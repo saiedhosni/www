@@ -1,6 +1,6 @@
 <section class="white intro">
 	<div class="row">
-		<div class="column align-self-top medium-7 medium-offset-4 large-offset-4">
+		<div class="column align-self-top medium-7 medium-offset-4 large-offset-4 text-right">
 			<h1 data-emergence>L'art de la création, l'animation et de l'interaction sur mesure, au bon endroit et au bon moment, notre spécialité !</h1>
 		</div>
 	</div>
