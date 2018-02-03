@@ -130,8 +130,7 @@
 			strokeDasharray: length,
 			transformOrigin: '109.2px 13.2px',
 			duration: 700,
-			easing: easingCurve,
-			isForce3d: true
+			easing: easingCurve
 		};
 
 		let letterIn = new mojs.Html(
