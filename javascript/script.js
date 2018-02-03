@@ -121,7 +121,7 @@
 	Array.from(document.querySelectorAll('.logo')).forEach(function(logo) {
 
 		// mojs options and objects for the "mouseenter/mouseleave logo" tween
-		const letter = logo.querySelector('.letter');
+		const letter = logo.querySelector('.motion-letter');
 		const length = letter.getTotalLength();
 		let letterPlayState = false;
 
