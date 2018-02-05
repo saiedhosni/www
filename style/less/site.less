@@ -418,17 +418,35 @@ textarea {
 
 .wrapper-motio-vertical {
 	position: relative;
+	margin-left: @gutter;
 	height:	0;
+	width: calc(~'50vw -' @gutter);
+	z-index: 3;
 }
 
 .motio-vertical {
 	position: absolute;
-	left: 14vw;
-	top: -122px;
+	left: calc(~'50% - 177px' - @min-gutter);
+	top: -120px;
 	width: 353px;
-	height: 1252px;
-	z-index: 3;
 	pointer-events: none;
+
+	svg {
+		display: block;
+		fill: none;
+		stroke: @vibrant-color;
+	}
+
+	circle {
+		stroke: none;
+		fill: @vibrant-color;
+	}
+
+	.vertical {
+		width: 100%;
+		margin-bottom: 51px;
+		color: @vibrant-color;
+	}
 }
 
 .post {
