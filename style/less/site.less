@@ -190,15 +190,15 @@ textarea {
 	}
 }
 
-[data-emergence] {
+[data-emergence]:not(.vertical) {
 	.transition(opacity 550ms ease);
 }
 
-[data-emergence="hidden"] {
+[data-emergence="hidden"]:not(.vertical) {
 	opacity: 0;
 }
 
-[data-emergence="visible"] {
+[data-emergence="visible"]:not(.vertical) {
 	opacity: 1;
 }
 
