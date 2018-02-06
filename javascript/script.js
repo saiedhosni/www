@@ -444,16 +444,16 @@
 
 	// manages the footer scroll animation
 	let scrollY = 0;
-	let debounce;
+	let throttle;
 	let footer = document.querySelector('footer');
 
 	// binds the scroll event to hide/show the footer content
 	window.addEventListener('scroll', function() {
 		scrollY = window.scrollY;
-		window.cancelAnimationFrame(debounce);
+		window.cancelAnimationFrame(throttle);
 
 		// displays the footer content and animate the footer logo depending on the scroll position
-		debounce = window.requestAnimationFrame(function() {
+		throttle = window.requestAnimationFrame(function() {
 			if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (screen.small ? 85 : 95)) {
 				if (!footer.classList.contains('show')) {
 					footer.classList.add('show');
