@@ -15,10 +15,13 @@
 	// initializes barba js
 	Barba.Pjax.start();
 
-	// adds a css class to pages that displays a footer (all pages except the homepage)
+	// manages the newPageReady event of barba js
 	Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, HTMLElementContainer, newPageRawHTML) {
-		window.scrollTo(0,0);
 
+		// scroll to the top when the new page is ready
+		window.scrollTo(0, 0);
+
+		// adds a css class to pages that displays a footer (all pages except the homepage)
 		if (currentStatus.namespace != 'index') {
 			document.querySelector('body').classList.add('has-footer');
 		}
