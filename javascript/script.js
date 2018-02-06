@@ -267,7 +267,9 @@
 				new mojs.Html(
 					mojs.helpers.extend({
 						el: '.shape-letter-i-dot',
-						r: { 0 : 41.784 }
+						fill: colors.vibrant,
+						transformOrigin: '40px 40px',
+						scale: { 0 : 1 }
 					}, motioOptions)
 				)
 			),

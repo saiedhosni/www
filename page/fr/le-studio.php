@@ -16,7 +16,7 @@
 			<svg viewBox="0 0 370 251.721"><path class="shape-letter-o-last" stroke-width="0" d="M244.16 218.97c51.423-.011 93.089-41.68 93.089-93.13 0-51.408-41.681-93.089-93.1-93.089-51.424 0-93.084 41.681-93.084 93.089v.021"/></svg>
 		</div>
 		<div class="vertical letter-i" data-emergence>
-			<svg viewBox="0 0 370 83.57"><line class="shape-letter-i-vertical" x1="116.399" x2="244.849" y1="42.241" y2="42.241" stroke-width="0"/><circle class="shape-letter-i-dot" cx="41.784" cy="41.785" r="0"/></svg>
+			<svg viewBox="0 0 370 83.57"><line class="shape-letter-i-vertical" x1="116.399" x2="244.849" y1="42.241" y2="42.241" stroke-width="0"/><circle class="shape-letter-i-dot" cx="41.784" cy="41.785" r="41.784" fill="none"/></svg>
 		</div>
 		<div class="vertical letter-t" data-emergence>
 			<svg viewBox="0 0 370 170.94"><line class="shape-letter-t-horizontal" x1="146.646" x2="146.646" y1="170.944" y2=".066" stroke-width="0"/><path class="shape-letter-t-vertical" stroke-width="0" d="M41.245 92.373h218.279c41.819-.195 70.256-16.79 76.269-51.787 2.43-14.226 1.085-26.616 1.085-40.586"/></svg>
