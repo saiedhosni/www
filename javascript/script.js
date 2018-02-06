@@ -17,6 +17,8 @@
 
 	// adds a css class to pages that displays a footer (all pages except the homepage)
 	Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, HTMLElementContainer, newPageRawHTML) {
+		window.scrollTo(0,0);
+
 		if (currentStatus.namespace != 'index') {
 			document.querySelector('body').classList.add('has-footer');
 		}
