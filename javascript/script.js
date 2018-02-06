@@ -6,7 +6,7 @@
 	console.log('%c Made with ❤︎️ by Studio MOTIO — https://www.studiomotio.com', 'background:#000;color:#fff;padding:0.5em 1em;line-height:2;');
 
 	// screen size detection (based on Foundation build)
-	const screen = {
+	let screen = {
 		small: window.innerWidth < 640,
 		medium: window.innerWidth >= 640 && window.innerWidth < 1024,
 		large: window.innerWidth >= 1024
@@ -463,5 +463,20 @@
 				footer.classList.remove('show');
 			}
 		});
+	});
+
+	// binds the resize event to properly updates screen resolution object
+	let debounce;
+
+	window.addEventListener('resize', function(e) {
+		clearTimeout(debounce);
+
+		debounce = setTimeout(function() {
+			screen = {
+				small: window.innerWidth < 640,
+				medium: window.innerWidth >= 640 && window.innerWidth < 1024,
+				large: window.innerWidth >= 1024
+			};
+		}, 250);
 	});
 })();
