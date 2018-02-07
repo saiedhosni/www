@@ -12,7 +12,7 @@
 			<div class="column small-12 medium-5 medium-offset-0 large-4 large-offset-2">
 				<p class="no-margin"><strong><?php echo LANGUAGE == 'fr' ? 'Alors, on travaille ensemble ?' : 'So, do we work together?'; ?></strong></p>
 				<a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" class="underline button big">
-					<span class="arrow"></span><?php echo LANGUAGE == 'fr' ? 'Briefez nous !' : 'Brief us!'; ?>
+					<span class="arrow"></span><?php echo LANGUAGE == 'fr' ? 'Briefez-nous !' : 'Brief-us!'; ?>
 				</a>
 			</div>
 			<div class="column small-12 medium-4 large-6">
