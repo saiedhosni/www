@@ -12,7 +12,7 @@
 </section>
 <section class="black expanded">
 	<div class="row">
-		<div class="column medium-6 medium-offset-2">
+		<div class="column medium-6 medium-offset-2 large-4">
 			<h2 data-emergence>Nos services</h2>
 			<p data-emergence>Le studio réalise des solutions digitales interactives. Nous portons une attention toute particulières aux nouvelles technologies, à l'open source ainsi qu'à la recherche et au développement de nouveaux produits.</p>
 		</div>
