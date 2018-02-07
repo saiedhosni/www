@@ -228,7 +228,7 @@
 						el: '.shape-letter-m-vertical',
 						strokeDasharray: 248.51,
 						strokeDashoffset: { 248.51 : 0 },
-						delay: motioOptions.interval * 3
+						delay: motioOptions.interval * 2
 					}, motioOptions)
 				)
 			),
