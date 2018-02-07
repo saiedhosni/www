@@ -147,9 +147,9 @@
 		// mojs options and objects for the "mouseenter/mouseleave logo" tween
 		const letter = logo.querySelector('.motion-letter');
 		const length = letter.getTotalLength();
-		let letterPlayState = false;
 
 		const letterOptions = {
+			playstate: false,
 			el: letter,
 			strokeDasharray: length,
 			transformOrigin: '109.2px 13.2px',
@@ -170,7 +170,7 @@
 				angleZ: { 0 : 180 },
 				onComplete: function() {
 					this.el.style['strokeDashoffset'] = -length;
-					letterPlayState = false;
+					this._props.playstate = false;
 					letterIn.play();
 				}
 			}, letterOptions)
@@ -178,13 +178,13 @@
 
 		// hides the "o" letter of the logo on enter
 		logo.addEventListener('mouseenter', function() {
-			letterPlayState = true;
+			letterOut._props.playstate = true;
 			letterOut.play();
 		});
 
 		// shows the "o" letter of the logo on leave
 		logo.addEventListener('mouseleave', function() {
-			if (letterPlayState == true) {
+			if (letterOut._props.playstate == true) {
 				letterOut.playBackward();
 			}
 		});
