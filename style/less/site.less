@@ -357,17 +357,45 @@ textarea {
 	cursor: pointer;
 	.no-select();
 
-	svg {
-		width: 14px;
-		height: 14px;
-		stroke: currentColor;
+	.arrow {
+		position: relative;
+		display: inline-block;
 		margin-right: 10px;
-		.transition(transform 500ms @cubic);
+		.transition(transform 700ms @cubic);
+
+		&::before {
+			content: '';
+			display: block;
+			width: 11px;
+			height: 11px;
+			border-width: 1px 1px 0 0;
+			border-style: solid;
+			border-color: currentColor;
+			.border-radius(0 2px 0 0);
+			.transform(rotate(45deg));
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			right: 0px;
+			top: 5px;
+			width: 14px;
+			height: 1px;
+			background: currentColor;
+			.transition(width 1.4s @cubic);
+			will-change: width;
+		}
 	}
 
 	&:hover {
-		svg {
-			.transform(translateX(4px));
+		.arrow {
+			.transform(translateX(-10px));
+		}
+
+		.arrow::after {
+			width: 40px;
 		}
 	}
 

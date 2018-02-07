@@ -36,7 +36,7 @@
 			<p data-emergence>Spécialisé dans la création d'animations et micro-interactions web basées sur les principes du motion design, nous travaillons en collaboration avec des designers et des développeurs de proximité, perfectionnistes, pointilleux et soucieux du détail.</p>
 			<p data-emergence>L'expérience utilisateur est au cœur de notre métier, c'est pourquoi nous utilisons des technologies graphiques de pointe, ayant déjà fait leur preuve et s'imposant aujourd'hui comme des références dans le domaine du web pour leur compatibilité, leurs performances et leur fluidité.</p>
 			<p data-emergence>Nous aimons notre métier, et nous réalisons toujours tous nos projets avec passion.</p>
-			<p data-emergence><a href="/nos-services" class="underline button"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Découvrir nos services</a></p>
+			<p data-emergence><a href="/nos-services" class="underline button"><span class="arrow"></span>Découvrir nos services</a></p>
 		</div>
 	</div>
 </section>
@@ -47,7 +47,7 @@
 			<p data-emergence>Notre point fort, la collaboration. Nous avons fondé le collectif afin de rassembler des entreprises de proximité, dans une démarche "éco-responsable".</p>
 			<p data-emergence>Cette méthode permet d'échanger les compétences, d'avoir de multiples points de vues et de partager le goût du détail pour mener à bien votre projet.</p>
 			<p data-emergence>Que vous soyez art-director, graphiste, designer, ou même développeur, le collectif est ouvert à tout le monde et vous pouvez nous rejoindre à tout moment.</p>
-			<p data-emergence><a href="/contact" class="underline button"><svg><use xlink:href="/picture/sprite.svg#arrow-right" /></svg>Nous rejoindre</a></p>
+			<p data-emergence><a href="/contact" class="underline button"><span class="arrow"></span>Nous rejoindre</a></p>
 		</div>
 	</div>
 </section>
