@@ -21,10 +21,6 @@
 		// scroll to the top when the new page is ready
 		window.scrollTo(0, 0);
 
-		// adds a css class to pages that displays a footer (all pages except the homepage)
-		if (currentStatus.namespace != 'index') {
-			document.querySelector('body').classList.add('has-footer');
-		}
 	});
 
 	// initializes emergence js

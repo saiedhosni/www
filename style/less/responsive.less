@@ -81,14 +81,6 @@
  * small screens
  */
 @media (max-width: 39.9375em) {
-	body {
-		&.has-footer {
-			main {
-				margin-bottom: 100vh;
-			}
-		}
-	}
-
 	header {
 		padding: @gutter / 2 @min-gutter * 2;
 	}
@@ -100,6 +92,10 @@
 		.logo, .copyright {
 			margin-top: 30px;
 		}
+	}
+
+	main:not([data-namespace="index"]) {
+		margin-bottom: 100vh;
 	}
 
 	section {

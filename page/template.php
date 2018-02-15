@@ -29,13 +29,7 @@
 			}
 		?>
 	</head>
-	<?php
-		$has_footer = !in_array(PAGE, [
-			'fr/index',
-			'en/index'
-		]);
-	?>
-	<body class="<?php echo $has_footer ? 'has-footer' : '' ?>" id="barba-wrapper">
+	<body id="barba-wrapper">
 		<?php
 			require_once 'module/header.php';
 			require_once 'module/media.php';
@@ -43,10 +37,7 @@
 		<main class="barba-container" data-namespace="<?php echo str_replace(LANGUAGE . '/', '', PAGE); ?>">
 			<?php
 				require_once PATH;
-
-				if ($has_footer) {
-					require_once 'module/footer.php';
-				}
+				require_once 'module/footer.php';
 			?>
 		</main>
 		<script type="text/javascript" src="/javascript/mo.min.js"></script>
