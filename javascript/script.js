@@ -20,7 +20,11 @@
 
 		// scroll to the top when the new page is ready
 		window.scrollTo(0, 0);
+	});
 
+	// manages the transitionCompleted event of barba js
+	Barba.Dispatcher.on('transitionCompleted', function(currentStatus, prevStatus) {
+		scrollTween();
 	});
 
 	// initializes emergence js
@@ -444,27 +448,29 @@
 	}
 
 	// manages the footer scroll animation
-	let scrollY = 0;
-	let throttle;
-	let footer = document.querySelector('footer');
+	(window.scrollTween = function() {
+		let scrollY = 0;
+		let throttle;
+		let footer = document.querySelector('footer');
 
-	// binds the scroll event to hide/show the footer content
-	window.addEventListener('scroll', function() {
-		scrollY = window.scrollY;
-		window.cancelAnimationFrame(throttle);
+		// binds the scroll event to hide/show the footer content
+		window.addEventListener('scroll', function() {
+			scrollY = window.scrollY;
+			window.cancelAnimationFrame(throttle);
 
-		// displays the footer content and animate the footer logo depending on the scroll position
-		throttle = window.requestAnimationFrame(function() {
-			if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (screen.small ? 85 : 95)) {
-				if (!footer.classList.contains('show')) {
-					footer.classList.add('show');
-					footer.querySelector('.logo').dispatchEvent(new Event('mouseenter'));
+			// displays the footer content and animate the footer logo depending on the scroll position
+			throttle = window.requestAnimationFrame(function() {
+				if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (screen.small ? 85 : 95)) {
+					if (!footer.classList.contains('show')) {
+						footer.classList.add('show');
+						footer.querySelector('.logo').dispatchEvent(new Event('mouseenter'));
+					}
+				} else {
+					footer.classList.remove('show');
 				}
-			} else {
-				footer.classList.remove('show');
-			}
+			});
 		});
-	});
+	})();
 
 	// binds the resize event to properly updates screen resolution object
 	let debounce;
