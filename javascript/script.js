@@ -25,6 +25,7 @@
 	// manages the transitionCompleted event of barba js
 	Barba.Dispatcher.on('transitionCompleted', function(currentStatus, prevStatus) {
 		scrollTween();
+		logoTween();
 	});
 
 	// initializes emergence js
@@ -142,53 +143,55 @@
 	const easingCurve = mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0');
 
 	// binds all logos and create an animation for each one
-	Array.from(document.querySelectorAll('.logo')).forEach(function(logo) {
+	(window.logoTween = function() {
+		Array.from(document.querySelectorAll('.logo')).forEach(function(logo) {
 
-		// mojs options and objects for the "mouseenter/mouseleave logo" tween
-		const letter = logo.querySelector('.motion-letter');
-		const length = letter.getTotalLength();
+			// mojs options and objects for the "mouseenter/mouseleave logo" tween
+			const letter = logo.querySelector('.motion-letter');
+			const length = letter.getTotalLength();
 
-		const letterOptions = {
-			playstate: false,
-			el: letter,
-			strokeDasharray: length,
-			transformOrigin: '109.2px 13.2px',
-			duration: 700,
-			easing: easingCurve
-		};
+			const letterOptions = {
+				playstate: false,
+				el: letter,
+				strokeDasharray: length,
+				transformOrigin: '109.2px 13.2px',
+				duration: 700,
+				easing: easingCurve
+			};
 
-		let letterIn = new mojs.Html(
-			mojs.helpers.extend({
-				strokeDashoffset: { [-length] : 0 },
-				angleZ: { 90 : 360 }
-			}, letterOptions)
-		);
+			let letterIn = new mojs.Html(
+				mojs.helpers.extend({
+					strokeDashoffset: { [-length] : 0 },
+					angleZ: { 90 : 360 }
+				}, letterOptions)
+			);
 
-		let letterOut = new mojs.Html(
-			mojs.helpers.extend({
-				strokeDashoffset: { 0 : length },
-				angleZ: { 0 : 180 },
-				onComplete: function() {
-					this.el.style['strokeDashoffset'] = -length;
-					this._props.playstate = false;
-					letterIn.play();
+			let letterOut = new mojs.Html(
+				mojs.helpers.extend({
+					strokeDashoffset: { 0 : length },
+					angleZ: { 0 : 180 },
+					onComplete: function() {
+						this.el.style['strokeDashoffset'] = -length;
+						this._props.playstate = false;
+						letterIn.play();
+					}
+				}, letterOptions)
+			);
+
+			// hides the "o" letter of the logo on enter
+			logo.addEventListener('mouseenter', function() {
+				letterOut._props.playstate = true;
+				letterOut.play();
+			});
+
+			// shows the "o" letter of the logo on leave
+			logo.addEventListener('mouseleave', function() {
+				if (letterOut._props.playstate == true) {
+					letterOut.playBackward();
 				}
-			}, letterOptions)
-		);
-
-		// hides the "o" letter of the logo on enter
-		logo.addEventListener('mouseenter', function() {
-			letterOut._props.playstate = true;
-			letterOut.play();
+			});
 		});
-
-		// shows the "o" letter of the logo on leave
-		logo.addEventListener('mouseleave', function() {
-			if (letterOut._props.playstate == true) {
-				letterOut.playBackward();
-			}
-		});
-	});
+	})();
 
 	// gets the motio vertical wrapper
 	const motioWrapper = document.querySelector('.wrapper-motio-vertical');
