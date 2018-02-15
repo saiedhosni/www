@@ -66,7 +66,7 @@
 	(window.initForm = function() {
 		const form = document.querySelector('form');
 
-		// checks if the form is present on the page
+		// exits if the form isn't present on the page
 		if (form == null) {
 			return;
 		}
