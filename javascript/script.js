@@ -24,8 +24,10 @@
 
 	// manages the transitionCompleted event of barba js
 	Barba.Dispatcher.on('transitionCompleted', function(currentStatus, prevStatus) {
-		scrollTween();
-		logoTween();
+
+		// inits some tweens for the current page
+		initScrollTween();
+		initLogoTween();
 	});
 
 	// initializes emergence js
@@ -143,7 +145,7 @@
 	const easingCurve = mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0');
 
 	// binds all logos and create an animation for each one
-	(window.logoTween = function() {
+	(window.initLogoTween = function() {
 		Array.from(document.querySelectorAll('.logo')).forEach(function(logo) {
 
 			// mojs options and objects for the "mouseenter/mouseleave logo" tween
@@ -451,7 +453,7 @@
 	}
 
 	// manages the footer scroll animation
-	(window.scrollTween = function() {
+	(window.initScrollTween = function() {
 		let scrollY = 0;
 		let throttle;
 		let footer = document.querySelector('footer');
