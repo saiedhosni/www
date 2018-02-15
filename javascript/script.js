@@ -34,33 +34,7 @@
 		// inits some tweens for the current page
 		initScrollTween();
 		initLogoTween();
-	});
-
-	// initializes emergence js
-	emergence.init({
-		elemCushion: 1,
-		offsetTop: screen.small ? 90 : 80,
-		offsetBottom: screen.small ? -700 : 0,
-		throttle: 100,
-		callback: function(element, state) {
-			if (screen.small) {
-				return;
-			}
-
-			if (motioWrapper != null && typeof(motioTween[element.className]) !== 'undefined') {
-				const tween = motioTween[element.className];
-
-				if (state == 'visible' && !tween._props.playstate) {
-					tween._props.playstate = true;
-					tween.play();
-				}
-
-				if (state == 'reset' && tween._props.playstate) {
-					tween._props.playstate = false;
-					tween.playBackward();
-				}
-			}
-		}
+		initEmergence();
 	});
 
 	// manages the contact form
@@ -204,105 +178,137 @@
 		});
 	})();
 
-	// gets the motio vertical wrapper
-	const motioWrapper = document.querySelector('.wrapper-motio-vertical');
+	// manages emergence js
+	(window.initEmergence = function() {
 
-	// checks if the motio vertical wrapper is present on the page
-	if (motioWrapper != null) {
+		// manages the motio vertical wrapper
+		const motioWrapper = document.querySelector('.wrapper-motio-vertical');
 
-		// mojs options and objects for the motio vertical tween
-		const motioOptions = {
-			interval: 100,
-			playstate: false,
-			strokeWidth: 65.502,
-			duration: 800,
-			easing: easingCurve,
-			isForce3d: true
-		};
+		// checks if the motio vertical wrapper is present on the page
+		if (motioWrapper != null) {
 
-		var motioTween = {
-			'vertical letter-m': new mojs.Timeline().add(
-				new mojs.Html(
+			// mojs options and objects for the motio vertical tween
+			const motioOptions = {
+				interval: 100,
+				playstate: false,
+				strokeWidth: 65.502,
+				duration: 800,
+				easing: easingCurve,
+				isForce3d: true
+			};
+
+			var motioTween = {
+				'vertical letter-m': new mojs.Timeline().add(
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-m-arc1',
+							strokeDasharray: 466.61,
+							strokeDashoffset: { [-466.61] : 0 }
+						}, motioOptions)
+					),
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-m-arc2',
+							strokeDasharray: 466.61,
+							strokeDashoffset: { [-466.61] : 0 },
+							delay: motioOptions.interval
+						}, motioOptions)
+					),
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-m-vertical',
+							strokeDasharray: 248.51,
+							strokeDashoffset: { 248.51 : 0 },
+							delay: motioOptions.interval * 2
+						}, motioOptions)
+					)
+				),
+				'vertical letter-o': new mojs.Html(
 					mojs.helpers.extend({
-						el: '.shape-letter-m-arc1',
-						strokeDasharray: 466.61,
-						strokeDashoffset: { [-466.61] : 0 }
+						el: '.shape-letter-o',
+						transformOrigin: '244px 126px',
+						strokeDasharray: 438.81,
+						strokeDashoffset: { [-438.81] : 0 },
+						angleZ: { [-180] : 0 }
 					}, motioOptions)
 				),
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-m-arc2',
-						strokeDasharray: 466.61,
-						strokeDashoffset: { [-466.61] : 0 },
-						delay: motioOptions.interval
-					}, motioOptions)
+				'vertical letter-t': new mojs.Timeline().add(
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-t-horizontal',
+							strokeDasharray: 170.878,
+							strokeDashoffset: { [-170.878] : 0 },
+							strokeWidth: 60.262,
+							delay: motioOptions.interval
+						}, motioOptions)
+					),
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-t-vertical',
+							strokeDasharray: 360.33,
+							strokeDashoffset: { [-360.33] : 0 }
+						}, motioOptions)
+					)
 				),
-				new mojs.Html(
+				'vertical letter-i': new mojs.Timeline().add(
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-i-vertical',
+							strokeDasharray: 128.45,
+							strokeDashoffset: { 128.45 : 0 },
+							strokeWidth: 68.777,
+							delay: 200
+						}, motioOptions)
+					),
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-i-dot',
+							fill: colors.vibrant,
+							transformOrigin: '40px 40px',
+							scale: { 0 : 1 }
+						}, motioOptions)
+					)
+				),
+				'vertical letter-o-last': new mojs.Html(
 					mojs.helpers.extend({
-						el: '.shape-letter-m-vertical',
-						strokeDasharray: 248.51,
-						strokeDashoffset: { 248.51 : 0 },
-						delay: motioOptions.interval * 2
+						el: '.shape-letter-o-last',
+						transformOrigin: '244px 126px',
+						strokeDasharray: 438.79,
+						strokeDashoffset: { 438.79 : 0 },
+						angleZ: { 180 : 0 }
 					}, motioOptions)
 				)
-			),
-			'vertical letter-o': new mojs.Html(
-				mojs.helpers.extend({
-					el: '.shape-letter-o',
-					transformOrigin: '244px 126px',
-					strokeDasharray: 438.81,
-					strokeDashoffset: { [-438.81] : 0 },
-					angleZ: { [-180] : 0 }
-				}, motioOptions)
-			),
-			'vertical letter-t': new mojs.Timeline().add(
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-t-horizontal',
-						strokeDasharray: 170.878,
-						strokeDashoffset: { [-170.878] : 0 },
-						strokeWidth: 60.262,
-						delay: motioOptions.interval
-					}, motioOptions)
-				),
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-t-vertical',
-						strokeDasharray: 360.33,
-						strokeDashoffset: { [-360.33] : 0 }
-					}, motioOptions)
-				)
-			),
-			'vertical letter-i': new mojs.Timeline().add(
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-i-vertical',
-						strokeDasharray: 128.45,
-						strokeDashoffset: { 128.45 : 0 },
-						strokeWidth: 68.777,
-						delay: 200
-					}, motioOptions)
-				),
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-i-dot',
-						fill: colors.vibrant,
-						transformOrigin: '40px 40px',
-						scale: { 0 : 1 }
-					}, motioOptions)
-				)
-			),
-			'vertical letter-o-last': new mojs.Html(
-				mojs.helpers.extend({
-					el: '.shape-letter-o-last',
-					transformOrigin: '244px 126px',
-					strokeDasharray: 438.79,
-					strokeDashoffset: { 438.79 : 0 },
-					angleZ: { 180 : 0 }
-				}, motioOptions)
-			)
-		};
-	}
+			};
+		}
+
+		// initializes emergence js
+		emergence.init({
+			elemCushion: 1,
+			offsetTop: screen.small ? 90 : 80,
+			offsetBottom: screen.small ? -700 : 0,
+			throttle: 100,
+			callback: function(element, state) {
+				if (screen.small) {
+					return;
+				}
+
+				// animates the motio wrapper if present on the page
+				if (motioWrapper != null && typeof(motioTween[element.className]) !== 'undefined') {
+					const tween = motioTween[element.className];
+
+					if (state == 'visible' && !tween._props.playstate) {
+						tween._props.playstate = true;
+						tween.play();
+					}
+
+					if (state == 'reset' && tween._props.playstate) {
+						tween._props.playstate = false;
+						tween.playBackward();
+					}
+				}
+			}
+		});
+	})();
 
 	// mojs options and objects for the "show/hide the close menu button" tween
 	const menuOptions = {
