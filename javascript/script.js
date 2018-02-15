@@ -20,6 +20,11 @@
 
 		// scroll to the top when the new page is ready
 		window.scrollTo(0, 0);
+
+		// inits the form on the contact page
+		if (currentStatus.namespace == 'contact') {
+			initForm();
+		}
 	});
 
 	// manages the transitionCompleted event of barba js
@@ -57,11 +62,14 @@
 		}
 	});
 
-	// gets the contact form
-	const form = document.querySelector('form');
+	// manages the contact form
+	(window.initForm = function() {
+		const form = document.querySelector('form');
 
-	// checks if the form is present on the page
-	if (form != null) {
+		// checks if the form is present on the page
+		if (form == null) {
+			return;
+		}
 
 		// binds the submit event of the form to validate the content
 		form.addEventListener('submit', function(e) {
@@ -128,7 +136,7 @@
 			// sends the contact message to the studio
 			request.send('message=' + document.querySelector('textarea').value);
 		});
-	}
+	})();
 
 	// motion colors based on main theme
 	const colors = {
