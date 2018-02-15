@@ -14,6 +14,7 @@
 
 	// initializes barba js
 	Barba.Pjax.start();
+	Barba.Prefetch.init();
 
 	// manages the newPageReady event of barba js
 	Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, HTMLElementContainer, newPageRawHTML) {
