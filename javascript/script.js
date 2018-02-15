@@ -258,8 +258,8 @@
 				new mojs.Html(
 					mojs.helpers.extend({
 						el: '.shape-letter-t-horizontal',
-						strokeDasharray: 170.87,
-						strokeDashoffset: { [-170.87] : 0 },
+						strokeDasharray: 170.878,
+						strokeDashoffset: { [-170.878] : 0 },
 						strokeWidth: 60.262,
 						delay: motioOptions.interval
 					}, motioOptions)
