@@ -11,6 +11,7 @@ body {
 	font-family: @font;
 	font-weight: 300;
 	.selection(@base-color, @vibrant-color);
+	.no-select();
 }
 
 header {
@@ -23,7 +24,6 @@ header {
 	font-size: 14px;
 	pointer-events: none;
 	mix-blend-mode: difference;
-	.no-select();
 
 	ul {
 		display: flex;
@@ -45,7 +45,6 @@ footer {
 	bottom: 0;
 	width: 100%;
 	height: 382px;
-	.no-select();
 
 	& > .column {
 		opacity: 0;
@@ -236,7 +235,6 @@ textarea {
 
 .menu {
 	padding-left: 40px;
-	.no-select();
 }
 
 .intro {
@@ -353,7 +351,6 @@ textarea {
 	font-weight: 100;
 	font-size: 18px;
 	cursor: pointer;
-	.no-select();
 
 	.arrow {
 		position: relative;
