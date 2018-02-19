@@ -506,4 +506,88 @@
 			};
 		}, 250);
 	});
+
+	// custom cursor effect
+	let dot = document.querySelector('.dot');
+	let mouseX = dot.offsetLeft;
+	let mouseY = dot.offsetTop;
+	let tempX = mouseX;
+	let tempY = mouseY;
+	let deltaX = 0;
+	let deltaY = 0;
+	let init = false;
+	let radius = dot.clientWidth / 2;
+	let radius2 = dot.clientWidth;
+
+	// binds the mousemove event to make the dot follow the mouse cursor
+	document.addEventListener('mousemove', function(e) {
+
+		// init the dot on first move
+		if (!init) {
+			dot.classList.add('init');
+			init = true;
+		}
+
+		// stores the mouse position
+		mouseX = e.clientX;
+		mouseY = e.clientY;
+	});
+
+	// binds the mousedown event to decrease the dot size on mousedown
+	document.addEventListener('mousedown', function(e) {
+		dot.classList.add('down');
+	});
+
+	// binds the mouseup event to restore the dot size on mouseup
+	document.addEventListener('mouseup', function(e) {
+		dot.classList.remove('down');
+
+		// creates a dot pulse effect on mouseup
+		let dotPulse = new mojs.Shape({
+			className: 'dot-pulse',
+			shape: 'circle',
+			left: 0,
+			top: 0,
+			x: e.pageX,
+			y: e.pageY,
+			radius: { 6 : 40 },
+			fill: colors.contrast,
+			opacity: { 0.5 : 0 },
+			duration: 500,
+			onComplete: function() {
+				this.el.parentNode.removeChild(this.el);
+			}
+		}).play();
+	});
+
+	// follows the mouse cursor on every frame
+	function dotframe() {
+
+		// calcultates the new position to follow
+		deltaX = mouseX - tempX;
+		deltaY = mouseY - tempY;
+		tempX += (deltaX - radius) * 0.22;
+		tempY += (deltaY - radius) * 0.22;
+
+		// sets the dot position
+		dot.style.left = Math.round(tempX) + 'px';
+		dot.style.top = Math.round(tempY) + 'px';
+
+		// makes this function run at 60fps
+		requestAnimationFrame(dotframe);
+	}
+
+	// run the dot frame
+	dotframe();
+
+	// binds the mouseenter and mouseleave events of all links to increase/decrease the dot size
+	Array.from(document.querySelectorAll('a, .button')).forEach(function(link) {
+		link.addEventListener('mouseenter', function() {
+			dot.classList.add('link');
+		});
+
+		link.addEventListener('mouseleave', function() {
+			dot.classList.remove('link');
+		});
+	});
 })();

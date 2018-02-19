@@ -10,6 +10,7 @@ body {
 	color: @contrast-color;
 	font-family: @font;
 	font-weight: 300;
+	cursor: none;
 	.selection(@base-color, @vibrant-color);
 	.no-select();
 }
@@ -141,6 +142,7 @@ dd {
 a {
 	color: @contrast-color;
 	text-decoration: none;
+	cursor: none;
 }
 
 svg {
@@ -350,7 +352,7 @@ textarea {
 	align-items: center;
 	font-weight: 100;
 	font-size: 18px;
-	cursor: pointer;
+	cursor: none;
 
 	.arrow {
 		position: relative;
@@ -545,4 +547,40 @@ textarea {
 
 .illustration-404 {
 	position: relative;
+}
+
+.dot {
+	position: fixed;
+	z-index: 100;
+	left: 50%;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	opacity: 0;
+	mix-blend-mode: difference;
+	pointer-events: none;
+
+	&.init {
+		opacity: 1;
+		.transition(opacity 1s @cubic);
+	}
+
+	&.link circle {
+		.transform(scale(4));
+	}
+
+	&.down circle {
+		.transform(scale(0.7));
+	}
+
+	circle {
+		transform-origin: 50% 50%;
+		.transition(transform 250ms ease);
+	}
+}
+
+.dot-pulse {
+	z-index: 90;
+	mix-blend-mode: difference;
+	pointer-events: none;
 }
