@@ -35,12 +35,12 @@
 			require_once 'module/media.php';
 		?>
 		<main class="barba-container" data-namespace="<?php echo str_replace(LANGUAGE . '/', '', PAGE); ?>">
-			<div class="dot"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="6"/></svg></div>
 			<?php
 				require_once PATH;
 				require_once 'module/footer.php';
 			?>
 		</main>
+		<div class="dot"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="6"/></svg></div>
 		<script type="text/javascript" src="/javascript/mo.min.js"></script>
 		<script type="text/javascript" src="/javascript/barba.min.js"></script>
 		<script type="text/javascript" src="/javascript/emergence.min.js"></script>
