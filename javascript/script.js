@@ -22,9 +22,14 @@
 		// scroll to the top when the new page is ready
 		window.scrollTo(0, 0);
 
-		// inits the form on the contact page
-		if (currentStatus.namespace == 'contact') {
-			initForm();
+		// inits some stuff depending on the page
+		switch(currentStatus.namespace) {
+			case 'contact':
+				initForm();
+				break;
+			case '404':
+				init404Tween();
+				break;
 		}
 	});
 
@@ -396,11 +401,13 @@
 		menuSteam.generate().play();
 	});
 
-	// 404 illustration tween
-	const illustration = document.querySelector('.illustration-404');
+	// manages the 404 illustration tween
+	(window.init404Tween = function() {
 
-	// checks if the illustration is present on the page
-	if (illustration != null) {
+		// checks if the illustration is present on the page
+		if (document.querySelector('.illustration-404') == null) {
+			return;
+		}
 
 		// bird tween
 		const birdOptions = {
@@ -466,7 +473,7 @@
 				this.generate().replay();
 			}
 		}).play();
-	}
+	})();
 
 	// manages the footer scroll animation
 	(window.initScrollTween = function() {
