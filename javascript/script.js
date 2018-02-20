@@ -534,7 +534,7 @@
 	});
 
 	// binds the mousedown event to decrease the dot size on mousedown
-	document.addEventListener('mousedown', function(e) {
+	document.addEventListener('mousedown', function() {
 		dot.classList.add('down');
 	});
 
