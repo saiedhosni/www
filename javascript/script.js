@@ -35,6 +35,7 @@
 		initScrollTween();
 		initLogoTween();
 		initEmergence();
+		initDotCursor();
 	});
 
 	// manages the contact form
@@ -507,7 +508,7 @@
 		}, 250);
 	});
 
-	// custom cursor effect
+	// manages the dot custom cursor effect
 	let dot = document.querySelector('.dot');
 	let mouseX = dot.offsetLeft;
 	let mouseY = dot.offsetTop;
@@ -580,14 +581,19 @@
 	// run the dot frame
 	dotframe();
 
-	// binds the mouseenter and mouseleave events of all links to increase/decrease the dot size
-	Array.from(document.querySelectorAll('a, .button')).forEach(function(link) {
-		link.addEventListener('mouseenter', function() {
-			dot.classList.add('link');
-		});
+	// manages the dot cursor size for all links
+	(window.initDotCursor = function() {
+		dot.classList.remove('link');
 
-		link.addEventListener('mouseleave', function() {
-			dot.classList.remove('link');
+		// binds the mouseenter and mouseleave events of all links to increase/decrease the dot size
+		Array.from(document.querySelectorAll('a, .button')).forEach(function(link) {
+			link.addEventListener('mouseenter', function() {
+				dot.classList.add('link');
+			});
+
+			link.addEventListener('mouseleave', function() {
+				dot.classList.remove('link');
+			});
 		});
-	});
+	})();
 })();
