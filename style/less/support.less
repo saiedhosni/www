@@ -1,0 +1,25 @@
+// main: build.less
+
+@supports (mix-blend-mode: difference) {
+	.dot-pulse {
+		ellipse {
+			fill: @contrast-color;
+		}
+	}
+}
+
+@supports not (mix-blend-mode: difference) {
+	.dot {
+		&.link circle {
+			opacity: 0.2;
+		}
+
+		&.support circle {
+			fill: @base-color;
+		}
+
+		circle {
+			.transition(transform 250ms ease, opacity 250ms ease, fill 1s ease;);
+		}
+	}
+}

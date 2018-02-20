@@ -550,6 +550,9 @@
 	document.addEventListener('mouseup', function(e) {
 		dot.classList.remove('down');
 
+		// support for non-blending browsers: this value is override by css for browsers that supports blending mode
+		let blend = dot.classList.contains('support') ? colors.base : colors.contrast;
+
 		// creates a dot pulse effect on mouseup
 		let dotPulse = new mojs.Shape({
 			className: 'dot-pulse',
@@ -559,7 +562,7 @@
 			x: e.pageX,
 			y: e.pageY,
 			radius: { 6 : 40 },
-			fill: colors.contrast,
+			fill: blend,
 			opacity: { 0.4 : 0 },
 			duration: 500,
 			onComplete: function() {
@@ -600,6 +603,17 @@
 
 			link.addEventListener('mouseleave', function() {
 				dot.classList.remove('link');
+			});
+		});
+
+		// binds the mouseenter and mouseleave events of all white sections and footer to support the dot circle fill transition
+		Array.from(document.querySelectorAll('section.white, footer.white')).forEach(function(element) {
+			element.addEventListener('mouseenter', function() {
+				document.querySelector('.dot').classList.add('support');
+			});
+
+			element.addEventListener('mouseleave', function() {
+				document.querySelector('.dot').classList.remove('support');
 			});
 		});
 	})();
