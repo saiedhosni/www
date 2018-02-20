@@ -553,7 +553,7 @@
 			y: e.pageY,
 			radius: { 6 : 40 },
 			fill: colors.contrast,
-			opacity: { 0.5 : 0 },
+			opacity: { 0.4 : 0 },
 			duration: 500,
 			onComplete: function() {
 				this.el.parentNode.removeChild(this.el);
