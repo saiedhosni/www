@@ -565,6 +565,7 @@
 			fill: blend,
 			opacity: { 0.4 : 0 },
 			duration: 500,
+			isForce3d: true,
 			onComplete: function() {
 				this.el.parentNode.removeChild(this.el);
 			}
