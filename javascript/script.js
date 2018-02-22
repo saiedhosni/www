@@ -563,7 +563,7 @@
 			y: e.pageY,
 			radius: { 6 : 40 },
 			fill: blend,
-			opacity: { 0.4 : 0 },
+			opacity: { 0.35 : 0 },
 			duration: 500,
 			isForce3d: true,
 			onComplete: function() {
