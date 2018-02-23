@@ -293,7 +293,7 @@
 		// initializes emergence js
 		emergence.init({
 			elemCushion: 1,
-			offsetTop: screen.small ? 90 : 80,
+			offsetTop: screen.small ? 90 : 70,
 			offsetBottom: screen.small ? -700 : 0,
 			throttle: 100,
 			callback: function(element, state) {
