@@ -491,10 +491,12 @@
 
 			// displays the footer content and animate the footer logo depending on the scroll position
 			throttle = window.requestAnimationFrame(function() {
-				if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (screen.small ? 85 : 95)) {
+				if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (screen.small ? 100 : 97)) {
 					if (!footer.classList.contains('show')) {
 						footer.classList.add('show');
-						footer.querySelector('.logo').dispatchEvent(new Event('mouseenter'));
+						setTimeout(() => {
+							footer.querySelector('.logo').dispatchEvent(new Event('mouseenter'));
+						}, 500);
 					}
 				} else {
 					footer.classList.remove('show');
