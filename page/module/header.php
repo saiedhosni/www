@@ -11,7 +11,7 @@
 					<label for="trigger" class="menu-button show-for-small-only"><span></span></label>
 					<ul class="menu">
 						<li class="<?php echo PAGE == 'fr/le-studio' || PAGE == 'en/the-studio' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" class="underline">Studio</a></li>
-						<li><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>" class="underline">Services</a></li>
+						<li class="<?php echo PAGE == 'fr/nos-services' || PAGE == 'en/our-services' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>" class="underline">Services</a></li>
 						<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" class="underline">Contact</a></li>
 					</ul>
 				</nav>
