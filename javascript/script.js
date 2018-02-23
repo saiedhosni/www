@@ -22,6 +22,9 @@
 		// scroll to the top when the new page is ready
 		window.scrollTo(0, 0);
 
+		// sets the body class to allow specific style override per page
+		document.querySelector('body').setAttribute('data-page', currentStatus.namespace);
+
 		// inits some stuff depending on the page
 		switch(currentStatus.namespace) {
 			case 'contact':

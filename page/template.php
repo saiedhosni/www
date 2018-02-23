@@ -29,25 +29,26 @@
 			}
 		?>
 	</head>
-	<body id="barba-wrapper">
+	<?php
+		// uniformizes the namespace between english and french pages
+		$namespace = str_replace(array(
+			LANGUAGE . '/',
+			'le-',
+			'the-',
+			'nos-',
+			'our-',
+			'legal-'
+		), '', PAGE);
+
+		// specific case for legal notices
+		if ($namespace == 'mentions-legales') {
+			$namespace = 'notices';
+		}
+	?>
+	<body id="barba-wrapper" data-page="<?php echo $namespace ?>">
 		<?php
 			require_once 'module/header.php';
 			require_once 'module/media.php';
-
-			// uniformizes the namespace between english and french pages
-			$namespace = str_replace(array(
-				LANGUAGE . '/',
-				'le-',
-				'the-',
-				'nos-',
-				'our-',
-				'legal-'
-			), '', PAGE);
-
-			// specific case for legal notices
-			if ($namespace == 'mentions-legales') {
-				$namespace = 'notices';
-			}
 		?>
 		<main class="barba-container" data-namespace="<?php echo $namespace ?>">
 			<?php
