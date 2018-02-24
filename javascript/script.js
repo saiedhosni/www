@@ -12,9 +12,87 @@
 		large: window.innerWidth >= 1024
 	}
 
-	// initializes barba js
-	Barba.Pjax.start();
+	// initializes prefetch of barba js
 	Barba.Prefetch.init();
+
+	// contact page base view
+	Barba.BaseView.extend({
+		namespace: 'contact',
+		onEnter: function() {
+
+			// gets the contact form
+			const form = document.querySelector('form');
+
+			// binds the submit event of the form to validate the content
+			form.addEventListener('submit', function(e) {
+
+				// prevents default event
+				e.preventDefault();
+
+				// defines the mail regular expression
+				const regex = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+
+				// gets the textarea field
+				const message = document.querySelector('textarea');
+
+				// gets the post button
+				const button = document.querySelector('button');
+
+				// displays an invalid message if no mail address is specified
+				if (!regex.test(message.value)) {
+					form.classList.add('state', 'nomail');
+					button.blur();
+
+					// restores the previous state after 2.2 seconds
+					setTimeout(function() {
+						form.className = '';
+					}, 2200);
+
+					return;
+				}
+
+				// displays a pending state before sending the message
+				message.setAttribute('disabled', 'disabled');
+				form.classList.add('state', 'pending');
+				button.blur();
+
+				// prepares the message for sending
+				const request = new XMLHttpRequest();
+				request.open('POST', '/javascript/asynchronous/message.php');
+				request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				request.addEventListener('readystatechange', function() {
+					if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+						if (request.responseText == 'posted') {
+							form.classList.remove('pending');
+							form.classList.add('state', 'delivered');
+
+							// restores the previous state after 2.2 seconds
+							setTimeout(function() {
+								form.className = '';
+								message.removeAttribute('disabled');
+								message.value = '';
+							}, 3200);
+						} else {
+							form.classList.remove('pending');
+							form.classList.add('undelivered');
+
+							// restores the previous state after 3.2 seconds
+							setTimeout(function() {
+								form.className = '';
+								message.removeAttribute('disabled');
+							}, 3200);
+						}
+					}
+				});
+
+				// sends the contact message to the studio
+				request.send('message=' + document.querySelector('textarea').value);
+			});
+		}
+	}).init();
+
+	// starts barba js
+	Barba.Pjax.start();
 
 	// manages the newPageReady event of barba js
 	Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, HTMLElementContainer, newPageRawHTML) {
@@ -27,9 +105,6 @@
 
 		// inits some stuff depending on the page
 		switch(currentStatus.namespace) {
-			case 'contact':
-				initForm();
-				break;
 			case '404':
 				init404Tween();
 				break;
@@ -73,82 +148,6 @@
 			}
 		}
 	});
-
-	// manages the contact form
-	(window.initForm = function() {
-		const form = document.querySelector('form');
-
-		// exits if the form isn't present on the page
-		if (form == null) {
-			return;
-		}
-
-		// binds the submit event of the form to validate the content
-		form.addEventListener('submit', function(e) {
-
-			// prevents default event
-			e.preventDefault();
-
-			// defines the mail regular expression
-			const regex = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
-
-			// gets the textarea field
-			const message = document.querySelector('textarea');
-
-			// gets the post button
-			const button = document.querySelector('button');
-
-			// displays an invalid message if no mail address is specified
-			if (!regex.test(message.value)) {
-				form.classList.add('state', 'nomail');
-				button.blur();
-
-				// restores the previous state after 2.2 seconds
-				setTimeout(function() {
-					form.className = '';
-				}, 2200);
-
-				return;
-			}
-
-			// displays a pending state before sending the message
-			message.setAttribute('disabled', 'disabled');
-			form.classList.add('state', 'pending');
-			button.blur();
-
-			// prepares the message for sending
-			const request = new XMLHttpRequest();
-			request.open('POST', '/javascript/asynchronous/message.php');
-			request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-			request.addEventListener('readystatechange', function() {
-				if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
-					if (request.responseText == 'posted') {
-						form.classList.remove('pending');
-						form.classList.add('state', 'delivered');
-
-						// restores the previous state after 2.2 seconds
-						setTimeout(function() {
-							form.className = '';
-							message.removeAttribute('disabled');
-							message.value = '';
-						}, 3200);
-					} else {
-						form.classList.remove('pending');
-						form.classList.add('undelivered');
-
-						// restores the previous state after 3.2 seconds
-						setTimeout(function() {
-							form.className = '';
-							message.removeAttribute('disabled');
-						}, 3200);
-					}
-				}
-			});
-
-			// sends the contact message to the studio
-			request.send('message=' + document.querySelector('textarea').value);
-		});
-	})();
 
 	// global motio object for global tweens
 	window.motio = {};
