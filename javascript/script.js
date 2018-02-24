@@ -208,6 +208,78 @@
 		}
 	}).init();
 
+	// 404 page base view
+	Barba.BaseView.extend({
+		namespace: '404',
+		onEnter: function() {
+
+			// mojs options and objects for the 404 tween
+			const birdOptions = {
+				parent: '.illustration-404',
+				shape: 'zigzag',
+				count: 2,
+				radiusX: 7,
+				radiusY: 5,
+				angle: 180,
+				scale: 'rand(0.5, 1)',
+				opacity: { 0 : 1 },
+				fill: 'transparent',
+				stroke: colors.base,
+				strokeWidth: 'rand(1, 1.5)',
+				strokeLinecap: 'round',
+				x: 'rand(0, 140)',
+				y: 'rand(-60, -10)',
+				duration: 'rand(500, 1500)',
+				delay: 'rand(0, 400)',
+				isForce3d: true
+			};
+
+			// creates some birds and makes them fly
+			for(let i = 0; i < Math.floor((Math.random() * 5) + 2); i++) {
+				new mojs.Shape(birdOptions).then({
+					radiusY: { 5 : 2 },
+					origin: { '50% 50%' : '50% 20%' },
+					easing: mojs.easing.sin.inout,
+					speed: 'rand(0.3, 0.4)',
+					delay: 0,
+					isYoyo: true,
+					repeat: 999
+				}).play();
+			}
+
+			// defines the wind shape
+			class Wind extends mojs.CustomShape {
+				getShape() { return '<path d="M14.798 70.488c9.153.405 19.657-4.285 27.707-8.416 10.015-5.139 22.439-12.05 27.156-22.866 6.19-14.195-14.828-10.743-6.568-.406 6.633 8.301 19.062-.819 22.108-7.998"/>';}
+				getLength() { return 118.114; }
+			}
+
+			// adds the wind shape to the library
+			mojs.addShape('wind', Wind);
+
+			// creates the wind effect
+			let wind = new mojs.Shape({
+				parent: '.illustration-404',
+				shape: 'wind',
+				left: 'rand(10%, 90%)',
+				top: 'rand(20%, 60%)',
+				fill: 'transparent',
+				stroke: colors.cloud,
+				strokeWidth: { 2 : 'rand(0.5, 1)' },
+				strokeDasharray: '40% 140%',
+				strokeDashoffset: { '50%' : '-140%' },
+				opacity: { 1 : 0 },
+				scale: 'rand(0.5, 1)',
+				easing: mojs.easing.quint.out,
+				duration: 'rand(3000, 4000)',
+				delay: 'rand(1000, 2000)',
+				isForce3d: true,
+				onComplete: function() {
+					this.generate().replay();
+				}
+			}).play();
+		}
+	}).init();
+
 	// starts barba js
 	Barba.Pjax.start();
 
@@ -400,80 +472,6 @@
 		menuCircle.play();
 		menuSteam.generate().play();
 	});
-
-	// manages the 404 illustration tween
-	(window.init404Tween = function() {
-
-		// checks if the illustration is present on the page
-		if (document.querySelector('.illustration-404') == null) {
-			return;
-		}
-
-		// bird tween
-		const birdOptions = {
-			parent: '.illustration-404',
-			shape: 'zigzag',
-			count: 2,
-			radiusX: 7,
-			radiusY: 5,
-			angle: 180,
-			scale: 'rand(0.5, 1)',
-			opacity: { 0 : 1 },
-			fill: 'transparent',
-			stroke: colors.base,
-			strokeWidth: 'rand(1, 1.5)',
-			strokeLinecap: 'round',
-			x: 'rand(0, 140)',
-			y: 'rand(-60, -10)',
-			duration: 'rand(500, 1500)',
-			delay: 'rand(0, 400)',
-			isForce3d: true
-		};
-
-		// creates some birds and makes them fly
-		for(let i = 0; i < Math.floor((Math.random() * 5) + 2); i++) {
-			new mojs.Shape(birdOptions).then({
-				radiusY: { 5 : 2 },
-				origin: { '50% 50%' : '50% 20%' },
-				easing: mojs.easing.sin.inout,
-				speed: 'rand(0.3, 0.4)',
-				delay: 0,
-				isYoyo: true,
-				repeat: 999
-			}).play();
-		}
-
-		// defines the wind shape
-		class Wind extends mojs.CustomShape {
-			getShape() { return '<path d="M14.798 70.488c9.153.405 19.657-4.285 27.707-8.416 10.015-5.139 22.439-12.05 27.156-22.866 6.19-14.195-14.828-10.743-6.568-.406 6.633 8.301 19.062-.819 22.108-7.998"/>';}
-			getLength() { return 118.114; }
-		}
-
-		// adds the wind shape to the library
-		mojs.addShape('wind', Wind);
-
-		// creates the wind effect
-		let wind = new mojs.Shape({
-			parent: '.illustration-404',
-			shape: 'wind',
-			left: 'rand(10%, 90%)',
-			top: 'rand(20%, 60%)',
-			fill: 'transparent',
-			stroke: colors.cloud,
-			strokeWidth: { 2 : 'rand(0.5, 1)' },
-			strokeDasharray: '40% 140%',
-			strokeDashoffset: { '50%' : '-140%' },
-			opacity: { 1 : 0 },
-			scale: 'rand(0.5, 1)',
-			easing: mojs.easing.quint.out,
-			duration: 'rand(3000, 4000)',
-			delay: 'rand(1000, 2000)',
-			isForce3d: true,
-			onComplete: function() {
-				this.generate().replay();
-			}
-		}).play();
-	})();
 
 	// manages the footer scroll animation
 	(window.initScrollTween = function() {
