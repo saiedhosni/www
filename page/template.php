@@ -16,11 +16,8 @@
 		<link type="text/css" rel="stylesheet" media="all" href="/style/default.min.css" />
 		<link rel="prefetch" href="/style/foundation.min.css" />
 		<link rel="prefetch" href="/font/sailec-thin.woff" />
-		<link rel="prefetch" href="/font/sailec-thin.ttf" />
 		<link rel="prefetch" href="/font/sailec-light.woff" />
-		<link rel="prefetch" href="/font/sailec-light.ttf" />
 		<link rel="prefetch" href="/font/sailec-bold.woff" />
-		<link rel="prefetch" href="/font/sailec-bold.ttf" />
 		<?php
 			if (ENVIRONMENT == 'prod') {
 		?>
