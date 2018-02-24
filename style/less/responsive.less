@@ -81,6 +81,10 @@
  * small screens
  */
 @media (max-width: 39.9375em) {
+	body {
+		cursor: auto;
+	}
+
 	header {
 		padding: @gutter / 2 @min-gutter * 2;
 	}
@@ -104,6 +108,10 @@
 
 	h1 {
 		font-size: 32px;
+	}
+
+	a, .button {
+		cursor: pointer;
 	}
 
 	textarea {
@@ -338,5 +346,9 @@
 
 	.message {
 		margin-right: 30px;
+	}
+
+	.dot {
+		display: none;
 	}
 }
