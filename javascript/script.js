@@ -12,6 +12,23 @@
 		large: window.innerWidth >= 1024
 	}
 
+	// global motio object for global tweens
+	window.motio = {};
+
+	// motion colors based on main theme
+	const colors = {
+		base: '#000',
+		vibrant: '#00ffd3',
+		contrast: '#fff',
+		bright: '#5f5f5f',
+		warning: '#f6cc00',
+		cloud: '#dadce0'
+	};
+
+	// easing path for motion effects
+	const linearCurve = mojs.easing.path('M0, -100 C0, -100 100, 0 100, 0');
+	const easingCurve = mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0');
+
 	// initializes prefetch of barba js
 	Barba.Prefetch.init();
 
@@ -247,23 +264,6 @@
 			}
 		}
 	});
-
-	// global motio object for global tweens
-	window.motio = {};
-
-	// motion colors based on main theme
-	const colors = {
-		base: '#000',
-		vibrant: '#00ffd3',
-		contrast: '#fff',
-		bright: '#5f5f5f',
-		warning: '#f6cc00',
-		cloud: '#dadce0'
-	};
-
-	// easing path for motion effects
-	const linearCurve = mojs.easing.path('M0, -100 C0, -100 100, 0 100, 0');
-	const easingCurve = mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0');
 
 	// binds all logos and create an animation for each one
 	(window.initLogoTween = function() {
