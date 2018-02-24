@@ -15,6 +15,106 @@
 	// initializes prefetch of barba js
 	Barba.Prefetch.init();
 
+	// studio page base view
+	Barba.BaseView.extend({
+		namespace: 'studio',
+		onEnter: function() {
+
+			// mojs options and objects for the motio vertical tween
+			const motioOptions = {
+				interval: 100,
+				playstate: false,
+				strokeWidth: 65.502,
+				duration: 800,
+				easing: easingCurve,
+				isForce3d: true
+			};
+
+			motio.motioTween = {
+				'vertical letter-m': new mojs.Timeline().add(
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-m-arc1',
+							strokeDasharray: 466.61,
+							strokeDashoffset: { [-466.61] : 0 }
+						}, motioOptions)
+					),
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-m-arc2',
+							strokeDasharray: 466.61,
+							strokeDashoffset: { [-466.61] : 0 },
+							delay: motioOptions.interval
+						}, motioOptions)
+					),
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-m-vertical',
+							strokeDasharray: 248.51,
+							strokeDashoffset: { 248.51 : 0 },
+							delay: motioOptions.interval * 2
+						}, motioOptions)
+					)
+				),
+				'vertical letter-o': new mojs.Html(
+					mojs.helpers.extend({
+						el: '.shape-letter-o',
+						transformOrigin: '244px 126px',
+						strokeDasharray: 438.81,
+						strokeDashoffset: { [-438.81] : 0 },
+						angleZ: { [-180] : 0 }
+					}, motioOptions)
+				),
+				'vertical letter-t': new mojs.Timeline().add(
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-t-horizontal',
+							strokeDasharray: 170.878,
+							strokeDashoffset: { [-170.878] : 0 },
+							strokeWidth: 60.262,
+							delay: motioOptions.interval
+						}, motioOptions)
+					),
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-t-vertical',
+							strokeDasharray: 360.33,
+							strokeDashoffset: { [-360.33] : 0 }
+						}, motioOptions)
+					)
+				),
+				'vertical letter-i': new mojs.Timeline().add(
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-i-vertical',
+							strokeDasharray: 128.45,
+							strokeDashoffset: { 128.45 : 0 },
+							strokeWidth: 68.777,
+							delay: 200
+						}, motioOptions)
+					),
+					new mojs.Html(
+						mojs.helpers.extend({
+							el: '.shape-letter-i-dot',
+							fill: colors.vibrant,
+							transformOrigin: '40px 40px',
+							scale: { 0 : 1 }
+						}, motioOptions)
+					)
+				),
+				'vertical letter-o-last': new mojs.Html(
+					mojs.helpers.extend({
+						el: '.shape-letter-o-last',
+						transformOrigin: '244px 126px',
+						strokeDasharray: 438.79,
+						strokeDashoffset: { 438.79 : 0 },
+						angleZ: { 180 : 0 }
+					}, motioOptions)
+				)
+			};
+		}
+	}).init();
+
 	// contact page base view
 	Barba.BaseView.extend({
 		namespace: 'contact',
@@ -117,7 +217,6 @@
 		// inits some tweens for the current page
 		initScrollTween();
 		initLogoTween();
-		initMotioTween();
 		initDotCursor();
 	});
 
@@ -215,108 +314,6 @@
 				}
 			});
 		});
-	})();
-
-	// manages motio tween
-	(window.initMotioTween = function() {
-
-		// checks if the motio vertical wrapper is present on the page
-		if (document.querySelector('.wrapper-motio-vertical') == null) {
-			return;
-		}
-
-		// mojs options and objects for the motio vertical tween
-		const motioOptions = {
-			interval: 100,
-			playstate: false,
-			strokeWidth: 65.502,
-			duration: 800,
-			easing: easingCurve,
-			isForce3d: true
-		};
-
-		motio.motioTween = {
-			'vertical letter-m': new mojs.Timeline().add(
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-m-arc1',
-						strokeDasharray: 466.61,
-						strokeDashoffset: { [-466.61] : 0 }
-					}, motioOptions)
-				),
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-m-arc2',
-						strokeDasharray: 466.61,
-						strokeDashoffset: { [-466.61] : 0 },
-						delay: motioOptions.interval
-					}, motioOptions)
-				),
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-m-vertical',
-						strokeDasharray: 248.51,
-						strokeDashoffset: { 248.51 : 0 },
-						delay: motioOptions.interval * 2
-					}, motioOptions)
-				)
-			),
-			'vertical letter-o': new mojs.Html(
-				mojs.helpers.extend({
-					el: '.shape-letter-o',
-					transformOrigin: '244px 126px',
-					strokeDasharray: 438.81,
-					strokeDashoffset: { [-438.81] : 0 },
-					angleZ: { [-180] : 0 }
-				}, motioOptions)
-			),
-			'vertical letter-t': new mojs.Timeline().add(
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-t-horizontal',
-						strokeDasharray: 170.878,
-						strokeDashoffset: { [-170.878] : 0 },
-						strokeWidth: 60.262,
-						delay: motioOptions.interval
-					}, motioOptions)
-				),
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-t-vertical',
-						strokeDasharray: 360.33,
-						strokeDashoffset: { [-360.33] : 0 }
-					}, motioOptions)
-				)
-			),
-			'vertical letter-i': new mojs.Timeline().add(
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-i-vertical',
-						strokeDasharray: 128.45,
-						strokeDashoffset: { 128.45 : 0 },
-						strokeWidth: 68.777,
-						delay: 200
-					}, motioOptions)
-				),
-				new mojs.Html(
-					mojs.helpers.extend({
-						el: '.shape-letter-i-dot',
-						fill: colors.vibrant,
-						transformOrigin: '40px 40px',
-						scale: { 0 : 1 }
-					}, motioOptions)
-				)
-			),
-			'vertical letter-o-last': new mojs.Html(
-				mojs.helpers.extend({
-					el: '.shape-letter-o-last',
-					transformOrigin: '244px 126px',
-					strokeDasharray: 438.79,
-					strokeDashoffset: { 438.79 : 0 },
-					angleZ: { 180 : 0 }
-				}, motioOptions)
-			)
-		};
 	})();
 
 	// mojs options and objects for the "show/hide the close menu button" tween
