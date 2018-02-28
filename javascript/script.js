@@ -389,7 +389,7 @@
 			}
 
 			// animates the motio wrapper if present on the page
-			if (typeof(motio.motioTween) !== 'undefined' && typeof(motio.motioTween[element.className]) !== 'undefined') {
+			if (typeof motio.motioTween !== 'undefined' && typeof motio.motioTween[element.className] !== 'undefined') {
 				const tween = motio.motioTween[element.className];
 
 				if (state == 'visible' && !tween._props.playstate) {
