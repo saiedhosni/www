@@ -29,6 +29,9 @@
 	const linearCurve = mojs.easing.path('M0, -100 C0, -100 100, 0 100, 0');
 	const easingCurve = mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0');
 
+	// global elements
+	let body = document.querySelector('body');
+
 	// initializes prefetch of barba js
 	Barba.Prefetch.init();
 
@@ -294,7 +297,7 @@
 		window.scrollTo(0, 0);
 
 		// sets the body class to allow specific style override per page
-		document.querySelector('body').setAttribute('data-page', currentStatus.namespace);
+		body.setAttribute('data-page', currentStatus.namespace);
 	});
 
 	// manages the transitionCompleted event of barba js
