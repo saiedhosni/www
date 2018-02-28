@@ -344,6 +344,13 @@
 	// starts barba js
 	Barba.Pjax.start();
 
+	// manages the initStateChange event of barba js
+	Barba.Dispatcher.on('initStateChange', function() {
+		if (typeof ga === 'function') {
+			ga('send', 'pageview', location.pathname);
+		}
+	});
+
 	// manages the linkClicked event of barba js
 	Barba.Dispatcher.on('linkClicked', function(link, e) {
 
