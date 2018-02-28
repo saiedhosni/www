@@ -522,7 +522,6 @@
 	let deltaY = 0;
 	let init = false;
 	let radius = dot.clientWidth / 2;
-	let radius2 = dot.clientWidth;
 
 	// binds the mousemove event to make the dot follow the mouse cursor
 	document.addEventListener('mousemove', function(e) {
