@@ -35,6 +35,60 @@
 	// initializes prefetch of barba js
 	Barba.Prefetch.init();
 
+	// defines the barba js page transition
+	Barba.Pjax.getTransition = function() {
+		return Barba.BaseTransition.extend({
+			start: function() {
+				Promise.all([
+					this.onLeave(),
+					this.newContainerLoading
+				]).then(this.onEnter.bind(this));
+			},
+			onLeave: function() {
+				return new Promise(function(resolve, reject) {
+					// need to manage the scrollbar
+					// document.querySelector('body').style.overflow = 'hidden';
+
+					dot.classList.remove('link');
+
+					new mojs.Shape({
+						className: 'dot-transition',
+						shape: 'circle',
+						left: 0,
+						top: 0,
+						x: motio.dotEventX,
+						y: motio.dotEventY,
+						radius: { 0 : motio.dotRadius },
+						// need to optimize dot fill transition based on current page / next page
+						// fill: { [colors[motio.dotColor == 'base' ? 'contrast' : 'base']] : colors[motio.dotColor] },
+						fill: colors[motio.dotColor],
+						duration: 1700,
+						easing: mojs.easing.expo.inout,
+						isForce3d: true,
+						onComplete: function() {
+							resolve();
+							this.el.parentNode.removeChild(this.el);
+						}
+					}).play();
+				});
+			},
+			onEnter: function() {
+				let transition = this;
+
+				new Promise(function(resolve, reject) {
+					// need to manage onEnter transition depending on the page
+					// Barba.HistoryManager.currentStatus().namespace;
+
+					// scroll to the top when the new page is ready
+					window.scrollTo(0, 0);
+
+					resolve();
+					transition.done();
+				});
+			}
+		});
+	};
+
 	// studio page base view
 	Barba.BaseView.extend({
 		namespace: 'studio',
@@ -290,11 +344,22 @@
 	// starts barba js
 	Barba.Pjax.start();
 
+	// manages the linkClicked event of barba js
+	Barba.Dispatcher.on('linkClicked', function(link, e) {
+
+		// evaluates the color and position of the transition dot
+		motio.dotColor = link.getAttribute('data-dot') || 'base';
+		motio.dotEventX = e.pageX;
+		motio.dotEventY = e.pageY;
+
+		// evaluates the radius of the transition dot
+		let deltaX = e.clientX <= window.innerWidth * 0.5 ? window.innerWidth - e.clientX : e.clientX;
+		let deltaY = e.clientY <= window.innerHeight * 0.5 ? window.innerHeight - e.clientY : e.clientY;
+		motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
+	});
+
 	// manages the newPageReady event of barba js
 	Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, HTMLElementContainer, newPageRawHTML) {
-
-		// scroll to the top when the new page is ready
-		window.scrollTo(0, 0);
 
 		// sets the body class to allow specific style override per page
 		body.setAttribute('data-page', currentStatus.namespace);

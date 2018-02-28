@@ -11,7 +11,7 @@
 		<div class="row align-center">
 			<div class="column small-12 medium-5 medium-offset-0 large-4 large-offset-2">
 				<p class="no-margin"><strong><?php echo LANGUAGE == 'fr' ? 'Alors, on travaille ensemble ?' : 'So, do we work together?'; ?></strong></p>
-				<a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" class="underline button big">
+				<a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" class="underline button big" data-dot="contrast">
 					<span class="arrow"></span><?php echo LANGUAGE == 'fr' ? 'Briefez-nous !' : 'Brief-us!'; ?>
 				</a>
 			</div>
@@ -25,7 +25,7 @@
 		</div>
 		<div class="row align-center">
 			<div class="column medium-9 medium-offset-0 large-offset-6 large-6">
-				<p class="copyright"><small>Copyright Studio MOTIO &reg; &ndash; <?php echo LANGUAGE == 'fr' ? '<a href="/mentions-legales" class="underline">Mentions légales</a>' : '<a href="/en/legal-notices" class="underline">Legal notices</a>'; ?></small></p>
+				<p class="copyright"><small>Copyright Studio MOTIO &reg; &ndash; <?php echo LANGUAGE == 'fr' ? '<a href="/mentions-legales" class="underline" data-dot="contrast">Mentions légales</a>' : '<a href="/en/legal-notices" class="underline" data-dot="contrast">Legal notices</a>'; ?></small></p>
 			</div>
 		</div>
 	</div>

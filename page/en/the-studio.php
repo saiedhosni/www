@@ -36,7 +36,7 @@
 			<p>Specialized in animations and web micro-interactions based on the principles of motion design, we work in collaboration with designers and local developers, perfectionists, meticulous and detail-oriented.</p>
 			<p>The user experience is at the heart of our business, which is why we use cutting-edge graphic technologies, which have already proved their worth and are now recognized as references in the web domain for their compatibility, performance and their fluidity.</p>
 			<p>We love our job, and we always carry out all our projects with passion.</p>
-			<p data-emergence><a href="/en/our-services" class="underline button"><span class="arrow"></span>Discover our services</a></p>
+			<p data-emergence><a href="/en/our-services" class="underline button" data-dot="contrast"><span class="arrow"></span>Discover our services</a></p>
 		</div>
 	</div>
 </section>
@@ -47,7 +47,7 @@
 			<p data-emergence>Our strong point, collaboration. We founded the collective to bring together local businesses, in an "eco-responsible" approach.</p>
 			<p data-emergence>This method allows you to exchange skills, have multiple points of view and share the taste of detail to carry out your project.</p>
 			<p data-emergence>Whether you are art-director, graphic designer, designer, or even developer, the collective is open to everyone and you can join us at any time.</p>
-			<p data-emergence><a href="/en/contact" class="underline button"><span class="arrow"></span>Join us</a></p>
+			<p data-emergence><a href="/en/contact" class="underline button" data-dot="contrast"><span class="arrow"></span>Join us</a></p>
 		</div>
 	</div>
 </section>
