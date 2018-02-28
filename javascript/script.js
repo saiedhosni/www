@@ -368,6 +368,9 @@
 	// manages the transitionCompleted event of barba js
 	Barba.Dispatcher.on('transitionCompleted', function(currentStatus, prevStatus) {
 
+		// fires emergence on transition complete
+		emergence.engage();
+
 		// inits some tweens for the current page
 		initScrollTween();
 		initLogoTween();
