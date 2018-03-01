@@ -378,10 +378,10 @@
 		// fires emergence on transition complete
 		emergence.engage();
 
-		// inits some tweens for the current page
-		initScrollTween();
-		initDotCursor(true);
-		initLogoTween(true);
+		// inits some stuff for the new page
+		bindScroll();
+		bindDotCursor(true);
+		bindLogos(true);
 	});
 
 	// initializes emergence js
@@ -411,57 +411,6 @@
 			}
 		}
 	});
-
-	// binds all logos and create an animation for each one
-	(window.initLogoTween = function(transitionCompleted) {
-		Array.from(document.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'footer .logo' : '.logo')).forEach(function(logo) {
-
-			// mojs options and objects for the "mouseenter/mouseleave logo" tween
-			const letter = logo.querySelector('.motion-letter');
-			const length = letter.getTotalLength();
-
-			const letterOptions = {
-				playstate: false,
-				el: letter,
-				strokeDasharray: length,
-				transformOrigin: '109.2px 13.2px',
-				duration: 700,
-				easing: easingCurve
-			};
-
-			let letterIn = new mojs.Html(
-				mojs.helpers.extend({
-					strokeDashoffset: { [-length] : 0 },
-					angleZ: { 90 : 360 }
-				}, letterOptions)
-			);
-
-			let letterOut = new mojs.Html(
-				mojs.helpers.extend({
-					strokeDashoffset: { 0 : length },
-					angleZ: { 0 : 180 },
-					onComplete: function() {
-						this.el.style['strokeDashoffset'] = -length;
-						this._props.playstate = false;
-						letterIn.play();
-					}
-				}, letterOptions)
-			);
-
-			// hides the "o" letter of the logo on enter
-			logo.addEventListener('mouseenter', function() {
-				letterOut._props.playstate = true;
-				letterOut.play();
-			});
-
-			// shows the "o" letter of the logo on leave
-			logo.addEventListener('mouseleave', function() {
-				if (letterOut._props.playstate == true) {
-					letterOut.playBackward();
-				}
-			});
-		});
-	})();
 
 	// mojs options and objects for the "show/hide the close menu button" tween
 	const menuOptions = {
@@ -548,8 +497,59 @@
 		menuSteam.generate().play();
 	});
 
+	// manages all logos animations
+	(window.bindLogos = function(transitionCompleted) {
+		Array.from(document.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'footer .logo' : '.logo')).forEach(function(logo) {
+
+			// mojs options and objects for the "mouseenter/mouseleave logo" tween
+			const letter = logo.querySelector('.motion-letter');
+			const length = letter.getTotalLength();
+
+			const letterOptions = {
+				playstate: false,
+				el: letter,
+				strokeDasharray: length,
+				transformOrigin: '109.2px 13.2px',
+				duration: 700,
+				easing: easingCurve
+			};
+
+			let letterIn = new mojs.Html(
+				mojs.helpers.extend({
+					strokeDashoffset: { [-length] : 0 },
+					angleZ: { 90 : 360 }
+				}, letterOptions)
+			);
+
+			let letterOut = new mojs.Html(
+				mojs.helpers.extend({
+					strokeDashoffset: { 0 : length },
+					angleZ: { 0 : 180 },
+					onComplete: function() {
+						this.el.style['strokeDashoffset'] = -length;
+						this._props.playstate = false;
+						letterIn.play();
+					}
+				}, letterOptions)
+			);
+
+			// hides the "o" letter of the logo on enter
+			logo.addEventListener('mouseenter', function() {
+				letterOut._props.playstate = true;
+				letterOut.play();
+			});
+
+			// shows the "o" letter of the logo on leave
+			logo.addEventListener('mouseleave', function() {
+				if (letterOut._props.playstate == true) {
+					letterOut.playBackward();
+				}
+			});
+		});
+	})();
+
 	// manages the footer scroll animation
-	(window.initScrollTween = function() {
+	(window.bindScroll = function() {
 		let scrollY = 0;
 		let throttle;
 		let footer = document.querySelector('footer');
@@ -667,10 +667,12 @@
 	dotframe();
 
 	// manages the dot cursor size for all links
-	(window.initDotCursor = function(transitionCompleted) {
+	(window.bindDotCursor = function(transitionCompleted) {
+
+		// cleans the dot link effect
 		dot.classList.remove('link');
 
-		// binds the mouseenter and mouseleave events of all links to increase/decrease the dot size
+		// binds the mouseenter/mouseleave/click events of all links to increase/decrease the dot size and avoid page reload on same urls
 		Array.from(document.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'main a, main .button' : 'a, .button')).forEach(function(link) {
 			link.addEventListener('mouseenter', function() {
 				dot.classList.add('link');
@@ -697,11 +699,11 @@
 		// binds the mouseenter and mouseleave events of all white sections and footer to support the dot circle fill transition
 		Array.from(document.querySelectorAll('section.white, footer.white')).forEach(function(element) {
 			element.addEventListener('mouseenter', function() {
-				document.querySelector('.dot').classList.add('support');
+				dot.classList.add('support');
 			});
 
 			element.addEventListener('mouseleave', function() {
-				document.querySelector('.dot').classList.remove('support');
+				dot.classList.remove('support');
 			});
 		});
 	})();
