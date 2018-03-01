@@ -380,8 +380,8 @@
 
 		// inits some tweens for the current page
 		initScrollTween();
+		initDotCursor(true);
 		initLogoTween();
-		initDotCursor();
 	});
 
 	// initializes emergence js
@@ -667,11 +667,11 @@
 	dotframe();
 
 	// manages the dot cursor size for all links
-	(window.initDotCursor = function() {
+	(window.initDotCursor = function(transitionCompleted) {
 		dot.classList.remove('link');
 
 		// binds the mouseenter and mouseleave events of all links to increase/decrease the dot size
-		Array.from(document.querySelectorAll('a, .button')).forEach(function(link) {
+		Array.from(document.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'main a, main .button' : 'a, .button')).forEach(function(link) {
 			link.addEventListener('mouseenter', function() {
 				dot.classList.add('link');
 			});
