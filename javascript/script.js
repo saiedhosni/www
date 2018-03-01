@@ -381,7 +381,7 @@
 		// inits some tweens for the current page
 		initScrollTween();
 		initDotCursor(true);
-		initLogoTween();
+		initLogoTween(true);
 	});
 
 	// initializes emergence js
@@ -413,8 +413,8 @@
 	});
 
 	// binds all logos and create an animation for each one
-	(window.initLogoTween = function() {
-		Array.from(document.querySelectorAll('.logo')).forEach(function(logo) {
+	(window.initLogoTween = function(transitionCompleted) {
+		Array.from(document.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'footer .logo' : '.logo')).forEach(function(logo) {
 
 			// mojs options and objects for the "mouseenter/mouseleave logo" tween
 			const letter = logo.querySelector('.motion-letter');
