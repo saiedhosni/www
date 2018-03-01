@@ -379,7 +379,6 @@
 		emergence.engage();
 
 		// inits some stuff for the new page
-		bindScroll();
 		bindDotCursor(true);
 		bindLogos(true);
 	});
@@ -549,31 +548,33 @@
 	})();
 
 	// manages the footer scroll animation
-	(window.bindScroll = function() {
-		let scrollY = 0;
-		let throttle;
-		let footer = document.querySelector('footer');
+	let throttle;
+	let scrollY = 0;
+	let visibility = false;
 
-		// binds the scroll event to hide/show the footer content
-		window.addEventListener('scroll', function() {
-			scrollY = window.scrollY;
-			window.cancelAnimationFrame(throttle);
+	// binds the scroll event to hide/show the footer content
+	window.addEventListener('scroll', function() {
+		scrollY = window.scrollY;
+		window.cancelAnimationFrame(throttle);
 
-			// displays the footer content and animate the footer logo depending on the scroll position
-			throttle = window.requestAnimationFrame(function() {
-				if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (screen.small ? 100 : 97)) {
-					if (!footer.classList.contains('show')) {
-						footer.classList.add('show');
-						setTimeout(() => {
-							footer.querySelector('.logo').dispatchEvent(new Event('mouseenter'));
-						}, 500);
-					}
-				} else {
-					footer.classList.remove('show');
+		// displays the footer content and animate the footer logo depending on the scroll position
+		throttle = window.requestAnimationFrame(function() {
+			if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (screen.small ? 100 : 97)) {
+				if (!visibility) {
+					document.querySelector('footer').classList.add('show');
+					visibility = true;
+					setTimeout(() => {
+						document.querySelector('footer .logo').dispatchEvent(new Event('mouseenter'));
+					}, 500);
 				}
-			});
+			} else {
+				if (visibility) {
+					document.querySelector('footer').classList.remove('show');
+					visibility = false;
+				}
+			}
 		});
-	})();
+	});
 
 	// binds the resize event to properly updates screen resolution object
 	let debounce;
