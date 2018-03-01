@@ -679,6 +679,19 @@
 			link.addEventListener('mouseleave', function() {
 				dot.classList.remove('link');
 			});
+
+			link.addEventListener('click', function(e) {
+				if (this.href == window.location.href) {
+					e.preventDefault();
+					setTimeout(function () {
+						window.scroll({
+							top: 0,
+							left: 0,
+							behavior: 'smooth'
+						});
+					}, 500);
+				}
+			});
 		});
 
 		// binds the mouseenter and mouseleave events of all white sections and footer to support the dot circle fill transition
