@@ -262,6 +262,26 @@
 				// sends the contact message to the studio
 				request.send('message=' + document.querySelector('textarea').value);
 			});
+		},
+		onEnterCompleted: function() {
+
+			// gets the text to type
+			let text = document.querySelector('.type');
+			let strings = text.innerText.split(',');
+
+			// cleans the current text content
+			text.innerText = '';
+
+			// instanciates the typeit library and type
+			new TypeIt('.type', {
+				autoStart: false,
+				startDelay: 500,
+				cursor: false,
+				callback: function() {
+					document.querySelector('textarea').focus();
+					document.querySelector('textarea').setSelectionRange(0, 0);
+				}
+			}).type(strings[0] + ',').pause(500).type(strings[1]);
 		}
 	}).init();
 

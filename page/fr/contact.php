@@ -7,7 +7,7 @@
 	</div>
 	<div class="row align-center">
 		<div class="column medium-9 large-8">
-			<p data-emergence="hidden"><strong>Hello, quels sont vos besoins ?</strong></p>
+			<p data-emergence="hidden"><strong class="type">Hello, quels sont vos besoins ?</strong></p>
 			<form method="post" data-emergence="hidden">
 				<textarea required="required" autocomplete="off"></textarea>
 				<span class="progress"></span>
