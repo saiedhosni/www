@@ -379,8 +379,8 @@
 		emergence.engage();
 
 		// inits some stuff for the new page
-		bindDotCursor(true);
-		bindLogos(true);
+		motio.bindDotCursor(true);
+		motio.bindLogos(true);
 	});
 
 	// initializes emergence js
@@ -497,7 +497,7 @@
 	});
 
 	// manages all logos animations
-	(window.bindLogos = function(transitionCompleted) {
+	(motio.bindLogos = function(transitionCompleted) {
 		Array.from(document.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'footer .logo' : '.logo')).forEach(function(logo) {
 
 			// mojs options and objects for the "mouseenter/mouseleave logo" tween
@@ -668,7 +668,7 @@
 	dotframe();
 
 	// manages the dot cursor size for all links
-	(window.bindDotCursor = function(transitionCompleted) {
+	(motio.bindDotCursor = function(transitionCompleted) {
 
 		// cleans the dot link effect
 		dot.classList.remove('link');
