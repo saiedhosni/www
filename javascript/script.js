@@ -276,7 +276,7 @@
 			text.innerText = '';
 
 			// instanciates the typeit library and type
-			new TypeIt('.type', {
+			let typewriter = new TypeIt('.type', {
 				autoStart: false,
 				startDelay: 500,
 				cursor: false,
@@ -288,6 +288,8 @@
 						textarea.focus();
 						textarea.setSelectionRange(0, 0);
 					}
+
+					typewriter.destroy();
 				}
 			}).type(strings[0] + ',').pause(500).type(strings[1]);
 		}
