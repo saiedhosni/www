@@ -40,8 +40,8 @@
 		return Barba.BaseTransition.extend({
 			start: function() {
 				Promise.all([
-					this.onLeave(),
-					this.newContainerLoading
+					this.newContainerLoading,
+					this.onLeave()
 				]).then(this.onEnter.bind(this));
 			},
 			onLeave: function() {
