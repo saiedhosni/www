@@ -279,8 +279,12 @@
 				cursor: false,
 				speed: 70,
 				callback: function() {
-					document.querySelector('textarea').focus();
-					document.querySelector('textarea').setSelectionRange(0, 0);
+					const textarea = document.querySelector('textarea');
+
+					if (window.scrollY == 0) {
+						textarea.focus();
+						textarea.setSelectionRange(0, 0);
+					}
 				}
 			}).type(strings[0] + ',').pause(500).type(strings[1]);
 		}
