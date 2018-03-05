@@ -67,13 +67,16 @@
 						isForce3d: true,
 						onComplete: function() {
 							resolve();
-							this.el.parentNode.removeChild(this.el);
 						}
 					}).play();
 				});
 			},
 			onEnter: function() {
 				let transition = this;
+
+				// removes the dot transition layer from the DOM
+				let dotlayer = document.querySelector('.dot-transition');
+				dotlayer.parentNode.removeChild(dotlayer);
 
 				new Promise(function(resolve, reject) {
 					// need to manage onEnter transition depending on the page
