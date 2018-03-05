@@ -277,6 +277,7 @@
 				autoStart: false,
 				startDelay: 500,
 				cursor: false,
+				speed: 70,
 				callback: function() {
 					document.querySelector('textarea').focus();
 					document.querySelector('textarea').setSelectionRange(0, 0);
