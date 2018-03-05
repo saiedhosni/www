@@ -711,6 +711,7 @@
 			link.addEventListener('click', function(e) {
 				if (this.href == window.location.href) {
 					e.preventDefault();
+					dot.classList.remove('link');
 					setTimeout(function () {
 						window.scroll({
 							top: 0,
