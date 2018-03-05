@@ -284,7 +284,7 @@
 				callback: function() {
 					const textarea = document.querySelector('textarea');
 
-					if (window.scrollY == 0) {
+					if (textarea != null && window.scrollY == 0) {
 						textarea.focus();
 						textarea.setSelectionRange(0, 0);
 					}
