@@ -48,8 +48,12 @@
 			require_once 'module/media.php';
 		?>
 		<main class="barba-container" data-namespace="<?php echo $namespace ?>">
+			<div class="smooth-scroll">
 			<?php
 				require_once PATH;
+			?>
+			</div>
+			<?php
 				require_once 'module/footer.php';
 			?>
 		</main>

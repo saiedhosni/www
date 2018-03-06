@@ -405,6 +405,12 @@
 	// manages the transitionCompleted event of barba js
 	Barba.Dispatcher.on('transitionCompleted', function(currentStatus, prevStatus) {
 
+		// destroys and rebuilds the smooth scrolling
+		motio.smooth.destroy();
+		motio.smooth.options.section = document.querySelector('.smooth-scroll');
+		motio.smooth = new Smooth(motio.smooth.options);
+		motio.smooth.init();
+
 		// fires emergence on transition complete
 		emergence.engage();
 
@@ -737,4 +743,15 @@
 			});
 		});
 	})();
+
+	// builds the smooth scrolling
+	motio.smooth = new Smooth({
+		section: document.querySelector('.smooth-scroll'),
+		native: true,
+		noscrollbar: true,
+		preload: false,
+		ease: 0.1
+	});
+
+	motio.smooth.init();
 })();

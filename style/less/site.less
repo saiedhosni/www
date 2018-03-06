@@ -11,8 +11,13 @@ body {
 	font-family: @font;
 	font-weight: 300;
 	cursor: none;
+	-ms-overflow-style: none;
 	.selection(@base-color, @vibrant-color);
 	.no-select();
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 header {
@@ -593,4 +598,21 @@ textarea {
 .dot-transition {
 	z-index: 5;
 	position: fixed;
+}
+
+.smooth-scroll {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	will-change: transform;
+}
+
+.vs-scroll-view {
+	position: relative;
+	width: 1px;
+	z-index: -10;
+	pointer-events: none;
 }
