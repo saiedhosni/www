@@ -49,8 +49,6 @@
 					// need to manage the scrollbar
 					// document.querySelector('body').style.overflow = 'hidden';
 
-					dot.classList.remove('link');
-
 					new mojs.Shape({
 						className: 'dot-transition',
 						shape: 'circle',
@@ -702,9 +700,6 @@
 	// manages the dot cursor size for all links
 	(motio.bindDotCursor = function(transitionCompleted) {
 
-		// cleans the dot link effect
-		dot.classList.remove('link');
-
 		// binds the mouseenter/mouseleave/click events of all links to increase/decrease the dot size and avoid page reload on same urls
 		Array.from(document.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'main a, main .button' : 'a, .button')).forEach(function(link) {
 			link.addEventListener('mouseenter', function() {
@@ -716,9 +711,10 @@
 			});
 
 			link.addEventListener('click', function(e) {
+				dot.classList.remove('link');
+
 				if (this.href == window.location.href) {
 					e.preventDefault();
-					dot.classList.remove('link');
 					setTimeout(function () {
 						window.scroll({
 							top: 0,
