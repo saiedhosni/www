@@ -376,6 +376,8 @@
 
 	// manages the initStateChange event of barba js
 	Barba.Dispatcher.on('initStateChange', function() {
+
+		// updating Google Analytics properly
 		if (typeof ga === 'function') {
 			ga('send', 'pageview', location.pathname);
 		}
