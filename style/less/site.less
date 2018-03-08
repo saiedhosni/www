@@ -333,29 +333,17 @@ textarea {
 	}
 }
 
-/*.underline {
-	position: relative;
-	z-index: 0;
-
-	&::before {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		height: 0;
-		background: fade(@vibrant-color, 60%);
-		.transition(height 250ms @cubic);
-	}
-
-	&:hover, &:focus {
-		&::before {
-			height: 30%;
-			.transition(height 500ms @cubic);
-		}
-	}
-}*/
+.highlight {
+	.mo-highlight(
+		@origin: top;
+		@release: reverse;
+		@opacity: 0.1;
+		@height: 40%;
+		@offset: 60%;
+		@duration: 300ms;
+		@easing: @cubic;
+	);
+}
 
 .button {
 	display: inline-flex;

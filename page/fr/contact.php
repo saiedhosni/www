@@ -23,12 +23,12 @@
 		<div class="column small-12 medium-9 large-4">
 			<p data-emergence="hidden"><strong>Collaboration</strong></p>
 			<p class="no-margin" data-emergence="hidden">Nous sommes toujours intéressés de construire de nouveaux partenariats. Vous avez du talent et vous souhaitez le partager avec nous, rejoignez le collectif !</p>
-			<p class="no-margin" data-emergence="hidden"><small><a href="mailto:collective@studiomotio.com" target="_blank" class="underline">collective@studiomotio.com</a></small></p>
+			<p class="no-margin" data-emergence="hidden"><small><a href="mailto:collective@studiomotio.com" target="_blank" class="highlight">collective@studiomotio.com</a></small></p>
 		</div>
 		<div class="column small-12 medium-9 large-4">
 			<p data-emergence="hidden"><strong>Jobs</strong></p>
 			<p class="no-margin" data-emergence="hidden">Le studio n'accueille pas de stagiaire pour le moment. Vous souhaitez tout de même nous montrer de quoi vous êtes capable ? Envoyez-nous votre CV !</p>
-			<p class="no-margin" data-emergence="hidden"><small><a href="mailto:jobs@studiomotio.com" target="_blank" class="underline">jobs@studiomotio.com</a></small></p>
+			<p class="no-margin" data-emergence="hidden"><small><a href="mailto:jobs@studiomotio.com" target="_blank" class="highlight">jobs@studiomotio.com</a></small></p>
 		</div>
 	</div>
 </section>

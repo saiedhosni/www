@@ -11,21 +11,21 @@
 			<p class="no-margin" data-emergence="hidden">
 				Studio MOTIO ®<br />
 				17000 La Rochelle<br />
-				<a href="mailto:hello@studiomotio.com" target="_blank" class="underline">hello@studiomotio.com</a><br />
-				Publication : <a href="mailto:xavier@studiomotio.com" target="_blank" class="underline">Xavier Foucrier</a> &ndash; 2017<br />
+				<a href="mailto:hello@studiomotio.com" target="_blank" class="highlight">hello@studiomotio.com</a><br />
+				Publication : <a href="mailto:xavier@studiomotio.com" target="_blank" class="highlight">Xavier Foucrier</a> &ndash; 2017<br />
 			</p>
 		</article>
 	</div>
 	<div class="row align-center">
 		<article class="column medium-9 large-8">
 			<p data-emergence="hidden"><strong>Hébergement</strong></p>
-			<p class="no-margin" data-emergence="hidden">Ce site internet est hébergé en France sur un hébergement professionnel et totalement sécurisé. OVH SAS au capital de 10 069 020€ RCS Lille Métropole - Tourcoing 424 761 419 00045 Code APE 2620Z - N° TVA : FR 22 424 761 419. Siège social au 2 rue Kellermann 59100 Roubaix - France. Plus d'informations sur OVH en consultant leur site internet : <a href="https://www.ovh.com" target="_blank" class="underline">https://www.ovh.com</a>.</p>
+			<p class="no-margin" data-emergence="hidden">Ce site internet est hébergé en France sur un hébergement professionnel et totalement sécurisé. OVH SAS au capital de 10 069 020€ RCS Lille Métropole - Tourcoing 424 761 419 00045 Code APE 2620Z - N° TVA : FR 22 424 761 419. Siège social au 2 rue Kellermann 59100 Roubaix - France. Plus d'informations sur OVH en consultant leur site internet : <a href="https://www.ovh.com" target="_blank" class="highlight">https://www.ovh.com</a>.</p>
 		</article>
 	</div>
 	<div class="row align-center">
 		<article class="column medium-9 large-8">
 			<p data-emergence="hidden"><strong>Protection des données</strong></p>
-			<p class="no-margin" data-emergence="hidden">Le site respecte la vie privée de l'internaute et se conforme strictement aux lois en vigueur sur la protection de la vie privée et des libertés individuelles. Aucune information personnelle n'est collectée à votre insu ou n'est cédée à des tiers. Les courriels, les adresses électroniques ou autres informations nominatives dont ce site est destinataire ne font l'objet d'aucune exploitation et ne sont conservés que pour la durée nécessaire à leur traitement.</p> <p class="no-margin" data-emergence="hidden">Conformément aux dispositions de l'article L.78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données qui vous concerne. Ce droit s'exerce par voie électronique, en justifiant de votre identité, à l'adresse <a href="mailto:hello@studiomotio.com" target="_blank" class="underline">hello@studiomotio.com</a>.</p>
+			<p class="no-margin" data-emergence="hidden">Le site respecte la vie privée de l'internaute et se conforme strictement aux lois en vigueur sur la protection de la vie privée et des libertés individuelles. Aucune information personnelle n'est collectée à votre insu ou n'est cédée à des tiers. Les courriels, les adresses électroniques ou autres informations nominatives dont ce site est destinataire ne font l'objet d'aucune exploitation et ne sont conservés que pour la durée nécessaire à leur traitement.</p> <p class="no-margin" data-emergence="hidden">Conformément aux dispositions de l'article L.78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données qui vous concerne. Ce droit s'exerce par voie électronique, en justifiant de votre identité, à l'adresse <a href="mailto:hello@studiomotio.com" target="_blank" class="highlight">hello@studiomotio.com</a>.</p>
 		</article>
 	</div>
 	<div class="row align-center">
