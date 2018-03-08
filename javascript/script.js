@@ -49,6 +49,8 @@
 					// need to manage the scrollbar
 					// document.querySelector('body').style.overflow = 'hidden';
 
+					dot.classList.remove('link');
+
 					new mojs.Shape({
 						className: 'dot-transition',
 						shape: 'circle',
