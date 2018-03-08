@@ -46,8 +46,9 @@
 			},
 			onLeave: function() {
 				return new Promise(function(resolve, reject) {
-					// need to manage the scrollbar
-					// document.querySelector('body').style.overflow = 'hidden';
+
+					// disables the body scrollbars
+					body.classList.add('no-scroll');
 
 					// removes the dot link class
 					dot.classList.remove('link');
@@ -83,6 +84,9 @@
 				new Promise(function(resolve, reject) {
 					// need to manage onEnter transition depending on the page
 					// Barba.HistoryManager.currentStatus().namespace;
+
+					// restores the body scrollbars
+					body.classList.remove('no-scroll');
 
 					// scroll to the top when the new page is ready
 					window.scrollTo(0, 0);
