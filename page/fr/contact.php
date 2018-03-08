@@ -11,7 +11,7 @@
 			<form method="post" data-emergence="hidden">
 				<textarea required="required" autocomplete="off"></textarea>
 				<span class="progress"></span>
-				<button name="submit" class="underline button post"><span class="arrow"></span>Poster ce message</button>
+				<button name="submit" class="button post"><span class="arrow"></span>Poster ce message</button>
 				<strong class="message warning missing-mail">N'oubliez pas d'indiquer votre adresse email avec votre message</strong>
 				<strong class="message warning bad-request">Oops, votre message n'a pas pu être envoyé, merci de réessayer dans quelques instants</strong>
 				<strong class="message pending-request">Envoi en cours..</strong>
