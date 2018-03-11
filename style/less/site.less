@@ -145,7 +145,7 @@ dd {
 }
 
 a {
-	color: @contrast-color;
+	color: currentColor;
 	text-decoration: none;
 	cursor: none;
 }
@@ -275,16 +275,17 @@ textarea {
 			content: '/';
 			position: absolute;
 			left: -12px;
-			color: @contrast-color;
+			color: currentColor;
 		}
 
 		&.active a {
 			color: @contrast-color;
+			opacity: 1;
 		}
 	}
 
 	a {
-		color: @bright-color;
+		opacity: 0.3;
 	}
 }
 
@@ -316,7 +317,7 @@ textarea {
 			left: 0;
 			width: 0px;
 			height: 1px;
-			background: @contrast-color;
+			background: currentColor;
 			will-change: width;
 			.transition(width 1.1s @cubic);
 		}

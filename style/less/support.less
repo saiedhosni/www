@@ -9,6 +9,22 @@
 }
 
 @supports not (mix-blend-mode: difference) {
+	[data-page="services"], [data-page="contact"], [data-page="notices"], [data-page="404"] {
+		color: @base-color;
+
+		.lang {
+			li {
+				&.active a {
+					color: @base-color;
+				}
+			}
+		}
+	}
+
+	body, .lang li.active a {
+		.transition(color 500ms 600ms ease);
+	}
+
 	.dot {
 		&.link circle {
 			opacity: 0.2;
