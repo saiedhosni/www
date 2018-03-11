@@ -98,37 +98,6 @@
 		});
 	};
 
-	// index page base view
-	Barba.BaseView.extend({
-		namespace: 'index',
-		onEnter: function() {
-
-			// mojs options and objects for the "o" tween
-			const path = document.querySelector('.motio-o-home path');
-			const length = path.getTotalLength();
-
-			const pathOptions = {
-				el: path,
-				strokeDasharray: length,
-				transformOrigin: '50% 50%',
-				strokeWidth: 24,
-				duration: 1400,
-				easing: mojs.easing.expo.inout,
-				isForce3d: true
-			};
-
-			motio.oTweenEnter = new mojs.Html(
-				mojs.helpers.extend({
-					strokeDashoffset: { [length] : 0 },
-					angleZ: { 0 : 360 }
-				}, pathOptions)
-			);
-		},
-		onEnterCompleted: function() {
-			motio.oTweenEnter.play();
-		}
-	}).init();
-
 	// studio page base view
 	Barba.BaseView.extend({
 		namespace: 'studio',
