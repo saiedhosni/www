@@ -10,7 +10,7 @@
 		</div>
 	</div>
 </section>
-<div class="wrapper-motio-vertical hide-for-small-only">
+<div class="wrapper hide-for-small-only">
 	<div class="motio-vertical">
 		<div class="vertical letter-o-last" data-emergence="hidden">
 			<svg viewBox="0 0 370 251.721"><path class="shape-letter-o-last" stroke-width="0" d="M244.16 218.97c51.423-.011 93.089-41.68 93.089-93.13 0-51.408-41.681-93.089-93.1-93.089-51.424 0-93.084 41.681-93.084 93.089v.021"/></svg>

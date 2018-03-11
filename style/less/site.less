@@ -455,19 +455,24 @@ textarea {
 	.transform(rotate(90deg));
 }
 
-.wrapper-motio-vertical {
+.wrapper {
 	position: relative;
-	margin-left: @gutter;
-	height:	0;
-	width: calc(~'50vw -' @gutter);
 	z-index: 2;
+	width: calc(~'50vw -' @gutter);
+	height: 0;
+	margin-left: @gutter;
+
+	&.right {
+		margin-left: 50vw;
+	}
 }
 
 .motio-vertical {
-	position: absolute;
-	left: calc(~'50% - 177px' - @min-gutter);
+	position: relative;
+	left: -@min-gutter;
 	top: -120px;
 	width: 353px;
+	margin: 0 auto;
 	pointer-events: none;
 
 	svg {

@@ -61,12 +61,15 @@
 		height: 100vh;
 	}
 
-	.wrapper-motio-vertical {
+	.wrapper {
 		width: calc(~'40vw -' @gutter);
+
+		&.right {
+			margin-left: 60vw;
+		}
 	}
 
 	.motio-vertical {
-		left: calc(~'50% - 100px' - @min-gutter);
 		top: -68px;
 		width: 200px;
 		height: 709px;
