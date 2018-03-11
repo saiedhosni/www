@@ -1,6 +1,8 @@
 <section class="black">
 	<div class="slider">
-		<svg class="motio-o-home"><use xlink:href="/picture/sprite.svg#logo-motio-o" /></svg>
+		<svg class="motio-o-home" viewBox="0 0 100 100">
+			<path fill="none" stroke-width="0" d="M12 50c0-21 17-38 38-38s38 17 38 38-17 38-38 38"/>
+		</svg>
 		<div>
 			<h1 data-emergence="hidden">France-based interactive design & creative web studio</h1>
 			<a href="/en/the-studio" class="button" data-emergence="hidden">
