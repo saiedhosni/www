@@ -31,7 +31,7 @@
 	<div class="row align-center">
 		<article class="column medium-9 large-8">
 			<p data-emergence="hidden"><strong>Cookies</strong></p>
-			<p class="no-margin" data-emergence="hidden">Des données non personnelles sont collectées lors de votre navigation, par un système de cookies, à des fins statistiques.  Ces fichiers, stockés sur votre ordinateur, permettent d'enregistrer des informations relatives à votre navigation sur notre site, comme par exemple les pages consultées ou encore la durée de consultation.</p> <p class="no-margin" data-emergence="hidden"> En aucun cas ces données ne nous permettent de vous identifier. Vous pouvez vous opposer à l'enregistrement des « cookies » en configurant votre navigateur internet.</p>
+			<p class="no-margin" data-emergence="hidden">Des données non personnelles sont collectées lors de votre navigation, par un système de cookies, à des fins statistiques. Ces fichiers, stockés sur votre ordinateur, permettent d'enregistrer des informations relatives à votre navigation sur notre site, comme par exemple les pages consultées ou encore la durée de consultation.</p> <p class="no-margin" data-emergence="hidden">En aucun cas ces données ne nous permettent de vous identifier. Vous pouvez vous opposer à l'enregistrement des « cookies » en configurant votre navigateur internet.</p>
 		</article>
 	</div>
 	<div class="row align-center">
