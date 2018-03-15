@@ -10,6 +10,11 @@
 		</div>
 	</div>
 </section>
+<div class="wrapper right hide-for-small-only">
+	<div class="i-vertical">
+		<div class="vertical letter-i-rebound" data-emergence="hidden"></div>
+	</div>
+</div>
 <section class="black expanded">
 	<div class="row">
 		<div class="column medium-6 medium-offset-2 large-4">
