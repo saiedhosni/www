@@ -704,7 +704,7 @@
 		let blend = dot.classList.contains('support') ? colors.base : colors.contrast;
 
 		// creates a dot pulse effect on mouseup
-		let dotPulse = new mojs.Shape({
+		new mojs.Shape({
 			className: 'dot-pulse',
 			shape: 'circle',
 			left: 0,
