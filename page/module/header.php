@@ -10,9 +10,9 @@
 				<nav>
 					<label for="trigger" class="menu-button show-for-small-only"><span></span></label>
 					<ul class="menu">
-						<li class="<?php echo PAGE == 'fr/le-studio' || PAGE == 'en/the-studio' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" class="highlight">Studio</a></li>
-						<li class="<?php echo PAGE == 'fr/nos-services' || PAGE == 'en/our-services' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>" class="highlight" data-dot="contrast">Services</a></li>
-						<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" class="highlight" data-dot="contrast">Contact</a></li>
+						<li class="<?php echo PAGE == 'fr/le-studio' || PAGE == 'en/the-studio' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>">Studio</a></li>
+						<li class="<?php echo PAGE == 'fr/nos-services' || PAGE == 'en/our-services' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>" data-dot="contrast">Services</a></li>
+						<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" data-dot="contrast">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -20,26 +20,26 @@
 	</div>
 	<div class="column shrink hide-for-small-only">
 		<ul class="lang">
-			<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="highlight no-barba">Fr</a></li>
-			<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="highlight no-barba">En</a></li>
+			<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="no-barba">Fr</a></li>
+			<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="no-barba">En</a></li>
 		</ul>
 	</div>
 </header>
 <div class="show-for-small-only">
 	<input type="checkbox" id="trigger" class="menu-trigger show-for-small-only">
 	<ul class="menu">
-		<li class="<?php echo PAGE == 'fr/le-studio' || PAGE == 'en/the-studio' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" class="highlight">Studio</a></li>
-		<li class="<?php echo PAGE == 'fr/nos-services' || PAGE == 'en/our-services' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>" class="highlight">Services</a></li>
-		<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" class="highlight">Contact</a></li>
+		<li class="<?php echo PAGE == 'fr/le-studio' || PAGE == 'en/the-studio' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>">Studio</a></li>
+		<li class="<?php echo PAGE == 'fr/nos-services' || PAGE == 'en/our-services' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>">Services</a></li>
+		<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>">Contact</a></li>
 		<li class="show-for-small-only">
 			<ul class="lang">
-				<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="highlight">Fr</a></li>
-				<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="highlight">En</a></li>
+				<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/">Fr</a></li>
+				<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en">En</a></li>
 			</ul>
 			<ul class="social">
-				<li><a href="https://www.facebook.com/studiomotio" target="_blank" class="highlight"><svg><use xlink:href="/picture/sprite.svg#logo-facebook" /></svg></a></li>
-				<li><a href="https://www.twitter.com/studiomotio" target="_blank" class="highlight"><svg><use xlink:href="/picture/sprite.svg#logo-twitter" /></svg></a></li>
-				<li><a href="https://www.instagram.com/studiomotio" target="_blank" class="highlight"><svg><use xlink:href="/picture/sprite.svg#logo-instagram" /></svg></a></li>
+				<li><a href="https://www.facebook.com/studiomotio" target="_blank"><svg><use xlink:href="/picture/sprite.svg#logo-facebook" /></svg></a></li>
+				<li><a href="https://www.twitter.com/studiomotio" target="_blank"><svg><use xlink:href="/picture/sprite.svg#logo-twitter" /></svg></a></li>
+				<li><a href="https://www.instagram.com/studiomotio" target="_blank"><svg><use xlink:href="/picture/sprite.svg#logo-instagram" /></svg></a></li>
 			</ul>
 			<label for="trigger" class="menu-button-close"></label>
 		</li>
