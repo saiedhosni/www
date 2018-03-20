@@ -33,8 +33,8 @@
 		<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>">Contact</a></li>
 		<li class="show-for-small-only">
 			<ul class="lang">
-				<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/">Fr</a></li>
-				<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en">En</a></li>
+				<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="no-barba">Fr</a></li>
+				<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="no-barba">En</a></li>
 			</ul>
 			<ul class="social">
 				<li><a href="https://www.facebook.com/studiomotio" target="_blank"><svg><use xlink:href="/picture/sprite.svg#logo-facebook" /></svg></a></li>
