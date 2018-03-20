@@ -1,8 +1,15 @@
 // main: build.less
 
 .selection(@color, @background) {
-	::-moz-selection {color: @color; background: @background;}
-	::selection {color: @color; background: @background;}
+	::-moz-selection {
+		color: @color;
+		background: @background;
+	}
+
+	::selection {
+		color: @color;
+		background: @background;
+	}
 }
 
 .border-radius(@radius) {
@@ -12,9 +19,17 @@
 }
 
 .keyframes(@name, @frames) {
-	@-webkit-keyframes @name { @frames(); }
-	@-moz-keyframes @name { @frames(); }
-	@keyframes @name { @frames(); }
+	@-webkit-keyframes @name {
+		@frames();
+	}
+
+	@-moz-keyframes @name {
+		@frames();
+	}
+
+	@keyframes @name {
+		@frames();
+	}
 }
 
 .animation(...) {
@@ -25,7 +40,7 @@
 
 .transition(...) {
 	-webkit-transition: @arguments;
-	-moz-transition:@arguments;
+	-moz-transition: @arguments;
 	-o-transition: @arguments;
 	transition: @arguments;
 }

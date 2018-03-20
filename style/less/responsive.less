@@ -110,7 +110,7 @@
 		}
 	}
 
-	main:not([data-namespace="index"]) {
+	main:not([data-namespace='index']) {
 		margin-bottom: 100vh;
 	}
 
@@ -207,11 +207,13 @@
 
 		&:hover {
 			span {
-				.transform(translateX(30%));
+				.transform (translateX(30%));
 			}
 		}
 
-		&::before, &::after, span {
+		&::before,
+		&::after,
+		span {
 			content: '';
 			position: absolute;
 			display: block;
