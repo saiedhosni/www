@@ -500,6 +500,26 @@
 		let deltaX = e.clientX <= window.innerWidth * 0.5 ? window.innerWidth - e.clientX : e.clientX;
 		let deltaY = e.clientY <= window.innerHeight * 0.5 ? window.innerHeight - e.clientY : e.clientY;
 		motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
+
+		// manages the mobile menu display if it is open
+		if (document.querySelector('.menu-trigger:checked') != null) {
+			let item = document.querySelector('.menu.mobile > li.active');
+
+			if (item != null) {
+				item.classList.add('out');
+			}
+
+			link.parentNode.classList.add('active', 'in');
+
+			setTimeout(function () {
+				if (item != null) {
+					item.classList.remove('active', 'out');
+				}
+
+				link.parentNode.classList.remove('in');
+				document.querySelector('.menu-button-close').click();
+			}, 600);
+		}
 	});
 
 	// manages the newPageReady event of barba js

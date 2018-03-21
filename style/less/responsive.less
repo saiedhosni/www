@@ -303,6 +303,15 @@
 				background: @vibrant-color;
 				.border-radius(100%);
 			}
+
+			&.out::before {
+				.transform(scale(0));
+				.transition(transform 500ms ease);
+			}
+
+			&.in::before {
+				.animation(activate 500ms @cubic forwards);
+			}
 		}
 
 		ul {
