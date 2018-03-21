@@ -37,6 +37,11 @@
 	// global elements
 	let body = document.querySelector('body');
 
+	// detect touch screen and add a css class to the body
+	if (screen.touch) {
+		body.classList.add('touch');
+	}
+
 	// initializes prefetch of barba js
 	Barba.Prefetch.init();
 
