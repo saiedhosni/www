@@ -513,10 +513,12 @@
 	Barba.Dispatcher.on('transitionCompleted', function(currentStatus, prevStatus) {
 
 		// destroys and rebuilds the smooth scrolling
-		motio.smooth.destroy();
-		motio.smooth.options.section = document.querySelector('.smooth-scroll');
-		motio.smooth = new Smooth(motio.smooth.options);
-		motio.smooth.init();
+		if (typeof motio.smooth !== 'undefined') {
+			motio.smooth.destroy();
+			motio.smooth.options.section = document.querySelector('.smooth-scroll');
+			motio.smooth = new Smooth(motio.smooth.options);
+			motio.smooth.init();
+		}
 
 		// fires emergence on transition complete
 		emergence.engage();
@@ -867,14 +869,16 @@
 		});
 	})();
 
-	// builds the smooth scrolling
-	motio.smooth = new Smooth({
-		section: document.querySelector('.smooth-scroll'),
-		native: true,
-		noscrollbar: true,
-		preload: false,
-		ease: 0.1
-	});
+	// builds the smooth scrolling for non-touch screens
+	if (!screen.touch) {
+		motio.smooth = new Smooth({
+			section: document.querySelector('.smooth-scroll'),
+			native: true,
+			noscrollbar: true,
+			preload: false,
+			ease: 0.1
+		});
 
-	motio.smooth.init();
+		motio.smooth.init();
+	}
 })();
