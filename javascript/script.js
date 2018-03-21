@@ -744,7 +744,8 @@
 			screen = {
 				small: window.innerWidth < 640,
 				medium: window.innerWidth >= 640 && window.innerWidth < 1024,
-				large: window.innerWidth >= 1024
+				large: window.innerWidth >= 1024,
+				touch: "ontouchstart" in document.documentElement || navigator.MaxTouchPoints > 0
 			};
 		}, 250);
 	});
