@@ -518,7 +518,7 @@
 
 				link.parentNode.classList.remove('in');
 				document.querySelector('.menu-button-close').click();
-			}, 600);
+			}, 500);
 		}
 	});
 

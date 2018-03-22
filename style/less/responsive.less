@@ -186,11 +186,11 @@
 		&:checked {
 			~ .menu {
 				.transform(translate3d(-100vw, 0, 0));
-				.transition(transform 1.4s 250ms @cubic);
+				.transition(transform 1.4s 200ms @cubic);
 
 				&::before {
 					.transform(translate3d(-70vw, 0, 0));
-					.transition(transform 1.7s 150ms @cubic);
+					.transition(transform 1.4s 100ms @cubic);
 				}
 
 				&::after {
@@ -260,7 +260,7 @@
 		padding: 10vh 20vw;
 		background: @base-color;
 		will-change: transform;
-		.transition(transform 1.4s 700ms @cubic);
+		.transition(transform 1.1s 700ms @cubic);
 
 		&::before {
 			content: '';
@@ -272,7 +272,7 @@
 			height: 100vh;
 			background: @contrast-color;
 			will-change: transform;
-			.transition(transform 1.7s 600ms @cubic);
+			.transition(transform 1s 800ms @cubic);
 		}
 
 		&::after {
@@ -285,12 +285,12 @@
 			height: 100vh;
 			background: @vibrant-color;
 			will-change: width;
-			.transition(width 1.4s 700ms @cubic);
+			.transition(width 1.1s 600ms @cubic);
 		}
 
 		& > li {
 			opacity: 0;
-			.transition(opacity 400ms 500ms ease);
+			.transition(opacity 500ms 300ms ease);
 
 			&.active::before {
 				content: '';
