@@ -26,12 +26,12 @@
 	</div>
 </header>
 <div class="show-for-small-only">
-	<input type="checkbox" id="trigger" class="menu-trigger show-for-small-only">
+	<input type="checkbox" id="trigger" class="menu-trigger">
 	<ul class="menu mobile">
 		<li class="<?php echo PAGE == 'fr/le-studio' || PAGE == 'en/the-studio' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>">Studio</a></li>
 		<li class="<?php echo PAGE == 'fr/nos-services' || PAGE == 'en/our-services' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>" data-dot="contrast">Services</a></li>
 		<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" data-dot="contrast">Contact</a></li>
-		<li class="show-for-small-only">
+		<li>
 			<ul class="lang">
 				<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="no-barba">Fr</a></li>
 				<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="no-barba">En</a></li>
