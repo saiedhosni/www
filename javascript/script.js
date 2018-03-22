@@ -527,6 +527,21 @@
 
 		// sets the body class to allow specific style override per page
 		body.setAttribute('data-page', currentStatus.namespace);
+
+		// manages the mobile menu display if it is closed
+		if (document.querySelector('.menu-trigger:checked') == null) {
+			let active = document.querySelector('.menu.mobile > li.active');
+
+			if (active != null) {
+				active.classList.remove('active');
+			}
+
+			let item = document.querySelector('[data-target="' + currentStatus.namespace + '"]');
+
+			if (item != null) {
+				item.classList.add('active');
+			}
+		}
 	});
 
 	// manages the transitionCompleted event of barba js
