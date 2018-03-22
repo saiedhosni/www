@@ -625,7 +625,7 @@
 	let menuBubbles = new stageMenu(
 		mojs.helpers.extend({
 			shape: 'circle',
-			radius: [{ 0: 10 }, { 0: 6 }, { 0: 4 }],
+			radius: [{ 0 : 10 }, { 0 : 6 }, { 0 : 4 }],
 			quantifier: 3,
 			x: ['rand(-30px, -20px)', 'rand(5px, 10px)', 'rand(15px, 30px)'],
 			y: ['rand(-20px, -40px)', 'rand(30px, 40px)', 'rand(-10px, -20px)'],
