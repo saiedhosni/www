@@ -288,9 +288,9 @@
 			.transition(width 1.1s 600ms @cubic);
 		}
 
-		& > li {
+		& > li:not(:last-child) {
 			opacity: 0;
-			.transition(opacity 500ms 300ms ease);
+			.transition(opacity 500ms 250ms ease);
 
 			&.active::before {
 				content: '';
