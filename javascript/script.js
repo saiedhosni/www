@@ -609,18 +609,7 @@
 		}, menuOptions)
 	);
 
-	let menuCross = new mojs.Shape(
-		mojs.helpers.extend({
-			shape: 'cross',
-			angle: 45,
-			radius: { 0 : 20 },
-			strokeWidth: 4,
-			easing: mojs.easing.circ.out,
-			duration: 1400,
-			delay: 200
-		}, menuOptions)
-	);
-
+	let menuCross;
 	let stageMenu = mojs.stagger(mojs.Shape);
 	let menuBubbles = new stageMenu(
 		mojs.helpers.extend({
@@ -637,7 +626,7 @@
 
 	let menuSteam = new mojs.Burst({
 		degree: 20,
-		radius: { 0 : 90 },
+		radius: { 0 : 100 },
 		parent: menuOptions.parent,
 		children: mojs.helpers.extend({
 			shape: 'circle',
@@ -646,8 +635,8 @@
 			pathScale: 'rand(0.3, 1)',
 			degreeShift: 10,
 			isSwirl: true,
-			radius: { 'rand(6, 8)' : 0 },
 			fill: [colors.contrast, colors.vibrant],
+			radius: { 5 : 0 },
 			stroke: 'transparent',
 			delay: 100,
 			duration: 600,
@@ -655,22 +644,53 @@
 		}, menuOptions)
 	});
 
-	let menuTimeline = new mojs.Timeline({delay: 1200});
-	menuTimeline.add(menuCircle, menuCross, menuBubbles);
-
 	// binds all open menu buttons to displays the tween when the menu is opened (from white or black section)
 	document.querySelector('.menu-button').addEventListener('click', function() {
-		menuBubbles.generate();
-		menuTimeline.play();
+		menuCross = new mojs.Shape(
+			mojs.helpers.extend({
+				playstate: false,
+				shape: 'cross',
+				angle: 45,
+				radius: { 0 : 20 },
+				strokeWidth: 4,
+				easing: mojs.easing.circ.out,
+				duration: 1000,
+				delay: 200,
+				onStart: function(isForward) {
+					if (isForward) {
+						menuCross._props.playstate = true;
+					}
+				},
+				onComplete: function(isForward) {
+					if (isForward) {
+						menuCross._props.playstate = false;
+					}
+				}
+			}, menuOptions)
+		);
+
+		setTimeout(function() {
+			menuCircle.play();
+			menuCross.play();
+			menuBubbles.generate().play();
+		}, 1200);
 	});
 
 	// binds the close menu button to displays the tween when the menu is closed
 	menuOptions.parent.addEventListener('click', function() {
-		menuCross.then({
-			radius: 0,
-			duration: 500,
-			delay: 0
-		}).play();
+		if (menuCross._props.playstate) {
+			menuCross._props.playstate = false;
+			menuCross.playBackward();
+		} else {
+			menuCross.then({
+				radius: 0,
+				duration: 500,
+				delay: 0,
+				onComplete: function() {
+					this.el.parentNode.removeChild(this.el);
+				}
+			}).play();
+		}
 
 		menuCircle.play();
 		menuSteam.generate().play();
