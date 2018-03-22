@@ -31,10 +31,10 @@
 		<li class="<?php echo PAGE == 'fr/le-studio' || PAGE == 'en/the-studio' ? 'active' : ''; ?>" data-target="studio"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>">Studio</a></li>
 		<li class="<?php echo PAGE == 'fr/nos-services' || PAGE == 'en/our-services' ? 'active' : ''; ?>" data-target="services"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>" data-dot="contrast">Services</a></li>
 		<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>" data-target="contact"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" data-dot="contrast">Contact</a></li>
-		<li>
+		<li class="<?php echo PAGE == 'fr/index' || PAGE == 'en/index' ? 'active' : ''; ?>" data-target="index">
 			<ul class="lang">
-				<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="no-barba">Fr</a></li>
-				<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="no-barba">En</a></li>
+				<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="index no-barba">Fr</a></li>
+				<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="index no-barba">En</a></li>
 			</ul>
 			<ul class="social">
 				<li><a href="https://www.facebook.com/studiomotio" target="_blank"><svg><use xlink:href="/picture/sprite.svg#logo-facebook" /></svg></a></li>

@@ -509,14 +509,20 @@
 				active.classList.add('out');
 			}
 
-			link.parentNode.classList.add('active', 'in');
+			let item = link.classList.contains('index') ? document.querySelector('[data-target="index"]') : link.parentNode;
+
+			if (link.classList.contains('index')) {
+				item.classList.add('active', 'in');
+			} else {
+				item.classList.add('active', 'in');
+			}
 
 			setTimeout(function () {
 				if (active != null) {
 					active.classList.remove('active', 'out');
 				}
 
-				link.parentNode.classList.remove('in');
+				item.classList.remove('in');
 				document.querySelector('.menu-button-close').click();
 			}, 500);
 		}
