@@ -627,11 +627,11 @@
 			shape: 'circle',
 			radius: [{ 0 : 10 }, { 0 : 6 }, { 0 : 4 }],
 			quantifier: 3,
-			x: ['rand(-30px, -20px)', 'rand(5px, 10px)', 'rand(15px, 30px)'],
-			y: ['rand(-20px, -40px)', 'rand(30px, 40px)', 'rand(-10px, -20px)'],
+			x: 'rand(-30, 30)',
+			y: 'rand(-40, 40)',
 			opacity: { 1 : 0, curve: linearCurve },
 			stroke: colors.vibrant,
-			delay: 'stagger(500, 150)'
+			delay: 'stagger(400, 150)'
 		}, menuOptions)
 	);
 
