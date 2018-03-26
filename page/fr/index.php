@@ -4,8 +4,8 @@
 			<path fill="none" stroke-width="0" d="M12 50c0-21 17-38 38-38s38 17 38 38-17 38-38 38"/>
 		</svg>
 		<div>
-			<h1 data-emergence="hidden">Studio de design interactif et de développement web</h1>
-			<a href="le-studio" class="button" data-emergence="hidden">
+			<h1 data-emergence="visible">Studio de design interactif et de développement web</h1>
+			<a href="le-studio" class="button shift" data-emergence="hidden">
 				<span class="arrow"></span>Découvrir le studio
 			</a>
 		</div>

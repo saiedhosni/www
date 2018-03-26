@@ -232,7 +232,8 @@
 						transformOrigin: '244px 126px',
 						strokeDasharray: 438.79,
 						strokeDashoffset: { 438.79 : 0 },
-						angleZ: { 180 : 0 }
+						angleZ: { 180 : 0 },
+						delay: 400
 					}, motioOptions)
 				)
 			};
@@ -567,6 +568,7 @@
 		// inits some stuff for the new page
 		motio.bindDotCursor(true);
 		motio.bindLogos(true);
+		motio.textEffect();
 	});
 
 	// initializes emergence js
@@ -928,6 +930,59 @@
 				dot.classList.remove('support');
 			});
 		});
+	})();
+
+	// creates a text effect on the main title
+	(motio.textEffect = function() {
+
+		// gets the title
+		let element = document.querySelector('h1');
+
+		// exits if there is no title on the page
+		if (element == null) {
+			return;
+		}
+
+		// cuts the title in multiple words
+		let words = element.innerText.match(/[a-zA-Zéçà',!&]+(\s)?/g);
+
+		// cleans the title
+		element.innerHTML = '';
+
+		// loops through each words and cuts each characters in multiple span
+		words.forEach(function(word) {
+			word = word.replace(/([^\x00-\x80]|\w|&|!|,|\')/g, '<span class="char">$&</span>');
+			element.innerHTML += '<span class="word">' + word + '</span> ';
+		});
+
+		// checks if the user is on the index page
+		let home = Barba.HistoryManager.currentStatus().namespace == 'index';
+
+		// creates the timeline
+		let textTween = new mojs.Timeline({
+			delay: home ? 1100 : 0,
+			onStart: function() {
+				setTimeout(function () {
+					Array.from(document.querySelectorAll('.shift')).forEach(function(element) {
+						element.classList.remove('shift');
+					});
+				}, home ? 700 : 550);
+			}
+		});
+
+		// independantly animates each characters
+		Array.from(document.querySelectorAll('.char')).forEach(function(char) {
+			textTween.add(new mojs.Html({
+				el: char,
+				y: { 42 : 0 },
+				easing: mojs.easing.quint.out,
+				duration: 1000,
+				delay: 'rand(100, 300)',
+				isForce3d: true
+			}));
+		});
+
+		textTween.play();
 	})();
 
 	// builds the smooth scrolling for non-touch screens

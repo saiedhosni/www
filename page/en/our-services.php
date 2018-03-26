@@ -1,12 +1,12 @@
 <section class="white intro">
 	<div class="row">
 		<div class="column align-self-top medium-7 medium-offset-4 large-offset-4 text-right">
-			<h1 data-emergence="hidden">The art of creation, animation and interaction tailored to the right place and the right time, our specialty!</h1>
+			<h1 data-emergence="visible">The art of creation, animation and interaction tailored to the right place and the right time, our specialty!</h1>
 		</div>
 	</div>
 	<div class="row">
 		<div class="column align-self-bottom medium-6 medium-offset-2 large-4">
-			<p data-emergence="hidden">We think and build your project around your requirements, focusing on what's important. So that the imagination comes to life.</p>
+			<p data-emergence="hidden" class="shift">We think and build your project around your requirements, focusing on what's important. So that the imagination comes to life.</p>
 		</div>
 	</div>
 </section>

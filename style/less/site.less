@@ -199,16 +199,25 @@ textarea {
 	overflow-y: hidden;
 }
 
-[data-emergence]:not(.vertical) {
-	.transition(opacity 1s ease);
-}
-
-[data-emergence='hidden']:not(.vertical) {
+[data-emergence='hidden'] {
 	opacity: 0;
 }
 
-[data-emergence='visible']:not(.vertical) {
+[data-emergence='visible'] {
 	opacity: 1;
+}
+
+[data-emergence] {
+	.transition(opacity 1s ease);
+
+	&.vertical {
+		opacity: 1;
+		.transition(none);
+	}
+
+	&.shift {
+		opacity: 0;
+	}
 }
 
 .black {
@@ -426,7 +435,7 @@ textarea {
 		position: absolute;
 		top: 50%;
 		height: 50%;
-		max-width: 56%;
+		max-width: 55%;
 	}
 
 	h1 {
@@ -662,4 +671,13 @@ textarea {
 
 .no-scroll {
 	overflow: hidden;
+}
+
+.word {
+	display: inline-flex;
+	overflow: hidden;
+}
+
+.char {
+	display: inline-block;
 }

@@ -1,12 +1,12 @@
 <section class="black intro">
 	<div class="row">
 		<div class="column align-self-top medium-8 medium-offset-2 large-7">
-			<h1 data-emergence="hidden">Studio MOTIO is a France-based interactive design and creative web development studio from La Rochelle</h1>
+			<h1 data-emergence="visible">Studio MOTIO is a France-based interactive design and creative web development studio from La Rochelle</h1>
 		</div>
 	</div>
 	<div class="row">
 		<div class="column align-self-bottom medium-6 medium-offset-5 large-4 large-offset-6">
-			<p data-emergence="hidden">We design and build bespoke digital solutions to provide an intuitive, modern and high-quality user experience.</p>
+			<p data-emergence="hidden" class="shift">We design and build bespoke digital solutions to provide an intuitive, modern and high-quality user experience.</p>
 		</div>
 	</div>
 </section>
