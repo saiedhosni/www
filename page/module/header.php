@@ -20,8 +20,8 @@
 	</div>
 	<div class="column shrink hide-for-small-only">
 		<ul class="lang">
-			<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="no-barba">Fr</a></li>
-			<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="no-barba">En</a></li>
+			<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="<?php echo LANGUAGE == 'fr' ? '' : 'no-barba'; ?>">Fr</a></li>
+			<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="<?php echo LANGUAGE == 'en' ? '' : 'no-barba'; ?>">En</a></li>
 		</ul>
 	</div>
 </header>
