@@ -479,10 +479,13 @@
 	// manages the linkClicked event of barba js
 	Barba.Dispatcher.on('linkClicked', function(link, e) {
 
+		// gets the coordinates of the current link element
+		let coordinates = link.getBoundingClientRect();
+
 		// evaluates the color and position of the transition dot
 		motio.dotColor = link.getAttribute('data-dot') || 'base';
-		motio.dotEventX = e.pageX;
-		motio.dotEventY = e.pageY;
+		motio.dotEventX = e.pageX != 0 ? e.pageX : coordinates.left + coordinates.width * 0.5 + pageXOffset;
+		motio.dotEventY = e.pageY != 0 ? e.pageY : coordinates.top + coordinates.height * 0.5 + pageYOffset;
 
 		// evaluates the radius of the transition dot
 		let deltaX = e.clientX <= window.innerWidth * 0.5 ? window.innerWidth - e.clientX : e.clientX;
