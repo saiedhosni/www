@@ -1,4 +1,4 @@
-<section class="black intro">
+<section class="white intro">
 	<div class="row">
 		<div class="column align-self-top medium-8 medium-offset-2 large-7">
 			<h1 data-emergence="visible">Studio MOTIO is a France-based interactive design and creative web development studio from La Rochelle</h1>
@@ -29,25 +29,25 @@
 		</div>
 	</div>
 </div>
-<section class="white">
+<section class="black">
 	<div class="row">
 		<div class="column medium-6 medium-offset-5 large-4 large-offset-6">
 			<h2 data-emergence="hidden">The studio</h2>
 			<p data-emergence="hidden">Specialized in animations and web micro-interactions based on the principles of motion design, we work in collaboration with designers and local developers, perfectionists, meticulous and detail-oriented.</p>
 			<p data-emergence="hidden">The user experience is at the heart of our business, which is why we use cutting-edge graphic technologies, which have already proved their worth and are now recognized as references in the web domain for their compatibility, performance and their fluidity.</p>
 			<p data-emergence="hidden">We love our job, and we always carry out all our projects with passion.</p>
-			<p data-emergence="hidden"><a href="/en/our-services" class="button" data-dot="contrast"><span class="arrow"></span>Discover our services</a></p>
+			<p data-emergence="hidden"><a href="/en/contact" class="button" data-dot="contrast"><span class="arrow"></span>Contact us</a></p>
 		</div>
 	</div>
 </section>
-<section class="black">
+<section class="white">
 	<div class="row">
 		<div class="column medium-6 medium-offset-5 large-4 large-offset-6">
 			<h2 data-emergence="hidden">The collective</h2>
 			<p data-emergence="hidden">Our strong point, collaboration. We founded the collective to bring together local businesses, in an "eco-responsible" approach.</p>
 			<p data-emergence="hidden">This method allows you to exchange skills, have multiple points of view and share the taste of detail to carry out your project.</p>
 			<p data-emergence="hidden">Whether you are art-director, graphic designer, designer, or even developer, the collective is open to everyone and you can join us at any time.</p>
-			<p data-emergence="hidden"><a href="/en/contact" class="button" data-dot="contrast"><span class="arrow"></span>Join us</a></p>
+			<p data-emergence="hidden"><a href="/en/our-services" class="button"><span class="arrow"></span>Discover our services</a></p>
 		</div>
 	</div>
 </section>

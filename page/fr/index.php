@@ -5,7 +5,7 @@
 		</svg>
 		<div>
 			<h1 data-emergence="visible">Studio de design interactif et de développement web</h1>
-			<a href="le-studio" class="button shift" data-emergence="hidden">
+			<a href="le-studio" class="button shift" data-emergence="hidden" data-dot="contrast">
 				<span class="arrow"></span>Découvrir le studio
 			</a>
 		</div>

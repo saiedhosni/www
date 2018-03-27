@@ -72,8 +72,6 @@
 						x: motio.dotEventX,
 						y: motio.dotEventY,
 						radius: { 0 : motio.dotRadius },
-						// need to optimize dot fill transition based on current page / next page
-						// fill: { [colors[motio.dotColor == 'base' ? 'contrast' : 'base']] : colors[motio.dotColor] },
 						fill: colors[motio.dotColor],
 						duration: 1700,
 						easing: mojs.easing.expo.inout,

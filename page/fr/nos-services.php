@@ -1,4 +1,4 @@
-<section class="white intro">
+<section class="black intro">
 	<div class="row">
 		<div class="column align-self-top medium-7 medium-offset-4 large-offset-4 text-right">
 			<h1 data-emergence="visible">L'art de la création, l'animation et de l'interaction sur mesure, au bon endroit et au bon moment, notre spécialité !</h1>
@@ -15,7 +15,7 @@
 		<div class="vertical letter-i-rebound" data-emergence="hidden"></div>
 	</div>
 </div>
-<section class="black expanded">
+<section class="white expanded">
 	<div class="row">
 		<div class="column medium-6 medium-offset-2 large-4">
 			<h2 data-emergence="hidden">Nos services</h2>
