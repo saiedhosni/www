@@ -90,8 +90,6 @@
 				dotlayer.parentNode.removeChild(dotlayer);
 
 				new Promise(function(resolve, reject) {
-					// need to manage onEnter transition depending on the page
-					// Barba.HistoryManager.currentStatus().namespace;
 
 					// restores the body scrollbars
 					body.classList.remove('no-scroll');
