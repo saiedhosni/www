@@ -476,15 +476,6 @@
 	// starts barba js
 	Barba.Pjax.start();
 
-	// manages the initStateChange event of barba js
-	Barba.Dispatcher.on('initStateChange', function() {
-
-		// updating Google Analytics properly
-		if (typeof ga === 'function') {
-			ga('send', 'pageview', location.pathname);
-		}
-	});
-
 	// manages the linkClicked event of barba js
 	Barba.Dispatcher.on('linkClicked', function(link, e) {
 
@@ -522,6 +513,15 @@
 				item.classList.remove('in');
 				document.querySelector('.menu-button-close').click();
 			}, 500);
+		}
+	});
+
+	// manages the initStateChange event of barba js
+	Barba.Dispatcher.on('initStateChange', function() {
+
+		// updating Google Analytics properly
+		if (typeof ga === 'function') {
+			ga('send', 'pageview', location.pathname);
 		}
 	});
 
