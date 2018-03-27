@@ -907,8 +907,16 @@
 			link.addEventListener('click', function(e) {
 				dot.classList.remove('link');
 
+				// prevents the user to reload the page if the location is the same
 				if (this.href == window.location.href) {
 					e.preventDefault();
+
+					// do nothing if the user is already at the top of the page
+					if (window.scrollY == 0) {
+						return;
+					}
+
+					// automatically scrolls to the top of the page on same location
 					setTimeout(function () {
 						window.scroll({
 							top: 0,
