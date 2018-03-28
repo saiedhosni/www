@@ -904,8 +904,8 @@
 		// calcultates the new position to follow
 		deltaX = mouseX - tempX;
 		deltaY = mouseY - tempY;
-		tempX += (deltaX - radius) * 0.25;
-		tempY += (deltaY - radius) * 0.25;
+		tempX += (deltaX - radius) * 0.27;
+		tempY += (deltaY - radius) * 0.27;
 
 		// sets the dot position
 		dot.style.left = Math.round(tempX) + 'px';
