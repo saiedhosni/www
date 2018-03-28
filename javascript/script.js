@@ -1004,4 +1004,9 @@
 
 		motio.smooth.init();
 	}
+
+	// prevents the browser from restoring the previous scroll position when using backward/forward arrows
+	if ('scrollRestoration' in history) {
+		history.scrollRestoration = 'manual';
+	}
 })();
