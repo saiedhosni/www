@@ -845,7 +845,7 @@
 	});
 
 	// binds the mouseup event to restore the dot size on mouseup
-	document.addEventListener('mouseup', function() {
+	document.addEventListener('mouseup', function(e) {
 		dot.classList.remove('down');
 
 		// support for non-blending browsers: this value is override by css for browsers that supports blending mode
