@@ -479,6 +479,9 @@
 	// manages the linkClicked event of barba js
 	Barba.Dispatcher.on('linkClicked', function(link, e) {
 
+		// defines that a click event from mouse/keyboard has been raised
+		motio.clickEvent = true;
+
 		// gets the coordinates of the current link element
 		let coordinates = link.getBoundingClientRect();
 
@@ -526,6 +529,31 @@
 		if (typeof ga === 'function') {
 			ga('send', 'pageview', location.pathname);
 		}
+
+		// determines if the user is navigating with backward/forward arrows
+		if (!motio.clickEvent) {
+
+			// extracts the data dot attribute of a link that have a location similar to the targetted location (unable to know at this time the next page namespace)
+			let color = document.querySelector('a[href="' + location.pathname + '"]').getAttribute('data-dot');
+
+			// gets the bounding coordinates of the dot cursor as reference for the dot transition
+			let coordinates = dot.getBoundingClientRect();
+			let dotX = coordinates.left + coordinates.width * 0.5;
+			let dotY = coordinates.top + coordinates.height * 0.5;
+
+			// evaluates the color and position of the transition dot
+			motio.dotColor = color || 'base';
+			motio.dotEventX = dotX + pageXOffset;
+			motio.dotEventY = dotY + pageYOffset;
+
+			// evaluates the radius of the transition dot
+			let deltaX = dotX <= window.innerWidth * 0.5 ? window.innerWidth - dotX : dotX;
+			let deltaY = dotY <= window.innerHeight * 0.5 ? window.innerHeight - dotY : dotY;
+			motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
+		}
+
+		// resets the click event
+		motio.clickEvent = false;
 	});
 
 	// manages the newPageReady event of barba js
