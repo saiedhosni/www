@@ -380,7 +380,7 @@
 			// instanciates the typeit library and type
 			let typewriter = new TypeIt('.type', {
 				autoStart: false,
-				startDelay: 500,
+				startDelay: 1200,
 				cursor: false,
 				speed: 70,
 				callback: function() {
@@ -979,14 +979,14 @@
 		}
 
 		// cuts the title in multiple words
-		let words = element.innerText.match(/[a-zA-Zéçà',!&]+(\s)?/g);
+		let words = element.innerText.match(/[a-zA-Zéçà',!&-]+(\s)?/g);
 
 		// cleans the title
 		element.innerHTML = '';
 
 		// loops through each words and cuts each characters in multiple span
 		words.forEach(function(word) {
-			word = word.replace(/([^\x00-\x80]|\w|&|!|,|\')/g, '<span class="char">$&</span>');
+			word = word.replace(/([^\x00-\x80]|\w|\'|,|!|&|-)/g, '<span class="char">$&</span>');
 			element.innerHTML += '<span class="word">' + word + '</span> ';
 		});
 
