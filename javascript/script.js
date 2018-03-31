@@ -299,6 +299,23 @@
 		namespace: 'contact',
 		onEnter: function() {
 
+			// mojs options and objects for the "arc" tween
+			const path = document.querySelector('.shape-arc');
+			const length = path.getTotalLength();
+
+			motio.arcTween = {
+				'letter-arc vertical': new mojs.Html({
+					playstate: false,
+					el: path,
+					strokeDasharray: length,
+					strokeDashoffset: { [-length] : 0 },
+					strokeWidth: 28,
+					duration: 1400,
+					easing: mojs.easing.expo.inout,
+					isForce3d: true
+				})
+			};
+
 			// gets the contact form
 			const form = document.querySelector('form');
 
@@ -627,6 +644,21 @@
 			// animates the i wrapper if present on the page
 			if (typeof motio.iTween !== 'undefined' && typeof motio.iTween[element.className] !== 'undefined') {
 				const tween = motio.iTween[element.className];
+
+				if (state == 'visible' && !tween._props.playstate) {
+					tween._props.playstate = true;
+					tween.play();
+				}
+
+				if (state == 'reset' && tween._props.playstate) {
+					tween._props.playstate = false;
+					tween.playBackward();
+				}
+			}
+
+			// animates the arc wrapper if present on the page
+			if (typeof motio.arcTween !== 'undefined' && typeof motio.arcTween[element.className] !== 'undefined') {
+				const tween = motio.arcTween[element.className];
 
 				if (state == 'visible' && !tween._props.playstate) {
 					tween._props.playstate = true;

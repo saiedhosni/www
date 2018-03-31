@@ -455,17 +455,6 @@ textarea {
 	stroke: @vibrant-color;
 }
 
-.motio-o-contact {
-	position: fixed;
-	right: 0;
-	top: -40vh;
-	width: 80vh;
-	height: 80vh;
-	z-index: -1;
-	stroke: @vibrant-color;
-	.transform(rotate(90deg));
-}
-
 .wrapper {
 	position: relative;
 	z-index: 2;
@@ -528,6 +517,29 @@ textarea {
 	.letter-i-rebound {
 		height: 100px;
 		margin-bottom: 100px;
+	}
+}
+
+.wrapper-arc {
+	width: 100%;
+	height: 0;
+	background: black;
+	position: relative;
+}
+
+.letter-arc {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 700px;
+	height: 220px;
+	z-index: -1;
+
+	svg {
+		margin-top: -150px;
+		margin-right: -@min-gutter;
+		fill: none;
+		stroke: @vibrant-color;
 	}
 }
 

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<symbol id="logo-motio-o" viewBox="0 0 100 100">
-		<path fill="none" stroke-width="24" d="M12 50c0-21 17-38 38-38s38 17 38 38-17 38-38 38"/>
-	</symbol>
 	<symbol id="logo-facebook" viewBox="0 0 15 15">
 		<path d="M8.68 15H5.86V7.5H3.98V4.92h1.88V3.38c0-2.12.57-3.4 3.05-3.4H11v2.58H9.7c-.95 0-1 .37-1 1.04v1.3H11l-.28 2.58H8.7L8.68 15z"/>
 	</symbol>
