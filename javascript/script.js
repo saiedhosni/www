@@ -252,7 +252,8 @@
 				strokeDasharray: '100%',
 				strokeDashoffset: { '100%' : 0 },
 				duration: 800,
-				easing: easingCurve
+				easing: easingCurve,
+				isForce3d: true
 			};
 
 			motio.iTween = {
