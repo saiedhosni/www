@@ -330,10 +330,10 @@
 				const regex = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
 
 				// gets the textarea field
-				const message = document.querySelector('textarea');
+				const message = form.querySelector('textarea');
 
 				// gets the post button
-				const button = document.querySelector('button');
+				const button = form.querySelector('button');
 
 				// displays an invalid message if no mail address is specified
 				if (!regex.test(message.value)) {
@@ -383,7 +383,7 @@
 				});
 
 				// sends the contact message to the studio
-				request.send('message=' + document.querySelector('textarea').value);
+				request.send('message=' + message.value);
 			});
 		},
 		onEnterCompleted: function() {
