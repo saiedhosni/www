@@ -1,5 +1,9 @@
 <section class="white">
-	<!-- <svg class="motio-o-contact"><use xlink:href="/picture/sprite.svg#logo-motio-o" /></svg> -->
+	<div class="wrapper-arc hide-for-small-only">
+		<div class="letter-arc vertical" data-emergence="hidden">
+			<svg viewBox="0 0 100 100"><path class="shape-arc" stroke-width="0" d="M100,75.524C58.279,75.524,24.482,41.727,24.482,0"/></svg>
+		</div>
+	</div>
 	<div class="row align-center">
 		<div class="column medium-9 large-8">
 			<h1 data-emergence="visible">Brief-us!</h1>
