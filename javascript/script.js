@@ -842,7 +842,7 @@
 
 		// displays the footer content and animate the footer logo depending on the scroll position
 		throttle = window.requestAnimationFrame(function() {
-			if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (screen.small ? 100 : 97)) {
+			if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (screen.small ? 99 : 97)) {
 				if (!visibility) {
 					document.querySelector('footer').classList.add('show');
 					visibility = true;
