@@ -371,6 +371,53 @@
 }
 
 /*
+ * landscape mode with low screen height
+ */
+@media (orientation: landscape) and (max-height: 500px) {
+	[lang='fr'] {
+		body::before {
+			content: 'La hauteur de votre écran est trop petite. Retournez-le ✌';
+		}
+	}
+
+	[lang='en'] {
+		body::before {
+			content: 'Your screen height is too low to properly displays the site. Please rotate your device ✌';
+		}
+	}
+
+	body {
+		overflow: hidden;
+
+		&::before {
+			position: fixed;
+			z-index: 200;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			padding: @gutter @gutter / 2;
+			color: @contrast-color;
+			font-family: @font;
+			font-size: 40px;
+			font-weight: 100;
+			line-height: 20vh;
+
+			@media (max-width: 39.9375em) {
+				padding: @gutter @min-gutter * 2;
+			}
+		}
+	}
+
+	nav,
+	main,
+	.lang,
+	.media {
+		display: none;
+	}
+}
+
+/*
  * touch screens
  */
 .touch {
