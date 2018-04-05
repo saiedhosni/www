@@ -125,13 +125,16 @@
 
 			motio.oTweenEnter = new mojs.Html(
 				mojs.helpers.extend({
-					strokeDashoffset: { [length] : 0 },
-					angleZ: screen.large ? { 0 : 360 } : { [-2] : -180 }
+					strokeDashoffset: screen.large ? { [length] : 0 } : { [length] : (length / 3) * 2 },
+					angleZ: screen.large ? { 0 : 360 } : 0
 				}, pathOptions)
 			);
 		},
 		onEnterCompleted: function() {
-			motio.oTweenEnter.play();
+			motio.oTweenEnter.then({
+				strokeDashoffset: 0,
+				duration: 0
+			}).play();
 		}
 	}).init();
 
