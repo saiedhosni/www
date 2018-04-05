@@ -126,7 +126,7 @@
 			motio.oTweenEnter = new mojs.Html(
 				mojs.helpers.extend({
 					strokeDashoffset: { [length] : 0 },
-					angleZ: !screen.small ? { 0 : 360 } : { [-2] : -180 }
+					angleZ: screen.large ? { 0 : 360 } : { [-2] : -180 }
 				}, pathOptions)
 			);
 		},
