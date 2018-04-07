@@ -15,7 +15,7 @@
 		<div class="vertical letter-i-rebound" data-emergence="hidden"></div>
 	</div>
 </div>
-<section class="white expanded">
+<section class="white">
 	<div class="row">
 		<div class="column medium-6 medium-offset-2 large-4">
 			<h2 data-emergence="hidden">Our services</h2>
