@@ -1,0 +1,37 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": "eslint:recommended",
+	"globals": {
+		"mojs": false,
+		"Barba": false,
+		"emergence": false,
+		"TypeIt": false,
+		"Smooth": false,
+		"ga": false,
+		"motio": true
+	},
+	"rules": {
+		"indent": [
+			"error",
+			"tab"
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"no-console": [
+			"off"
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"semi": [
+			"error",
+			"always"
+		]
+	}
+}
