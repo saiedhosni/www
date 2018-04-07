@@ -33,9 +33,25 @@
 		$path = __DIR__ . '/page/' . $page . '.php';
 	}
 
-	// defines the page and requested file path
+	// uniformizes the namespace between english and french pages
+	$name = str_replace(array(
+		LANGUAGE . '/',
+		'le-',
+		'the-',
+		'nos-',
+		'our-',
+		'legal-'
+	), '', $page);
+
+	// specific case for legal notices
+	if ($name == 'mentions-legales') {
+		$name = 'notices';
+	}
+
+	// defines the page, requested file path and namespace
 	define('PAGE', $page);
 	define('PATH', $path);
+	define('NAME', $name);
 
 	// calls the template
 	require 'page/template.php';
