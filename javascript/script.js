@@ -10,8 +10,8 @@
 		small: window.innerWidth < 640,
 		medium: window.innerWidth >= 640 && window.innerWidth < 1024,
 		large: window.innerWidth >= 1024,
-		touch: "ontouchstart" in document.documentElement || navigator.MaxTouchPoints > 0
-	}
+		touch: 'ontouchstart' in document.documentElement || navigator.MaxTouchPoints > 0
+	};
 
 	// global motio object for global tweens
 	window.motio = {};
@@ -55,7 +55,7 @@
 				]).then(this.onEnter.bind(this));
 			},
 			onLeave: function() {
-				return new Promise(function(resolve, reject) {
+				return new Promise(function(resolve) {
 
 					// disables the body scrollbars
 					body.classList.add('no-scroll');
@@ -89,7 +89,7 @@
 				let dotlayer = document.querySelector('.dot-transition');
 				dotlayer.parentNode.removeChild(dotlayer);
 
-				new Promise(function(resolve, reject) {
+				new Promise(function(resolve) {
 
 					// restores the body scrollbars
 					body.classList.remove('no-scroll');
@@ -330,7 +330,7 @@
 				e.preventDefault();
 
 				// defines the mail regular expression
-				const regex = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+				const regex = /(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
 
 				// gets the textarea field
 				const message = form.querySelector('textarea');
@@ -578,7 +578,7 @@
 	});
 
 	// manages the newPageReady event of barba js
-	Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, HTMLElementContainer, newPageRawHTML) {
+	Barba.Dispatcher.on('newPageReady', function(currentStatus) {
 
 		// sets the body class to allow specific style override per page
 		body.setAttribute('data-page', currentStatus.namespace);
@@ -600,7 +600,7 @@
 	});
 
 	// manages the transitionCompleted event of barba js
-	Barba.Dispatcher.on('transitionCompleted', function(currentStatus, prevStatus) {
+	Barba.Dispatcher.on('transitionCompleted', function() {
 
 		// destroys and rebuilds the smooth scrolling
 		if (typeof motio.smooth !== 'undefined') {
@@ -865,7 +865,7 @@
 	// binds the resize event to properly updates screen resolution object
 	let debounce;
 
-	window.addEventListener('resize', function(e) {
+	window.addEventListener('resize', function() {
 		clearTimeout(debounce);
 
 		debounce = setTimeout(function() {
@@ -873,7 +873,7 @@
 				small: window.innerWidth < 640,
 				medium: window.innerWidth >= 640 && window.innerWidth < 1024,
 				large: window.innerWidth >= 1024,
-				touch: "ontouchstart" in document.documentElement || navigator.MaxTouchPoints > 0
+				touch: 'ontouchstart' in document.documentElement || navigator.MaxTouchPoints > 0
 			};
 		}, 250);
 	});
@@ -1022,7 +1022,7 @@
 
 		// loops through each words and cuts each characters in multiple span
 		words.forEach(function(word) {
-			word = word.replace(/([^\x00-\x80]|\w|\'|,|!|&|-)/g, '<span class="char">$&</span>');
+			word = word.replace(/([^x00-x80]|\w|'|,|!|&|-)/g, '<span class="char">$&</span>');
 			element.innerHTML += '<span class="word">' + word + '</span> ';
 		});
 
