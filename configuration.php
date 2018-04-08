@@ -20,7 +20,7 @@
 		),
 		'fr/nos-services' => array(
 			'Nos services' . META_SUFFIX,
-			'L\'art de l\'animation et de l\'interaction sur mesure, au bon endroit et au bon moment !'
+			'L\'art de la création, l\'animation et de l\'interaction sur mesure, au bon endroit et au bon moment, notre spécialité !'
 		),
 		'fr/contact' => array(
 			'Contact' . META_SUFFIX,
@@ -44,7 +44,7 @@
 		),
 		'en/our-services' => array(
 			'Our services' . META_SUFFIX,
-			'The art of animation and tailor-made interaction, in the right place and at the right time!'
+			'The art of creation, animation and interaction tailored to the right place and the right time, our specialty!'
 		),
 		'en/contact' => array(
 			'Contact' . META_SUFFIX,
