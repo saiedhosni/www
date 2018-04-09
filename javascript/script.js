@@ -1027,7 +1027,7 @@
 		});
 
 		// checks if the user is on the index page
-		let home = Barba.HistoryManager.currentStatus().namespace == 'index';
+		let home = body.getAttribute('data-page') == 'index';
 
 		// creates the timeline
 		let textTween = new mojs.Timeline({
