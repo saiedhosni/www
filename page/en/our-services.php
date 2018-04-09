@@ -48,3 +48,23 @@
 		</div>
 	</div>
 </section>
+<section class="black">
+	<div class="row">
+		<div class="column medium-6 medium-offset-2 large-4">
+			<h2 data-emergence="hidden">Our references</h2>
+			<p data-emergence="hidden">Since 2015 &ndash; We assist startups, studios, agencies and companies in the development of tailor-made solutions in La Rochelle, Bordeaux, Nantes and Lille.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="column medium-6 medium-offset-2 large-8">
+			<ul class="row small-up-1 medium-up-2 large-up-3 references">
+				<li class="column" data-emergence="hidden"><svg><use xlink:href="/picture/sprite.svg#logo-p2mv" /></svg></li>
+				<li class="column" data-emergence="hidden"><svg><use xlink:href="/picture/sprite.svg#logo-supdeco" /></svg></li>
+				<li class="column" data-emergence="hidden"><svg><use xlink:href="/picture/sprite.svg#logo-web2do" /></svg></li>
+				<li class="column" data-emergence="hidden"><svg><use xlink:href="/picture/sprite.svg#logo-phonequest" /></svg></li>
+				<li class="column" data-emergence="hidden"><svg><use xlink:href="/picture/sprite.svg#logo-missionlocale" /></svg></li>
+				<li class="column" data-emergence="hidden"><svg><use xlink:href="/picture/sprite.svg#logo-shawork" /></svg></li>
+			</ul>
+		</div>
+	</div>
+</section>

@@ -1,4 +1,4 @@
-<footer class="row align-middle expanded black">
+<footer class="row align-middle expanded <?php echo NAME == 'services' ? 'white' : 'black'; ?>">
 	<div class="column">
 		<div class="row align-center">
 			<div class="column small-12 medium-5 medium-offset-0 large-4 large-offset-2">
