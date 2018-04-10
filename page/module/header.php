@@ -27,23 +27,23 @@
 </header>
 <div class="show-for-small-only">
 	<input type="checkbox" id="trigger" class="menu-trigger">
-	<ul class="menu mobile">
-		<li class="<?php echo PAGE == 'fr/le-studio' || PAGE == 'en/the-studio' ? 'active' : ''; ?>" data-target="studio"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" data-dot="contrast">Studio</a></li>
-		<li class="<?php echo PAGE == 'fr/nos-services' || PAGE == 'en/our-services' ? 'active' : ''; ?>" data-target="services"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>">Services</a></li>
-		<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>" data-target="contact"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" data-dot="contrast">Contact</a></li>
-		<li class="<?php echo PAGE == 'fr/index' || PAGE == 'en/index' ? 'active' : ''; ?>" data-target="index">
-			<ul class="lang">
-				<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="index <?php echo LANGUAGE == 'fr' ? '' : 'no-barba'; ?>">Fr</a></li>
-				<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="index <?php echo LANGUAGE == 'en' ? '' : 'no-barba'; ?>">En</a></li>
-			</ul>
-			<ul class="social">
-				<li><a href="https://www.facebook.com/studiomotio" target="_blank"><svg><use xlink:href="/picture/sprite.svg#logo-facebook" /></svg></a></li>
-				<li><a href="https://www.twitter.com/studiomotio" target="_blank"><svg><use xlink:href="/picture/sprite.svg#logo-twitter" /></svg></a></li>
-				<li><a href="https://www.instagram.com/studiomotio" target="_blank"><svg><use xlink:href="/picture/sprite.svg#logo-instagram" /></svg></a></li>
-			</ul>
-		</li>
-		<li>
-			<label for="trigger" class="menu-button-close"></label>
-		</li>
-	</ul>
+	<div class="menu mobile">
+		<label for="trigger" class="menu-button-close"></label>
+		<ul>
+			<li class="<?php echo PAGE == 'fr/le-studio' || PAGE == 'en/the-studio' ? 'active' : ''; ?>" data-target="studio"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" data-dot="contrast">Studio</a></li>
+			<li class="<?php echo PAGE == 'fr/nos-services' || PAGE == 'en/our-services' ? 'active' : ''; ?>" data-target="services"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>">Services</a></li>
+			<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>" data-target="contact"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" data-dot="contrast">Contact</a></li>
+			<li class="<?php echo PAGE == 'fr/index' || PAGE == 'en/index' ? 'active' : ''; ?>" data-target="index">
+				<ul class="lang">
+					<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="index <?php echo LANGUAGE == 'fr' ? '' : 'no-barba'; ?>">Fr</a></li>
+					<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="index <?php echo LANGUAGE == 'en' ? '' : 'no-barba'; ?>">En</a></li>
+				</ul>
+				<ul class="social">
+					<li><a href="https://www.facebook.com/studiomotio" target="_blank"><svg><use xlink:href="/picture/sprite.svg#logo-facebook" /></svg></a></li>
+					<li><a href="https://www.twitter.com/studiomotio" target="_blank"><svg><use xlink:href="/picture/sprite.svg#logo-twitter" /></svg></a></li>
+					<li><a href="https://www.instagram.com/studiomotio" target="_blank"><svg><use xlink:href="/picture/sprite.svg#logo-instagram" /></svg></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
 </div>
