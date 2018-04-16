@@ -184,7 +184,7 @@
 
 						// starts barba js
 						Barba.Pjax.start();
-					}, 1200);
+					}, 1100);
 				}
 			}
 		}).play();
