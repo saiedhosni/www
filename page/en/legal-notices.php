@@ -1,7 +1,7 @@
 <section class="white">
 	<div class="row align-center">
 		<div class="column medium-9 large-8">
-			<h1 data-emergence="visible">Legal notices</h1>
+			<h1 data-emergence="hidden">Legal notices</h1>
 			<p data-emergence="hidden" class="shift">This website is the exclusive property of Studio MOTIO. Any reproduction or total or partial representation of this site by any process whatsoever without the express permission of the studio is prohibited and constitutes an infringement punishable by articles L.335-2 and following of the Code of Intellectual Property.</p>
 		</div>
 	</div>

@@ -6,7 +6,7 @@
 	</div>
 	<div class="row align-center">
 		<div class="column medium-9 large-8">
-			<h1 data-emergence="visible">Briefez-nous !</h1>
+			<h1 data-emergence="hidden">Briefez-nous !</h1>
 			<p data-emergence="hidden" class="shift">Envie de nous confier votre projet, lancer un nouveau site web ou construire une identité de marque mémorable, laissez-nous un petit mot. Nous serions ravis de travailler avec vous !</p>
 		</div>
 	</div>

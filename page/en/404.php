@@ -2,7 +2,7 @@
 	<div class="column">
 		<div class="row align-center collapse">
 			<div class="column medium-9 large-8">
-				<h1 data-emergence="visible">Oops!</h1>
+				<h1 data-emergence="hidden">Oops!</h1>
 				<strong data-emergence="hidden" class="shift">It seems you're lost..</strong>
 			</div>
 		</div>

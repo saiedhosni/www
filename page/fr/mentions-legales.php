@@ -1,7 +1,7 @@
 <section class="white">
 	<div class="row align-center">
 		<div class="column medium-9 large-8">
-			<h1 data-emergence="visible">Mentions légales</h1>
+			<h1 data-emergence="hidden">Mentions légales</h1>
 			<p data-emergence="hidden" class="shift">Ce site internet est la propriété exclusive de Studio MOTIO. Toute reproduction ou représentation totale ou partielle de ce site par quelque procédé que ce soit, sans l'autorisation expresse du studio est interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
 		</div>
 	</div>

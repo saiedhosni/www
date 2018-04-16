@@ -6,7 +6,7 @@
 
 body {
 	overflow-x: hidden;
-	background: @base-color;
+	background: @contrast-color;
 	color: @contrast-color;
 	font-family: @font;
 	font-weight: 300;
@@ -664,6 +664,11 @@ textarea {
 	position: fixed;
 }
 
+.dot-simulation {
+	z-index: 5;
+	position: fixed;
+}
+
 .smooth-scroll {
 	position: fixed;
 	z-index: 1;
@@ -700,4 +705,18 @@ textarea {
 	li {
 		margin-bottom: @gutter;
 	}
+}
+
+.preload {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 80;
+	background: @contrast-color;
+}
+
+.display {
+	.animation(display 1.4s ease forwards);
 }
