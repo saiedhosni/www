@@ -26,7 +26,8 @@
 			}
 		?>
 	</head>
-	<body id="barba-wrapper" data-page="<?php echo NAME; ?>">
+	<body id="barba-wrapper" data-page="<?php echo NAME; ?>" data-color="<?php echo NAME == 'index' || NAME == 'services' ? 'base' : 'contrast'; ?>">
+		<div class="preload"></div>
 		<?php
 			require_once 'module/header.php';
 			require_once 'module/media.php';

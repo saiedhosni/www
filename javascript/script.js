@@ -68,11 +68,8 @@
 			isForce3d: true,
 			onComplete: function() {
 
-				// extracts the data dot attribute of a link that have a location similar to the targetted location (unable to know at this time the next page namespace)
-				let color = document.querySelector('a[href="' + location.pathname + '"]').getAttribute('data-dot') || 'base';
-
 				// depending on the targetted background color, builds a dot transition or simply displays the site
-				if (color == 'base') {
+				if (body.getAttribute('data-color') == 'base') {
 
 					// gets the bounding coordinates of the dot cursor as reference for the dot transition
 					let coordinates = dot.getBoundingClientRect();
@@ -80,7 +77,7 @@
 					let dotY = coordinates.top + coordinates.height * 0.5;
 
 					// evaluates the color and position of the transition dot
-					motio.dotColor = color || 'base';
+					motio.dotColor = body.getAttribute('data-color');
 					motio.dotEventX = dotX + pageXOffset;
 					motio.dotEventY = dotY + pageYOffset;
 
@@ -699,16 +696,13 @@
 		// determines if the user is navigating with backward/forward arrows
 		if (!motio.clickEvent) {
 
-			// extracts the data dot attribute of a link that have a location similar to the targetted location (unable to know at this time the next page namespace)
-			let color = document.querySelector('a[href="' + location.pathname + '"]').getAttribute('data-dot');
-
 			// gets the bounding coordinates of the dot cursor as reference for the dot transition
 			let coordinates = dot.getBoundingClientRect();
 			let dotX = coordinates.left + coordinates.width * 0.5;
 			let dotY = coordinates.top + coordinates.height * 0.5;
 
 			// evaluates the color and position of the transition dot
-			motio.dotColor = color || 'base';
+			motio.dotColor = body.getAttribute('data-color');
 			motio.dotEventX = dotX + pageXOffset;
 			motio.dotEventY = dotY + pageYOffset;
 
@@ -725,8 +719,9 @@
 	// manages the newPageReady event of barba js
 	Barba.Dispatcher.on('newPageReady', function(currentStatus) {
 
-		// sets the body class to allow specific style override per page
+		// sets some body data attributes to allow specific style override per page
 		body.setAttribute('data-page', currentStatus.namespace);
+		body.setAttribute('data-color', motio.dotColor);
 
 		// manages the mobile menu display if it is closed
 		if (document.querySelector('.menu-trigger:checked') == null) {
