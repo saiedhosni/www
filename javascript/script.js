@@ -47,149 +47,6 @@
 	// initializes prefetch of barba js
 	Barba.Prefetch.init();
 
-	// binds the load event to completely wait for the site to load
-	window.addEventListener('load', function() {
-
-		// gets the preload layout
-		const preload = body.querySelector('.preload');
-
-		// preload tween simulation
-		new mojs.Shape({
-			className: 'dot-simulation',
-			parent: preload,
-			shape: 'circle',
-			radius: { 0 : 50 },
-			fill: colors.vibrant,
-			easing: mojs.easing.expo.out,
-			duration: 800,
-			delay: 500,
-			isYoyo: true,
-			repeat: 1,
-			isForce3d: true,
-			onComplete: function() {
-
-				// depending on the targetted background color, builds a dot transition or simply displays the site
-				if (body.getAttribute('data-color') == 'base') {
-
-					// gets the bounding coordinates of the dot cursor as reference for the dot transition
-					let coordinates = dot.getBoundingClientRect();
-					let dotX = coordinates.left + coordinates.width * 0.5;
-					let dotY = coordinates.top + coordinates.height * 0.5;
-
-					// evaluates the color and position of the transition dot
-					motio.dotColor = body.getAttribute('data-color');
-					motio.dotEventX = dotX + pageXOffset;
-					motio.dotEventY = dotY + pageYOffset;
-
-					// evaluates the radius of the transition dot
-					let deltaX = dotX <= window.innerWidth * 0.5 ? window.innerWidth - dotX : dotX;
-					let deltaY = dotY <= window.innerHeight * 0.5 ? window.innerHeight - dotY : dotY;
-					motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
-
-					// creates the dot transition
-					new mojs.Shape({
-						className: 'dot-transition',
-						parent: preload,
-						shape: 'circle',
-						left: 0,
-						top: 0,
-						x: motio.dotEventX,
-						y: motio.dotEventY,
-						radius: { 0 : motio.dotRadius },
-						fill: colors[motio.dotColor],
-						duration: 1700,
-						easing: mojs.easing.expo.inout,
-						isForce3d: true,
-						onComplete: function() {
-							preloadComplete();
-						}
-					}).play();
-				} else {
-					preloadComplete();
-				}
-
-				// method fired when the site preload is complete
-				function preloadComplete() {
-
-					// displays the header and the media icons
-					body.querySelector('header').classList.add('display');
-					body.querySelector('.media').classList.add('display');
-
-					// removes the preload layout
-					body.removeChild(preload);
-
-					// delays page load
-					setTimeout(function () {
-
-						// init the smooth scroll
-						motio.smooth.init();
-
-						// initializes emergence js
-						emergence.init({
-							elemCushion: 1,
-							offsetTop: screen.small ? 90 : 110,
-							offsetBottom: screen.small ? -700 : 0,
-							throttle: 110,
-							callback: function(element, state) {
-								if (screen.small) {
-									return;
-								}
-
-								// animates the motio wrapper if present on the page
-								if (typeof motio.motioTween !== 'undefined' && typeof motio.motioTween[element.className] !== 'undefined') {
-									const tween = motio.motioTween[element.className];
-
-									if (state == 'visible' && !tween._props.playstate) {
-										tween._props.playstate = true;
-										tween.play();
-									}
-
-									if (state == 'reset' && tween._props.playstate) {
-										tween._props.playstate = false;
-										tween.playBackward();
-									}
-								}
-
-								// animates the i wrapper if present on the page
-								if (typeof motio.iTween !== 'undefined' && typeof motio.iTween[element.className] !== 'undefined') {
-									const tween = motio.iTween[element.className];
-
-									if (state == 'visible' && !tween._props.playstate) {
-										tween._props.playstate = true;
-										tween.play();
-									}
-
-									if (state == 'reset' && tween._props.playstate) {
-										tween._props.playstate = false;
-										tween.playBackward();
-									}
-								}
-
-								// animates the arc wrapper if present on the page
-								if (typeof motio.arcTween !== 'undefined' && typeof motio.arcTween[element.className] !== 'undefined') {
-									const tween = motio.arcTween[element.className];
-
-									if (state == 'visible' && !tween._props.playstate) {
-										tween._props.playstate = true;
-										tween.play();
-									}
-
-									if (state == 'reset' && tween._props.playstate) {
-										tween._props.playstate = false;
-										tween.playBackward();
-									}
-								}
-							}
-						});
-
-						// starts barba js
-						Barba.Pjax.start();
-					}, 1100);
-				}
-			}
-		}).play();
-	});
-
 	// defines the barba js page transition
 	Barba.Pjax.getTransition = function() {
 		return Barba.BaseTransition.extend({
@@ -1163,4 +1020,147 @@
 	if ('scrollRestoration' in history) {
 		history.scrollRestoration = 'manual';
 	}
+
+	// binds the load event to completely wait for the site to load
+	window.addEventListener('load', function() {
+
+		// gets the preload layout
+		const preload = body.querySelector('.preload');
+
+		// preload tween simulation
+		new mojs.Shape({
+			className: 'dot-simulation',
+			parent: preload,
+			shape: 'circle',
+			radius: { 0 : 50 },
+			fill: colors.vibrant,
+			easing: mojs.easing.expo.out,
+			duration: 800,
+			delay: 500,
+			isYoyo: true,
+			repeat: 1,
+			isForce3d: true,
+			onComplete: function() {
+
+				// depending on the targetted background color, builds a dot transition or simply displays the site
+				if (body.getAttribute('data-color') == 'base') {
+
+					// gets the bounding coordinates of the dot cursor as reference for the dot transition
+					let coordinates = dot.getBoundingClientRect();
+					let dotX = coordinates.left + coordinates.width * 0.5;
+					let dotY = coordinates.top + coordinates.height * 0.5;
+
+					// evaluates the color and position of the transition dot
+					motio.dotColor = body.getAttribute('data-color');
+					motio.dotEventX = dotX + pageXOffset;
+					motio.dotEventY = dotY + pageYOffset;
+
+					// evaluates the radius of the transition dot
+					let deltaX = dotX <= window.innerWidth * 0.5 ? window.innerWidth - dotX : dotX;
+					let deltaY = dotY <= window.innerHeight * 0.5 ? window.innerHeight - dotY : dotY;
+					motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
+
+					// creates the dot transition
+					new mojs.Shape({
+						className: 'dot-transition',
+						parent: preload,
+						shape: 'circle',
+						left: 0,
+						top: 0,
+						x: motio.dotEventX,
+						y: motio.dotEventY,
+						radius: { 0 : motio.dotRadius },
+						fill: colors[motio.dotColor],
+						duration: 1700,
+						easing: mojs.easing.expo.inout,
+						isForce3d: true,
+						onComplete: function() {
+							preloadComplete();
+						}
+					}).play();
+				} else {
+					preloadComplete();
+				}
+
+				// method fired when the site preload is complete
+				function preloadComplete() {
+
+					// displays the header and the media icons
+					body.querySelector('header').classList.add('display');
+					body.querySelector('.media').classList.add('display');
+
+					// removes the preload layout
+					body.removeChild(preload);
+
+					// delays page load
+					setTimeout(function () {
+
+						// init the smooth scroll
+						motio.smooth.init();
+
+						// initializes emergence js
+						emergence.init({
+							elemCushion: 1,
+							offsetTop: screen.small ? 90 : 110,
+							offsetBottom: screen.small ? -700 : 0,
+							throttle: 110,
+							callback: function(element, state) {
+								if (screen.small) {
+									return;
+								}
+
+								// animates the motio wrapper if present on the page
+								if (typeof motio.motioTween !== 'undefined' && typeof motio.motioTween[element.className] !== 'undefined') {
+									const tween = motio.motioTween[element.className];
+
+									if (state == 'visible' && !tween._props.playstate) {
+										tween._props.playstate = true;
+										tween.play();
+									}
+
+									if (state == 'reset' && tween._props.playstate) {
+										tween._props.playstate = false;
+										tween.playBackward();
+									}
+								}
+
+								// animates the i wrapper if present on the page
+								if (typeof motio.iTween !== 'undefined' && typeof motio.iTween[element.className] !== 'undefined') {
+									const tween = motio.iTween[element.className];
+
+									if (state == 'visible' && !tween._props.playstate) {
+										tween._props.playstate = true;
+										tween.play();
+									}
+
+									if (state == 'reset' && tween._props.playstate) {
+										tween._props.playstate = false;
+										tween.playBackward();
+									}
+								}
+
+								// animates the arc wrapper if present on the page
+								if (typeof motio.arcTween !== 'undefined' && typeof motio.arcTween[element.className] !== 'undefined') {
+									const tween = motio.arcTween[element.className];
+
+									if (state == 'visible' && !tween._props.playstate) {
+										tween._props.playstate = true;
+										tween.play();
+									}
+
+									if (state == 'reset' && tween._props.playstate) {
+										tween._props.playstate = false;
+										tween.playBackward();
+									}
+								}
+							}
+						});
+
+						// starts barba js
+						Barba.Pjax.start();
+					}, 1100);
+				}
+			}
+		}).play();
+	});
 })();
