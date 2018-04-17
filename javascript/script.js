@@ -841,7 +841,7 @@
 	// binds the mousemove event to make the dot follow the mouse cursor
 	document.addEventListener('mousemove', function(e) {
 
-		// init the dot on first move
+		// inits the dot on first move
 		if (!init) {
 			dot.classList.add('init');
 			init = true;
@@ -1095,8 +1095,10 @@
 					// delays page load
 					setTimeout(function () {
 
-						// init the smooth scroll
-						motio.smooth.init();
+						// inits the smooth scroll
+						if (typeof motio.smooth !== 'undefined') {
+							motio.smooth.init();
+						}
 
 						// initializes emergence js
 						emergence.init({
