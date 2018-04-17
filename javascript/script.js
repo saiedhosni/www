@@ -161,14 +161,14 @@
 						mojs.helpers.extend({
 							el: '.shape-letter-m-arc1',
 							strokeDasharray: 466.61,
-							strokeDashoffset: { [-466.61] : 0 }
+							strokeDashoffset: { 466.61 : 933.22 }
 						}, motioOptions)
 					),
 					new mojs.Html(
 						mojs.helpers.extend({
 							el: '.shape-letter-m-arc2',
 							strokeDasharray: 466.61,
-							strokeDashoffset: { [-466.61] : 0 },
+							strokeDashoffset: { 466.61 : 933.22 },
 							delay: motioOptions.interval
 						}, motioOptions)
 					),
@@ -186,7 +186,7 @@
 						el: '.shape-letter-o',
 						transformOrigin: '244px 126px',
 						strokeDasharray: 438.81,
-						strokeDashoffset: { [-438.81] : 0 },
+						strokeDashoffset: { 438.81 : 877.62 },
 						angleZ: { [-180] : 0 }
 					}, motioOptions)
 				),
@@ -195,7 +195,7 @@
 						mojs.helpers.extend({
 							el: '.shape-letter-t-horizontal',
 							strokeDasharray: 170.878,
-							strokeDashoffset: { [-170.878] : 0 },
+							strokeDashoffset: { 170.878 : 341.756 },
 							strokeWidth: 60.262,
 							delay: motioOptions.interval
 						}, motioOptions)
@@ -204,7 +204,7 @@
 						mojs.helpers.extend({
 							el: '.shape-letter-t-vertical',
 							strokeDasharray: 360.33,
-							strokeDashoffset: { [-360.33] : 0 }
+							strokeDashoffset: { 360.33 : 720.66 }
 						}, motioOptions)
 					)
 				),
@@ -314,7 +314,7 @@
 					playstate: false,
 					el: path,
 					strokeDasharray: length,
-					strokeDashoffset: { [-length] : 0 },
+					strokeDashoffset: { [length] : length * 2 },
 					strokeWidth: 28,
 					duration: 1400,
 					easing: mojs.easing.expo.inout,
@@ -750,7 +750,7 @@
 
 			let letterIn = new mojs.Html(
 				mojs.helpers.extend({
-					strokeDashoffset: { [-length] : 0 },
+					strokeDashoffset: { [length] : length * 2 },
 					angleZ: { 90 : 360 }
 				}, letterOptions)
 			);
@@ -760,7 +760,6 @@
 					strokeDashoffset: { 0 : length },
 					angleZ: { 0 : 180 },
 					onComplete: function() {
-						this.el.style['strokeDashoffset'] = -length;
 						this._props.playstate = false;
 						letterIn.play();
 					}
