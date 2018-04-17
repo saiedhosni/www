@@ -993,7 +993,7 @@
 		Array.from(document.querySelectorAll('.char')).forEach(function(char) {
 			textTween.add(new mojs.Html({
 				el: char,
-				y: { 42 : 0 },
+				y: { 50 : 0 },
 				easing: mojs.easing.quint.out,
 				duration: 1000,
 				delay: 'rand(100, 300)',
