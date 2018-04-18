@@ -36,7 +36,7 @@
 		stroke: colors.base,
 		strokeWidth: 10,
 		strokeDasharray: '100%',
-		strokeDashoffset: { '100%' : 0 },
+		strokeDashoffset: { '300%' : '200%' },
 		y: -19,
 		duration: 500,
 		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0')
@@ -46,7 +46,7 @@
 	const motio_out = {
 		delay: 3500,
 		duration: 250,
-		strokeDashoffset: '-100%',
+		strokeDashoffset: '100%',
 		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0')
 	};
 
@@ -242,7 +242,7 @@
 		stroke: { 'transparent' : colors.base },
 		strokeWidth: 0.71,
 		strokeDasharray: '100%',
-		strokeDashoffset: { '-100%' : 0 },
+		strokeDashoffset: { '100%' : '200%' },
 		y: -56,
 		duration: 500,
 		easing: mojs.easing.ease.in
@@ -358,7 +358,7 @@
 		stroke: [colors.bright, colors.vibrant],
 		strokeWidth: { 'rand(1, 4)' : 0 },
 		strokeDasharray: '100%',
-		strokeDashoffset: { '-100%': '100%' },
+		strokeDashoffset: { '100%': '300%' },
 		opacity: { 1 : 0, curve: linearCurve },
 		x: 'rand(-110, -20)',
 		y: 'rand(-70, -50)',
