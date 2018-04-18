@@ -1,3 +1,6 @@
+<?php
+	if (!isset($_SERVER['HTTP_X_BARBA'])) {
+?>
 <!doctype html>
 <html lang="<?php echo LANGUAGE; ?>">
 	<head>
@@ -32,16 +35,22 @@
 			require_once 'module/header.php';
 			require_once 'module/media.php';
 		?>
-		<main class="barba-container" data-namespace="<?php echo NAME; ?>">
-			<div class="smooth-scroll">
-			<?php
-				require_once PATH;
-			?>
-			</div>
-			<?php
-				require_once 'module/footer.php';
-			?>
-		</main>
+<?php
+	}
+?>
+<main class="barba-container" data-namespace="<?php echo NAME; ?>" data-title="<?php echo METADATA[PAGE][0] ?? ''; ?>">
+	<div class="smooth-scroll">
+	<?php
+		require_once PATH;
+	?>
+	</div>
+	<?php
+		require_once 'module/footer.php';
+	?>
+</main>
+<?php
+	if (!isset($_SERVER['HTTP_X_BARBA'])) {
+?>
 		<div class="dot"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="5.15"/></svg></div>
 		<script type="text/javascript" src="/javascript/mo.min.js"></script>
 		<script type="text/javascript" src="/javascript/barba.min.js"></script>
@@ -51,3 +60,6 @@
 		<script type="text/javascript" src="/javascript/script.min.js"></script>
 	</body>
 </html>
+<?php
+	}
+?>

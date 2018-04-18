@@ -574,7 +574,10 @@
 	});
 
 	// manages the newPageReady event of barba js
-	Barba.Dispatcher.on('newPageReady', function(currentStatus) {
+	Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, HTMLElementContainer) {
+
+		// sets the page title
+		document.title = HTMLElementContainer.getAttribute('data-title');
 
 		// sets some body data attributes to allow specific style override per page
 		body.setAttribute('data-page', currentStatus.namespace);
