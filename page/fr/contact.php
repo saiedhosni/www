@@ -10,7 +10,7 @@
 			<p data-emergence="hidden" class="shift">Envie de nous confier votre projet, lancer un nouveau site web ou construire une identité de marque mémorable, laissez-nous un petit mot. Nous serions ravis de travailler avec vous !</p>
 		</div>
 	</div>
-	<div class="row align-center">
+	<div class="row align-center hide-for-small-only">
 		<div class="column medium-9 large-8">
 			<p data-emergence="hidden" class="shift"><strong class="type">Hello, quels sont vos besoins ?</strong></p>
 			<form method="post">
@@ -29,6 +29,11 @@
 		</div>
 	</div>
 	<div class="row align-center">
+		<div class="column small-12 medium-9 large-4 show-for-small-only">
+			<p data-emergence="hidden" class="shift"><strong>Hello</strong></p>
+			<p class="no-margin shift" data-emergence="hidden">Une seule et même adresse pour contacter le studio <span class="emoji">✌</span></p>
+			<p class="no-margin shift" data-emergence="hidden"><small><a href="mailto:hello@studiomotio.com" target="_blank" class="highlight">hello@studiomotio.com</a></small></p>
+		</div>
 		<div class="column small-12 medium-9 large-4">
 			<p data-emergence="hidden" class="shift"><strong>Collaboration</strong></p>
 			<p class="no-margin shift" data-emergence="hidden">Nous sommes toujours intéressés de construire de nouveaux partenariats. Vous avez du talent et vous souhaitez le partager avec nous, rejoignez le collectif !</p>

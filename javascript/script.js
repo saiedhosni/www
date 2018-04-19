@@ -395,6 +395,11 @@
 		},
 		onEnterCompleted: function() {
 
+			// disables the type writer on small touch devices
+			if (screen.small && screen.touch) {
+				return;
+			}
+
 			// gets the text to type
 			let text = document.querySelector('.type');
 			let strings = text.innerText.split(',');

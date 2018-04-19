@@ -10,7 +10,7 @@
 			<p data-emergence="hidden" class="shift">Want to entrust us with your project, launch a new website or build a memorable brand identity, leave us a note. We would love to work with you!</p>
 		</div>
 	</div>
-	<div class="row align-center">
+	<div class="row align-center hide-for-small-only">
 		<div class="column medium-9 large-8">
 			<p data-emergence="hidden" class="shift"><strong class="type">Hello, what are your needs?</strong></p>
 			<form method="post">
@@ -29,6 +29,11 @@
 		</div>
 	</div>
 	<div class="row align-center">
+		<div class="column small-12 medium-9 large-4 show-for-small-only">
+			<p data-emergence="hidden" class="shift"><strong>Hello</strong></p>
+			<p class="no-margin shift" data-emergence="hidden">One and the same address to contact the studio <span class="emoji">✌</span></p>
+			<p class="no-margin shift" data-emergence="hidden"><small><a href="mailto:hello@studiomotio.com" target="_blank" class="highlight">hello@studiomotio.com</a></small></p>
+		</div>
 		<div class="column small-12 medium-9 large-4">
 			<p data-emergence="hidden" class="shift"><strong>Collaboration</strong></p>
 			<p class="no-margin shift" data-emergence="hidden">We are always very interested in building new partnerships. You have talent and you want to share it with us, join the collective!</p>
