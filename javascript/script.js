@@ -390,7 +390,7 @@
 				});
 
 				// sends the contact message to the studio
-				request.send('message=' + message.value);
+				request.send(`message=${message.value}`);
 			});
 		},
 		onEnterCompleted: function() {
@@ -423,7 +423,7 @@
 
 					typewriter.destroy();
 				}
-			}).type(strings[0] + ',').pause(500).type(strings[1]);
+			}).type(`${strings[0]},`).pause(500).type(strings[1]);
 		}
 	}).init();
 
@@ -598,7 +598,7 @@
 				active.classList.remove('active');
 			}
 
-			let item = document.querySelector('[data-target="' + currentStatus.namespace + '"]');
+			let item = document.querySelector(`[data-target="${currentStatus.namespace}"]`);
 
 			if (item !== null) {
 				item.classList.add('active');
@@ -902,8 +902,8 @@
 		tempY += (deltaY - radius) * 0.27;
 
 		// sets the dot position
-		dot.style.left = Math.round(tempX) + 'px';
-		dot.style.top = Math.round(tempY) + 'px';
+		dot.style.left = `${Math.round(tempX)}px`;
+		dot.style.top = `${Math.round(tempY)}px`;
 
 		// makes this function run at 60fps
 		requestAnimationFrame(dotframe);
@@ -981,7 +981,7 @@
 		// loops through each words and cuts each characters in multiple span
 		words.forEach(function(word) {
 			word = word.replace(/([^x00-x80]|\w|'|,|!|&|-)/g, '<span class="char">$&</span>');
-			element.innerHTML += '<span class="word">' + word + '</span> ';
+			element.innerHTML += `<span class="word">${word}</span> `;
 		});
 
 		// checks if the user is on the index page
