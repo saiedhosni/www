@@ -366,7 +366,7 @@
 				request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 				request.addEventListener('readystatechange', function() {
 					if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
-						if (request.responseText == 'posted') {
+						if (request.responseText === 'posted') {
 							form.classList.remove('pending');
 							form.classList.add('state', 'delivered');
 
@@ -416,7 +416,7 @@
 				callback: function() {
 					const textarea = document.querySelector('textarea');
 
-					if (textarea != null && textarea !== document.activeElement && window.scrollY == 0) {
+					if (textarea !== null && textarea !== document.activeElement && window.scrollY === 0) {
 						textarea.focus();
 						textarea.setSelectionRange(0, 0);
 					}
@@ -493,7 +493,7 @@
 				delay: 'rand(1000, 2000)',
 				isForce3d: true,
 				onComplete: function() {
-					if (document.querySelector('.illustration-404') != null) {
+					if (document.querySelector('.illustration-404') !== null) {
 						this.generate().replay();
 					} else {
 						this.stop();
@@ -514,8 +514,8 @@
 
 		// evaluates the color and position of the transition dot
 		motio.dotColor = link.getAttribute('data-dot') || 'base';
-		motio.dotEventX = e.pageX != 0 ? e.pageX : coordinates.left + coordinates.width * 0.5 + pageXOffset;
-		motio.dotEventY = e.pageY != 0 ? e.pageY : coordinates.top + coordinates.height * 0.5 + pageYOffset;
+		motio.dotEventX = e.pageX !== 0 ? e.pageX : coordinates.left + coordinates.width * 0.5 + pageXOffset;
+		motio.dotEventY = e.pageY !== 0 ? e.pageY : coordinates.top + coordinates.height * 0.5 + pageYOffset;
 
 		// evaluates the radius of the transition dot
 		let deltaX = e.clientX <= window.innerWidth * 0.5 ? window.innerWidth - e.clientX : e.clientX;
@@ -523,10 +523,10 @@
 		motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
 
 		// manages the mobile menu display if it is opened
-		if (document.querySelector('.menu-trigger:checked') != null) {
+		if (document.querySelector('.menu-trigger:checked') !== null) {
 			let active = document.querySelector('.menu.mobile ul > li.active');
 
-			if (active != null) {
+			if (active !== null) {
 				active.classList.add('out');
 			}
 
@@ -539,7 +539,7 @@
 			}
 
 			setTimeout(function () {
-				if (active != null) {
+				if (active !== null) {
 					active.classList.remove('active', 'out');
 				}
 
@@ -591,16 +591,16 @@
 		body.setAttribute('data-color', motio.dotColor);
 
 		// manages the mobile menu display if it is closed
-		if (document.querySelector('.menu-trigger:checked') == null) {
+		if (document.querySelector('.menu-trigger:checked') === null) {
 			let active = document.querySelector('.menu.mobile ul > li.active');
 
-			if (active != null) {
+			if (active !== null) {
 				active.classList.remove('active');
 			}
 
 			let item = document.querySelector('[data-target="' + currentStatus.namespace + '"]');
 
-			if (item != null) {
+			if (item !== null) {
 				item.classList.add('active');
 			}
 		}
@@ -784,7 +784,7 @@
 
 			// shows the "o" letter of the logo on leave
 			logo.addEventListener('mouseleave', function() {
-				if (letterOut._props.playstate == true) {
+				if (letterOut._props.playstate === true) {
 					letterOut.playBackward();
 				}
 			});
@@ -929,11 +929,11 @@
 				dot.classList.remove('link');
 
 				// prevents the user to reload the page if the location is the same
-				if (this.href == window.location.href) {
+				if (this.href === window.location.href) {
 					e.preventDefault();
 
 					// do nothing if the user is already at the top of the page
-					if (window.scrollY == 0) {
+					if (window.scrollY === 0) {
 						return;
 					}
 
@@ -968,7 +968,7 @@
 		let element = document.querySelector('h1');
 
 		// exits if there is no title on the page
-		if (element == null) {
+		if (element === null) {
 			return;
 		}
 
@@ -985,7 +985,7 @@
 		});
 
 		// checks if the user is on the index page
-		let home = body.getAttribute('data-page') == 'index';
+		let home = body.getAttribute('data-page') === 'index';
 
 		// creates the timeline
 		let textTween = new mojs.Timeline({
@@ -1394,7 +1394,7 @@
 			onComplete: function() {
 
 				// depending on the targetted background color, builds a dot transition or simply displays the site
-				if (body.getAttribute('data-color') == 'base') {
+				if (body.getAttribute('data-color') === 'base') {
 
 					// gets the bounding coordinates of the dot cursor as reference for the dot transition
 					let coordinates = dot.getBoundingClientRect();
@@ -1466,12 +1466,12 @@
 								if (typeof motio.motioTween !== 'undefined' && typeof motio.motioTween[element.className] !== 'undefined') {
 									const tween = motio.motioTween[element.className];
 
-									if (state == 'visible' && !tween._props.playstate) {
+									if (state === 'visible' && !tween._props.playstate) {
 										tween._props.playstate = true;
 										tween.play();
 									}
 
-									if (state == 'reset' && tween._props.playstate) {
+									if (state === 'reset' && tween._props.playstate) {
 										tween._props.playstate = false;
 										tween.playBackward();
 									}
@@ -1481,12 +1481,12 @@
 								if (typeof motio.iTween !== 'undefined' && typeof motio.iTween[element.className] !== 'undefined') {
 									const tween = motio.iTween[element.className];
 
-									if (state == 'visible' && !tween._props.playstate) {
+									if (state === 'visible' && !tween._props.playstate) {
 										tween._props.playstate = true;
 										tween.play();
 									}
 
-									if (state == 'reset' && tween._props.playstate) {
+									if (state === 'reset' && tween._props.playstate) {
 										tween._props.playstate = false;
 										tween.playBackward();
 									}
@@ -1496,12 +1496,12 @@
 								if (typeof motio.arcTween !== 'undefined' && typeof motio.arcTween[element.className] !== 'undefined') {
 									const tween = motio.arcTween[element.className];
 
-									if (state == 'visible' && !tween._props.playstate) {
+									if (state === 'visible' && !tween._props.playstate) {
 										tween._props.playstate = true;
 										tween.play();
 									}
 
-									if (state == 'reset' && tween._props.playstate) {
+									if (state === 'reset' && tween._props.playstate) {
 										tween._props.playstate = false;
 										tween.playBackward();
 									}
