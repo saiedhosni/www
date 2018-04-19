@@ -560,20 +560,8 @@
 		// determines if the user is navigating with backward/forward arrows
 		if (!motio.clickEvent) {
 
-			// gets the bounding coordinates of the dot cursor as reference for the dot transition
-			let coordinates = dot.getBoundingClientRect();
-			let dotX = coordinates.left + coordinates.width * 0.5;
-			let dotY = coordinates.top + coordinates.height * 0.5;
-
-			// evaluates the color and position of the transition dot
-			motio.dotColor = body.getAttribute('data-color');
-			motio.dotEventX = dotX + pageXOffset;
-			motio.dotEventY = dotY + pageYOffset;
-
-			// evaluates the radius of the transition dot
-			let deltaX = dotX <= window.innerWidth * 0.5 ? window.innerWidth - dotX : dotX;
-			let deltaY = dotY <= window.innerHeight * 0.5 ? window.innerHeight - dotY : dotY;
-			motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
+			// tunes the dot for the next transition
+			motio.dotTune();
 		}
 
 		// resets the click event
@@ -911,6 +899,25 @@
 
 	// run the dot frame
 	dotframe();
+
+	// method to sets the global dot position and appearance
+	(motio.dotTune = function(color = body.getAttribute('data-color')) {
+
+		// gets the bounding coordinates of the dot cursor as reference for the dot transition
+		let coordinates = dot.getBoundingClientRect();
+		let dotX = coordinates.left + coordinates.width * 0.5;
+		let dotY = coordinates.top + coordinates.height * 0.5;
+
+		// evaluates the color and position of the transition dot
+		motio.dotColor = color;
+		motio.dotEventX = dotX + pageXOffset;
+		motio.dotEventY = dotY + pageYOffset;
+
+		// evaluates the radius of the transition dot
+		let deltaX = dotX <= window.innerWidth * 0.5 ? window.innerWidth - dotX : dotX;
+		let deltaY = dotY <= window.innerHeight * 0.5 ? window.innerHeight - dotY : dotY;
+		motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
+	});
 
 	// manages the dot cursor size for all links
 	(motio.bindDotCursor = function(transitionCompleted) {
@@ -1396,20 +1403,8 @@
 				// depending on the targetted background color, builds a dot transition or simply displays the site
 				if (body.getAttribute('data-color') === 'base') {
 
-					// gets the bounding coordinates of the dot cursor as reference for the dot transition
-					let coordinates = dot.getBoundingClientRect();
-					let dotX = coordinates.left + coordinates.width * 0.5;
-					let dotY = coordinates.top + coordinates.height * 0.5;
-
-					// evaluates the color and position of the transition dot
-					motio.dotColor = body.getAttribute('data-color');
-					motio.dotEventX = dotX + pageXOffset;
-					motio.dotEventY = dotY + pageYOffset;
-
-					// evaluates the radius of the transition dot
-					let deltaX = dotX <= window.innerWidth * 0.5 ? window.innerWidth - dotX : dotX;
-					let deltaY = dotY <= window.innerHeight * 0.5 ? window.innerHeight - dotY : dotY;
-					motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
+					// tunes the dot for the next transition
+					motio.dotTune();
 
 					// creates the dot transition
 					new mojs.Shape({
