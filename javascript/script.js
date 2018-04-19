@@ -317,7 +317,7 @@
 					el: path,
 					strokeDasharray: length,
 					strokeDashoffset: { [length] : length * 2 },
-					strokeWidth: 28,
+					strokeWidth: device.large ? 28 : 40,
 					duration: 1400,
 					easing: mojs.easing.expo.inout,
 					isForce3d: true
