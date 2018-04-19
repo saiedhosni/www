@@ -5,8 +5,8 @@
 	// web developer console signature
 	console.log('%c Made with ❤︎️ by Studio MOTIO — https://www.studiomotio.com', 'background:#000;color:#fff;padding:0.5em 1em;line-height:2;');
 
-	// screen size detection (based on Foundation build)
-	let screen = {
+	// device detection (screen sizes based on Foundation build)
+	let device = {
 		small: window.innerWidth < 640,
 		medium: window.innerWidth >= 640 && window.innerWidth < 1024,
 		large: window.innerWidth >= 1024,
@@ -41,8 +41,8 @@
 	// global elements
 	let body = document.querySelector('body');
 
-	// detect touch screen and add a css class to the body
-	if (screen.touch) {
+	// detect touch device and add a css class to the body
+	if (device.touch) {
 		body.classList.add('touch');
 	}
 
@@ -129,8 +129,8 @@
 
 			motio.oTweenEnter = new mojs.Html(
 				mojs.helpers.extend({
-					strokeDashoffset: screen.large ? { [length] : 0 } : { [length] : (length / 3) * 2 },
-					angleZ: screen.large ? { 0 : 360 } : 0
+					strokeDashoffset: device.large ? { [length] : 0 } : { [length] : (length / 3) * 2 },
+					angleZ: device.large ? { 0 : 360 } : 0
 				}, pathOptions)
 			);
 		},
@@ -396,7 +396,7 @@
 		onEnterCompleted: function() {
 
 			// disables the type writer on small touch devices
-			if (screen.small && screen.touch) {
+			if (device.small && device.touch) {
 				return;
 			}
 
@@ -803,7 +803,7 @@
 
 		// displays the footer content and animate the footer logo depending on the scroll position
 		throttle = window.requestAnimationFrame(function() {
-			if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (screen.large ? 98 : 95)) {
+			if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (device.large ? 98 : 95)) {
 				if (!visibility) {
 					document.querySelector('footer').classList.add('show');
 					visibility = true;
@@ -820,14 +820,14 @@
 		});
 	});
 
-	// binds the resize event to properly updates screen resolution object
+	// binds the resize event to properly updates device object
 	let debounce;
 
 	window.addEventListener('resize', function() {
 		clearTimeout(debounce);
 
 		debounce = setTimeout(function() {
-			screen = {
+			device = {
 				small: window.innerWidth < 640,
 				medium: window.innerWidth >= 640 && window.innerWidth < 1024,
 				large: window.innerWidth >= 1024,
@@ -1014,8 +1014,8 @@
 		textTween.play();
 	});
 
-	// builds the smooth scrolling for non-touch screens
-	if (!screen.touch) {
+	// builds the smooth scrolling for non-touch devices
+	if (!device.touch) {
 		motio.smooth = new Smooth({
 			section: document.querySelector('.smooth-scroll'),
 			native: true,
@@ -1454,11 +1454,11 @@
 						// initializes emergence js
 						emergence.init({
 							elemCushion: 1,
-							offsetTop: screen.small ? 90 : 110,
-							offsetBottom: screen.small ? -700 : 0,
+							offsetTop: device.small ? 90 : 110,
+							offsetBottom: device.small ? -700 : 0,
 							throttle: 110,
 							callback: function(element, state) {
-								if (screen.small) {
+								if (device.small) {
 									return;
 								}
 
