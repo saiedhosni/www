@@ -509,18 +509,8 @@
 		// defines that a click event from mouse/keyboard has been raised
 		motio.clickEvent = true;
 
-		// gets the coordinates of the current link element
-		let coordinates = link.getBoundingClientRect();
-
-		// evaluates the color and position of the transition dot
-		motio.dotColor = link.getAttribute('data-dot') || 'base';
-		motio.dotEventX = e.pageX !== 0 ? e.pageX : coordinates.left + coordinates.width * 0.5 + pageXOffset;
-		motio.dotEventY = e.pageY !== 0 ? e.pageY : coordinates.top + coordinates.height * 0.5 + pageYOffset;
-
-		// evaluates the radius of the transition dot
-		let deltaX = e.clientX <= window.innerWidth * 0.5 ? window.innerWidth - e.clientX : e.clientX;
-		let deltaY = e.clientY <= window.innerHeight * 0.5 ? window.innerHeight - e.clientY : e.clientY;
-		motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
+		// tunes the dot for the next transition
+		motio.dotTune(link.getAttribute('data-dot') || 'base', e);
 
 		// manages the mobile menu display if it is opened
 		if (document.querySelector('.menu-trigger:checked') !== null) {
@@ -901,7 +891,7 @@
 	dotframe();
 
 	// method to sets the global dot position and appearance
-	(motio.dotTune = function(color = body.getAttribute('data-color')) {
+	(motio.dotTune = function(color = body.getAttribute('data-color'), event = null) {
 
 		// gets the bounding coordinates of the dot cursor as reference for the dot transition
 		let coordinates = dot.getBoundingClientRect();
@@ -910,10 +900,15 @@
 
 		// evaluates the color and position of the transition dot
 		motio.dotColor = color;
-		motio.dotEventX = dotX + pageXOffset;
-		motio.dotEventY = dotY + pageYOffset;
+		motio.dotEventX = event !== null && event.pageX !== 0 ? event.pageX : dotX + pageXOffset;
+		motio.dotEventY = event !== null && event.pageY !== 0 ? event.pageY : dotY + pageYOffset;
 
 		// evaluates the radius of the transition dot
+		if (event !== null) {
+			dotX = event.clientX;
+			dotY = event.clientY;
+		}
+
 		let deltaX = dotX <= window.innerWidth * 0.5 ? window.innerWidth - dotX : dotX;
 		let deltaY = dotY <= window.innerHeight * 0.5 ? window.innerHeight - dotY : dotY;
 		motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
