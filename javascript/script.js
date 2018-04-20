@@ -1449,7 +1449,7 @@
 					body.removeChild(preload);
 
 					// delays page load
-					setTimeout(function () {
+					setTimeout(function() {
 
 						// inits the smooth scroll
 						if (typeof motio.smooth !== 'undefined') {
