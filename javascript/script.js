@@ -15,7 +15,7 @@
 
 	// global motio object for global tweens
 	window.motio = {
-		preload: false,
+		preloaded: false,
 		transitionEngaged: false
 	};
 
@@ -594,12 +594,12 @@
 	Barba.Dispatcher.on('transitionCompleted', function() {
 
 		// in preload mode, only fires emergence and the text effect
-		if (!motio.preload) {
+		if (!motio.preloaded) {
 			emergence.engage();
 			motio.textEffect();
 
 			// indicates that the preload site has complete
-			motio.preload = true;
+			motio.preloaded = true;
 			return;
 		}
 
