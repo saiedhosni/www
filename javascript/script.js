@@ -551,7 +551,7 @@
 		if (!motio.clickEvent) {
 
 			// tunes the dot for the next transition
-			motio.dotTune();
+			motio.dotTune(motio.dotPreviousColor);
 		}
 
 		// resets the click event
@@ -897,6 +897,9 @@
 		let coordinates = dot.getBoundingClientRect();
 		let dotX = coordinates.left + coordinates.width * 0.5;
 		let dotY = coordinates.top + coordinates.height * 0.5;
+
+		// stores the latest dot color
+		motio.dotPreviousColor = typeof motio.dotPreviousColor === 'undefined' ? color : motio.dotColor;
 
 		// evaluates the color and position of the transition dot
 		motio.dotColor = color;
