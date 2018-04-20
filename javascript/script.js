@@ -15,7 +15,8 @@
 
 	// global motio object for global tweens
 	window.motio = {
-		preload: false
+		preload: false,
+		transitionEngaged: false
 	};
 
 	// motion colors based on main theme
@@ -61,6 +62,9 @@
 			onLeave: function() {
 				return new Promise(function(resolve) {
 
+					// indicates that a transition is engaged
+					motio.transitionEngaged = true;
+
 					// disables the body scrollbars
 					body.classList.add('no-scroll');
 
@@ -101,8 +105,10 @@
 					// scroll to the top when the new page is ready
 					window.scrollTo(0, 0);
 
+					// indicates that the transition is done
 					resolve();
 					transition.done();
+					motio.transitionEngaged = false;
 				});
 			}
 		});
@@ -997,6 +1003,12 @@
 			delay: home ? 1100 : 0,
 			onStart: function() {
 				setTimeout(function () {
+
+					// discards shift effect if a transition is engaged before the page is fully loaded
+					if (motio.transitionEngaged) {
+						return;
+					}
+
 					Array.from(document.querySelectorAll('.shift')).forEach(function(element) {
 						element.classList.remove('shift');
 					});
