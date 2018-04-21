@@ -1526,7 +1526,7 @@
 
 						// restores the body scrollbars
 						body.classList.remove('no-scroll');
-					}, 1200);
+					}, 900);
 				}
 			}
 		});
