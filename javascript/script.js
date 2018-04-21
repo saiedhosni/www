@@ -595,7 +595,69 @@
 
 		// in preload mode, only fires emergence and the text effect
 		if (!motio.preloaded) {
+
+			// initializes emergence js
+			emergence.init({
+				elemCushion: 1,
+				offsetTop: device.small ? 90 : 110,
+				offsetBottom: device.small ? -700 : 0,
+				throttle: 100,
+				callback: function(element, state) {
+					if (device.small) {
+						return;
+					}
+
+					// animates the motio wrapper if present on the page
+					if (typeof motio.motioTween !== 'undefined' && typeof motio.motioTween[element.className] !== 'undefined') {
+						const tween = motio.motioTween[element.className];
+
+						if (state === 'visible' && !tween._props.playstate) {
+							tween._props.playstate = true;
+							tween.play();
+						}
+
+						if (state === 'reset' && tween._props.playstate) {
+							tween._props.playstate = false;
+							tween.playBackward();
+						}
+					}
+
+					// animates the i wrapper if present on the page
+					if (typeof motio.iTween !== 'undefined' && typeof motio.iTween[element.className] !== 'undefined') {
+						const tween = motio.iTween[element.className];
+
+						if (state === 'visible' && !tween._props.playstate) {
+							tween._props.playstate = true;
+							tween.play();
+						}
+
+						if (state === 'reset' && tween._props.playstate) {
+							tween._props.playstate = false;
+							tween.playBackward();
+						}
+					}
+
+					// animates the arc wrapper if present on the page
+					if (typeof motio.arcTween !== 'undefined' && typeof motio.arcTween[element.className] !== 'undefined') {
+						const tween = motio.arcTween[element.className];
+
+						if (state === 'visible' && !tween._props.playstate) {
+							tween._props.playstate = true;
+							tween.play();
+						}
+
+						if (state === 'reset' && tween._props.playstate) {
+							tween._props.playstate = false;
+							tween.playBackward();
+						}
+					}
+				}
+			});
+
+			// engage emergence
 			emergence.engage();
+
+			// animates the main title
 			motio.textEffect();
 
 			// indicates that the preload site has complete
@@ -1406,6 +1468,9 @@
 	// binds the load event to completely wait for the site to load
 	window.addEventListener('load', function() {
 
+		// disables the body scrollbars
+		body.classList.add('no-scroll');
+
 		// creates the timeline
 		let preloadTimeline = new mojs.Timeline({
 			onComplete: function() {
@@ -1456,67 +1521,12 @@
 							motio.smooth.init();
 						}
 
-						// initializes emergence js
-						emergence.init({
-							elemCushion: 1,
-							offsetTop: device.small ? 90 : 110,
-							offsetBottom: device.small ? -700 : 0,
-							throttle: 110,
-							callback: function(element, state) {
-								if (device.small) {
-									return;
-								}
-
-								// animates the motio wrapper if present on the page
-								if (typeof motio.motioTween !== 'undefined' && typeof motio.motioTween[element.className] !== 'undefined') {
-									const tween = motio.motioTween[element.className];
-
-									if (state === 'visible' && !tween._props.playstate) {
-										tween._props.playstate = true;
-										tween.play();
-									}
-
-									if (state === 'reset' && tween._props.playstate) {
-										tween._props.playstate = false;
-										tween.playBackward();
-									}
-								}
-
-								// animates the i wrapper if present on the page
-								if (typeof motio.iTween !== 'undefined' && typeof motio.iTween[element.className] !== 'undefined') {
-									const tween = motio.iTween[element.className];
-
-									if (state === 'visible' && !tween._props.playstate) {
-										tween._props.playstate = true;
-										tween.play();
-									}
-
-									if (state === 'reset' && tween._props.playstate) {
-										tween._props.playstate = false;
-										tween.playBackward();
-									}
-								}
-
-								// animates the arc wrapper if present on the page
-								if (typeof motio.arcTween !== 'undefined' && typeof motio.arcTween[element.className] !== 'undefined') {
-									const tween = motio.arcTween[element.className];
-
-									if (state === 'visible' && !tween._props.playstate) {
-										tween._props.playstate = true;
-										tween.play();
-									}
-
-									if (state === 'reset' && tween._props.playstate) {
-										tween._props.playstate = false;
-										tween.playBackward();
-									}
-								}
-							}
-						});
-
 						// starts barba js
 						Barba.Pjax.start();
-					}, 1100);
+
+						// restores the body scrollbars
+						body.classList.remove('no-scroll');
+					}, 1200);
 				}
 			}
 		});
