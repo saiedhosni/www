@@ -607,39 +607,25 @@
 						return;
 					}
 
-					// animates the motio wrapper if present on the page
-					if (typeof motio.motioTween !== 'undefined' && typeof motio.motioTween[element.className] !== 'undefined') {
-						const tween = motio.motioTween[element.className];
+					// gets the page namespace
+					const page = body.getAttribute('data-page');
 
-						if (state === 'visible' && !tween._props.playstate) {
-							tween._props.playstate = true;
-							tween.play();
-						}
+					// gets the tween object depending on the page
+					let tweenObject = null;
 
-						if (state === 'reset' && tween._props.playstate) {
-							tween._props.playstate = false;
-							tween.playBackward();
-						}
+					if (page === 'studio') {
+						tweenObject = motio.motioTween;
+					} else if (page === 'services') {
+						tweenObject = motio.iTween;
+					} else if (page === 'contact') {
+						tweenObject = motio.arcTween;
+					} else {
+						return;
 					}
 
-					// animates the i wrapper if present on the page
-					if (typeof motio.iTween !== 'undefined' && typeof motio.iTween[element.className] !== 'undefined') {
-						const tween = motio.iTween[element.className];
-
-						if (state === 'visible' && !tween._props.playstate) {
-							tween._props.playstate = true;
-							tween.play();
-						}
-
-						if (state === 'reset' && tween._props.playstate) {
-							tween._props.playstate = false;
-							tween.playBackward();
-						}
-					}
-
-					// animates the arc wrapper if present on the page
-					if (typeof motio.arcTween !== 'undefined' && typeof motio.arcTween[element.className] !== 'undefined') {
-						const tween = motio.arcTween[element.className];
+					// plays the specified tween if the element is present on the page
+					if (typeof tweenObject[element.className] !== 'undefined') {
+						const tween = tweenObject[element.className];
 
 						if (state === 'visible' && !tween._props.playstate) {
 							tween._props.playstate = true;
