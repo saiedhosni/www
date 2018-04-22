@@ -1451,79 +1451,97 @@
 		diagonalLines
 	);
 
+	// creates the timeline
+	let preloadTimeline = new mojs.Timeline({
+		playstate: false,
+		onStart: function() {
+			this._o.playstate = true;
+		},
+		onComplete: function() {
+
+			// depending on the targetted background color, builds a dot transition or simply displays the site
+			if (body.getAttribute('data-color') === 'base') {
+
+				// tunes the dot for the next transition
+				motio.dotTune();
+
+				// creates the dot transition
+				new mojs.Shape({
+					className: 'dot-transition',
+					parent: preload,
+					shape: 'circle',
+					left: 0,
+					top: 0,
+					x: motio.dotEventX,
+					y: motio.dotEventY,
+					radius: { 0 : motio.dotRadius },
+					fill: colors[motio.dotColor],
+					duration: 1700,
+					easing: mojs.easing.expo.inout,
+					isForce3d: true,
+					onComplete: function() {
+						preloadComplete();
+					}
+				}).play();
+			} else {
+				preloadComplete();
+			}
+
+			// method fired when the site preload is complete
+			function preloadComplete() {
+
+				// displays the header and the media icons
+				body.querySelector('header').classList.add('display');
+				body.querySelector('.media').classList.add('display');
+
+				// removes the preload layout
+				body.removeChild(preload);
+
+				// delays page load
+				setTimeout(function() {
+
+					// inits the smooth scroll
+					if (typeof motio.smooth !== 'undefined') {
+						motio.smooth.init();
+					}
+
+					// starts barba js
+					Barba.Pjax.start();
+
+					// restores the body scrollbars
+					body.classList.remove('no-scroll');
+				}, 900);
+			}
+		}
+	});
+
+	// merges timeline
+	preloadTimeline.add([
+		motioTimeline,
+		studioTimeline
+	]);
+
 	// binds the load event to completely wait for the site to load
 	window.addEventListener('load', function() {
 
 		// disables the body scrollbars
 		body.classList.add('no-scroll');
 
-		// creates the timeline
-		let preloadTimeline = new mojs.Timeline({
-			onComplete: function() {
-
-				// depending on the targetted background color, builds a dot transition or simply displays the site
-				if (body.getAttribute('data-color') === 'base') {
-
-					// tunes the dot for the next transition
-					motio.dotTune();
-
-					// creates the dot transition
-					new mojs.Shape({
-						className: 'dot-transition',
-						parent: preload,
-						shape: 'circle',
-						left: 0,
-						top: 0,
-						x: motio.dotEventX,
-						y: motio.dotEventY,
-						radius: { 0 : motio.dotRadius },
-						fill: colors[motio.dotColor],
-						duration: 1700,
-						easing: mojs.easing.expo.inout,
-						isForce3d: true,
-						onComplete: function() {
-							preloadComplete();
-						}
-					}).play();
-				} else {
-					preloadComplete();
-				}
-
-				// method fired when the site preload is complete
-				function preloadComplete() {
-
-					// displays the header and the media icons
-					body.querySelector('header').classList.add('display');
-					body.querySelector('.media').classList.add('display');
-
-					// removes the preload layout
-					body.removeChild(preload);
-
-					// delays page load
-					setTimeout(function() {
-
-						// inits the smooth scroll
-						if (typeof motio.smooth !== 'undefined') {
-							motio.smooth.init();
-						}
-
-						// starts barba js
-						Barba.Pjax.start();
-
-						// restores the body scrollbars
-						body.classList.remove('no-scroll');
-					}, 900);
-				}
-			}
-		});
-
-		// merges timeline
-		preloadTimeline.add([
-			motioTimeline,
-			studioTimeline
-		]);
-
 		// plays the preload tween
 		preloadTimeline.play();
+	});
+
+	// binds the visibilitychange event to replay the timeline if the user have leaving tab focus before the site has completely loading
+	document.addEventListener('visibilitychange', function() {
+
+		// exits if the preload has already complete
+		if (motio.preloaded) {
+			return;
+		}
+
+		// replays the preload timeline if the tab get focus back and the preload timeline is not already playing
+		if (document.visibilityState === 'visible' && preloadTimeline._o.playstate === false) {
+			preloadTimeline.replay();
+		}
 	});
 })();
