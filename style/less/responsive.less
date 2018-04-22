@@ -4,6 +4,15 @@
  * medium and small screens
  */
 @media (max-width: 63.9375em) {
+	body {
+		cursor: auto;
+	}
+
+	a,
+	.button {
+		cursor: pointer;
+	}
+
 	.motio-o-home {
 		position: absolute;
 	}
@@ -24,6 +33,16 @@
 		.button {
 			position: relative;
 			margin-top: 50px;
+		}
+	}
+
+	.touch {
+		.dot {
+			display: none;
+		}
+
+		.smooth-scroll {
+			position: relative;
 		}
 	}
 }
@@ -99,10 +118,6 @@
  * small screens
  */
 @media (max-width: 39.9375em) {
-	body {
-		cursor: auto;
-	}
-
 	header {
 		padding: @gutter / 2 @min-gutter * 2;
 	}
@@ -123,11 +138,6 @@
 
 	h1 {
 		font-size: 32px;
-	}
-
-	a,
-	.button {
-		cursor: pointer;
 	}
 
 	textarea {
@@ -431,18 +441,5 @@
 	.lang,
 	.media {
 		display: none;
-	}
-}
-
-/*
- * touch screens
- */
-.touch {
-	.dot {
-		display: none;
-	}
-
-	.smooth-scroll {
-		position: relative;
 	}
 }

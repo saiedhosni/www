@@ -1079,8 +1079,8 @@
 		textTween.play();
 	});
 
-	// builds the smooth scrolling for non-touch devices
-	if (!device.touch) {
+	// builds the smooth scrolling for non-touch devices or touch devices with large screen
+	if (!device.touch || (device.touch && device.large)) {
 		motio.smooth = new Smooth({
 			section: document.querySelector('.smooth-scroll'),
 			native: true,
