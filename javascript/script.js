@@ -258,6 +258,7 @@
 			const iOptions = {
 				playstate: false,
 				parent: '.letter-i-rebound',
+				className: 'isolated',
 				top: 200,
 				fill: 'transparent',
 				stroke: colors.vibrant,
@@ -288,6 +289,7 @@
 						mojs.helpers.extend({
 							shape: 'circle',
 							stroke: 'transparent',
+							strokeWidth: 0,
 							fill: colors.vibrant,
 							radius: { 20 : 37 },
 							y: { 35 : -300 },
@@ -593,7 +595,7 @@
 	// manages the transitionCompleted event of barba js
 	Barba.Dispatcher.on('transitionCompleted', function() {
 
-		// in preload mode, only fires emergence and the text effect
+		// in preload mode, only fires emergence, isolation and the text effect
 		if (!motio.preloaded) {
 
 			// initializes emergence js
@@ -643,6 +645,9 @@
 			// engage emergence
 			emergence.engage();
 
+			// binds the isolation
+			motio.bindIsolation();
+
 			// animates the main title
 			motio.textEffect();
 
@@ -665,6 +670,7 @@
 		// inits some stuff for the new page
 		motio.bindDotCursor(true);
 		motio.bindLogos(true);
+		motio.bindIsolation();
 		motio.textEffect();
 	});
 
@@ -1019,6 +1025,22 @@
 			});
 		});
 	})();
+
+	// manages the isolation on the dot cursor
+	(motio.bindIsolation = function() {
+		console.log('bindIsolation');
+
+		// binds the mouseenter and mouseleave events of all mask element to prevent the user from displaying the oposite color of the vibrant color on svg elements
+		Array.from(document.querySelectorAll('.isolation, .isolated line, .isolated ellipse')).forEach(function(element) {
+			element.addEventListener('mouseenter', function() {
+				dot.classList.add('isolate');
+			});
+
+			element.addEventListener('mouseleave', function() {
+				dot.classList.remove('isolate');
+			});
+		});
+	});
 
 	// creates a text effect on the main title
 	(motio.textEffect = function() {
