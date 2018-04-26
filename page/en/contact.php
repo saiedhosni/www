@@ -1,10 +1,10 @@
 <section class="white">
 	<div class="wrapper-arc hide-for-small-only">
 		<div class="letter-arc vertical" data-emergence="hidden">
-			<svg viewBox="0 0 100 100"><path class="shape-arc" stroke-width="0" d="M100,75.524C58.279,75.524,24.482,41.727,24.482,0"/></svg>
+			<svg viewBox="0 0 100 100"><path class="shape-arc isolation" stroke-width="0" d="M100,75.524C58.279,75.524,24.482,41.727,24.482,0"/></svg>
 		</div>
 	</div>
-	<div class="row align-center">
+	<div class="row align-center isolation-contact">
 		<div class="column medium-9 large-8">
 			<h1 data-emergence="hidden">Brief-us!</h1>
 			<p data-emergence="hidden" class="shift">Want to entrust us with your project, launch a new website or build a memorable brand identity, leave us a note. We would love to work with you!</p>
