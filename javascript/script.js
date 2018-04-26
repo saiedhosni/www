@@ -1028,7 +1028,6 @@
 
 	// manages the isolation on the dot cursor
 	(motio.bindIsolation = function() {
-		console.log('bindIsolation');
 
 		// binds the mouseenter and mouseleave events of all mask element to prevent the user from displaying the oposite color of the vibrant color on svg elements
 		Array.from(document.querySelectorAll('.isolation, .isolated line, .isolated ellipse')).forEach(function(element) {
