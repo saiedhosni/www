@@ -1056,6 +1056,9 @@
 		// cuts the title in multiple words
 		let words = element.innerText.match(/[a-zA-Zéçà',!&-]+(\s)?/g);
 
+		// backups the title
+		let title = element.innerHTML;
+
 		// cleans the title
 		element.innerHTML = '';
 
@@ -1083,6 +1086,9 @@
 						element.classList.remove('shift');
 					});
 				}, home ? 700 : 550);
+			},
+			onComplete: function() {
+				element.innerHTML = title;
 			}
 		});
 
