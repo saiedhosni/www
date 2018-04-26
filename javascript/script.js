@@ -992,6 +992,7 @@
 
 			link.addEventListener('click', function(e) {
 				dot.classList.remove('link');
+				link.blur();
 
 				// prevents the user to reload the page if the location is the same
 				if (this.href === window.location.href) {
