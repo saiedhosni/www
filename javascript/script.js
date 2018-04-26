@@ -159,7 +159,7 @@
 				playstate: false,
 				strokeWidth: 65.502,
 				duration: 800,
-				easing: easingCurve,
+				easing: mojs.easing.expo.inout,
 				isForce3d: true
 			};
 
@@ -195,7 +195,7 @@
 						transformOrigin: '244px 126px',
 						strokeDasharray: 438.81,
 						strokeDashoffset: { 438.81 : 877.62 },
-						angleZ: { [-180] : 0 }
+						angleZ: { [-90] : 0 }
 					}, motioOptions)
 				),
 				'vertical letter-t': new mojs.Timeline().add(
@@ -241,7 +241,7 @@
 						transformOrigin: '244px 126px',
 						strokeDasharray: 438.79,
 						strokeDashoffset: { 438.79 : 0 },
-						angleZ: { 180 : 0 },
+						angleZ: { 90 : 0 },
 						delay: 400
 					}, motioOptions)
 				)
@@ -266,7 +266,7 @@
 				strokeDasharray: '100%',
 				strokeDashoffset: { '100%' : 0 },
 				duration: 800,
-				easing: easingCurve,
+				easing: mojs.easing.expo.inout,
 				isForce3d: true
 			};
 
@@ -793,7 +793,7 @@
 				strokeDasharray: length,
 				transformOrigin: '109.2px 13.2px',
 				duration: 700,
-				easing: easingCurve
+				easing: mojs.easing.expo.inout
 			};
 
 			let letterIn = new mojs.Html(
@@ -1140,7 +1140,7 @@
 		strokeDashoffset: { '300%' : '200%' },
 		y: -19,
 		duration: 500,
-		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0')
+		easing: easingCurve
 	};
 
 	// defines options for the out animation
@@ -1148,7 +1148,7 @@
 		delay: 3500,
 		duration: 250,
 		strokeDashoffset: '100%',
-		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0')
+		easing: easingCurve
 	};
 
 	// defines the base shapes
