@@ -550,11 +550,6 @@
 	// manages the initStateChange event of barba js
 	Barba.Dispatcher.on('initStateChange', function() {
 
-		// updating Google Analytics properly
-		if (typeof ga === 'function') {
-			ga('send', 'pageview', location.pathname);
-		}
-
 		// determines if the user is navigating with backward/forward arrows
 		if (!motio.clickEvent) {
 
@@ -571,6 +566,15 @@
 
 		// sets the page title
 		document.title = HTMLElementContainer.getAttribute('data-title');
+
+		// updating Google Analytics properly
+		if (typeof gtag === 'function') {
+			gtag('config', 'UA-90171753-1', {
+				'page_title' : document.title,
+				'page_location' : location.href,
+				'page_path': location.pathname
+			});
+		}
 
 		// sets some body data attributes to allow specific style override per page
 		body.setAttribute('data-page', currentStatus.namespace);

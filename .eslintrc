@@ -10,7 +10,7 @@
 		"emergence": false,
 		"TypeIt": false,
 		"Smooth": false,
-		"ga": false,
+		"gtag": false,
 		"motio": true
 	},
 	"rules": {
