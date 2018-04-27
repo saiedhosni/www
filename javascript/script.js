@@ -569,10 +569,13 @@
 
 		// updating Google Analytics properly
 		if (typeof gtag === 'function') {
+			const oops = currentStatus.namespace === '404';
+			const fr = document.documentElement.lang === 'fr';
+
 			gtag('config', 'UA-90171753-1', {
 				'page_title' : document.title,
-				'page_location' : location.href,
-				'page_path': location.pathname
+				'page_location' : oops ? location.href.replace(location.pathname, fr ? '/404' : '/en/404') : location.href,
+				'page_path': oops ? (fr ? '/404' : '/en/404') : location.pathname
 			});
 		}
 
