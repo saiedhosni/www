@@ -26,9 +26,8 @@
 	// builds a predictive path
 	$path = __DIR__ . '/page/' . $page . '.php';
 
-	// http header for 404 requests
+	// manages 404 requests
 	if (!file_exists($path)) {
-		header('HTTP/1.1 404 Not Found');
 		$page = LANGUAGE . '/404';
 		$path = __DIR__ . '/page/' . $page . '.php';
 	}
