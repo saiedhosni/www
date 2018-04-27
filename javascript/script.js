@@ -123,22 +123,17 @@
 			const path = document.querySelector('.motio-o-home path');
 			const length = path.getTotalLength();
 
-			const pathOptions = {
+			motio.oTweenEnter = new mojs.Html({
 				el: path,
 				strokeDasharray: length,
-				transformOrigin: '50% 50%',
+				strokeDashoffset: device.large ? { [length] : 0 } : { [length] : (length / 3) * 2 },
 				strokeWidth: 24,
+				transformOrigin: '50% 50%',
+				angleZ: device.large ? { 0 : 360 } : 0,
 				duration: 1400,
 				easing: mojs.easing.expo.inout,
 				isForce3d: true
-			};
-
-			motio.oTweenEnter = new mojs.Html(
-				mojs.helpers.extend({
-					strokeDashoffset: device.large ? { [length] : 0 } : { [length] : (length / 3) * 2 },
-					angleZ: device.large ? { 0 : 360 } : 0
-				}, pathOptions)
-			);
+			});
 		},
 		onEnterCompleted: function() {
 			motio.oTweenEnter.then({
