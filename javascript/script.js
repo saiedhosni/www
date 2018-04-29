@@ -11,6 +11,7 @@
 		medium: window.innerWidth >= 640 && window.innerWidth < 1024,
 		large: window.innerWidth >= 1024,
 		touch: 'ontouchstart' in document.documentElement || navigator.MaxTouchPoints > 0,
+		rotate: 'orientation' in window,
 		blend: window.CSS && CSS.supports('mix-blend-mode', 'difference')
 	};
 
@@ -861,23 +862,6 @@
 		});
 	});
 
-	// binds the resize event to properly updates device object
-	let debounce;
-
-	window.addEventListener('resize', function() {
-		clearTimeout(debounce);
-
-		debounce = setTimeout(function() {
-			device = {
-				small: window.innerWidth < 640,
-				medium: window.innerWidth >= 640 && window.innerWidth < 1024,
-				large: window.innerWidth >= 1024,
-				touch: 'ontouchstart' in document.documentElement || navigator.MaxTouchPoints > 0,
-				blend: window.CSS && CSS.supports('mix-blend-mode', 'difference')
-			};
-		}, 250);
-	});
-
 	// manages the dot custom cursor effect
 	let dot = document.querySelector('.dot');
 	let mouseX = dot.offsetLeft;
@@ -1120,8 +1104,8 @@
 		textTween.play();
 	});
 
-	// builds the smooth scrolling for non-touch devices or touch devices with large screen
-	if (!device.touch || (device.touch && device.large)) {
+	// builds the smooth scrolling for non-touch devices or touch devices with no screen rotation (usually touch laptop and desktop)
+	if (!device.touch || (device.touch && !device.rotate)) {
 		motio.smooth = new Smooth({
 			section: document.querySelector('.smooth-scroll'),
 			native: true,
@@ -1129,6 +1113,8 @@
 			preload: false,
 			ease: 0.1
 		});
+	} else {
+		body.classList.add('no-smooth');
 	}
 
 	// prevents the browser from restoring the previous scroll position when using backward/forward arrows
