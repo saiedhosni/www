@@ -1,7 +1,7 @@
 <section class="black intro">
 	<div class="row">
 		<div class="column align-self-top medium-7 medium-offset-4 large-offset-4 text-right">
-			<h1 data-emergence="hidden">L'art de la création, l'animation et de l'interaction sur mesure, au bon endroit et au bon moment, notre spécialité !</h1>
+			<h1 data-emergence="hidden">Des idées rebondissantes pour la construction de vos animations et interactions sur mesure !</h1>
 		</div>
 	</div>
 	<div class="row">
@@ -52,7 +52,7 @@
 	<div class="row">
 		<div class="column medium-6 medium-offset-2 large-4">
 			<h2 data-emergence="hidden">Nos références</h2>
-			<p data-emergence="hidden">Depuis 2015 &ndash; Nous accompagnons des startups, studios, agences et entreprises dans le développement de solutions sur mesure à La Rochelle, Bordeaux, Nantes et Lille.</p>
+			<p data-emergence="hidden">Depuis 2015 &ndash; Nous accompagnons des startups, studios, agences et entreprises dans le développement de solutions sur mesure à La Rochelle, Bordeaux et Nantes.</p>
 		</div>
 	</div>
 	<div class="row">

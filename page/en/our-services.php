@@ -1,7 +1,7 @@
 <section class="black intro">
 	<div class="row">
 		<div class="column align-self-top medium-7 medium-offset-4 large-offset-4 text-right">
-			<h1 data-emergence="hidden">The art of creation, animation and interaction tailored to the right place and the right time, our specialty!</h1>
+			<h1 data-emergence="hidden">Bouncing ideas for building your smooth animations and tailor-made interactions!</h1>
 		</div>
 	</div>
 	<div class="row">
@@ -19,7 +19,7 @@
 	<div class="row">
 		<div class="column medium-6 medium-offset-2 large-4">
 			<h2 data-emergence="hidden">Our services</h2>
-			<p data-emergence="hidden">The studio produces interactive digital solutions. We pay special attention to new technologies, open source and research and development of new products.</p>
+			<p data-emergence="hidden">The studio produces interactive digital solutions. We pay special attention to new technologies, open source and research & development of new products.</p>
 		</div>
 	</div>
 	<div class="row">
@@ -52,7 +52,7 @@
 	<div class="row">
 		<div class="column medium-6 medium-offset-2 large-4">
 			<h2 data-emergence="hidden">Our references</h2>
-			<p data-emergence="hidden">Since 2015 &ndash; We assist startups, studios, agencies and companies in the development of tailor-made solutions in La Rochelle, Bordeaux, Nantes and Lille.</p>
+			<p data-emergence="hidden">Since 2015 &ndash; We assist startups, studios, agencies and companies in the development of tailor-made solutions in La Rochelle, Bordeaux and Nantes.</p>
 		</div>
 	</div>
 	<div class="row">
