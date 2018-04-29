@@ -518,7 +518,7 @@
 
 		// manages the mobile menu display if it is opened
 		if (document.querySelector('.menu-trigger:checked') !== null) {
-			let active = document.querySelector('.menu.mobile ul > li.active');
+			let active = document.querySelector('.menu.mobile ul:not(.lang) > li.active');
 
 			if (active !== null) {
 				active.classList.add('out');
@@ -581,7 +581,7 @@
 
 		// manages the mobile menu display if it is closed
 		if (document.querySelector('.menu-trigger:checked') === null) {
-			let active = document.querySelector('.menu.mobile ul > li.active');
+			let active = document.querySelector('.menu.mobile ul:not(.lang) > li.active');
 
 			if (active !== null) {
 				active.classList.remove('active');
