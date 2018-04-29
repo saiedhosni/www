@@ -606,7 +606,7 @@
 				elemCushion: 1,
 				offsetTop: device.small ? 90 : 110,
 				offsetBottom: device.small ? -700 : 0,
-				throttle: 100,
+				throttle: 200,
 				callback: function(element, state) {
 					if (device.small) {
 						return;
