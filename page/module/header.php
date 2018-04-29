@@ -10,9 +10,9 @@
 				<nav>
 					<label for="trigger" class="menu-button show-for-small-only"><span></span></label>
 					<ul class="menu">
-						<li class="<?php echo PAGE == 'fr/le-studio' || PAGE == 'en/the-studio' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" data-dot="contrast">Studio</a></li>
-						<li class="<?php echo PAGE == 'fr/nos-services' || PAGE == 'en/our-services' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>">Services</a></li>
-						<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" data-dot="contrast">Contact</a></li>
+						<li><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" data-dot="contrast">Studio</a></li>
+						<li><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>">Services</a></li>
+						<li><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" data-dot="contrast">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -30,10 +30,10 @@
 	<div class="menu mobile">
 		<label for="trigger" class="menu-button-close"></label>
 		<ul>
-			<li class="<?php echo PAGE == 'fr/le-studio' || PAGE == 'en/the-studio' ? 'active' : ''; ?>" data-target="studio"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" data-dot="contrast">Studio</a></li>
-			<li class="<?php echo PAGE == 'fr/nos-services' || PAGE == 'en/our-services' ? 'active' : ''; ?>" data-target="services"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>">Services</a></li>
-			<li class="<?php echo PAGE == 'fr/contact' || PAGE == 'en/contact' ? 'active' : ''; ?>" data-target="contact"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" data-dot="contrast">Contact</a></li>
-			<li class="<?php echo PAGE == 'fr/index' || PAGE == 'en/index' ? 'active' : ''; ?>" data-target="index">
+			<li class="<?php echo NAME == 'studio' ? 'active' : ''; ?>" data-target="studio"><a href="<?php echo LANGUAGE == 'fr' ? '/le-studio' : '/en/the-studio'; ?>" data-dot="contrast">Studio</a></li>
+			<li class="<?php echo NAME == 'services' ? 'active' : ''; ?>" data-target="services"><a href="<?php echo LANGUAGE == 'fr' ? '/nos-services' : '/en/our-services'; ?>">Services</a></li>
+			<li class="<?php echo NAME == 'contact' ? 'active' : ''; ?>" data-target="contact"><a href="<?php echo LANGUAGE == 'fr' ? '/contact' : '/en/contact'; ?>" data-dot="contrast">Contact</a></li>
+			<li class="<?php echo NAME == 'index' ? 'active' : ''; ?>" data-target="index">
 				<ul class="lang">
 					<li class="<?php echo LANGUAGE == 'fr' ? 'active' : ''; ?>"><a href="/" class="index <?php echo LANGUAGE == 'fr' ? '' : 'no-barba'; ?>">Fr</a></li>
 					<li class="<?php echo LANGUAGE == 'en' ? 'active' : ''; ?>"><a href="/en" class="index <?php echo LANGUAGE == 'en' ? '' : 'no-barba'; ?>">En</a></li>
