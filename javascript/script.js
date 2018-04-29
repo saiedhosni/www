@@ -1158,7 +1158,7 @@
 
 	// defines options for the out animation
 	const motioOut = {
-		delay: 3500,
+		delay: 3000,
 		duration: 250,
 		strokeDashoffset: '100%',
 		easing: easingCurve
@@ -1364,7 +1364,7 @@
 	const studioOut = {
 		opacity: 0,
 		duration: 500,
-		delay: 2200
+		delay: 1700
 	};
 
 	// defines the base shapes
