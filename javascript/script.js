@@ -912,9 +912,6 @@
 	document.addEventListener('mouseup', function(e) {
 		dot.classList.remove('down');
 
-		// support for non-blending browsers: this value is override by css for browsers that supports blending mode
-		let blend = dot.classList.contains('support') ? colors.base : colors.contrast;
-
 		// creates a dot pulse effect on mouseup
 		new mojs.Shape({
 			className: 'dot-pulse',
@@ -924,7 +921,7 @@
 			x: e.pageX,
 			y: e.pageY,
 			radius: { 6 : 40 },
-			fill: blend,
+			fill: device.blend ? colors.contrast : (dot.classList.contains('blend') ? colors.base : colors.contrast),
 			opacity: { 0.35 : 0 },
 			duration: 500,
 			isForce3d: true,
@@ -1020,15 +1017,27 @@
 		});
 
 		// binds the mouseenter and mouseleave events of all white sections and footer to support the dot circle fill transition
-		Array.from(document.querySelectorAll('section.white, footer.white')).forEach(function(element) {
-			element.addEventListener('mouseenter', function() {
-				dot.classList.add('support');
+		if (!device.blend) {
+			Array.from(document.querySelectorAll('section.white, footer.white')).forEach(function(element) {
+				element.addEventListener('mouseenter', function() {
+					dot.classList.add('blend');
+				});
+
+				element.addEventListener('mouseleave', function() {
+					dot.classList.remove('blend');
+				});
 			});
 
-			element.addEventListener('mouseleave', function() {
-				dot.classList.remove('support');
+			Array.from(document.querySelectorAll('header, .media')).forEach(function(element) {
+				element.addEventListener('mouseenter', function() {
+					dot.classList.add('blend-extended');
+				});
+
+				element.addEventListener('mouseleave', function() {
+					dot.classList.remove('blend-extended');
+				});
 			});
-		});
+		}
 	})();
 
 	// manages the isolation on the dot cursor

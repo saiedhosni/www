@@ -1,24 +1,41 @@
 // main: build.less
 
-@supports (mix-blend-mode: difference) {
-	.dot-pulse {
-		ellipse {
+@supports not (mix-blend-mode: difference) {
+	[data-color='base'] {
+		.dot.blend-extended circle {
 			fill: @contrast-color;
 		}
 	}
-}
 
-@supports not (mix-blend-mode: difference) {
-	[data-page='studio'],
-	[data-page='contact'],
-	[data-page='notices'],
-	[data-page='404'] {
+	[data-color='contrast'] {
 		color: @base-color;
 
 		.lang {
 			li {
 				&.active a {
 					color: @base-color;
+				}
+			}
+		}
+
+		.dot.blend-extended circle {
+			fill: @base-color;
+		}
+
+		.menu-button {
+			&::before,
+			&::after,
+			span {
+				background: @base-color;
+			}
+		}
+
+		.menu {
+			.lang {
+				li {
+					&.active a {
+						color: @contrast-color;
+					}
 				}
 			}
 		}
@@ -31,19 +48,25 @@
 
 	.dot {
 		&.link circle {
-			opacity: 0.2;
+			opacity: 0.25;
 		}
 
-		&.support circle {
+		&.isolate {
+			opacity: 1;
+		}
+
+		&.blend circle {
 			fill: @base-color;
 		}
 
 		circle {
-			.transition(transform 250ms ease, opacity 250ms ease, fill 1s ease;);
+			fill: @contrast-color;
+			.transition(transform 250ms ease, opacity 250ms ease, fill 250ms ease;);
 		}
 	}
 }
 
+// edge override
 @supports (-ms-ime-align: auto) {
 	header .column {
 		flex: 0 auto;
@@ -51,5 +74,34 @@
 
 	nav {
 		float: auto;
+	}
+
+	.dot {
+		&.link svg {
+			.transition(transform 250ms ease);
+			.transform(scale(2.95));
+		}
+
+		&.down svg {
+			.transform(scale(0.7));
+		}
+
+		svg {
+			.transition(transform 250ms ease);
+			.transform(scale(1));
+		}
+	}
+
+	.media svg,
+	.references svg {
+		pointer-events: none;
+	}
+
+	.wrapper {
+		height: 1px;
+	}
+
+	.wrapper-arc {
+		right: -14px;
 	}
 }
