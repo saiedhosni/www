@@ -1083,6 +1083,7 @@
 			},
 			onComplete: function() {
 				element.innerHTML = title;
+				element.style.willChange = 'auto';
 			}
 		});
 
@@ -1091,7 +1092,7 @@
 			textTween.add(new mojs.Html({
 				el: char,
 				y: { 50 : 0 },
-				easing: mojs.easing.quint.out,
+				easing: mojs.easing.expo.out,
 				duration: 1000,
 				delay: 'rand(100, 300)',
 				isForce3d: true
