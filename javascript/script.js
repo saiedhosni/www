@@ -672,7 +672,7 @@
 		emergence.engage();
 
 		// inits some stuff for the new page
-		motio.bindDotCursor(true);
+		motio.bindLinks(true);
 		motio.bindLogos(true);
 		motio.bindIsolation();
 		motio.textEffect();
@@ -960,7 +960,7 @@
 	});
 
 	// manages the dot cursor size for all links
-	(motio.bindDotCursor = function(transitionCompleted) {
+	(motio.bindLinks = function(transitionCompleted) {
 
 		// binds the mouseenter/mouseleave/click events of all links to increase/decrease the dot size and avoid page reload on same urls
 		Array.from(document.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'main a, main .button' : 'a, .button')).forEach(function(link) {
