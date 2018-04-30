@@ -741,7 +741,7 @@
 				radius: { 0 : 20 },
 				strokeWidth: 4,
 				easing: mojs.easing.circ.out,
-				duration: 1000,
+				duration: 800,
 				delay: 200,
 				onStart: function(isForward) {
 					if (isForward) {
