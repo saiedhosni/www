@@ -915,8 +915,8 @@
 		}).play();
 	});
 
-	// follows the mouse cursor on every frame
-	function dotframe() {
+	// animation frame to follow the mouse cursor on every mouvement
+	(motio.dotFrame = function() {
 
 		// calcultates the new position to follow
 		deltaX = mouseX - tempX;
@@ -929,11 +929,8 @@
 		dot.style.top = `${Math.round(tempY)}px`;
 
 		// makes this function run at 60fps
-		requestAnimationFrame(dotframe);
-	}
-
-	// run the dot frame
-	dotframe();
+		requestAnimationFrame(motio.dotFrame);
+	})();
 
 	// method to sets the global dot position and appearance
 	(motio.dotTune = function(color = body.getAttribute('data-color'), event = null) {
