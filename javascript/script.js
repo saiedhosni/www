@@ -862,7 +862,7 @@
 		});
 	});
 
-	// manages the dot custom cursor effect
+	// dot custom cursor properties
 	let dot = document.querySelector('.dot');
 	let mouseX = dot.offsetLeft;
 	let mouseY = dot.offsetTop;
@@ -930,7 +930,7 @@
 
 		// makes this function run at 60fps
 		requestAnimationFrame(motio.dotFrame);
-	})();
+	});
 
 	// method to sets the global dot position and appearance
 	(motio.dotTune = function(color = body.getAttribute('data-color'), event = null) {
@@ -1110,8 +1110,11 @@
 			preload: false,
 			ease: 0.1
 		});
+
+		motio.dotFrame();
 	} else {
 		body.classList.add('no-smooth');
+		body.classList.add('no-dot');
 	}
 
 	// prevents the browser from restoring the previous scroll position when using backward/forward arrows
