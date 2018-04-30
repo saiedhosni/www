@@ -3,7 +3,7 @@
 (function() {
 
 	// web developer console signature
-	console.log('%c Made with ❤︎️ by Studio MOTIO — https://www.studiomotio.com', 'background:#000;color:#fff;padding:0.5em 1em;line-height:2;');
+	console.log('%cMade with ❤︎️ by Studio MOTIO — Interactive design and creative web studio from La Rochelle — studiomotio.com', 'background:#000;color:#fff;padding:0.5em 1em;line-height:2;');
 
 	// device detection (screen sizes based on Foundation build)
 	let device = {
