@@ -331,7 +331,6 @@ textarea {
 			width: 0;
 			height: 1px;
 			background: currentColor;
-			will-change: width;
 			.transition(width 1.1s @cubic);
 		}
 
@@ -364,7 +363,6 @@ textarea {
 		width: 100%;
 		height: 0;
 		.transition(height 300ms @cubic);
-		will-change: height;
 	}
 
 	&:hover::after,
@@ -410,7 +408,6 @@ textarea {
 			height: 1px;
 			background: currentColor;
 			.transition(width 1.4s @cubic);
-			will-change: width;
 		}
 	}
 
