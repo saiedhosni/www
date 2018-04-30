@@ -133,8 +133,7 @@
 				transformOrigin: '50% 50%',
 				angleZ: device.large ? { 0 : 360 } : 0,
 				duration: 1400,
-				easing: mojs.easing.expo.inout,
-				isForce3d: true
+				easing: mojs.easing.expo.inout
 			});
 		},
 		onEnterCompleted: function() {
@@ -156,8 +155,7 @@
 				playstate: false,
 				strokeWidth: 65.502,
 				duration: 800,
-				easing: mojs.easing.expo.inout,
-				isForce3d: true
+				easing: mojs.easing.expo.inout
 			};
 
 			motio.motioTween = {
@@ -263,8 +261,7 @@
 				strokeDasharray: '100%',
 				strokeDashoffset: { '100%' : 0 },
 				duration: 800,
-				easing: mojs.easing.expo.inout,
-				isForce3d: true
+				easing: mojs.easing.expo.inout
 			};
 
 			motio.iTween = {
@@ -324,8 +321,7 @@
 					strokeDashoffset: { [length] : length * 2 },
 					strokeWidth: device.large ? 28 : 40,
 					duration: 1400,
-					easing: mojs.easing.expo.inout,
-					isForce3d: true
+					easing: mojs.easing.expo.inout
 				})
 			};
 
@@ -454,8 +450,7 @@
 				x: 'rand(0, 140)',
 				y: 'rand(-60, -10)',
 				duration: 'rand(500, 1500)',
-				delay: 'rand(0, 400)',
-				isForce3d: true
+				delay: 'rand(0, 400)'
 			};
 
 			// creates some birds and makes them fly
@@ -496,7 +491,6 @@
 				easing: mojs.easing.quint.out,
 				duration: 'rand(3000, 4000)',
 				delay: 'rand(1000, 2000)',
-				isForce3d: true,
 				onComplete: function() {
 					if (document.querySelector('.illustration-404') !== null) {
 						this.generate().replay();
@@ -684,8 +678,7 @@
 		fill: 'transparent',
 		stroke: colors.contrast,
 		strokeWidth: { 4 : 0 },
-		duration: 700,
-		isForce3d: true
+		duration: 700
 	};
 
 	let menuCircle = new mojs.Shape(
@@ -908,7 +901,6 @@
 			fill: device.blend ? colors.contrast : (dot.classList.contains('blend') ? colors.base : colors.contrast),
 			opacity: { 0.35 : 0 },
 			duration: 500,
-			isForce3d: true,
 			onComplete: function() {
 				this.el.parentNode.removeChild(this.el);
 			}
