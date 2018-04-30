@@ -1050,7 +1050,7 @@
 
 		// loops through each words and cuts each characters in multiple span
 		words.forEach(function(word) {
-			word = word.replace(/([^x00-x80]|\w|'|,|!|&|-)/g, '<span class="char">$&</span>');
+			word = word.replace(/([^x00-x80 ]|\w|'|,|!|&|-)/g, '<span class="char">$&</span>');
 			element.innerHTML += `<span class="word">${word}</span> `;
 		});
 
