@@ -52,12 +52,22 @@
 	if (!isset($_SERVER['HTTP_X_BARBA'])) {
 ?>
 		<div class="dot"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="5.15"/></svg></div>
+		<?php
+			if (ENVIRONMENT == 'prod') {
+		?>
+		<script type="text/javascript" src="/javascript/app.min.js"></script>
+		<?php
+			} else {
+		?>
 		<script type="text/javascript" src="/javascript/mo.min.js"></script>
 		<script type="text/javascript" src="/javascript/barba.min.js"></script>
 		<script type="text/javascript" src="/javascript/emergence.min.js"></script>
 		<script type="text/javascript" src="/javascript/typeit.min.js"></script>
 		<script type="text/javascript" src="/javascript/smooth-scrolling.min.js"></script>
 		<script type="text/javascript" src="/javascript/script.min.js"></script>
+		<?php
+			}
+		?>
 	</body>
 </html>
 <?php
