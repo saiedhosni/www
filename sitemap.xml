@@ -5,7 +5,7 @@
 		<xhtml:link rel="alternate" hreflang="fr" href="https://www.studiomotio.com"/>
 		<xhtml:link rel="alternate" hreflang="en" href="https://www.studiomotio.com/en"/>
 		<priority>1.00</priority>
-		<lastmod>2018-14-02</lastmod>
+		<lastmod>2018-04-05</lastmod>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
@@ -13,7 +13,7 @@
 		<xhtml:link rel="alternate" hreflang="fr" href="https://www.studiomotio.com/le-studio"/>
 		<xhtml:link rel="alternate" hreflang="en" href="https://www.studiomotio.com/en/the-studio"/>
 		<priority>0.8</priority>
-		<lastmod>2018-14-02</lastmod>
+		<lastmod>2018-04-05</lastmod>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
@@ -21,7 +21,7 @@
 		<xhtml:link rel="alternate" hreflang="fr" href="https://www.studiomotio.com/nos-services"/>
 		<xhtml:link rel="alternate" hreflang="en" href="https://www.studiomotio.com/en/our-services"/>
 		<priority>0.8</priority>
-		<lastmod>2018-14-02</lastmod>
+		<lastmod>2018-04-05</lastmod>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
@@ -29,7 +29,7 @@
 		<xhtml:link rel="alternate" hreflang="fr" href="https://www.studiomotio.com/contact"/>
 		<xhtml:link rel="alternate" hreflang="en" href="https://www.studiomotio.com/en/contact"/>
 		<priority>0.8</priority>
-		<lastmod>2018-14-02</lastmod>
+		<lastmod>2018-04-05</lastmod>
 		<changefreq>daily</changefreq>
 	</url>
 	<url>
@@ -37,7 +37,7 @@
 		<xhtml:link rel="alternate" hreflang="fr" href="https://www.studiomotio.com/mentions-legales"/>
 		<xhtml:link rel="alternate" hreflang="en" href="https://www.studiomotio.com/en/legal-notices"/>
 		<priority>0.5</priority>
-		<lastmod>2018-14-02</lastmod>
+		<lastmod>2018-04-05</lastmod>
 		<changefreq>daily</changefreq>
 	</url>
 </urlset>
