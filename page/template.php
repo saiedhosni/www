@@ -9,9 +9,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<meta name="keywords" content="studio, motio, interactive, design, creative, web, motion, digital, development" />
 		<meta name="description" content="<?php echo METADATA[PAGE][1] ?? ''; ?>" />
-		<meta name="author" content="Studio Motio, Copyright (c) 2017" />
+		<meta name="author" content="Studio MOTIO, Copyright (c) 2018" />
 		<meta name="geo.placename" content="La Rochelle, Charente-Maritime, France" />
-		<meta name="application-name" content="Studio Motio" />
+		<meta name="application-name" content="Studio MOTIO" />
 		<meta name="theme-color" content="#000" />
 		<title><?php echo METADATA[PAGE][0] ?? ''; ?></title>
 		<link rel="icon" href="/picture/favicon.ico" type="image/x-icon" />
