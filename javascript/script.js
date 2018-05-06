@@ -564,8 +564,8 @@
 			const fr = document.documentElement.lang === 'fr';
 
 			gtag('config', 'UA-90171753-1', {
-				'page_title' : document.title,
-				'page_location' : oops ? location.href.replace(location.pathname, fr ? '/404' : '/en/404') : location.href,
+				'page_title': document.title,
+				'page_location': oops ? location.href.replace(location.pathname, fr ? '/404' : '/en/404') : location.href,
 				'page_path': oops ? (fr ? '/404' : '/en/404') : location.pathname
 			});
 		}
