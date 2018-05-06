@@ -31,7 +31,7 @@
 			'Informations techniques et mentions légales relatives au site du studio.'
 		),
 		'fr/404' => array(
-			'Oops! ' . META_SUFFIX,
+			'Oops!' . META_SUFFIX,
 			'La page que vous recherchez est introuvable : elle a peut être été renommée, déplacée ou supprimée.'
 		),
 		'en/index' => array(
@@ -55,7 +55,7 @@
 			'Technical information and legal notices about the studio website.'
 		),
 		'en/404' => array(
-			'Oops! ' . META_SUFFIX,
+			'Oops!' . META_SUFFIX,
 			'The page you are looking for is unavailable: it may have been renamed, moved or deleted.'
 		)
 	));
