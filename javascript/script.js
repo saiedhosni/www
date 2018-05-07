@@ -18,7 +18,8 @@
 	// global motio object for global tweens
 	window.motio = {
 		preloaded: false,
-		transitionEngaged: false
+		transitionEngaged: false,
+		tabKeyEvent: false
 	};
 
 	// motion colors based on main theme
@@ -907,6 +908,20 @@
 		}).play();
 	});
 
+	// binds the keydown event to store the tab key event
+	document.addEventListener('keydown', function(e) {
+		if (e.keyCode === 9) {
+			motio.tabKeyEvent = true;
+		}
+	});
+
+	// binds the keyup event to clear the tab key event
+	document.addEventListener('keyup', function(e) {
+		if (e.keyCode === 9) {
+			motio.tabKeyEvent = false;
+		}
+	});
+
 	// animation frame to follow the mouse cursor on every mouvement
 	(motio.dotFrame = function() {
 
@@ -954,7 +969,7 @@
 	// manages the dot cursor size for all links
 	(motio.bindLinks = function(transitionCompleted) {
 
-		// binds the mouseenter/mouseleave/click events of all links to increase/decrease the dot size and avoid page reload on same urls
+		// binds the mouseenter/mouseleave/click/focus events of all links to increase/decrease the dot size, avoid page reload on same urls and manages tab focus event
 		Array.from(document.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'main a, main .button' : 'a, .button')).forEach(function(link) {
 			link.addEventListener('mouseenter', function() {
 				dot.classList.add('link');
@@ -985,6 +1000,54 @@
 							behavior: 'smooth'
 						});
 					}, 500);
+				}
+			});
+
+			link.addEventListener('focus', function() {
+
+				// exits if the event is not provided by the user keyboard tabulation key
+				if (!motio.tabKeyEvent) {
+					return;
+				}
+
+				if (link.parentNode.classList.contains('media')) {
+					return;
+				}
+
+				// highlight the current link if needed
+				if (link.classList.contains('need-highlight')) {
+					link.classList.add('highlight');
+				}
+
+				// calculates the offset top to scroll
+				let offsetTop = 0;
+
+				if (link.classList.contains('in-footer')) {
+					offsetTop = body.scrollHeight;
+				} else {
+					let element = link;
+
+					do {
+						offsetTop += element.offsetTop || 0;
+						element = element.offsetParent;
+					} while(element);
+
+					offsetTop = offsetTop - window.innerHeight * 0.5;
+				}
+
+				// scrolls to the specified offset
+				window.scroll({
+					top: offsetTop,
+					left: 0,
+					behavior: 'smooth'
+				});
+			});
+
+			link.addEventListener('blur', function() {
+
+				// cleans the highlight class for specific links
+				if (link.classList.contains('need-highlight')) {
+					link.classList.remove('highlight');
 				}
 			});
 		});

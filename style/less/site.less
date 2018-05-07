@@ -373,6 +373,24 @@ textarea {
 	}
 }
 
+.black .highlight {
+	&::after {
+		opacity: 0.15;
+	}
+}
+
+.need-highlight {
+	&::after {
+		.animation(height 300ms @cubic forwards);
+	}
+}
+
+[data-color='base'] .need-highlight.highlight {
+	&::after {
+		opacity: 0.3;
+	}
+}
+
 .button {
 	display: inline-flex;
 	align-items: center;
