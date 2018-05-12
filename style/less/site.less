@@ -783,3 +783,16 @@ textarea {
 .touch {
 	.no-highlight();
 }
+
+.wotd {
+	position: fixed;
+	z-index: 10;
+	left: 25px;
+	bottom: 25px;
+	width: 70px;
+	mix-blend-mode: difference;
+}
+
+.media.display + .wotd {
+	.animation(display 1.4s ease forwards);
+}
