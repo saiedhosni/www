@@ -19,7 +19,7 @@
 	<div class="row">
 		<div class="column medium-6 medium-offset-2 large-4">
 			<h2 data-emergence="hidden">Nos services</h2>
-			<p data-emergence="hidden">Le studio réalise des solutions digitales interactives. Nous portons une attention toute particulières aux nouvelles technologies, à l'open source ainsi qu'à la recherche et au développement de nouveaux produits.</p>
+			<p data-emergence="hidden">Le studio réalise des solutions digitales interactives. Nous portons une attention toute particulière aux nouvelles technologies, à l'open source ainsi qu'à la recherche et au développement de nouveaux produits.</p>
 		</div>
 	</div>
 	<div class="row">

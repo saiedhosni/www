@@ -35,7 +35,7 @@
 			<h2 data-emergence="hidden">The studio</h2>
 			<p data-emergence="hidden">Specialized in animations and web micro-interactions based on the principles of motion design, we work in collaboration with designers and local developers, perfectionists, meticulous and detail-oriented.</p>
 			<p data-emergence="hidden">The user experience is at the heart of our business, which is why we use cutting-edge graphic technologies, which have already proved their worth and are now recognized as references in the web domain for their compatibility, performance and their fluidity.</p>
-			<p data-emergence="hidden">We love our job, and we always carry out all our projects with passion.</p>
+			<p data-emergence="hidden">We love our job and we always carry out all our projects with passion.</p>
 			<p data-emergence="hidden"><a href="/en/contact" class="button" data-dot="contrast"><span class="arrow"></span>Contact us</a></p>
 		</div>
 	</div>
