@@ -28,6 +28,7 @@ Build with
 - emergencejs, by [@xtianmiller](https://github.com/xtianmiller/emergence.js)
 - typeit, by [@alexmacarthur](https://github.com/alexmacarthur/typeit)
 - smooth scrolling, by [@baptistebriel](https://github.com/baptistebriel/smooth-scrolling)
+- foundation framework, by [@zurb](https://github.com/zurb/foundation-sites)
 - javascript es6
 - less
 - php7
