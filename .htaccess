@@ -21,16 +21,16 @@ RewriteEngine On
 # rewrites content that are not in https, except for .local environment
 RewriteCond %{HTTPS} !on
 RewriteCond %{HTTP_HOST} !.local$
-RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 
 # rewrites index direct call
-RewriteRule ^index.html$ / [R,L]
-RewriteRule ^fr$ / [R,L]
-RewriteRule ^en/index.html$ /en [R,L]
-RewriteRule ^en/index.php$ /en [R,L]
+RewriteRule ^index.html$ / [R=301,L]
+RewriteRule ^fr$ / [R=301,L]
+RewriteRule ^en/index.html$ /en [R=301,L]
+RewriteRule ^en/index.php$ /en [R=301,L]
 
 # removes trailing slashes
-RewriteRule (.*)/$ /$1 [R,L]
+RewriteRule (.*)/$ /$1 [R=301,L]
 
 # rewrites urls to the template engine
 RewriteRule ^([/0-9a-zA-Z-]+)$ index.php?page=$1 [L]
