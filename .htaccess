@@ -33,7 +33,7 @@ RewriteRule ^en/index.php$ /en [R=301,L]
 RewriteRule (.*)/$ /$1 [R=301,L]
 
 # rewrites urls to the template engine
-RewriteRule ^([/0-9a-zA-Z-]+)$ index.php?page=$1 [L]
+RewriteRule ^([/a-zA-Z-]+)$ index.php?page=$1 [L]
 
 # redirects 403 and 404 http requests to a specific 404 page
 ErrorDocument 403 /index.php?page=404
