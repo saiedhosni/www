@@ -7,7 +7,7 @@
 
 	// default page if nothing is specified
 	if (!isset($_GET['page'])) {
-		$_GET['page'] = DEFAULT_PAGE;
+		$_GET['page'] = empty($_GET) ? DEFAULT_PAGE : '404';
 	}
 
 	// builds a predictive page
