@@ -7,7 +7,13 @@
 
 	// default page if nothing is specified
 	if (!isset($_GET['page'])) {
-		$_GET['page'] = empty($_GET) ? DEFAULT_PAGE : '404';
+		if (empty($_GET)) {
+			$_GET['page'] = DEFAULT_PAGE;
+		} else {
+			header('HTTP/1.1 301 Moved Permanently');
+			header('Location: /');
+			exit();
+		}
 	}
 
 	// builds a predictive page
