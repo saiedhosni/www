@@ -1,0 +1,25 @@
+{
+  "name": "www1",
+  "version": "1.0.0",
+  "description": "www1 ==== This is the official **portfolio website of Studio MOTIO**, a France-based interactive design & creative web studio from La Rochelle.",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^4.12.0",
+    "webpack-command": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiomotio/www1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/studiomotio/www1/issues"
+  },
+  "homepage": "https://github.com/studiomotio/www1#readme"
+}
