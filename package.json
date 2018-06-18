@@ -4,6 +4,7 @@
   "description": "www1 ==== This is the official **portfolio website of Studio MOTIO**, a France-based interactive design & creative web studio from La Rochelle.",
   "main": "index.js",
   "dependencies": {
+    "mo-js": "^0.288.2",
     "webpack": "^4.12.0",
     "webpack-command": "^0.2.1"
   },
