@@ -13,6 +13,10 @@
 		"gtag": false,
 		"motio": true
 	},
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+	},
 	"rules": {
 		"eqeqeq": [
 			"error",
