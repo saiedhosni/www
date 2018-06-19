@@ -20,7 +20,12 @@
 		"type": "git",
 		"url": "git+https://github.com/studiomotio/www1.git"
 	},
-	"keywords": [],
+	"keywords": [
+		"site",
+		"web",
+		"studio",
+		"portfolio"
+	],
 	"author": {
 		"name": "Studio MOTIO",
 		"email": "hello@studiomotio.com",
