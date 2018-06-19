@@ -21,8 +21,12 @@
 		"url": "git+https://github.com/studiomotio/www1.git"
 	},
 	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"author": {
+		"name": "Studio MOTIO",
+		"email": "hello@studiomotio.com",
+		"url": "https://www.studiomotio.com"
+	},
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/studiomotio/www1/issues"
 	},
