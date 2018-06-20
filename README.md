@@ -7,12 +7,17 @@ This is the official **portfolio website of Studio MOTIO**, a France-based inter
 
 Awards
 ------
-On May 12, 2018, the site is nominated as **Website Of The Day** on CSS Design Awards and won **best UI**, **best UX** and **best Innovation** awards. CSS Design Awards is an international web design and development award platform that honors and showcases freelance designers, studios and agencies for work that pushes the boundaries of UI, UX and innovative development.
+On May 12, 2018, the site is awarded as **Website Of The Day** on CSS Design Awards and won **best UI**, **best UX** and **best Innovation** awards. CSS Design Awards is an international web design and development award platform that honors and showcases freelance designers, studios and agencies for work that pushes the boundaries of UI, UX and innovative development.
 
 [![Website Of The Day – CSS Design Awards](https://raw.github.com/studiomotio/www1/master/cssda-wotd.png "Website Of The Day – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)&nbsp;
 [![Best UI Design – CSS Design Awards](https://raw.github.com/studiomotio/www1/master/cssda-best-ui-design.png "Best UI Design – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)&nbsp;
 [![Best UX Design – CSS Design Awards](https://raw.github.com/studiomotio/www1/master/cssda-best-ux-design.png "Best UX Design – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)&nbsp;
 [![Best Innovation – CSS Design Awards](https://raw.github.com/studiomotio/www1/master/cssda-best-innovation.png "Best Innovation – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)
+
+On May 31, 2018, the site is nominee for **Site Of The Day** on Awwwards and won a **Mobile Excellence** and an **Honorable Mention** awards. Awwwards is a community that recognize the talent and effort of the best web designers, developers and agencies in the world.
+
+[![Mobile Excellence – Awwwards](https://raw.github.com/studiomotio/www1/master/awwwards-me.png "Mobile Excellence – Awwwards")](https://awwwards.com/sites/studio-motio)&nbsp;
+[![Honorable Mention – Awwwards](https://raw.github.com/studiomotio/www1/master/awwwards-hm.png "Honorable Mention – Awwwards")](https://awwwards.com/sites/studio-motio)
 
 
 Compatibility

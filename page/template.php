@@ -35,7 +35,7 @@
 					$gtag = "gtag('config','UA-90171753-1')";
 				}
 		?>
-		<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-90171753-1" async></script><script type="text/javascript">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());<?php echo $gtag; ?></script>
+		<script src="https://www.googletagmanager.com/gtag/js?id=UA-90171753-1" async></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());<?php echo $gtag; ?></script>
 		<?php
 			}
 		?>
@@ -66,16 +66,16 @@
 		<?php
 			if (ENVIRONMENT == 'prod') {
 		?>
-		<script type="text/javascript" src="/javascript/app.min.js"></script>
+		<script src="/javascript/app.min.js"></script>
 		<?php
 			} else {
 		?>
-		<script type="text/javascript" src="/javascript/mo.min.js"></script>
-		<script type="text/javascript" src="/javascript/barba.min.js"></script>
-		<script type="text/javascript" src="/javascript/emergence.min.js"></script>
-		<script type="text/javascript" src="/javascript/typeit.min.js"></script>
-		<script type="text/javascript" src="/javascript/smooth-scrolling.min.js"></script>
-		<script type="text/javascript" src="/javascript/script.min.js"></script>
+		<script src="/javascript/mo.min.js"></script>
+		<script src="/javascript/barba.min.js"></script>
+		<script src="/javascript/emergence.min.js"></script>
+		<script src="/javascript/typeit.min.js"></script>
+		<script src="/javascript/smooth-scrolling.min.js"></script>
+		<script src="/javascript/script.min.js"></script>
 		<?php
 			}
 		?>
