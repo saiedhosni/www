@@ -5,11 +5,6 @@
 	},
 	"extends": "eslint:recommended",
 	"globals": {
-		"mojs": false,
-		"Barba": false,
-		"emergence": false,
-		"TypeIt": false,
-		"Smooth": false,
 		"gtag": false,
 		"motio": true
 	},
