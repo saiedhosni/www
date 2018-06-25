@@ -5,7 +5,7 @@ module.exports = {
 	watch: true,
 	entry: './javascript/script.js',
 	output: {
-		filename: 'script.min.js',
+		filename: 'app.js',
 		path: path.resolve(__dirname, 'javascript')
 	}
 };

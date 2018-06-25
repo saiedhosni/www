@@ -63,17 +63,7 @@
 	if (!isset($_SERVER['HTTP_X_BARBA'])) {
 ?>
 		<div class="dot"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="5.15"/></svg></div>
-		<?php
-			if (ENVIRONMENT == 'prod') {
-		?>
-		<script src="/javascript/app.min.js"></script>
-		<?php
-			} else {
-		?>
-		<script src="/javascript/script.min.js"></script>
-		<?php
-			}
-		?>
+		<script src="/javascript/app<?php echo ENVIRONMENT == 'prod' ? '.min' : ''; ?>.js"></script>
 	</body>
 </html>
 <?php
