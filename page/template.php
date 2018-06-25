@@ -70,11 +70,6 @@
 		<?php
 			} else {
 		?>
-		<script src="/javascript/mo.min.js"></script>
-		<script src="/javascript/barba.min.js"></script>
-		<script src="/javascript/emergence.min.js"></script>
-		<script src="/javascript/typeit.min.js"></script>
-		<script src="/javascript/smooth-scrolling.min.js"></script>
 		<script src="/javascript/script.min.js"></script>
 		<?php
 			}

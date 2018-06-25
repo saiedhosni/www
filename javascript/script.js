@@ -1,5 +1,11 @@
 'use strict';
 
+import mojs from 'mo-js';
+import Barba from 'barba.js';
+import emergence from 'emergence.js';
+import TypeIt from 'typeit';
+import Smooth from 'smooth-scrolling';
+
 (function() {
 
 	// web developer console signature
