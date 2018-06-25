@@ -15,7 +15,8 @@
 		"webpack-cli": "^3.0.8"
 	},
 	"scripts": {
-		"build": "webpack"
+		"build:dev": "webpack --env=dev",
+		"build:prod": "webpack --env=prod"
 	},
 	"repository": {
 		"type": "git",
