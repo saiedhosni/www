@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
 	entry: './javascript/script.js',
 	output: {
 		filename: 'app.min.js',
