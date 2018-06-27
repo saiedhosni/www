@@ -39,14 +39,16 @@ import Smooth from 'smooth-scrolling';
 	};
 
 	// easing path for motion effects
-	const flatCurve = mojs.easing.path('M0, 0 C0, 0 100, 0 100, 0 ');
-	const linearCurve = mojs.easing.path('M0, -100 C0, -100 100, 0 100, 0');
-	const easingCurve = mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0');
-	const elasticCurve = mojs.easing.path('M0, 0 C0, 0 4.849404450774318, 19.999999999999982 12.791828475731364, 20 C24.190094519338984, 19.428571428571438 29.27028214126006, -5.143614215712348 35, -5 C40.62000858830659, -4.856385784287652 45.232927349299665, 4.978765515972064 50, 5 C54.767072650700335, 5.02123448402794 54.71135836980356, -0.434601857594152 70, 0 C89.43392377726468, 0.14888757187990745 100, 0 100, 0');
-	const reboundCurve = mojs.easing.path('M0, 100 C44.9687098810755, 100.46990312590644 32.608640807316306, -112.71428571428571 50, -112.71428571428571 C53.88142541784926, -113 50.5690732831949, -112.77159800612652 53.187808896210875, -112.71428571428571 C69.63942143079312, -112.6569734224449 62.47664961113968, 10.152839571695123 80, 10 C89.59652112056764, 9.84716042830488 89.16196028466256, -9.97870241527512 91.82926829268293, -10 C94.4965763007033, -10.021297584724882 95.18543962777919, -0.4699031259064711 100, 0');
-	const scaleCurve = mojs.easing.path('M0, 0 C0, 0 40, 0 40, 0 C40.43668122270742, 13.428571428571429 41.99545637252657, 19.999999999999993 48.25324744707157, 20 C54.51103852161658, 20.000000000000007 65, -20 65, -20 C65, -20 74.54070841137144, 0.10152544552210262 100, 0');
-	const bounceCurve = mojs.easing.path('M0, 50 C0, 50 17.25503118510422, -149.86658034848554 35, -150 C52.744968814895785, -150.13341965151443 62.32679796811743, 12.80677716048544 70, 25 C77.67320203188257, 37.193222839514554 100, 0 100, 0');
-	const tencilCurve = mojs.easing.path('M0, 0 C0, 0 1.5581395348837228, 64.71428571428571 6.578073089700997, 65 C11.598006644518271, 65.28571428571429 8.650122205969112, 65.14210007000197 13.417411218269201, 65 C24.120011928557993, 59.42932850142662 21.325081368532917, -0.14888757187985946 45, 0 C64.43392377726468, 0.14888757187990745 100, 0 100, 0');
+	const curves = {
+		flat: mojs.easing.path('M0, 0 C0, 0 100, 0 100, 0 '),
+		linear: mojs.easing.path('M0, -100 C0, -100 100, 0 100, 0'),
+		easing: mojs.easing.path('M0,100 C50,100 50,67.578125 50,50 C50,32.421875 50,0 100,0'),
+		elastic: mojs.easing.path('M0, 0 C0, 0 4.849404450774318, 19.999999999999982 12.791828475731364, 20 C24.190094519338984, 19.428571428571438 29.27028214126006, -5.143614215712348 35, -5 C40.62000858830659, -4.856385784287652 45.232927349299665, 4.978765515972064 50, 5 C54.767072650700335, 5.02123448402794 54.71135836980356, -0.434601857594152 70, 0 C89.43392377726468, 0.14888757187990745 100, 0 100, 0'),
+		rebound: mojs.easing.path('M0, 100 C44.9687098810755, 100.46990312590644 32.608640807316306, -112.71428571428571 50, -112.71428571428571 C53.88142541784926, -113 50.5690732831949, -112.77159800612652 53.187808896210875, -112.71428571428571 C69.63942143079312, -112.6569734224449 62.47664961113968, 10.152839571695123 80, 10 C89.59652112056764, 9.84716042830488 89.16196028466256, -9.97870241527512 91.82926829268293, -10 C94.4965763007033, -10.021297584724882 95.18543962777919, -0.4699031259064711 100, 0'),
+		scale: mojs.easing.path('M0, 0 C0, 0 40, 0 40, 0 C40.43668122270742, 13.428571428571429 41.99545637252657, 19.999999999999993 48.25324744707157, 20 C54.51103852161658, 20.000000000000007 65, -20 65, -20 C65, -20 74.54070841137144, 0.10152544552210262 100, 0'),
+		bounce: mojs.easing.path('M0, 50 C0, 50 17.25503118510422, -149.86658034848554 35, -150 C52.744968814895785, -150.13341965151443 62.32679796811743, 12.80677716048544 70, 25 C77.67320203188257, 37.193222839514554 100, 0 100, 0'),
+		tencil: mojs.easing.path('M0, 0 C0, 0 1.5581395348837228, 64.71428571428571 6.578073089700997, 65 C11.598006644518271, 65.28571428571429 8.650122205969112, 65.14210007000197 13.417411218269201, 65 C24.120011928557993, 59.42932850142662 21.325081368532917, -0.14888757187985946 45, 0 C64.43392377726468, 0.14888757187990745 100, 0 100, 0')
+	};
 
 	// global elements
 	let body = document.querySelector('body');
@@ -283,8 +285,8 @@ import Smooth from 'smooth-scrolling';
 					).then({
 						delay: 300,
 						y: { 120 : 0 },
-						radius: { 120 : 120, curve: elasticCurve },
-						easing: elasticCurve
+						radius: { 120 : 120, curve: curves.elastic },
+						easing: curves.elastic
 					}),
 					new mojs.Shape(
 						mojs.helpers.extend({
@@ -299,12 +301,12 @@ import Smooth from 'smooth-scrolling';
 							easing: mojs.easing.circ.out
 						}, iOptions)
 					).then({
-						radius: { 37 : 45, curve: flatCurve },
-						scaleY: { 1 : 1, curve: scaleCurve },
+						radius: { 37 : 45, curve: curves.flat },
+						scaleY: { 1 : 1, curve: curves.scale },
 						delay: 0,
 						duration: 700,
 						y: -210,
-						easing: reboundCurve
+						easing: curves.rebound
 					})
 				)
 			};
@@ -692,7 +694,7 @@ import Smooth from 'smooth-scrolling';
 		mojs.helpers.extend({
 			shape: 'circle',
 			radius: { 0 : 30 },
-			opacity: { 1 : 0, curve: linearCurve }
+			opacity: { 1 : 0, curve: curves.linear }
 		}, menuOptions)
 	);
 
@@ -705,7 +707,7 @@ import Smooth from 'smooth-scrolling';
 			quantifier: 3,
 			x: 'rand(-30, 30)',
 			y: 'rand(-40, 40)',
-			opacity: { 1 : 0, curve: linearCurve },
+			opacity: { 1 : 0, curve: curves.linear },
 			stroke: colors.vibrant,
 			delay: 'stagger(400, 150)'
 		}, menuOptions)
@@ -1201,7 +1203,7 @@ import Smooth from 'smooth-scrolling';
 		strokeDashoffset: { '300%' : '200%' },
 		y: -19,
 		duration: 500,
-		easing: easingCurve
+		easing: curves.easing
 	};
 
 	// defines options for the out animation
@@ -1209,7 +1211,7 @@ import Smooth from 'smooth-scrolling';
 		delay: 3000,
 		duration: 250,
 		strokeDashoffset: '100%',
-		easing: easingCurve
+		easing: curves.easing
 	};
 
 	// defines the base shapes
@@ -1336,8 +1338,8 @@ import Smooth from 'smooth-scrolling';
 	).then({
 		delay: 75,
 		y: { '-19' : '-28.5' },
-		radius: { 9.7 : 9.7, curve: tencilCurve},
-		easing: tencilCurve
+		radius: { 9.7 : 9.7, curve: curves.tencil},
+		easing: curves.tencil
 	}).then(
 		mojs.helpers.extend({
 			delay: motioOut.delay - motioOptions.interval * 9.5
@@ -1351,7 +1353,7 @@ import Smooth from 'smooth-scrolling';
 			fill: colors.base,
 			radius: { 5 : 6.3 },
 			x: 47.4,
-			y: { '-45' : -49.5, curve: bounceCurve },
+			y: { '-45' : -49.5, curve: curves.bounce },
 			delay: motioOptions.interval * 7 + 150
 		}, motioOptions)
 	).then(
@@ -1520,7 +1522,7 @@ import Smooth from 'smooth-scrolling';
 		strokeWidth: { 'rand(1, 4)' : 0 },
 		strokeDasharray: '100%',
 		strokeDashoffset: { '100%' : '300%' },
-		opacity: { 1 : 0, curve: linearCurve },
+		opacity: { 1 : 0, curve: curves.linear },
 		x: 'rand(-110, -20)',
 		y: 'rand(-70, -50)',
 		radius: 'rand(25, 35)',
