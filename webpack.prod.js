@@ -11,6 +11,7 @@ module.exports = {
 	optimization: {
 		minimizer: [
 			new UglifyJsPlugin({
+				parallel: true,
 				uglifyOptions: {
 					output: {
 						comments: false
