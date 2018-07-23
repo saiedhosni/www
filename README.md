@@ -34,6 +34,7 @@ Build with
 - typeit, by [@alexmacarthur](https://github.com/alexmacarthur/typeit)
 - smooth scrolling, by [@baptistebriel](https://github.com/baptistebriel/smooth-scrolling)
 - foundation framework, by [@zurb](https://github.com/zurb/foundation-sites)
+- webpack, by [@webpack](https://github.com/webpack/webpack)
 - javascript es6
 - less
 - php7
