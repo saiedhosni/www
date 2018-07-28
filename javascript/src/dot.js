@@ -37,7 +37,7 @@ dot.init = function() {
 	});
 
 	// binds the mouseup event to restore the dot size on mouseup
-	document.addEventListener('mouseup', function(e) {
+	document.addEventListener('mouseup', function() {
 		dot.classList.remove('down');
 
 		// creates a dot pulse effect on mouseup
@@ -46,12 +46,15 @@ dot.init = function() {
 			shape: 'circle',
 			left: 0,
 			top: 0,
-			x: e.pageX,
-			y: e.pageY,
+			x: mouseX,
+			y: mouseY,
 			radius: { 6 : 40 },
 			fill: device.blend ? colors.contrast : (dot.classList.contains('blend') ? colors.base : colors.contrast),
 			opacity: { 0.35 : 0 },
 			duration: 500,
+			onStart: function() {
+				this.el.style.position = 'fixed';
+			},
 			onComplete: function() {
 				this.el.parentNode.removeChild(this.el);
 			}
