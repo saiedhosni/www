@@ -1,7 +1,7 @@
 {
 	"name": "www1",
 	"version": "1.2.2",
-	"description": "www1 ==== This is the official **portfolio website of Studio MOTIO**, a France-based interactive design & creative web studio from La Rochelle.",
+	"description": "This is the official **portfolio website of Studio MOTIO**, a France-based interactive design & creative web studio from La Rochelle.",
 	"private": true,
 	"dependencies": {
 		"barba.js": "1.0.0",
