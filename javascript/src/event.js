@@ -74,9 +74,6 @@ export function bindFooter() {
 				if (!visibility) {
 					document.querySelector('footer').classList.add('show');
 					visibility = true;
-					setTimeout(() => {
-						document.querySelector('footer .logo').dispatchEvent(new Event('mouseenter'));
-					}, 500);
 				}
 			} else {
 				if (visibility) {
