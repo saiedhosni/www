@@ -348,29 +348,7 @@ textarea {
 }
 
 .highlight {
-	position: relative;
-	text-decoration: none;
-
-	&::after {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		background: currentColor;
-		opacity: 0.1;
-		top: auto;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 0;
-		.transition(height 300ms @cubic);
-	}
-
-	&:hover::after,
-	&:focus::after {
-		height: 40%;
-		bottom: auto;
-		top: 60%;
-	}
+	.mm-highlight(@origin: top; @release: reverse; @opacity: 0.1; @height: 30%; @offset: 60%; @duration: 300ms; @easing: @cubic);
 }
 
 .black .highlight {
