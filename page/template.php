@@ -15,9 +15,7 @@
 		<meta name="theme-color" content="#000" />
 		<title><?php echo METADATA[PAGE][0] ?? ''; ?></title>
 		<link rel="icon" href="/picture/favicon.ico" type="image/x-icon" />
-		<link type="text/css" rel="stylesheet" media="all" href="/style/foundation.min.css" />
 		<link type="text/css" rel="stylesheet" media="all" href="/style/default.min.css" />
-		<link rel="prefetch" href="/style/foundation.min.css" />
 		<link rel="prefetch" href="/font/sailec-thin.woff" />
 		<link rel="prefetch" href="/font/sailec-light.woff" />
 		<link rel="prefetch" href="/font/sailec-bold.woff" />
