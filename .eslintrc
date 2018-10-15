@@ -1,40 +1,52 @@
 {
-	"env": {
-		"browser": true,
-		"es6": true
-	},
-	"extends": "eslint:recommended",
-	"globals": {
-		"gtag": false,
-		"motio": true
-	},
-	"parserOptions": {
-		"ecmaVersion": 6,
-		"sourceType": "module"
-	},
-	"rules": {
-		"eqeqeq": [
-			"error",
-			"always"
-		],
-		"indent": [
-			"error",
-			"tab"
-		],
-		"linebreak-style": [
-			"error",
-			"unix"
-		],
-		"no-console": [
-			"off"
-		],
-		"quotes": [
-			"error",
-			"single"
-		],
-		"semi": [
-			"error",
-			"always"
-		]
-	}
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "gtag": false,
+    "motio": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
+    "indent": [
+      "error",
+      2, {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "no-console": [
+      "off"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "space-infix-ops": [
+      "error"
+    ],
+    "space-before-blocks": [
+      "error",
+      "always"
+    ],
+    "arrow-spacing": [
+      "error"
+    ]
+  }
 }

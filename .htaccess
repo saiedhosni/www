@@ -12,7 +12,7 @@ SetOutputFilter DEFLATE
 
 # sets browser cache to 1 week for some files
 <FilesMatch "\.(css|ico|js|svg|woff|xml)$">
-	Header set Cache-Control "private, max-age=604800, must-revalidate"
+  Header set Cache-Control "private, max-age=604800, must-revalidate"
 </FilesMatch>
 
 # actives the rewrite engine

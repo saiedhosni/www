@@ -2,7 +2,7 @@
 
 // global motio object for global tweens
 export let motio = {
-	preloaded: false,
-	transitionEngaged: false,
-	tabKeyEvent: false
+  preloaded: false,
+  transitionEngaged: false,
+  tabKeyEvent: false
 };

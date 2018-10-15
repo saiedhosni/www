@@ -1,107 +1,107 @@
 // main: build.less
 
 @supports not (mix-blend-mode: difference) {
-	[data-color='base'] {
-		.dot.blend-extended circle {
-			fill: @contrast-color;
-		}
-	}
+  [data-color='base'] {
+    .dot.blend-extended circle {
+      fill: @contrast-color;
+    }
+  }
 
-	[data-color='contrast'] {
-		color: @base-color;
+  [data-color='contrast'] {
+    color: @base-color;
 
-		.lang {
-			li {
-				&.active a {
-					color: @base-color;
-				}
-			}
-		}
+    .lang {
+      li {
+        &.active a {
+          color: @base-color;
+        }
+      }
+    }
 
-		.dot.blend-extended circle {
-			fill: @base-color;
-		}
+    .dot.blend-extended circle {
+      fill: @base-color;
+    }
 
-		.menu-button {
-			&::before,
-			&::after,
-			span {
-				background: @base-color;
-			}
-		}
+    .menu-button {
+      &::before,
+      &::after,
+      span {
+        background: @base-color;
+      }
+    }
 
-		.menu {
-			.lang {
-				li {
-					&.active a {
-						color: @contrast-color;
-					}
-				}
-			}
-		}
-	}
+    .menu {
+      .lang {
+        li {
+          &.active a {
+            color: @contrast-color;
+          }
+        }
+      }
+    }
+  }
 
-	body,
-	.lang li.active a {
-		.transition(color 500ms 600ms ease);
-	}
+  body,
+  .lang li.active a {
+    .transition(color 500ms 600ms ease);
+  }
 
-	.dot {
-		&.link circle {
-			opacity: 0.25;
-		}
+  .dot {
+    &.link circle {
+      opacity: 0.25;
+    }
 
-		&.isolate {
-			opacity: 1;
-		}
+    &.isolate {
+      opacity: 1;
+    }
 
-		&.blend circle {
-			fill: @base-color;
-		}
+    &.blend circle {
+      fill: @base-color;
+    }
 
-		circle {
-			fill: @contrast-color;
-			.transition(transform 250ms ease, opacity 250ms ease, fill 250ms ease;);
-		}
-	}
+    circle {
+      fill: @contrast-color;
+      .transition(transform 250ms ease, opacity 250ms ease, fill 250ms ease;);
+    }
+  }
 }
 
 // edge override
 @supports (-ms-ime-align: auto) {
-	header .column {
-		flex: 0 auto;
-	}
+  header .column {
+    flex: 0 auto;
+  }
 
-	nav {
-		float: auto;
-	}
+  nav {
+    float: auto;
+  }
 
-	.dot {
-		&.link svg {
-			.transition(transform 250ms ease);
-			.transform(scale(2.95));
-		}
+  .dot {
+    &.link svg {
+      .transition(transform 250ms ease);
+      .transform(scale(2.95));
+    }
 
-		&.down svg {
-			.transform(scale(0.7));
-		}
+    &.down svg {
+      .transform(scale(0.7));
+    }
 
-		svg {
-			.transition(transform 250ms ease);
-			.transform(scale(1));
-		}
-	}
+    svg {
+      .transition(transform 250ms ease);
+      .transform(scale(1));
+    }
+  }
 
-	.media svg,
-	.references svg {
-		pointer-events: none;
-	}
+  .media svg,
+  .references svg {
+    pointer-events: none;
+  }
 
-	.wrapper {
-		height: 1px;
-	}
+  .wrapper {
+    height: 1px;
+  }
 
-	.wrapper-arc {
-		right: -14px;
-	}
+  .wrapper-arc {
+    right: -14px;
+  }
 }
