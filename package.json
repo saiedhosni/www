@@ -3,19 +3,6 @@
   "version": "1.7.3",
   "description": "This is the official **portfolio website of Studio MOTIO**, a France-based interactive design & creative web studio from La Rochelle.",
   "private": true,
-  "dependencies": {
-    "@studiomotio/micro-motion": "^0.1.1",
-    "barba.js": "1.0.0",
-    "emergence.js": "1.1.2",
-    "mo-js": "0.288.2",
-    "smooth-scrolling": "2.3.11",
-    "typeit": "5.5.1"
-  },
-  "devDependencies": {
-    "uglifyjs-webpack-plugin": "^1.2.7",
-    "webpack": "^4.16.3",
-    "webpack-cli": "^3.1.0"
-  },
   "scripts": {
     "build:dev": "webpack --env dev",
     "build:prod": "webpack --env prod"
@@ -39,5 +26,18 @@
   "bugs": {
     "url": "https://github.com/studiomotio/www1/issues"
   },
-  "homepage": "https://github.com/studiomotio/www1#readme"
+  "homepage": "https://github.com/studiomotio/www1#readme",
+  "dependencies": {
+    "@studiomotio/micro-motion": "^0.1.1",
+    "barba.js": "1.0.0",
+    "emergence.js": "1.1.2",
+    "mo-js": "0.288.2",
+    "smooth-scrolling": "2.3.11",
+    "typeit": "5.5.1"
+  },
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0"
+  }
 }
