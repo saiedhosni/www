@@ -1,5 +1,6 @@
 const path = require('path');
 const uglify = require('uglifyjs-webpack-plugin');
+const package = require('./package.json');
 
 module.exports = {
   extends: path.resolve(__dirname, 'webpack.dev.js'),
@@ -15,7 +16,8 @@ module.exports = {
         parallel: true,
         uglifyOptions: {
           output: {
-            comments: false
+            comments: false,
+            preamble: `/*!\n  ${package.name} – ${package.description}\n  ${package.author.name} ${package.author.github} 2018 ${package.license}\n  ${package.version}\n*/`
           }
         }
       })

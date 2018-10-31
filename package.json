@@ -20,7 +20,8 @@
   "author": {
     "name": "Studio MOTIO",
     "email": "hello@studiomotio.com",
-    "url": "https://www.studiomotio.com"
+    "url": "https://www.studiomotio.com",
+    "github": "@studiomotio"
   },
   "license": "MIT",
   "bugs": {
