@@ -17,6 +17,10 @@ On May 31, 2018, the site is nominee for **Site Of The Day** on Awwwards and won
 [![Mobile Excellence – Awwwards](awwwards-me.png "Mobile Excellence – Awwwards")](https://awwwards.com/sites/studio-motio)&nbsp;
 [![Honorable Mention – Awwwards](awwwards-hm.png "Honorable Mention – Awwwards")](https://awwwards.com/sites/studio-motio)
 
+On November 15, 2018, the site is awarded for **Site Of The Day** on French Design Index. French Design Index promote talent of designers all over the world with the French Design Index Award.
+
+[![Site Of The Day – FDI](fdi-sotd.png "Site Of The Day – FDI")](http://www.frenchdesignindex.com/design-index-14035)
+
 
 ## Compatibility
 This website **officially runs on** Chrome 60+, Firefox 55+, Opera 50+, Safari 10+ and Edge 16+.
