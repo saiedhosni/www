@@ -43,14 +43,14 @@
   }
 
   // uniformizes the namespace between english and french pages
-  $name = str_replace(array(
+  $name = str_replace([
     LANGUAGE . '/',
     'le-',
     'the-',
     'nos-',
     'our-',
     'legal-'
-  ), '', $page);
+  ], '', $page);
 
   // specific case for legal notices
   if ($name == 'mentions-legales') {
