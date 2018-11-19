@@ -34,10 +34,6 @@
 
   // manages 404 requests
   if (!file_exists($path)) {
-
-    // prevents robots from indexing 404 requests
-    header('X-Robots-Tag: noindex');
-
     $page = LANGUAGE . '/404';
     $path = __DIR__ . '/page/' . $page . '.php';
   }
