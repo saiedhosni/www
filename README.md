@@ -51,5 +51,5 @@ Read the [full license](LICENSE.md) for more information about your rights.
 
 
 ## Questions?
-If you have any questions, please **feel free to contact us!**
+If you have any questions, please **feel free to contact us!**  
 [hello [at] studiomotio.com](mailto:hello@studiomotio.com)
