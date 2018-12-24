@@ -36,7 +36,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "terser-webpack-plugin": "^1.2.0",
     "webpack": "^4.16.3",
-    "webpack-command": "^0.4.1"
+    "webpack-command": "^0.4.2"
   },
   "dependencies": {
     "@studiomotio/micro-motion": "^0.1.2",
