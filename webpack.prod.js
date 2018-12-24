@@ -1,6 +1,6 @@
 const path = require('path');
-const uglify = require('uglifyjs-webpack-plugin');
 const package = require('./package.json');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   extends: path.resolve(__dirname, 'webpack.dev.js'),
@@ -12,9 +12,9 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      new uglify({
+      new TerserPlugin({
         parallel: true,
-        uglifyOptions: {
+        terserOptions: {
           output: {
             comments: false,
             preamble: `/*!\n  ${package.name} – ${package.description}\n  ${package.author.name} ${package.author.github} 2018 ${package.license}\n  ${package.version}\n*/`
