@@ -44,6 +44,6 @@
     "emergence.js": "1.1.2",
     "mo-js": "0.288.2",
     "smooth-scrolling": "2.3.11",
-    "typeit": "5.5.1"
+    "typeit": "^5.10.7"
   }
 }
