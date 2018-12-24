@@ -5,7 +5,7 @@ import {body, device, colors} from './global.js';
 import {motio} from './motio.js';
 
 // dot custom cursor properties
-export let dot = document.querySelector('.dot');
+export let dot = body.querySelector('.dot');
 let mouseX = dot.offsetLeft;
 let mouseY = dot.offsetTop;
 let tempX = mouseX;

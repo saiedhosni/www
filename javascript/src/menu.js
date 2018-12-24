@@ -1,13 +1,14 @@
 'use strict';
 
 import mojs from 'mo-js';
+import {body} from './global.js';
 import {colors, curves} from './global.js';
 
 export function init() {
 
   // mojs options and objects for the "show/hide the close menu button" tween
   const menuOptions = {
-    parent: document.querySelector('.menu-button-close'),
+    parent: body.querySelector('.menu-button-close'),
     fill: 'transparent',
     stroke: colors.contrast,
     strokeWidth: { 4 : 0 },
@@ -58,7 +59,7 @@ export function init() {
   });
 
   // binds all open menu buttons to displays the tween when the menu is opened (from white or black section)
-  document.querySelector('.menu-button').addEventListener('click', function() {
+  body.querySelector('.menu-button').addEventListener('click', function() {
     menuCross = new mojs.Shape(
       mojs.helpers.extend({
         playstate: false,

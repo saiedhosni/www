@@ -59,7 +59,7 @@ export function init() {
         let transition = this;
 
         // removes the dot transition layer from the DOM
-        let dotlayer = document.querySelector('.dot-transition');
+        let dotlayer = body.querySelector('.dot-transition');
         dotlayer.parentNode.removeChild(dotlayer);
 
         new Promise(function(resolve) {
@@ -85,7 +85,7 @@ export function init() {
     onEnter: function() {
 
       // mojs options and objects for the "o" tween
-      const path = document.querySelector('.motio-o-home path');
+      const path = body.querySelector('.motio-o-home path');
       const length = path.getTotalLength();
 
       motio.oTweenEnter = new mojs.Html({
@@ -273,7 +273,7 @@ export function init() {
     onEnter: function() {
 
       // mojs options and objects for the "arc" tween
-      const path = document.querySelector('.shape-arc');
+      const path = body.querySelector('.shape-arc');
       const length = path.getTotalLength();
 
       motio.arcTween = {
@@ -289,7 +289,7 @@ export function init() {
       };
 
       // gets the contact form
-      const form = document.querySelector('form');
+      const form = body.querySelector('form');
 
       // binds the submit event of the form to validate the content
       form.addEventListener('submit', function(e) {
@@ -365,7 +365,7 @@ export function init() {
       }
 
       // gets the text to type
-      let text = document.querySelector('.type');
+      let text = body.querySelector('.type');
       let strings = text.innerText.split(',');
 
       // cleans the current text content
@@ -378,9 +378,9 @@ export function init() {
         cursor: false,
         speed: 70,
         callback: function() {
-          const textarea = document.querySelector('textarea');
+          const textarea = body.querySelector('textarea');
 
-          if (textarea !== null && textarea !== document.activeElement && window.scrollY === 0) {
+          if (textarea !== null && textarea !== body.activeElement && window.scrollY === 0) {
             textarea.focus();
             textarea.setSelectionRange(0, 0);
           }
@@ -455,7 +455,7 @@ export function init() {
         duration: 'rand(3000, 4000)',
         delay: 'rand(1000, 2000)',
         onComplete: function() {
-          if (document.querySelector('.illustration-404') !== null) {
+          if (body.querySelector('.illustration-404') !== null) {
             this.generate().replay();
           } else {
             this.stop();
@@ -475,14 +475,14 @@ export function init() {
     dot.tune(link.getAttribute('data-dot') || 'base', e);
 
     // manages the mobile menu display if it is opened
-    if (document.querySelector('.menu-trigger:checked') !== null) {
-      let active = document.querySelector('.menu.mobile ul:not(.lang) > li.active');
+    if (body.querySelector('.menu-trigger:checked') !== null) {
+      let active = body.querySelector('.menu.mobile ul:not(.lang) > li.active');
 
       if (active !== null) {
         active.classList.add('out');
       }
 
-      let item = link.classList.contains('index') ? document.querySelector('[data-target="index"]') : link.parentNode;
+      let item = link.classList.contains('index') ? body.querySelector('[data-target="index"]') : link.parentNode;
 
       if (link.classList.contains('index')) {
         item.classList.add('active', 'in');
@@ -496,7 +496,7 @@ export function init() {
         }
 
         item.classList.remove('in');
-        document.querySelector('.menu-button-close').click();
+        body.querySelector('.menu-button-close').click();
       }, 500);
     }
   });
@@ -538,14 +538,14 @@ export function init() {
     body.setAttribute('data-color', motio.dotColor);
 
     // manages the mobile menu display if it is closed
-    if (document.querySelector('.menu-trigger:checked') === null) {
-      let active = document.querySelector('.menu.mobile ul:not(.lang) > li.active');
+    if (body.querySelector('.menu-trigger:checked') === null) {
+      let active = body.querySelector('.menu.mobile ul:not(.lang) > li.active');
 
       if (active !== null) {
         active.classList.remove('active');
       }
 
-      let item = document.querySelector(`[data-target="${currentStatus.namespace}"]`);
+      let item = body.querySelector(`[data-target="${currentStatus.namespace}"]`);
 
       if (item !== null) {
         item.classList.add('active');

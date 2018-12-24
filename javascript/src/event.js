@@ -8,7 +8,7 @@ import {dot} from './dot.js';
 export function bindLogos(transitionCompleted) {
 
   // manages all logos animations
-  Array.from(document.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'footer .logo' : '.logo')).forEach(function(logo) {
+  Array.from(body.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'footer .logo' : '.logo')).forEach(function(logo) {
 
     // mojs options and objects for the "mouseenter/mouseleave logo" tween
     const letter = logo.querySelector('.motion-letter');
@@ -72,12 +72,12 @@ export function bindFooter() {
     throttle = window.requestAnimationFrame(function() {
       if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (device.large ? 98 : 95)) {
         if (!visibility) {
-          document.querySelector('footer').classList.add('show');
+          body.querySelector('footer').classList.add('show');
           visibility = true;
         }
       } else {
         if (visibility) {
-          document.querySelector('footer').classList.remove('show');
+          body.querySelector('footer').classList.remove('show');
           visibility = false;
         }
       }
@@ -105,7 +105,7 @@ export function bindTabKey() {
 export function bindLinks(transitionCompleted) {
 
   // binds the mouseenter/mouseleave/click/focus events of all links to increase/decrease the dot size, avoid page reload on same urls and manages tab focus event
-  Array.from(document.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'main a, main .button' : 'a, .button')).forEach(function(link) {
+  Array.from(body.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'main a, main .button' : 'a, .button')).forEach(function(link) {
     link.addEventListener('mouseenter', function() {
       dot.classList.add('link');
     });
@@ -195,7 +195,7 @@ export function bindLinks(transitionCompleted) {
 
   // binds the mouseenter and mouseleave events of all white sections and footer to support the dot circle fill transition
   if (!device.blend) {
-    Array.from(document.querySelectorAll('section.white, footer.white')).forEach(function(element) {
+    Array.from(body.querySelectorAll('section.white, footer.white')).forEach(function(element) {
       element.addEventListener('mouseenter', function() {
         dot.classList.add('blend');
       });
@@ -205,7 +205,7 @@ export function bindLinks(transitionCompleted) {
       });
     });
 
-    Array.from(document.querySelectorAll('header, .media')).forEach(function(element) {
+    Array.from(body.querySelectorAll('header, .media')).forEach(function(element) {
       element.addEventListener('mouseenter', function() {
         dot.classList.add('blend-extended');
       });
@@ -220,7 +220,7 @@ export function bindLinks(transitionCompleted) {
 export function bindIsolation() {
 
   // binds the mouseenter and mouseleave events of all mask element to prevent the user from displaying the oposite color of the vibrant color on svg elements
-  Array.from(document.querySelectorAll('.isolation, .isolated line, .isolated ellipse')).forEach(function(element) {
+  Array.from(body.querySelectorAll('.isolation, .isolated line, .isolated ellipse')).forEach(function(element) {
     element.addEventListener('mouseenter', function() {
       dot.classList.add('isolate');
     });
@@ -235,7 +235,7 @@ export function bindIsolation() {
 export function bindTextEffect() {
 
   // gets the title
-  let element = document.querySelector('h1');
+  let element = body.querySelector('h1');
 
   // exits if there is no title on the page
   if (element === null) {
@@ -271,7 +271,7 @@ export function bindTextEffect() {
           return;
         }
 
-        Array.from(document.querySelectorAll('.shift')).forEach(function(element) {
+        Array.from(body.querySelectorAll('.shift')).forEach(function(element) {
           element.classList.remove('shift');
         });
       }, home ? 700 : 550);
@@ -283,7 +283,7 @@ export function bindTextEffect() {
   });
 
   // independantly animates each characters
-  Array.from(document.querySelectorAll('.char')).forEach(function(char) {
+  Array.from(body.querySelectorAll('.char')).forEach(function(char) {
     textTween.add(new mojs.Html({
       el: char,
       y: { 50 : 0 },

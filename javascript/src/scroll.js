@@ -11,7 +11,7 @@ export function init() {
   // builds the smooth scrolling for non-touch devices or touch devices with no screen rotation (usually touch laptop and desktop)
   if (!device.touch || (device.touch && !device.rotate)) {
     scrolling = new Smooth({
-      section: document.querySelector('.smooth-scroll'),
+      section: body.querySelector('.smooth-scroll'),
       native: true,
       noscrollbar: true,
       preload: false,
@@ -39,7 +39,7 @@ export function build() {
 export function rebuild() {
   if (typeof scrolling !== 'undefined') {
     scrolling.destroy();
-    scrolling.options.section = document.querySelector('.smooth-scroll');
+    scrolling.options.section = body.querySelector('.smooth-scroll');
     scrolling = new Smooth(scrolling.options);
     scrolling.init();
   }
