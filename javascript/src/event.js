@@ -243,7 +243,7 @@ export function bindTextEffect() {
   }
 
   // cuts the title in multiple words
-  let words = element.innerText.match(/[a-zA-Zéçà',!&-]+(\s)?/g);
+  let words = element.innerText.match(/[^\s]+/g);
 
   // backups the title
   let title = element.innerHTML;
@@ -251,9 +251,9 @@ export function bindTextEffect() {
   // cleans the title
   element.innerHTML = '';
 
-  // loops through each words and cuts each characters in multiple span
+  // loops through each words and cuts each characters in multiple span, discarding spaces
   words.forEach(function(word) {
-    word = word.replace(/([^x00-x80 ]|\w|'|,|!|&|-)/g, '<span class="char">$&</span>');
+    word = word.replace(/[^\s]/g, '<span class="char">$&</span>');
     element.innerHTML += `<span class="word">${word}</span> `;
   });
 
