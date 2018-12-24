@@ -1,6 +1,6 @@
 {
   "name": "www1",
-  "version": "1.7.3",
+  "version": "1.9.10",
   "description": "This is the official **portfolio website of Studio MOTIO**, a France-based interactive design & creative web studio from La Rochelle.",
   "private": true,
   "scripts": {
