@@ -1,12 +1,17 @@
 const path = require('path');
 const package = require('./package.json');
 const TerserPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   extends: path.resolve(__dirname, 'webpack.dev.js'),
   mode: 'production',
   watch: false,
-  entry: './javascript/src/index.js',
+  entry: [
+    './javascript/src/index.js',
+    './style/less/build.less'
+  ],
   output: {
     filename: 'app.min.js'
   },
@@ -22,5 +27,37 @@ module.exports = {
         }
       })
     ]
-  }
+  },
+  module: {
+    rules: [{
+      test: /\.(less|css)$/,
+      use: [
+        MiniCssExtractPlugin.loader, {
+          loader: 'css-loader',
+          options: {
+            url: false
+          }
+        }, {
+          loader: 'less-loader',
+          options: {
+            relativeUrls: false
+          }
+        }
+      ]
+    }]
+  },
+  plugins: [
+    new OptimizeCSSAssetsPlugin({
+      cssProcessorPluginOptions: {
+        preset: ['default', {
+          discardComments: {
+            removeAll: true
+          }
+        }],
+      }
+    }),
+    new MiniCssExtractPlugin({
+      filename: '../style/default.min.css'
+    })
+  ]
 };
