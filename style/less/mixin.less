@@ -12,47 +12,6 @@
   }
 }
 
-.border-radius(@radius) {
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  border-radius: @radius;
-}
-
-.keyframes(@name, @frames) {
-  @-webkit-keyframes @name {
-    @frames();
-  }
-
-  @-moz-keyframes @name {
-    @frames();
-  }
-
-  @keyframes @name {
-    @frames();
-  }
-}
-
-.animation(...) {
-  -webkit-animation: @arguments;
-  -moz-animation: @arguments;
-  animation: @arguments;
-}
-
-.transition(...) {
-  -webkit-transition: @arguments;
-  -moz-transition: @arguments;
-  -o-transition: @arguments;
-  transition: @arguments;
-}
-
-.transform(...) {
-  -webkit-transform: @arguments;
-  -moz-transform: @arguments;
-  -ms-transform: @arguments;
-  -o-transform: @arguments;
-  transform: @arguments;
-}
-
 .no-select {
   -webkit-user-select: none;
   -moz-user-select: none;

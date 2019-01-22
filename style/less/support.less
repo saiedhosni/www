@@ -43,7 +43,7 @@
 
   body,
   .lang li.active a {
-    .transition(color 500ms 600ms ease);
+    transition: color 500ms 600ms ease;
   }
 
   .dot {
@@ -61,7 +61,7 @@
 
     circle {
       fill: @contrast-color;
-      .transition(transform 250ms ease, opacity 250ms ease, fill 250ms ease;);
+      transition: transform 250ms ease, opacity 250ms ease, fill 250ms ease;
     }
   }
 }
@@ -78,17 +78,17 @@
 
   .dot {
     &.link svg {
-      .transition(transform 250ms ease);
-      .transform(scale(2.95));
+      transition: transform 250ms ease;
+      transform: scale(2.95);
     }
 
     &.down svg {
-      .transform(scale(0.7));
+      transform: scale(0.7);
     }
 
     svg {
-      .transition(transform 250ms ease);
-      .transform(scale(1));
+      transition: transform 250ms ease;
+      transform: scale(1);
     }
   }
 

@@ -1,32 +1,66 @@
 // main: build.less
 
-.keyframes(pending-progress, {
-  0% {width: 0%;}
-  20% {width: 20%;}
-  100% {width: 70%;}
-});
+@keyframes pending-progress {
+  0% {
+    width: 0%;
+  }
 
-.keyframes(undelivered-progress, {
-  from {width: 70%;}
-  to {width: 100%; background: @warning-color;}
-});
+  20% {
+    width: 20%;
+  }
 
-.keyframes(delivered-progress, {
-  from {width: 70%;}
-  to {width: 100%;}
-});
+  100% {
+    width: 70%;
+  }
+}
 
-.keyframes(activate, {
-  from {.transform(scale(0));}
-  to {.transform(scale(1));}
-});
+@keyframes undelivered-progress {
+  from {
+    width: 70%;
+  }
 
-.keyframes(display, {
-  from {opacity: 0;}
-  to {opacity: 1;}
-});
+  to {
+    width: 100%;
+    background: @warning-color;
+  }
+}
 
-.keyframes(height, {
-  from {height: 0;}
-  to {height: 40%;}
-});
+@keyframes delivered-progress {
+  from {
+    width: 70%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes activate {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes display {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes height {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 40%;
+  }
+}
