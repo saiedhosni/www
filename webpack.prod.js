@@ -22,7 +22,7 @@ module.exports = {
         terserOptions: {
           output: {
             comments: false,
-            preamble: `/*!\n  ${package.name} – ${package.description}\n  ${package.author.name} ${package.author.github} 2018 ${package.license}\n  ${package.version}\n*/`
+            preamble: `/*!\n  ${package.name} – ${package.description}\n  ${package.author.name} ${package.author.github} ${package.year} ${package.license}\n  ${package.version}\n*/`
           }
         }
       })
