@@ -1,8 +1,8 @@
 <?php
-  // requires the site configuration
+  // require the site configuration
   require 'configuration.php';
 
-  // defines the site language
+  // define the site language
   define('LANGUAGE', substr($_SERVER['REQUEST_URI'], 0, 3) != '/en' ? 'fr' : 'en');
 
   // default page if nothing is specified
@@ -16,33 +16,33 @@
     }
   }
 
-  // builds a predictive page
+  // build a predictive page
   $page = $_GET['page'];
 
-  // rewrites french requests
+  // rewrite french requests
   if (LANGUAGE == 'fr') {
     $page = 'fr/' . $page;
   }
 
-  // rewrites english default page
+  // rewrite english default page
   if (LANGUAGE == 'en' && $page == 'en') {
     $page = 'en/' . DEFAULT_PAGE;
   }
 
-  // builds a predictive path
+  // build a predictive path
   $path = __DIR__ . '/page/' . $page . '.php';
 
-  // manages 404 requests
+  // manage 404 requests
   if (!file_exists($path)) {
 
-    // prevents robots from indexing 404 requests
+    // prevent robots from indexing 404 requests
     header('X-Robots-Tag: noindex');
 
     $page = LANGUAGE . '/404';
     $path = __DIR__ . '/page/' . $page . '.php';
   }
 
-  // uniformizes the namespace between english and french pages
+  // uniformize the namespace between english and french pages
   $name = str_replace([
     LANGUAGE . '/',
     'le-',
@@ -57,11 +57,11 @@
     $name = 'notices';
   }
 
-  // defines the page, requested file path and namespace
+  // define the page, requested file path and namespace
   define('PAGE', $page);
   define('PATH', $path);
   define('NAME', $name);
 
-  // calls the template
+  // call the template
   require 'page/template.php';
 ?>

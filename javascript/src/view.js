@@ -12,10 +12,10 @@ import * as event from './event.js';
 
 export function init() {
 
-  // initializes prefetch of barba js
+  // initialize prefetch of barba js
   Barba.Prefetch.init();
 
-  // defines the barba js page transition
+  // define the barba js page transition
   Barba.Pjax.getTransition = function() {
     return Barba.BaseTransition.extend({
       start: function() {
@@ -27,16 +27,16 @@ export function init() {
       onLeave: function() {
         return new Promise(function(resolve) {
 
-          // indicates that a transition is engaged
+          // indicate that a transition is engaged
           motio.transitionEngaged = true;
 
-          // disables the body scrollbars
+          // disable the body scrollbars
           body.classList.add('no-scroll');
 
-          // removes the dot link class
+          // remove the dot link class
           dot.classList.remove('link');
 
-          // creates the dot transition
+          // create the dot transition
           new mojs.Shape({
             className: 'dot-transition',
             shape: 'circle',
@@ -58,19 +58,19 @@ export function init() {
       onEnter: function() {
         let transition = this;
 
-        // removes the dot transition layer from the DOM
+        // remove the dot transition layer from the DOM
         let dotlayer = body.querySelector('.dot-transition');
         dotlayer.parentNode.removeChild(dotlayer);
 
         new Promise(function(resolve) {
 
-          // restores the body scrollbars
+          // restore the body scrollbars
           body.classList.remove('no-scroll');
 
           // scroll to the top when the new page is ready
           window.scrollTo(0, 0);
 
-          // indicates that the transition is done
+          // indicate that the transition is done
           resolve();
           transition.done();
           motio.transitionEngaged = false;
@@ -212,7 +212,7 @@ export function init() {
     namespace: 'services',
     onEnter: function() {
 
-      // defines the base options
+      // define the base options
       const iOptions = {
         playstate: false,
         parent: '.letter-i-rebound',
@@ -288,30 +288,30 @@ export function init() {
         })
       };
 
-      // gets the contact form
+      // get the contact form
       const form = body.querySelector('form');
 
-      // binds the submit event of the form to validate the content
+      // bind the submit event of the form to validate the content
       form.addEventListener('submit', function(e) {
 
-        // prevents default event
+        // prevent default event
         e.preventDefault();
 
-        // defines the mail regular expression
+        // define the mail regular expression
         const regex = /(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
 
-        // gets the textarea field
+        // get the textarea field
         const message = form.querySelector('textarea');
 
-        // gets the post button
+        // get the post button
         const button = form.querySelector('button');
 
-        // displays an invalid message if no mail address is specified
+        // display an invalid message if no mail address is specified
         if (!regex.test(message.value)) {
           form.classList.add('state', 'nomail');
           button.blur();
 
-          // restores the previous state after 2.2 seconds
+          // restore the previous state after 2.2 seconds
           setTimeout(function() {
             form.className = '';
           }, 2200);
@@ -319,12 +319,12 @@ export function init() {
           return;
         }
 
-        // displays a pending state before sending the message
+        // display a pending state before sending the message
         message.setAttribute('disabled', 'disabled');
         form.classList.add('state', 'pending');
         button.blur();
 
-        // prepares the message for sending
+        // prepare the message for sending
         const request = new XMLHttpRequest();
         request.open('POST', '/javascript/asynchronous/message.php');
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -334,7 +334,7 @@ export function init() {
               form.classList.remove('pending');
               form.classList.add('state', 'delivered');
 
-              // restores the previous state after 2.2 seconds
+              // restore the previous state after 2.2 seconds
               setTimeout(function() {
                 form.className = '';
                 message.removeAttribute('disabled');
@@ -344,7 +344,7 @@ export function init() {
               form.classList.remove('pending');
               form.classList.add('undelivered');
 
-              // restores the previous state after 3.2 seconds
+              // restore the previous state after 3.2 seconds
               setTimeout(function() {
                 form.className = '';
                 message.removeAttribute('disabled');
@@ -353,25 +353,25 @@ export function init() {
           }
         });
 
-        // sends the contact message to the studio
+        // send the contact message to the studio
         request.send(`message=${message.value}`);
       });
     },
     onEnterCompleted: function() {
 
-      // disables the type writer on small touch devices
+      // disable the type writer on small touch devices
       if (device.small && device.touch) {
         return;
       }
 
-      // gets the text to type
+      // get the text to type
       let text = body.querySelector('.type');
       let strings = text.innerText.split(',');
 
-      // cleans the current text content
+      // clean the current text content
       text.innerText = '';
 
-      // instanciates the typeit library and type
+      // instanciate the typeit library and type
       let typewriter = new TypeIt('.type', {
         autoStart: false,
         startDelay: 1200,
@@ -416,7 +416,7 @@ export function init() {
         delay: 'rand(0, 400)'
       };
 
-      // creates some birds and makes them fly
+      // create some birds and make them fly
       for(let i = 0; i < Math.floor((Math.random() * 5) + 2); i++) {
         new mojs.Shape(birdOptions).then({
           radiusY: { 5 : 2 },
@@ -429,16 +429,16 @@ export function init() {
         }).play();
       }
 
-      // defines the wind shape
+      // define the wind shape
       class Wind extends mojs.CustomShape {
         getShape() { return '<path d="M14.798 70.488c9.153.405 19.657-4.285 27.707-8.416 10.015-5.139 22.439-12.05 27.156-22.866 6.19-14.195-14.828-10.743-6.568-.406 6.633 8.301 19.062-.819 22.108-7.998"/>';}
         getLength() { return 118.114; }
       }
 
-      // adds the wind shape to the library
+      // add the wind shape to the library
       mojs.addShape('wind', Wind);
 
-      // creates the wind effect
+      // create the wind effect
       new mojs.Shape({
         parent: '.illustration-404',
         shape: 'wind',
@@ -465,16 +465,16 @@ export function init() {
     }
   }).init();
 
-  // manages the linkClicked event of barba js
+  // manage the linkClicked event of barba js
   Barba.Dispatcher.on('linkClicked', function(link, e) {
 
-    // defines that a click event from mouse/keyboard has been raised
+    // define that a click event from mouse/keyboard has been raised
     motio.clickEvent = true;
 
-    // tunes the dot for the next transition
+    // tune the dot for the next transition
     dot.tune(link.getAttribute('data-dot') || 'base', e);
 
-    // manages the mobile menu display if it is opened
+    // manage the mobile menu display if it is opened
     if (body.querySelector('.menu-trigger:checked') !== null) {
       let active = body.querySelector('.menu.mobile ul:not(.lang) > li.active');
 
@@ -501,24 +501,24 @@ export function init() {
     }
   });
 
-  // manages the initStateChange event of barba js
+  // manage the initStateChange event of barba js
   Barba.Dispatcher.on('initStateChange', function() {
 
-    // determines if the user is navigating with backward/forward arrows
+    // determine if the user is navigating with backward/forward arrows
     if (!motio.clickEvent) {
 
-      // tunes the dot for the next transition
+      // tune the dot for the next transition
       dot.tune(motio.dotPreviousColor);
     }
 
-    // resets the click event
+    // reset the click event
     motio.clickEvent = false;
   });
 
-  // manages the newPageReady event of barba js
+  // manage the newPageReady event of barba js
   Barba.Dispatcher.on('newPageReady', function(currentStatus, prevStatus, HTMLElementContainer) {
 
-    // sets the page title
+    // set the page title
     document.title = HTMLElementContainer.getAttribute('data-title');
 
     // updating Google Analytics properly
@@ -533,11 +533,11 @@ export function init() {
       });
     }
 
-    // sets some body data attributes to allow specific style override per page
+    // set some body data attributes to allow specific style override per page
     body.setAttribute('data-page', currentStatus.namespace);
     body.setAttribute('data-color', motio.dotColor);
 
-    // manages the mobile menu display if it is closed
+    // manage the mobile menu display if it is closed
     if (body.querySelector('.menu-trigger:checked') === null) {
       let active = body.querySelector('.menu.mobile ul:not(.lang) > li.active');
 
@@ -553,13 +553,13 @@ export function init() {
     }
   });
 
-  // manages the transitionCompleted event of barba js
+  // manage the transitionCompleted event of barba js
   Barba.Dispatcher.on('transitionCompleted', function() {
 
-    // in preload mode, only fires emergence, isolation and the text effect
+    // in preload mode, only fire emergence, isolation and the text effect
     if (!motio.preloaded) {
 
-      // initializes emergence js
+      // initialize emergence js
       emergence.init({
         elemCushion: 1,
         offsetTop: device.small ? 90 : 110,
@@ -570,10 +570,10 @@ export function init() {
             return;
           }
 
-          // gets the page namespace
+          // get the page namespace
           const page = body.getAttribute('data-page');
 
-          // gets the tween object depending on the page
+          // get the tween object depending on the page
           let tweenObject = null;
 
           if (page === 'studio') {
@@ -586,7 +586,7 @@ export function init() {
             return;
           }
 
-          // plays the specified tween if the element is present on the page
+          // play the specified tween if the element is present on the page
           if (typeof tweenObject[element.className] !== 'undefined') {
             const tween = tweenObject[element.className];
 
@@ -606,24 +606,24 @@ export function init() {
       // engage emergence
       emergence.engage();
 
-      // binds the isolation
+      // bind the isolation
       event.bindIsolation();
 
-      // animates the main title
+      // animate the main title
       event.bindTextEffect();
 
-      // indicates that the preload site has complete
+      // indicate that the preload site has complete
       motio.preloaded = true;
       return;
     }
 
-    // destroys and rebuilds the smooth scrolling
+    // destroy and rebuild the smooth scrolling
     scroll.rebuild();
 
-    // fires emergence on transition complete
+    // fire emergence on transition complete
     emergence.engage();
 
-    // inits some stuff for the new page
+    // init some stuff for the new page
     event.bindLinks(true);
     event.bindLogos(true);
     event.bindIsolation();

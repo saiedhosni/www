@@ -9,13 +9,13 @@ import * as scroll from './scroll.js';
 
 export function init() {
 
-  // gets the preload layout
+  // get the preload layout
   const preload = body.querySelector('.preload');
 
-  // creates the timeline
+  // create the timeline
   let motioTimeline = new mojs.Timeline();
 
-  // defines the base options
+  // define the base options
   const motioOptions = {
     parent: preload,
     interval: 100,
@@ -29,7 +29,7 @@ export function init() {
     easing: curves.easing
   };
 
-  // defines options for the out animation
+  // define options for the out animation
   const motioOut = {
     delay: 3000,
     duration: 250,
@@ -37,7 +37,7 @@ export function init() {
     easing: curves.easing
   };
 
-  // defines the base shapes
+  // define the base shapes
   class MotioMArc1 extends mojs.CustomShape {
     getShape() { return '<path d="M38.56 50.39c0-5.36 5.17-9.7 11.54-9.7 6.3 0 11.43 4.25 11.53 9.54V64.6"/>'; }
     getLength() { return 47.7; }
@@ -58,7 +58,7 @@ export function init() {
     getLength() { return 55; }
   }
 
-  // adds all custom shapes to the library
+  // add all custom shapes to the library
   mojs.addShape('motio-m-arc1', MotioMArc1);
   mojs.addShape('motio-m-arc2', MotioMArc2);
   mojs.addShape('motio-o', MotioO);
@@ -201,7 +201,7 @@ export function init() {
     }, motioOut)
   );
 
-  // adds shapes to the timeline
+  // add shapes to the timeline
   motioTimeline.add(
     motioMVertical,
     motioMArc1,
@@ -214,12 +214,12 @@ export function init() {
     motioOLast
   );
 
-  // creates the "studio" timeline
+  // create the "studio" timeline
   let studioTimeline = new mojs.Timeline({
     delay: motioOLast._o.delay + 300
   });
 
-  // defines the base options
+  // define the base options
   const studioOptions = {
     parent: preload,
     interval: 70,
@@ -233,14 +233,14 @@ export function init() {
     easing: mojs.easing.ease.in
   };
 
-  // defines options for the out animation
+  // define options for the out animation
   const studioOut = {
     opacity: 0,
     duration: 500,
     delay: 1700
   };
 
-  // defines the base shapes
+  // define the base shapes
   class StudioS extends mojs.CustomShape {
     getShape() { return '<path d="M54.034 48.451c-.076-.852-.473-1.473-1.043-1.89-.633-.459-1.188-.563-2.086-.57-.279-.004-1.143-.021-1.807.368-.492.288-.83.608-1.033 1.105-.207.494-.242.729-.203 1.213.041.482.135.76.338 1.018.205.256.434.438.955.635.514.189 1.398.377 1.988.506a11.68 11.68 0 0 1 1.666.492c.355.137.803.346 1.021.578.248.266.336.441.408.635.055.146.152.523.121 1.029-.021.363-.078.701-.258 1.025-.143.256-.35.57-.742.813-.373.23-.91.514-1.754.572-1.096.078-1.426-.037-1.965-.195a2.968 2.968 0 0 1-1.51-1.07c-.215-.305-.443-.654-.5-1.23"/>'; }
     getLength() { return 27.4; }
@@ -271,7 +271,7 @@ export function init() {
     getLength() { return 30.8; }
   }
 
-  // adds all custom shapes to the library
+  // add all custom shapes to the library
   mojs.addShape('studio-s', StudioS);
   mojs.addShape('studio-t', StudioT);
   mojs.addShape('studio-u', StudioU);
@@ -354,7 +354,7 @@ export function init() {
     delay: 'stagger(100, rand(50, 100))'
   });
 
-  // adds shapes to the timeline
+  // add shapes to the timeline
   studioTimeline.add(
     studioS,
     studioT,
@@ -365,7 +365,7 @@ export function init() {
     diagonalLines
   );
 
-  // creates the timeline
+  // create the timeline
   let preloadTimeline = new mojs.Timeline({
     playstate: false,
     onStart: function() {
@@ -373,13 +373,13 @@ export function init() {
     },
     onComplete: function() {
 
-      // depending on the targetted background color, builds a dot transition or simply displays the site
+      // depending on the targetted background color, build a dot transition or simply display the site
       if (body.getAttribute('data-color') === 'base') {
 
-        // tunes the dot for the next transition
+        // tune the dot for the next transition
         dot.tune();
 
-        // creates the dot transition
+        // create the dot transition
         new mojs.Shape({
           className: 'dot-transition',
           parent: preload,
@@ -404,54 +404,54 @@ export function init() {
       // method fired when the site preload is complete
       function preloadComplete() {
 
-        // displays the header and the media icons
+        // display the header and the media icons
         body.querySelector('header').classList.add('display');
         body.querySelector('.media').classList.add('display');
 
-        // removes the preload layout
+        // remove the preload layout
         body.removeChild(preload);
 
-        // delays page load
+        // delay page load
         setTimeout(function() {
 
-          // builds the smooth scroll
+          // build the smooth scroll
           scroll.build();
 
-          // starts barba js
+          // start barba js
           Barba.Pjax.start();
 
-          // restores the body scrollbars
+          // restore the body scrollbars
           body.classList.remove('no-scroll');
         }, 900);
       }
     }
   });
 
-  // merges timeline
+  // merge timeline
   preloadTimeline.add([
     motioTimeline,
     studioTimeline
   ]);
 
-  // binds the load event to completely wait for the site to load
+  // bind the load event to completely wait for the site to load
   window.addEventListener('load', function() {
 
-    // disables the body scrollbars
+    // disable the body scrollbars
     body.classList.add('no-scroll');
 
-    // plays the preload tween
+    // play the preload tween
     preloadTimeline.play();
   });
 
-  // binds the visibilitychange event to replay the timeline if the user have leaving tab focus before the site has completely loading
+  // bind the visibilitychange event to replay the timeline if the user have leaving tab focus before the site has completely loading
   document.addEventListener('visibilitychange', function() {
 
-    // exits if the preload has already complete
+    // exit if the preload has already complete
     if (motio.preloaded) {
       return;
     }
 
-    // replays the preload timeline if the tab get focus back and the preload timeline is not already playing
+    // replay the preload timeline if the tab get focus back and the preload timeline is not already playing
     if (document.visibilityState === 'visible' && preloadTimeline._o.playstate === false) {
       preloadTimeline.replay();
     }

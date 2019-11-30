@@ -58,7 +58,7 @@ export function init() {
     }, menuOptions)
   });
 
-  // binds all open menu buttons to displays the tween when the menu is opened (from white or black section)
+  // bind all open menu buttons to display the tween when the menu is opened (from white or black section)
   body.querySelector('.menu-button').addEventListener('click', function() {
     menuCross = new mojs.Shape(
       mojs.helpers.extend({
@@ -90,7 +90,7 @@ export function init() {
     }, 1200);
   });
 
-  // binds the close menu button to displays the tween when the menu is closed
+  // bind the close menu button to display the tween when the menu is closed
   menuOptions.parent.addEventListener('click', function() {
     if (menuCross._props.playstate) {
       menuCross._props.playstate = false;

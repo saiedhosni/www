@@ -8,7 +8,7 @@ let scrolling;
 
 export function init() {
 
-  // builds the smooth scrolling for non-touch devices or touch devices with no screen rotation (usually touch laptop and desktop)
+  // build the smooth scrolling for non-touch devices or touch devices with no screen rotation (usually touch laptop and desktop)
   if (!device.touch || (device.touch && !device.rotate)) {
     scrolling = new Smooth({
       section: body.querySelector('.smooth-scroll'),
@@ -24,7 +24,7 @@ export function init() {
     body.classList.add('no-dot');
   }
 
-  // prevents the browser from restoring the previous scroll position when using backward/forward arrows
+  // prevent the browser from restoring the previous scroll position when using backward/forward arrows
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }

@@ -7,7 +7,7 @@ import {dot} from './dot.js';
 
 export function bindLogos(transitionCompleted) {
 
-  // manages all logos animations
+  // manage all logos animations
   Array.from(body.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'footer .logo' : '.logo')).forEach(function(logo) {
 
     // mojs options and objects for the "mouseenter/mouseleave logo" tween
@@ -41,13 +41,13 @@ export function bindLogos(transitionCompleted) {
       }, letterOptions)
     );
 
-    // hides the "o" letter of the logo on enter
+    // hide the "o" letter of the logo on enter
     logo.addEventListener('mouseenter', function() {
       letterOut._props.playstate = true;
       letterOut.play();
     });
 
-    // shows the "o" letter of the logo on leave
+    // show the "o" letter of the logo on leave
     logo.addEventListener('mouseleave', function() {
       if (letterOut._props.playstate === true) {
         letterOut.playBackward();
@@ -58,17 +58,17 @@ export function bindLogos(transitionCompleted) {
 
 export function bindFooter() {
 
-  // manages the footer scroll animation
+  // manage the footer scroll animation
   let throttle;
   let scrollY = 0;
   let visibility = false;
 
-  // binds the scroll event to hide/show the footer content
+  // bind the scroll event to hide/show the footer content
   window.addEventListener('scroll', function() {
     scrollY = window.scrollY;
     window.cancelAnimationFrame(throttle);
 
-    // displays the footer content and animate the footer logo depending on the scroll position
+    // display the footer content and animate the footer logo depending on the scroll position
     throttle = window.requestAnimationFrame(function() {
       if (Math.floor(scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) >= (device.large ? 98 : 95)) {
         if (!visibility) {
@@ -87,14 +87,14 @@ export function bindFooter() {
 
 export function bindTabKey() {
 
-  // binds the keydown event to store the tab key event
+  // bind the keydown event to store the tab key event
   document.addEventListener('keydown', function(e) {
     if (e.keyCode === 9) {
       motio.tabKeyEvent = true;
     }
   });
 
-  // binds the keyup event to clear the tab key event
+  // bind the keyup event to clear the tab key event
   document.addEventListener('keyup', function(e) {
     if (e.keyCode === 9) {
       motio.tabKeyEvent = false;
@@ -104,7 +104,7 @@ export function bindTabKey() {
 
 export function bindLinks(transitionCompleted) {
 
-  // binds the mouseenter/mouseleave/click/focus events of all links to increase/decrease the dot size, avoid page reload on same urls and manages tab focus event
+  // bind the mouseenter/mouseleave/click/focus events of all links to increase/decrease the dot size, avoid page reload on same urls and manage tab focus event
   Array.from(body.querySelectorAll(typeof transitionCompleted !== 'undefined' ? 'main a, main .button' : 'a, .button')).forEach(function(link) {
     link.addEventListener('mouseenter', function() {
       dot.classList.add('link');
@@ -118,13 +118,13 @@ export function bindLinks(transitionCompleted) {
       dot.classList.remove('link');
       link.blur();
 
-      // prevents the user to reload the page if another link is clicked during a page transition
+      // prevent the user to reload the page if another link is clicked during a page transition
       if (motio.transitionEngaged) {
         e.preventDefault();
         e.stopPropagation();
       }
 
-      // prevents the user to reload the page if the location is the same
+      // prevent the user to reload the page if the location is the same
       if (this.href === window.location.href) {
         e.preventDefault();
 
@@ -133,7 +133,7 @@ export function bindLinks(transitionCompleted) {
           return;
         }
 
-        // automatically scrolls to the top of the page on same location
+        // automatically scroll to the top of the page on same location
         setTimeout(function () {
           window.scroll({
             top: 0,
@@ -146,7 +146,7 @@ export function bindLinks(transitionCompleted) {
 
     link.addEventListener('focus', function() {
 
-      // exits if the event is not provided by the user keyboard tabulation key
+      // exit if the event is not provided by the user keyboard tabulation key
       if (!motio.tabKeyEvent) {
         return;
       }
@@ -160,7 +160,7 @@ export function bindLinks(transitionCompleted) {
         link.classList.add('highlight');
       }
 
-      // calculates the offset top to scroll
+      // calculate the offset top to scroll
       let offsetTop = 0;
 
       if (link.classList.contains('in-footer')) {
@@ -176,7 +176,7 @@ export function bindLinks(transitionCompleted) {
         offsetTop = offsetTop - window.innerHeight * 0.5;
       }
 
-      // scrolls to the specified offset
+      // scroll to the specified offset
       window.scroll({
         top: offsetTop,
         left: 0,
@@ -186,14 +186,14 @@ export function bindLinks(transitionCompleted) {
 
     link.addEventListener('blur', function() {
 
-      // cleans the highlight class for specific links
+      // clean the highlight class for specific links
       if (link.classList.contains('need-highlight')) {
         link.classList.remove('highlight');
       }
     });
   });
 
-  // binds the mouseenter and mouseleave events of all white sections and footer to support the dot circle fill transition
+  // bind the mouseenter and mouseleave events of all white sections and footer to support the dot circle fill transition
   if (!device.blend) {
     Array.from(body.querySelectorAll('section.white, footer.white')).forEach(function(element) {
       element.addEventListener('mouseenter', function() {
@@ -219,7 +219,7 @@ export function bindLinks(transitionCompleted) {
 
 export function bindIsolation() {
 
-  // binds the mouseenter and mouseleave events of all mask element to prevent the user from displaying the oposite color of the vibrant color on svg elements
+  // bind the mouseenter and mouseleave events of all mask element to prevent the user from displaying the oposite color of the vibrant color on svg elements
   Array.from(body.querySelectorAll('.isolation, .isolated line, .isolated ellipse')).forEach(function(element) {
     element.addEventListener('mouseenter', function() {
       dot.classList.add('isolate');
@@ -231,42 +231,42 @@ export function bindIsolation() {
   });
 }
 
-// creates a text effect on the main title
+// create a text effect on the main title
 export function bindTextEffect() {
 
-  // gets the title
+  // get the title
   let element = body.querySelector('h1');
 
-  // exits if there is no title on the page
+  // exit if there is no title on the page
   if (element === null) {
     return;
   }
 
-  // cuts the title in multiple words
+  // cut the title in multiple words
   let words = element.innerText.match(/[^\s]+/g);
 
-  // backups the title
+  // backup the title
   let title = element.innerHTML;
 
-  // cleans the title
+  // clean the title
   element.innerHTML = '';
 
-  // loops through each words and cuts each characters in multiple span, discarding spaces
+  // loop through each words and cut each characters in multiple span, discarding spaces
   words.forEach(function(word) {
     word = word.replace(/[^\s]/g, '<span class="char">$&</span>');
     element.innerHTML += `<span class="word">${word}</span> `;
   });
 
-  // checks if the user is on the index page
+  // check if the user is on the index page
   let home = body.getAttribute('data-page') === 'index';
 
-  // creates the timeline
+  // create the timeline
   let textTween = new mojs.Timeline({
     delay: home ? 1100 : 0,
     onStart: function() {
       setTimeout(function () {
 
-        // discards shift effect if a transition is engaged before the page is fully loaded
+        // discard shift effect if a transition is engaged before the page is fully loaded
         if (motio.transitionEngaged) {
           return;
         }
@@ -282,7 +282,7 @@ export function bindTextEffect() {
     }
   });
 
-  // independantly animates each characters
+  // independantly animate each characters
   Array.from(body.querySelectorAll('.char')).forEach(function(char) {
     textTween.add(new mojs.Html({
       el: char,
