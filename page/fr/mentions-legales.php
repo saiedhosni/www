@@ -12,7 +12,7 @@
         Studio MOTIO ®<br />
         17000 La Rochelle<br />
         <a href="mailto:hello@studiomotio.com" target="_blank" class="highlight">hello@studiomotio.com</a><br />
-        Publication : <a href="mailto:xavier@studiomotio.com" target="_blank" class="highlight">Xavier Foucrier</a> &ndash; 2018<br />
+        Publication : <a href="mailto:xavier@studiomotio.com" target="_blank" class="highlight">Xavier Foucrier</a> &ndash; 2019<br />
       </p>
     </article>
   </div>
