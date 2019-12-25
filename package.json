@@ -44,7 +44,7 @@
     "barba.js": "1.0.0",
     "emergence.js": "1.1.2",
     "mo-js": "0.288.2",
-    "smooth-scrolling": "2.3.11",
+    "smooth-scrolling": "^2.3.12",
     "typeit": "^5.10.7"
   }
 }
