@@ -373,11 +373,10 @@ export function init() {
 
       // instanciate the typeit library and type
       let typewriter = new TypeIt('.type', {
-        autoStart: false,
         startDelay: 1200,
         cursor: false,
         speed: 70,
-        callback: function() {
+        afterComplete: () => {
           const textarea = body.querySelector('textarea');
 
           if (textarea !== null && textarea !== body.activeElement && window.scrollY === 0) {
@@ -387,7 +386,7 @@ export function init() {
 
           typewriter.destroy();
         }
-      }).type(`${strings[0]},`).pause(500).type(strings[1]);
+      }).type(`${strings[0]},`).pause(500).type(strings[1]).go();
     }
   }).init();
 
