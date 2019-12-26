@@ -24,7 +24,7 @@ module.exports = {
   optimization: {
     minimizer: [
       new TerserPlugin({
-        parallel: true,
+        extractComments: false,
         terserOptions: {
           output: {
             comments: false,
