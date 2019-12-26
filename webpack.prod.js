@@ -1,8 +1,8 @@
 'use strict';
 
-const path = require('path');
 const pack = require('./package.json');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -10,14 +10,9 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // package preamble
 const preamble = `/*!\n  ${pack.name} – ${pack.description}\n  ${pack.author.name} ${pack.author.github} ${pack.year} ${pack.license}\n  ${pack.version}\n*/`;
 
-module.exports = {
-  extends: path.resolve(__dirname, 'webpack.dev.js'),
+module.exports = (argv) => merge(require('./webpack.common.js')(argv), {
   mode: 'production',
   watch: false,
-  entry: [
-    './javascript/src/index.js',
-    './style/less/build.less'
-  ],
   output: {
     filename: 'app.min.js'
   },
@@ -33,24 +28,6 @@ module.exports = {
         }
       })
     ]
-  },
-  module: {
-    rules: [{
-      test: /\.(less|css)$/,
-      use: [
-        MiniCssExtractPlugin.loader, {
-          loader: 'css-loader',
-          options: {
-            url: false
-          }
-        }, {
-          loader: 'less-loader',
-          options: {
-            relativeUrls: false
-          }
-        }
-      ]
-    }]
   },
   plugins: [
     new OptimizeCSSAssetsPlugin({
@@ -72,4 +49,4 @@ module.exports = {
       filename: '../style/default.min.css'
     })
   ]
-};
+});
