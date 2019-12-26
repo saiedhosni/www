@@ -5,7 +5,7 @@ const package = require('./package.json');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 // package preamble
 const preamble = `/*!\n  ${package.name} – ${package.description}\n  ${package.author.name} ${package.author.github} ${package.year} ${package.license}\n  ${package.version}\n*/`;
