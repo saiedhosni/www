@@ -45,8 +45,6 @@
     // indicate to the contact form that the message has been delivered successfully
     echo $mailer->send($message) !== false ? 'posted' : '';
   } catch(Exception $e) {
-
-    // log the exception
-    file_put_contents(__DIR__ . '/log/message.log', date('j M Y H:i:s') . ' —— ' . $e->getMessage() . "\n", FILE_APPEND);
+    return;
   }
 ?>
