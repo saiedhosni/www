@@ -4,13 +4,13 @@
 
 body {
   overflow-x: hidden;
-  background: @contrast-color;
-  color: @contrast-color;
+  background: @color[contrast];
+  color: @color[contrast];
   font-family: @font[base];
   font-weight: 300;
   cursor: none;
   -ms-overflow-style: none;
-  .selection(@base-color, @vibrant-color);
+  .selection(@color[base], @color[vibrant]);
   .no-select();
 
   &::-webkit-scrollbar {
@@ -174,19 +174,19 @@ textarea {
   padding: 0;
   font-size: 35px;
   font-weight: 100;
-  color: @bright-color;
+  color: @color[bright];
   background: none;
   line-height: 1.4;
   border: none;
-  border-bottom: 1px solid fade(@bright-color, 10%);
+  border-bottom: 1px solid fade(@color[bright], 10%);
   border-radius: 0;
   resize: none;
   cursor: none;
   transition: all 500ms ease;
 
   &:focus {
-    color: @base-color;
-    border-bottom: 1px solid @base-color;
+    color: @color[base];
+    border-bottom: 1px solid @color[base];
   }
 
   &:disabled {
@@ -223,13 +223,13 @@ textarea {
 }
 
 .black {
-  background: @base-color;
-  color: @contrast-color;
+  background: @color[base];
+  color: @color[contrast];
 }
 
 .white {
-  background: @contrast-color;
-  color: @base-color;
+  background: @color[contrast];
+  color: @color[base];
 
   a {
     color: currentColor;
@@ -290,7 +290,7 @@ textarea {
     }
 
     &.active a {
-      color: @contrast-color;
+      color: @color[contrast];
       opacity: 1;
     }
   }
@@ -449,7 +449,7 @@ textarea {
 .motio-o-home {
   height: 100vh;
   width: 100vh;
-  stroke: @vibrant-color;
+  stroke: @color[vibrant];
 }
 
 .wrapper {
@@ -474,7 +474,7 @@ textarea {
   svg {
     display: block;
     fill: none;
-    stroke: @vibrant-color;
+    stroke: @color[vibrant];
   }
 
   circle {
@@ -484,7 +484,7 @@ textarea {
   .vertical {
     width: 100%;
     margin-bottom: 51px;
-    color: @vibrant-color;
+    color: @color[vibrant];
   }
 
   .letter-o-last {
@@ -537,7 +537,7 @@ textarea {
     margin-top: -165px;
     margin-right: -@min-gutter * 2;
     fill: none;
-    stroke: @vibrant-color;
+    stroke: @color[vibrant];
     pointer-events: none;
 
     path {
@@ -561,7 +561,7 @@ textarea {
 }
 
 .warning {
-  color: @warning-color;
+  color: @color[warning];
 }
 
 .state {
@@ -612,7 +612,7 @@ textarea {
   width: 0;
   height: 1px;
   margin-top: -1px;
-  background: @base-color;
+  background: @color[base];
 }
 
 .emoji {
@@ -743,7 +743,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background: @contrast-color;
+  background: @color[contrast];
 }
 
 .display {

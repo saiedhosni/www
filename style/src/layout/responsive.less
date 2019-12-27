@@ -208,7 +208,7 @@
       display: block;
       height: 4px;
       width: 100%;
-      background: @contrast-color;
+      background: @color[contrast];
     }
 
     &::before {
@@ -235,8 +235,8 @@
     height: 100vh;
     margin: 0;
     padding: 10vh 20vw;
-    color: @contrast-color;
-    background: @base-color;
+    color: @color[contrast];
+    background: @color[base];
     pointer-events: none;
     will-change: transform;
     transition: transform 1.1s 700ms @cubic;
@@ -249,7 +249,7 @@
       top: 0;
       width: 71vw;
       height: 100vh;
-      background: @contrast-color;
+      background: @color[contrast];
       transition: transform 1s 800ms @cubic;
     }
 
@@ -261,7 +261,7 @@
       top: 0;
       width: 100vw;
       height: 100vh;
-      background: @vibrant-color;
+      background: @color[vibrant];
       transition: width 1.1s 600ms @cubic;
     }
 
@@ -278,7 +278,7 @@
           top: 48%;
           width: 10px;
           height: 10px;
-          background: @vibrant-color;
+          background: @color[vibrant];
           border-radius: 100%;
         }
 
@@ -310,13 +310,13 @@
           margin-left: 40px;
 
           &::before {
-            color: @contrast-color;
+            color: @color[contrast];
             left: -30px;
           }
         }
 
         &.active a {
-          color: @contrast-color;
+          color: @color[contrast];
         }
       }
     }
@@ -386,8 +386,8 @@
       width: 100vw;
       height: 100vh;
       padding: 30vh @gutter / 2;
-      background: @base-color;
-      color: @contrast-color;
+      background: @color[base];
+      color: @color[contrast];
       font-family: @font[base];
       font-size: 40px;
       font-weight: 100;
