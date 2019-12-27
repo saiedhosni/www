@@ -7,19 +7,19 @@ This is the official **portfolio website of Studio MOTIO**, a France-based inter
 ## Awards
 On May 12, 2018, the site is awarded as **Website Of The Day** on CSS Design Awards and won **best UI**, **best UX** and **best Innovation** awards. CSS Design Awards is an international web design and development award platform that honors and showcases freelance designers, studios and agencies for work that pushes the boundaries of UI, UX and innovative development.
 
-[![Website Of The Day – CSS Design Awards](cssda-wotd.png "Website Of The Day – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)&nbsp;
-[![Best UI Design – CSS Design Awards](cssda-best-ui-design.png "Best UI Design – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)&nbsp;
-[![Best UX Design – CSS Design Awards](cssda-best-ux-design.png "Best UX Design – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)&nbsp;
-[![Best Innovation – CSS Design Awards](cssda-best-innovation.png "Best Innovation – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)
+[![Website Of The Day – CSS Design Awards](awwward/cssda-wotd.png "Website Of The Day – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)&nbsp;
+[![Best UI Design – CSS Design Awards](awwward/cssda-best-ui-design.png "Best UI Design – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)&nbsp;
+[![Best UX Design – CSS Design Awards](awwward/cssda-best-ux-design.png "Best UX Design – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)&nbsp;
+[![Best Innovation – CSS Design Awards](awwward/cssda-best-innovation.png "Best Innovation – CSS Design Awards")](https://www.cssdesignawards.com/sites/studio-motio/32875)
 
 On May 31, 2018, the site is nominee for **Site Of The Day** on Awwwards and won a **Mobile Excellence** and an **Honorable Mention** awards. Awwwards is a community that recognize the talent and effort of the best web designers, developers and agencies in the world.
 
-[![Mobile Excellence – Awwwards](awwwards-me.png "Mobile Excellence – Awwwards")](https://awwwards.com/sites/studio-motio)&nbsp;
-[![Honorable Mention – Awwwards](awwwards-hm.png "Honorable Mention – Awwwards")](https://awwwards.com/sites/studio-motio)
+[![Mobile Excellence – Awwwards](awwward/awwwards-me.png "Mobile Excellence – Awwwards")](https://awwwards.com/sites/studio-motio)&nbsp;
+[![Honorable Mention – Awwwards](awwward/awwwards-hm.png "Honorable Mention – Awwwards")](https://awwwards.com/sites/studio-motio)
 
 On November 15, 2018, the site is awarded for **Site Of The Day** on French Design Index. French Design Index promote talent of designers all over the world with the French Design Index Award.
 
-[![Site Of The Day – FDI](fdi-sotd.png "Site Of The Day – FDI")](http://www.frenchdesignindex.com/design-index-14035)
+[![Site Of The Day – FDI](awwward/fdi-sotd.png "Site Of The Day – FDI")](http://www.frenchdesignindex.com/design-index-14035)
 
 
 ## Compatibility
