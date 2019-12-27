@@ -36,7 +36,7 @@ Many other browsers may work, but are not extensively tested.
 - foundation framework, by [@zurb](https://github.com/zurb/foundation-sites)
 - webpack, by [@webpack](https://github.com/webpack/webpack)
 - javascript es6
-- less
+- sass/less
 - php7
 
 
