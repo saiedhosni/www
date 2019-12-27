@@ -1,5 +1,4 @@
-.idea
-node_modules/
-vendor/
-javascript/app.js
-style/default.css
+/node_modules
+/vendor
+/javascript/app.js
+/style/default.css
