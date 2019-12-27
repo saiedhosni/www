@@ -326,7 +326,7 @@ export function init() {
 
         // prepare the message for sending
         const request = new XMLHttpRequest();
-        request.open('POST', '/javascript/asynchronous/message.php');
+        request.open('POST', 'async/message');
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         request.addEventListener('readystatechange', function() {
           if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {

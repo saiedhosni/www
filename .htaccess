@@ -32,6 +32,9 @@ RewriteRule ^en/index.php$ /en [R=301,L]
 # remove trailing slashes
 RewriteRule (.*)/$ /$1 [R=301,L]
 
+# rewrite asynchronous requests
+RewriteRule ^(.*)+async/message$ javascript/async/message.php [L]
+
 # rewrite urls to the template engine
 RewriteRule ^([/a-zA-Z-]+)$ index.php?page=$1 [L]
 
