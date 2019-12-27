@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/studiomotio/www1#readme",
   "devDependencies": {
+    "autoprefixer": "^9.7.3",
     "css-loader": "^3.4.0",
     "glob-all": "^3.1.0",
     "less": "^3.10.3",
