@@ -1,4 +1,4 @@
-# www1
+# www
 This is the official **portfolio website of Studio MOTIO**, a France-based interactive design & creative web studio from La Rochelle.
 
 [![Studio MOTIO](logo.png "Studio MOTIO")](https://www.studiomotio.com)

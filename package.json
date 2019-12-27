@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/studiomotio/www1.git"
+    "url": "git+https://github.com/studiomotio/www.git"
   },
   "keywords": [
     "site",
@@ -26,9 +26,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/studiomotio/www1/issues"
+    "url": "https://github.com/studiomotio/www/issues"
   },
-  "homepage": "https://github.com/studiomotio/www1#readme",
+  "homepage": "https://github.com/studiomotio/www#readme",
   "devDependencies": {
     "autoprefixer": "^9.7.3",
     "css-loader": "^3.4.0",
