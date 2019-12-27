@@ -1,6 +1,6 @@
 'use strict';
 
-import mojs from 'mo-js';
+import mojs from '@mojs/core';
 import { body } from './global.js';
 import { colors, curves } from './global.js';
 

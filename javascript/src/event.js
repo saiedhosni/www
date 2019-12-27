@@ -1,6 +1,6 @@
 'use strict';
 
-import mojs from 'mo-js';
+import mojs from '@mojs/core';
 import { body, device } from './global.js';
 import { motio } from './motio.js';
 import { dot } from './dot.js';

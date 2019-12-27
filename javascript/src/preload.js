@@ -1,6 +1,6 @@
 'use strict';
 
-import mojs from 'mo-js';
+import mojs from '@mojs/core';
 import Barba from 'barba.js';
 import { body, colors, curves } from './global.js';
 import { motio } from './motio.js';

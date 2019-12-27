@@ -28,7 +28,7 @@ Many other browsers may work, but are not extensively tested.
 
 
 ## Build with
-- mojs, by [@legomushroom](https://github.com/legomushroom/mojs)
+- mojs, by [@legomushroom](https://github.com/mojs/mojs)
 - barbajs, by [@luruke](https://github.com/luruke/barba.js)
 - emergencejs, by [@xtianmiller](https://github.com/xtianmiller/emergence.js)
 - typeit, by [@alexmacarthur](https://github.com/alexmacarthur/typeit)

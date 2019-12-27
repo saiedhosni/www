@@ -1,6 +1,6 @@
 'use strict';
 
-import mojs from 'mo-js';
+import mojs from '@mojs/core';
 
 // device detection (screen sizes based on Foundation build)
 export let device = {
