@@ -1,4 +1,5 @@
 .idea
 node_modules/
+vendor/
 javascript/app.js
 style/default.css
