@@ -1,8 +1,8 @@
 'use strict';
 
 import mojs from 'mo-js';
-import {body} from './global.js';
-import {colors, curves} from './global.js';
+import { body } from './global.js';
+import { colors, curves } from './global.js';
 
 export function init() {
 

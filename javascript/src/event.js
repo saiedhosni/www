@@ -1,9 +1,9 @@
 'use strict';
 
 import mojs from 'mo-js';
-import {body, device} from './global.js';
-import {motio} from './motio.js';
-import {dot} from './dot.js';
+import { body, device } from './global.js';
+import { motio } from './motio.js';
+import { dot } from './dot.js';
 
 export function bindLogos(transitionCompleted) {
 

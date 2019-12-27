@@ -4,9 +4,9 @@ import mojs from 'mo-js';
 import Barba from 'barba.js';
 import emergence from 'emergence.js';
 import TypeIt from 'typeit';
-import {body, device, colors, curves} from './global.js';
-import {motio} from './motio.js';
-import {dot} from './dot.js';
+import { body, device, colors, curves } from './global.js';
+import { motio } from './motio.js';
+import { dot } from './dot.js';
 import * as scroll from './scroll.js';
 import * as event from './event.js';
 

@@ -2,9 +2,9 @@
 
 import mojs from 'mo-js';
 import Barba from 'barba.js';
-import {body, colors, curves} from './global.js';
-import {motio} from './motio.js';
-import {dot} from './dot.js';
+import { body, colors, curves } from './global.js';
+import { motio } from './motio.js';
+import { dot } from './dot.js';
 import * as scroll from './scroll.js';
 
 export function init() {
@@ -161,7 +161,7 @@ export function init() {
   ).then({
     delay: 75,
     y: { '-19' : '-28.5' },
-    radius: { 9.7 : 9.7, curve: curves.tencil},
+    radius: { 9.7 : 9.7, curve: curves.tencil },
     easing: curves.tencil
   }).then(
     mojs.helpers.extend({

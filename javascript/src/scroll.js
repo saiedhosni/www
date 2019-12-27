@@ -1,8 +1,8 @@
 'use strict';
 
 import Smooth from 'smooth-scrolling';
-import {device, body} from './global.js';
-import {dot} from './dot.js';
+import { device, body } from './global.js';
+import { dot } from './dot.js';
 
 let scrolling;
 
