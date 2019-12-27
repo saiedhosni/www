@@ -1,13 +1,17 @@
 'use strict';
 
-const path = require('path');
+const merge = require('webpack-merge');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
+module.exports = (argv) => merge(require('./webpack.common.js')(argv), {
   mode: 'development',
   watch: true,
-  entry: './javascript/src/index.js',
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'javascript')
-  }
-};
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '../style/default.css'
+    })
+  ]
+});
