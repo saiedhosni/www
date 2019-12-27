@@ -5,8 +5,8 @@
   "description": "This is the official **portfolio website of Studio MOTIO**, a France-based interactive design & creative web studio from La Rochelle.",
   "private": true,
   "scripts": {
-    "build:dev": "webpack --config webpack.dev.js",
-    "build:prod": "webpack --config webpack.prod.js"
+    "build:dev": "webpack --config webpack.dev.js --define.env development",
+    "build:prod": "webpack --config webpack.prod.js --define.env production"
   },
   "repository": {
     "type": "git",

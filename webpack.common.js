@@ -1,10 +1,11 @@
 'use strict';
 
 const path = require('path');
+const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = () => ({
+module.exports = (argv) => ({
   entry: [
     './javascript/src/index.js',
     './style/src/build.less'
@@ -41,5 +42,12 @@ module.exports = () => ({
         loader: 'sass-loader'
       }]
     }]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      build: {
+        environment: `"${argv.define.env}"`,
+      }
+    })
+  ]
 });
