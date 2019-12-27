@@ -16,8 +16,8 @@
   // include the site configuration
   require '../../configuration.php';
 
-  // include swiftmailer autoloader
-  require '../../api/swiftmailer/autoload.php';
+  // require the composer autoload
+  require __DIR__ . '/../../vendor/autoload.php';
 
   // send the message
   try {
