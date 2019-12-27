@@ -5,9 +5,13 @@ body {
   font-family: @font[base];
   font-weight: 300;
   cursor: none;
+  user-select: none;
   -ms-overflow-style: none;
-  .selection(@color[base], @color[vibrant]);
-  .no-select();
+
+  ::selection {
+    color: @color[base];
+    background: @color[vibrant];
+  }
 
   &::-webkit-scrollbar {
     display: none;
@@ -757,5 +761,6 @@ textarea {
 }
 
 .touch {
-  .no-highlight();
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
