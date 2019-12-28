@@ -13,6 +13,12 @@ module.exports = (argv) => ({
   output: {
     path: path.resolve(__dirname, 'javascript')
   },
+  resolve: {
+    alias: {
+      component: path.resolve(__dirname, 'javascript/src/component/'),
+      utils: path.resolve(__dirname, 'javascript/src/utils/')
+    }
+  },
   module: {
     rules: [{
       test: /\.(less|css)$/,

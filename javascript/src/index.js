@@ -1,11 +1,11 @@
 'use strict';
 
-import * as view from './view.js';
-import * as menu from './menu.js';
-import * as event from './event.js';
-import * as preload from './preload.js';
-import * as scroll from './scroll.js';
-import { dot } from './dot.js';
+import * as view from 'component/view';
+import * as menu from 'component/menu';
+import * as event from 'component/event';
+import * as preload from 'component/preload';
+import * as scroll from 'component/scroll';
+import { dot } from 'component/dot';
 
 // web developer console signature
 console.log('%cMade with ❤︎️ by Studio MOTIO — Interactive design and creative web studio from La Rochelle — studiomotio.com', 'background:#000;color:#fff;padding:0.5em 1em;line-height:2;');

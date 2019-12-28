@@ -2,10 +2,10 @@
 
 import mojs from '@mojs/core';
 import Barba from 'barba.js';
-import { body, colors, curves } from './global.js';
-import { motio } from './motio.js';
-import { dot } from './dot.js';
-import * as scroll from './scroll.js';
+import { body, colors, curves } from 'utils/global';
+import { motio } from 'utils/motio';
+import { dot } from 'component/dot';
+import * as scroll from 'component/scroll';
 
 export function init() {
 

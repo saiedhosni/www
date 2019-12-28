@@ -1,8 +1,8 @@
 'use strict';
 
 import mojs from '@mojs/core';
-import { body, device, colors } from './global.js';
-import { motio } from './motio.js';
+import { body, device, colors } from 'utils/global';
+import { motio } from 'utils/motio';
 
 // dot custom cursor properties
 export let dot = body.querySelector('.dot');

@@ -4,11 +4,11 @@ import mojs from '@mojs/core';
 import Barba from 'barba.js';
 import emergence from 'emergence.js';
 import TypeIt from 'typeit';
-import { body, device, colors, curves } from './global.js';
-import { motio } from './motio.js';
-import { dot } from './dot.js';
-import * as scroll from './scroll.js';
-import * as event from './event.js';
+import { body, device, colors, curves } from 'utils/global';
+import { motio } from 'utils/motio';
+import { dot } from 'component/dot';
+import * as scroll from 'component/scroll';
+import * as event from 'component/event';
 
 export function init() {
 

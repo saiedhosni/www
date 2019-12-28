@@ -1,8 +1,7 @@
 'use strict';
 
 import mojs from '@mojs/core';
-import { body } from './global.js';
-import { colors, curves } from './global.js';
+import { body, colors, curves } from 'utils/global';
 
 export function init() {
 
