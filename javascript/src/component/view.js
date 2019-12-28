@@ -9,6 +9,7 @@ import { motio } from 'utils/motio';
 import { dot } from 'component/dot';
 import * as scroll from 'component/scroll';
 import * as event from 'component/event';
+import * as traffic from 'component/traffic';
 
 export function init() {
 
@@ -520,17 +521,8 @@ export function init() {
     // set the page title
     document.title = HTMLElementContainer.getAttribute('data-title');
 
-    // updating Google Analytics properly
-    if (typeof gtag === 'function') {
-      const oops = currentStatus.namespace === '404';
-      const fr = document.documentElement.lang === 'fr';
-
-      gtag('config', 'UA-90171753-1', {
-        'page_title': document.title,
-        'page_location': oops ? location.href.replace(location.pathname, fr ? '/404' : '/en/404') : location.href,
-        'page_path': oops ? (fr ? '/404' : '/en/404') : location.pathname
-      });
-    }
+    // push the traffic
+    traffic.push();
 
     // set some body data attributes to allow specific style override per page
     body.setAttribute('data-page', currentStatus.namespace);

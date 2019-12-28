@@ -19,24 +19,6 @@
     <link rel="prefetch" href="/font/sailec-thin.woff" />
     <link rel="prefetch" href="/font/sailec-light.woff" />
     <link rel="prefetch" href="/font/sailec-bold.woff" />
-    <?php
-      if (ENVIRONMENT == 'prod') {
-        $gtag = '';
-
-        if (NAME == '404') {
-          $gtag .= "gtag('config','UA-90171753-1',{";
-          $gtag .= "'page_title':'" . (METADATA[PAGE][0] ?? '') . "',";
-          $gtag .= "'page_location':'https://www.studiomotio.com" . (LANGUAGE == 'fr' ? "/404" : "/en/404") . "',";
-          $gtag .= "'page_path':'" . (LANGUAGE == 'fr' ? "/404'" : "/en/404'");
-          $gtag .= "});";
-        } else {
-          $gtag = "gtag('config','UA-90171753-1')";
-        }
-    ?>
-    <script src="https://www.googletagmanager.com/gtag/js?id=UA-90171753-1" async></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());<?php echo $gtag; ?></script>
-    <?php
-      }
-    ?>
   </head>
   <body id="barba-wrapper" data-page="<?php echo NAME; ?>" data-color="<?php echo NAME == 'index' || NAME == 'services' ? 'base' : 'contrast'; ?>">
     <div class="preload"></div>

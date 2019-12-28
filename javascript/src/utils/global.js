@@ -13,6 +13,7 @@ export let device = {
 };
 
 // global elements
+export let head = document.querySelector('head');
 export let body = document.querySelector('body');
 
 // detect touch device and add a css class to the body
