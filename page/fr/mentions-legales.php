@@ -19,7 +19,7 @@
   <div class="row align-center">
     <article class="column medium-9 large-8">
       <p data-emergence="hidden" class="shift"><strong>Hébergement</strong></p>
-      <p class="no-margin shift" data-emergence="hidden">Ce site internet est hébergé en France sur un hébergement professionnel et totalement sécurisé. OVH SAS au capital de 10 069 020€ RCS Lille Métropole - Tourcoing 424 761 419 00045 Code APE 2620Z - N° TVA : FR 22 424 761 419. Siège social au 2 rue Kellermann 59100 Roubaix - France. Plus d'informations sur OVH en consultant leur site internet : <a href="https://www.ovh.com" target="_blank" class="highlight">https://www.ovh.com</a>.</p>
+      <p class="no-margin shift" data-emergence="hidden">Ce site internet est hébergé en France sur un hébergement professionnel et totalement sécurisé. OVH SAS au capital de 10 069 020€ RCS Lille Métropole - Tourcoing 424 761 419 00045 Code APE 2620Z - N° TVA : FR 22 424 761 419. Siège social au 2 rue Kellermann 59100 Roubaix - France. Plus d'informations sur OVH en consultant leur site internet : <a href="https://www.ovh.com" target="_blank" class="highlight" rel="noopener">https://www.ovh.com</a>.</p>
     </article>
   </div>
   <div class="row align-center">
