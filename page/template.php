@@ -15,10 +15,9 @@
     <meta name="theme-color" content="#000" />
     <title><?php echo METADATA[PAGE][0] ?? ''; ?></title>
     <link rel="icon" href="/picture/favicon.ico" type="image/x-icon" />
+    <link rel="preload" as="style" href="/style/default<?php echo ENVIRONMENT == 'prod' ? '.min' : ''; ?>.css" />
     <link type="text/css" rel="stylesheet" media="all" href="/style/default<?php echo ENVIRONMENT == 'prod' ? '.min' : ''; ?>.css" />
-    <link rel="prefetch" href="/font/sailec-thin.woff" />
-    <link rel="prefetch" href="/font/sailec-light.woff" />
-    <link rel="prefetch" href="/font/sailec-bold.woff" />
+    <link rel="preload" as="script" href="javascript/app<?php echo ENVIRONMENT == 'prod' ? '.min' : ''; ?>.js" />
   </head>
   <body id="barba-wrapper" data-page="<?php echo NAME; ?>" data-color="<?php echo NAME == 'index' || NAME == 'services' ? 'base' : 'contrast'; ?>">
     <div class="preload"></div>
