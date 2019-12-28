@@ -15,6 +15,7 @@ module.exports = (argv) => ({
   },
   resolve: {
     alias: {
+      root: __dirname,
       component: path.resolve(__dirname, 'javascript/src/component/'),
       utils: path.resolve(__dirname, 'javascript/src/utils/')
     }
