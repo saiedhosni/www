@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="robots" content="all" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="studio, motio, interactive, design, creative, web, motion, digital, development" />
     <meta name="description" content="<?php echo METADATA[PAGE][1] ?? ''; ?>" />
     <meta name="author" content="Studio MOTIO, Copyright (c) 2019" />
