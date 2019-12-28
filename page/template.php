@@ -23,8 +23,8 @@
   <body id="barba-wrapper" data-page="<?php echo NAME; ?>" data-color="<?php echo NAME == 'index' || NAME == 'services' ? 'base' : 'contrast'; ?>">
     <div class="preload"></div>
     <?php
-      require_once 'module/header.php';
-      require_once 'module/media.php';
+      require_once 'layout/header.php';
+      require_once 'layout/media.php';
     ?>
 <?php
   }
@@ -36,7 +36,7 @@
   ?>
   </div>
   <?php
-    require_once 'module/footer.php';
+    require_once 'layout/footer.php';
   ?>
 </main>
 <?php
