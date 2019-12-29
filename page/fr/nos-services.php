@@ -65,7 +65,6 @@
         <li class="column" data-emergence="hidden"><svg viewBox="0 0 100 100"><use xlink:href="/picture/sprite.svg#logo-phonequest" /></svg></li>
         <li class="column" data-emergence="hidden"><svg viewBox="0 0 100 100"><use xlink:href="/picture/sprite.svg#logo-excelia" /></svg></li>
         <li class="column" data-emergence="hidden"><svg viewBox="0 0 100 100"><use xlink:href="/picture/sprite.svg#logo-web2do" /></svg></li>
-        <li class="column" data-emergence="hidden"><svg viewBox="0 0 100 100"><use xlink:href="/picture/sprite.svg#logo-missionlocale" /></svg></li>
         <li class="column" data-emergence="hidden"><svg viewBox="0 0 100 100"><use xlink:href="/picture/sprite.svg#logo-shawork" /></svg></li>
       </ul>
     </div>
