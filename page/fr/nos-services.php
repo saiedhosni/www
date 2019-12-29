@@ -58,6 +58,7 @@
   <div class="row">
     <div class="column medium-8 medium-offset-2 large-8">
       <ul class="row small-up-1 medium-up-2 large-up-3 references">
+        <li class="column" data-emergence="hidden"><svg viewBox="0 0 100 100"><use xlink:href="/picture/sprite.svg#logo-capmystere" /></svg></li>
         <li class="column" data-emergence="hidden"><svg viewBox="0 0 100 100"><use xlink:href="/picture/sprite.svg#logo-kosmo" /></svg></li>
         <li class="column" data-emergence="hidden"><svg viewBox="0 0 100 100"><use xlink:href="/picture/sprite.svg#logo-kyoso" /></svg></li>
         <li class="column" data-emergence="hidden"><svg viewBox="0 0 100 100"><use xlink:href="/picture/sprite.svg#logo-p2mv" /></svg></li>
