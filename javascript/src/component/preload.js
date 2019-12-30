@@ -18,7 +18,7 @@ export function init() {
   // define the base options
   const motioOptions = {
     parent: preload,
-    interval: 100,
+    interval: 70,
     fill: 'transparent',
     stroke: colors.base,
     strokeWidth: 10,
@@ -31,7 +31,7 @@ export function init() {
 
   // define options for the out animation
   const motioOut = {
-    delay: 3000,
+    delay: 1800,
     duration: 250,
     strokeDashoffset: '100%',
     easing: curves.easing
@@ -229,15 +229,15 @@ export function init() {
     strokeDasharray: '100%',
     strokeDashoffset: { '100%' : '200%' },
     y: -56,
-    duration: 500,
+    duration: 400,
     easing: mojs.easing.ease.in
   };
 
   // define options for the out animation
   const studioOut = {
     opacity: 0,
-    duration: 500,
-    delay: 1700
+    duration: 400,
+    delay: 800
   };
 
   // define the base shapes
@@ -339,7 +339,7 @@ export function init() {
   let diagonalLinesStagger = mojs.stagger(mojs.Shape);
   let diagonalLines = new diagonalLinesStagger({
     parent: preload,
-    quantifier: 8,
+    quantifier: 7,
     shape: 'line',
     stroke: [colors.bright, colors.vibrant],
     strokeWidth: { 'rand(1, 4)' : 0 },
@@ -422,7 +422,7 @@ export function init() {
 
           // restore the body scrollbars
           body.classList.remove('no-scroll');
-        }, 900);
+        }, 200);
       }
     }
   });
