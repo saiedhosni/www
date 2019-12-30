@@ -390,9 +390,8 @@ export function init() {
           y: motio.dotEventY,
           radius: { 0 : motio.dotRadius },
           fill: colors[motio.dotColor],
-          duration: 1700,
-          easing: mojs.easing.expo.inout,
-          isForce3d: true,
+          duration: 1400,
+          easing: mojs.easing.quint.inout,
           onComplete: function() {
             preloadComplete();
           }
