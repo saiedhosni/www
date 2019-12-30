@@ -20,7 +20,7 @@ export function bindLogos(transitionCompleted) {
       strokeDasharray: length,
       transformOrigin: '109.2px 13.2px',
       duration: 700,
-      easing: mojs.easing.expo.inout
+      easing: mojs.easing.quint.inout
     };
 
     let letterIn = new mojs.Html(
@@ -287,7 +287,7 @@ export function bindTextEffect() {
     textTween.add(new mojs.Html({
       el: char,
       y: { 50 : 0 },
-      easing: mojs.easing.expo.out,
+      easing: mojs.easing.quint.out,
       duration: 1000,
       delay: 'rand(100, 300)',
       isForce3d: true

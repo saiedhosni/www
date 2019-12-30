@@ -96,7 +96,7 @@ export function init() {
         transformOrigin: '50% 50%',
         angleZ: device.large ? { 0 : 360 } : 0,
         duration: 1400,
-        easing: mojs.easing.expo.inout
+        easing: mojs.easing.quint.inout
       });
     },
     onEnterCompleted: function() {
@@ -118,7 +118,7 @@ export function init() {
         playstate: false,
         strokeWidth: 65.502,
         duration: 800,
-        easing: mojs.easing.expo.inout
+        easing: mojs.easing.quint.inout
       };
 
       motio.motioTween = {
@@ -224,7 +224,7 @@ export function init() {
         strokeDasharray: '100%',
         strokeDashoffset: { '100%' : 0 },
         duration: 800,
-        easing: mojs.easing.expo.inout
+        easing: mojs.easing.quint.inout
       };
 
       motio.iTween = {
@@ -284,7 +284,7 @@ export function init() {
           strokeDashoffset: { [length] : length * 2 },
           strokeWidth: device.large ? 28 : 40,
           duration: 1400,
-          easing: mojs.easing.expo.inout
+          easing: mojs.easing.quint.inout
         })
       };
 
