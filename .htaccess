@@ -7,7 +7,7 @@ Options All -Indexes
 # disable trailing slash redirects
 DirectorySlash Off
 
-# compresse content with the Apache deflate filter
+# compress content with the Apache deflate filter
 SetOutputFilter DEFLATE
 
 # set browser cache to 1 week for some files
@@ -15,7 +15,7 @@ SetOutputFilter DEFLATE
   Header set Cache-Control "private, max-age=604800, must-revalidate"
 </FilesMatch>
 
-# active the rewrite engine
+# enable the rewrite engine
 RewriteEngine On
 
 # rewrite content that are not in https, except for .local environment
