@@ -262,7 +262,7 @@ export function bindTextEffect() {
 
   // create the timeline
   let textTween = new mojs.Timeline({
-    delay: home ? 1100 : 0,
+    delay: home ? 900 : 0,
     onStart: function() {
       setTimeout(function () {
 
@@ -274,7 +274,7 @@ export function bindTextEffect() {
         Array.from(body.querySelectorAll('.shift')).forEach(function(element) {
           element.classList.remove('shift');
         });
-      }, home ? 700 : 550);
+      }, 550);
     },
     onComplete: function() {
       element.innerHTML = title;
