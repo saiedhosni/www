@@ -253,7 +253,7 @@ export function bindTextEffect() {
 
   // loop through each words and cut each characters in multiple span, discarding spaces
   words.forEach(function(word) {
-    word = word.replace(/[^\s]/g, '<span class="char">$&</span>');
+    word = word.replace(device.small ? /[^\s]+/g : /[^\s]/g, '<span class="char">$&</span>');
     element.innerHTML += `<span class="word">${word}</span> `;
   });
 
