@@ -2,14 +2,31 @@
 
 import mojs from '@mojs/core';
 
-// device detection (screen sizes based on Foundation build)
+// device detection (screen sizes based on viewport breackpoints)
 export let device = {
-  small: window.innerWidth < 640,
-  medium: window.innerWidth >= 640 && window.innerWidth < 1024,
-  large: window.innerWidth >= 1024,
-  touch: 'ontouchstart' in document.documentElement || navigator.MaxTouchPoints > 0,
-  rotate: 'orientation' in window,
-  blend: window.CSS && CSS.supports('mix-blend-mode', 'difference')
+  get small() {
+    return window.innerWidth < 640;
+  },
+
+  get medium() {
+    return window.innerWidth >= 640 && window.innerWidth < 1024;
+  },
+
+  get large() {
+    return window.innerWidth >= 1024;
+  },
+
+  get touch() {
+    return 'ontouchstart' in document.documentElement || navigator.MaxTouchPoints > 0;
+  },
+
+  get rotate() {
+    return 'orientation' in window;
+  },
+
+  get blend() {
+    return window.CSS && CSS.supports('mix-blend-mode', 'difference');
+  }
 };
 
 // global elements

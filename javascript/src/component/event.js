@@ -253,7 +253,7 @@ export function bindTextEffect() {
 
   // loop through each words and cut each characters in multiple span, discarding spaces
   words.forEach(function(word) {
-    word = word.replace(/[^\s]/g, '<span class="char">$&</span>');
+    word = word.replace(device.small ? /[^\s]+/g : /[^\s]/g, '<span class="char">$&</span>');
     element.innerHTML += `<span class="word">${word}</span> `;
   });
 
@@ -262,7 +262,7 @@ export function bindTextEffect() {
 
   // create the timeline
   let textTween = new mojs.Timeline({
-    delay: home ? 1100 : 0,
+    delay: home ? 900 : 0,
     onStart: function() {
       setTimeout(function () {
 
@@ -274,7 +274,7 @@ export function bindTextEffect() {
         Array.from(body.querySelectorAll('.shift')).forEach(function(element) {
           element.classList.remove('shift');
         });
-      }, home ? 700 : 550);
+      }, 550);
     },
     onComplete: function() {
       element.innerHTML = title;
