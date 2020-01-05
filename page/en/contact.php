@@ -12,10 +12,10 @@
   </div>
   <div class="row align-center hide-for-small-only">
     <div class="column medium-9 large-8">
-      <p data-emergence="hidden" class="shift"><strong class="type">Hello, what are your needs?</strong></p>
+      <p data-emergence="hidden" class="shift"><label for="message"><strong class="type">Hello, what are your needs?</strong></label></p>
       <form method="post">
         <div data-emergence="hidden" class="shift">
-          <textarea required="required" autocomplete="off"></textarea>
+          <textarea required="required" autocomplete="off" id="message"></textarea>
         </div>
         <div data-emergence="hidden" class="shift">
           <span class="progress"></span>
