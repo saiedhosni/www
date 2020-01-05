@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="studio, motio, interactive, design, creative, web, motion, digital, development" />
     <meta name="description" content="<?php echo METADATA[PAGE][1] ?? ''; ?>" />
-    <meta name="author" content="Studio MOTIO, Copyright (c) 2019" />
+    <meta name="author" content="Studio MOTIO, Copyright (c) 2020" />
     <meta name="geo.placename" content="La Rochelle, Charente-Maritime, France" />
     <meta name="application-name" content="Studio MOTIO" />
     <meta name="theme-color" content="#000" />
