@@ -392,6 +392,9 @@ export function init() {
           fill: colors[motio.dotColor],
           duration: 1400,
           easing: mojs.easing.quint.inout,
+          onStart: function() {
+            this.el.style.position = 'fixed';
+          },
           onComplete: function() {
             preloadComplete();
           }

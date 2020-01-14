@@ -80,28 +80,21 @@ dot.loop = function() {
 };
 
 // method to set the global dot position and appearance
-dot.tune = function(color = body.getAttribute('data-color'), event = null) {
+dot.tune = function(color = body.getAttribute('data-color')) {
 
-  // get the bounding coordinates of the dot cursor as reference for the dot transition
-  let coordinates = dot.getBoundingClientRect();
-  let dotX = coordinates.left + coordinates.width * 0.5;
-  let dotY = coordinates.top + coordinates.height * 0.5;
+  // get the mouse coordinates as reference for the dot transition
+  let dotX = mouseX;
+  let dotY = mouseY;
 
   // store the latest dot color
   motio.dotPreviousColor = typeof motio.dotPreviousColor === 'undefined' ? color : motio.dotColor;
 
   // evaluate the color and position of the transition dot
   motio.dotColor = color;
-  motio.dotEventX = event !== null && event.pageX !== 0 ? event.pageX : dotX + pageXOffset;
-  motio.dotEventY = event !== null && event.pageY !== 0 ? event.pageY : dotY + pageYOffset;
-
-  // evaluate the radius of the transition dot
-  if (event !== null) {
-    dotX = event.clientX;
-    dotY = event.clientY;
-  }
+  motio.dotEventX = dotX;
+  motio.dotEventY = dotY;
 
   let deltaX = dotX <= window.innerWidth * 0.5 ? window.innerWidth - dotX : dotX;
   let deltaY = dotY <= window.innerHeight * 0.5 ? window.innerHeight - dotY : dotY;
-  motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY) + 20;
+  motio.dotRadius = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 };

@@ -49,6 +49,9 @@ export function init() {
             fill: colors[motio.dotColor],
             duration: 1400,
             easing: mojs.easing.quint.inout,
+            onStart: function() {
+              this.el.style.position = 'fixed';
+            },
             onComplete: function() {
               resolve();
             }
@@ -465,13 +468,13 @@ export function init() {
   }).init();
 
   // manage the linkClicked event of barba js
-  Barba.Dispatcher.on('linkClicked', function(link, e) {
+  Barba.Dispatcher.on('linkClicked', function(link) {
 
     // define that a click event from mouse/keyboard has been raised
     motio.clickEvent = true;
 
     // tune the dot for the next transition
-    dot.tune(link.getAttribute('data-dot') || 'base', e);
+    dot.tune(link.getAttribute('data-dot') || 'base');
 
     // manage the mobile menu display if it is opened
     if (body.querySelector('.menu-trigger:checked') !== null) {
