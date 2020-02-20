@@ -25,19 +25,25 @@
   <div class="row align-center">
     <article class="column medium-9 large-8">
       <p data-emergence="hidden" class="shift"><strong>Protection des données</strong></p>
-      <p class="no-margin shift" data-emergence="hidden">Le site respecte la vie privée de l'internaute et se conforme strictement aux lois en vigueur sur la protection de la vie privée et des libertés individuelles. Aucune information personnelle n'est collectée à votre insu ou n'est cédée à des tiers. Les courriels, les adresses électroniques ou autres informations nominatives dont ce site est destinataire ne font l'objet d'aucune exploitation et ne sont conservés que pour la durée nécessaire à leur traitement.</p> <p class="no-margin shift" data-emergence="hidden">Conformément aux dispositions de l'article L.78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données qui vous concerne. Ce droit s'exerce par voie électronique, en justifiant de votre identité, à l'adresse <a href="mailto:hello@studiomotio.com" target="_blank" class="highlight">hello@studiomotio.com</a>.</p>
+      <p class="no-margin shift" data-emergence="hidden">Le site respecte la vie privée de l'internaute et se conforme strictement aux lois en vigueur sur la protection de la vie privée et des libertés individuelles. Aucune information personnelle n'est collectée à votre insu ou n'est cédée à des tiers. Les courriels, les adresses électroniques ou autres informations nominatives dont ce site est destinataire ne font l'objet d'aucune exploitation et ne sont conservés que pour la durée nécessaire à leur traitement.</p>
+      <br>
+      <p class="no-margin shift" data-emergence="hidden">Conformément aux dispositions de l'article L.78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés, vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données qui vous concerne. Ce droit s'exerce par voie électronique, en justifiant de votre identité, à l'adresse <a href="mailto:hello@studiomotio.com" target="_blank" class="highlight">hello@studiomotio.com</a>.</p>
     </article>
   </div>
   <div class="row align-center">
     <article class="column medium-9 large-8">
-      <p data-emergence="hidden" class="shift"><strong>Cookies</strong></p>
-      <p class="no-margin shift" data-emergence="hidden">Des données non personnelles sont collectées lors de votre navigation, par un système de cookies, à des fins statistiques. Ces fichiers, stockés sur votre ordinateur, permettent d'enregistrer des informations relatives à votre navigation sur notre site, comme par exemple les pages consultées ou encore la durée de consultation.</p> <p class="no-margin shift" data-emergence="hidden">En aucun cas ces données ne nous permettent de vous identifier. Vous pouvez vous opposer à l'enregistrement des « cookies » en configurant votre navigateur internet.</p>
+      <p data-emergence="hidden" class="shift"><strong>Politique de confidentialité</strong></p>
+      <p class="no-margin shift" data-emergence="hidden">Toutes les informations fournies lors de vos visites sont strictement confidentielles. Kyoso Consulting s’engage à respecter la confidentialité de vos données personnelles. Ces données sont utilisées par nos services internes lors du traitement de vos demandes.</p>
+      <br>
+      <p class="no-margin shift" data-emergence="hidden">Des données non personnelles sont collectées lors de votre navigation, par un système de cookies, à des fins statistiques. Ces fichiers, stockés sur votre ordinateur, permettent d’enregistrer des informations relatives à votre navigation sur notre site, comme par exemple les pages consultées ou encore la durée de consultation. En aucun cas ces données ne nous permettent de vous identifier. Vous pouvez vous opposer à l’enregistrement des « cookies » en configurant votre navigateur internet.</p>
     </article>
   </div>
   <div class="row align-center">
     <article class="column medium-9 large-8">
       <p data-emergence="hidden" class="shift"><strong>Marque déposée</strong></p>
-      <p class="no-margin shift" data-emergence="hidden">Studio MOTIO ® est une marque Française déposée à l'INPI sous le numéro 17 4 343 034. Toute reproduction totale ou partielle de cette marque ou des logos effectuées à partir des éléments du site sans l'autorisation expresse du studio est prohibée, au sens des articles L.713-2 et suivants du Code de la propriété intellectuelle.</p> <p class="no-margin shift" data-emergence="hidden">Tous les noms de produits, logos et marques sont la propriété de leurs détenteurs respectifs. Toute personne ne respectant pas les dispositions légales applicables se rend coupable du délit de contrefaçon et est passible des sanctions pénales prévues par la loi.</p>
+      <p class="no-margin shift" data-emergence="hidden">Studio MOTIO ® est une marque Française déposée à l'INPI sous le numéro 17 4 343 034. Toute reproduction totale ou partielle de cette marque ou des logos effectuées à partir des éléments du site sans l'autorisation expresse du studio est prohibée, au sens des articles L.713-2 et suivants du Code de la propriété intellectuelle.</p>
+      <br>
+      <p class="no-margin shift" data-emergence="hidden">Tous les noms de produits, logos et marques sont la propriété de leurs détenteurs respectifs. Toute personne ne respectant pas les dispositions légales applicables se rend coupable du délit de contrefaçon et est passible des sanctions pénales prévues par la loi.</p>
     </article>
   </div>
 </section>
