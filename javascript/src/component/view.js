@@ -49,6 +49,7 @@ export function init() {
             fill: colors[motio.dotColor],
             duration: 1400,
             easing: mojs.easing.quint.inout,
+            isForce3d: true,
             onStart: function() {
               this.el.style.position = 'fixed';
             },
@@ -99,7 +100,8 @@ export function init() {
         transformOrigin: '50% 50%',
         angleZ: device.large ? { 0 : 360 } : 0,
         duration: 1400,
-        easing: mojs.easing.quint.inout
+        easing: mojs.easing.quint.inout,
+        isForce3d: true
       });
     },
     onEnterCompleted: function() {
@@ -121,7 +123,8 @@ export function init() {
         playstate: false,
         strokeWidth: 65.502,
         duration: 800,
-        easing: mojs.easing.quint.inout
+        easing: mojs.easing.quint.inout,
+        isForce3d: true
       };
 
       motio.motioTween = {
@@ -227,7 +230,8 @@ export function init() {
         strokeDasharray: '100%',
         strokeDashoffset: { '100%' : 0 },
         duration: 800,
-        easing: mojs.easing.quint.inout
+        easing: mojs.easing.quint.inout,
+        isForce3d: true
       };
 
       motio.iTween = {
@@ -287,7 +291,8 @@ export function init() {
           strokeDashoffset: { [length] : length * 2 },
           strokeWidth: device.large ? 28 : 40,
           duration: 1400,
-          easing: mojs.easing.quint.inout
+          easing: mojs.easing.quint.inout,
+          isForce3d: true
         })
       };
 
